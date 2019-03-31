@@ -1,0 +1,351 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Lato, sans-serif;
+	height: auto;
+	width: 100%
+}
+
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	max-width: 2000px;
+	position: relative
+}
+
+
+h1,
+h2,
+h3 {
+	font-family: Roboto, sans-serif;
+	font-weight: 700;
+	margin: 0;
+	padding: 0
+}
+
+a {
+	text-decoration: none
+}
+
+nav {
+	position: absolute;
+	top: 10px;
+	right: 40px;
+	display: flex;
+	flex-wrap: wrap
+}
+
+nav > a {
+	font-size: 1.5em;
+	color: #3c3c3c;
+	margin: 0 1.7rem 0 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative
+}
+
+
+
+.tooltip {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .4s;
+	font-size: .8em;
+	color: #3c3c3c;
+	text-align: center;
+	position: absolute;
+	bottom: -1.8em
+}
+
+.tooltip::after {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent #3c3c3c transparent;
+	border-color: transparent transparent rgba(60, 60, 60, .8) transparent;
+	border-radius: 50%
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 7em;
+	align-items: flex-start;
+	margin-bottom: 7em;
+}
+
+#projects {
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	justify-content: center;
+	margin: auto;
+}
+
+.projectsheader {
+	margin-left: 10%;
+}
+
+.projectsheader h1 {
+	font-size: 5em;
+
+	margin-bottom: .05em;
+	line-height: 1em;
+	cursor: default;
+	animation: 1s ease-out .2s 1 opacityToOne backwards
+}
+
+.project {
+	display: flex;
+	overflow: hidden;
+	margin: calc(.2em + 0.3vw);
+	border-radius: .1em;
+	height: 440px;
+	width: 275px;
+	background-color: black;
+}
+
+.project a {
+	color: #fdfdfd;
+	width: 100%;
+}
+
+.project p {
+	margin: .3em .8em;
+
+}
+
+.part-wrapper {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	height: 100%;
+}
+
+.part-wrapper img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 1em;
+	filter: brightness(0.5) blur(2px);
+	transform: scale(1.1);
+	transition: filter 0.2s, transform 0.3s ease-out;
+}
+
+.part-content {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.part-header {
+	height: 35%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.part-icons {
+	margin: .7em 0;
+}
+
+.part-wrapper h3 {
+	font-size: 1.5em;
+	text-transform: capitalize;
+}
+
+.part-icons i {
+	font-size: 2.3em;
+	margin: 0 0.3em;
+}
+
+i.customicon {
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+}
+
+i.construct2 {
+	background-image: url(../assets/construct2.svg);
+
+}
+
+.char {
+	display: inline-block;
+	transition: transform .5s ease-in;
+	color: #0d6fd3;
+	animation: bgc ease 12s infinite
+}
+
+.inlineletter {
+	display: inline
+}
+
+.hoveranimation {
+	animation: hover ease 1s
+}
+
+.hovering {
+	transition: transform .3s ease-out;
+	transform: rotate(20deg)
+}
+
+.projects i {
+	font-size: 1.15rem;
+}
+
+.github i,
+.projects i,
+.twitter i,
+.youtube i,
+.home i {
+	transition: color .2s ease, transform .3s ease;
+	-webkit-transform-origin: 50% 53%
+}
+
+.projects > i,
+.home i {
+	animation: .5s ease-out .2s 1 slideInFromTop backwards, .3s ease-out .3s 1 opacityToOne backwards
+}
+
+
+
+.github i {
+	animation: .5s ease-out .4s 1 slideInFromTop backwards, .3s ease-out .5s 1 opacityToOne backwards
+}
+
+
+
+.twitter i {
+	animation: .5s ease-out .6s 1 slideInFromTop backwards, .3s ease-out .6s 1 opacityToOne backwards
+}
+
+
+
+.youtube i {
+	animation: .5s ease-out .65s 1 slideInFromTop backwards, .3s ease-out .6s 1 opacityToOne backwards
+}
+
+
+
+
+@media (hover: hover) {
+	nav > a:hover .tooltip {
+		visibility: visible;
+		opacity: 1
+	}
+
+	.project:hover img {
+		filter: brightness(0.5) blur(1px);
+		transform: scale(1.2);
+	}
+
+	.projects:hover > i,
+	.home:hover i {
+		transform: rotate(11deg)
+	}
+
+	.github:hover > i {
+		transform: rotate(11deg);
+		color: #913199
+	}
+
+	.twitter:hover i {
+		transform: rotate(11deg);
+		color: #008efd
+	}
+
+	.youtube:hover i {
+		transform: rotate(11deg);
+		color: #df1d45
+	}
+
+}
+
+@keyframes hover {
+	50% {
+		transform: rotate(10deg)
+	}
+}
+
+@keyframes bgc {
+	50% {
+		color: #af2c52
+	}
+}
+
+@keyframes slideInFromTop {
+	0% {
+		transform: translateY(-100%)
+	}
+
+	100% {
+		transform: translateY(0)
+	}
+}
+
+@keyframes slideInFromBottom {
+	0% {
+		transform: translateY(100%)
+	}
+
+	100% {
+		transform: translateY(0)
+	}
+}
+
+@keyframes opacityToOne {
+	0% {
+		opacity: 0
+	}
+
+	1000% {
+		opacity: 1
+	}
+}
+
+@media only screen and (max-width:800px) {
+	.wrapper {
+		justify-content: center;
+		align-items: center
+	}
+}
+
+@media only screen and (max-width:600px) {
+	#projects {
+		width: 95%
+	}
+	
+	.project {
+		width: 330px;
+		max-width: 90%;
+	}
+	
+}
+
+@media only screen and (max-width:520px) {
+
+	.projectsheader h1 {
+		font-size: calc(1.5em + 6vw);
+		margin-bottom: 0.1em;
+	}
+}

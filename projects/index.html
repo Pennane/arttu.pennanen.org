@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
+	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Lato|Roboto:900" as="fetch" crossorigin="anonymous">
+	<script type="text/javascript">
+		! function(e, n, t) {
+			"use strict";
+			var o = "https://fonts.googleapis.com/css?family=Lato|Roboto:700",
+				r = "__3perf_googleFontsStylesheet";
+
+			function c(e) {
+				(n.head || n.body).appendChild(e)
+			}
+
+			function a() {
+				var e = n.createElement("link");
+				e.href = o, e.rel = "stylesheet", c(e)
+			}
+
+			function f(e) {
+				if (!n.getElementById(r)) {
+					var t = n.createElement("style");
+					t.id = r, c(t)
+				}
+				n.getElementById(r).innerHTML = e
+			}
+			e.FontFace && e.FontFace.prototype.hasOwnProperty("display") ? (t[r] && f(t[r]), fetch(o).then(function(e) {
+				return e.text()
+			}).then(function(e) {
+				return e.replace(/@font-face {/g, "@font-face{font-display:swap;")
+			}).then(function(e) {
+				return t[r] = e
+			}).then(f).catch(a)) : a()
+		}(window, document, localStorage);
+	</script>
+	<!-- End of code snippet for Google Fonts -->
+
+	<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<meta content="Arttu Pennanen's project library filled with mysterious shenanigans. You are more than welcomed to venture through the site." name="description">
+	<meta content="Arttupennanen,Arttu,Pennanen" name="keywords">
+	<meta content="Arttu Pennanen" name="author">
+	<meta content="summary" name="twitter:card">
+	<meta content="@arttupennane" name="twitter:creator">
+	<meta content="Arttu Pennanen Web" name="twitter:title">
+	<meta content="Arttu Pennanen's project library filled with mysterious shenanigans. You are more than welcomed to venture through the site." name="twitter:description">
+	<meta content="https://arttu.pennanen.org/cover.png" name="twitter:image">
+	<meta content="@arttupennane" name="twitter:site">
+	<meta content="https://arttu.pennanen.org" property="og:url">
+	<meta content="Arttu Pennanen Web" property="og:title">
+	<meta content="Arttu Pennanen's project library filled with mysterious shenanigans. You are more than welcomed to venture through the site." property="og:description">
+	<meta content="https://arttu.pennanen.org/cover.png" property="og:image">
+	<meta content="arttu.pennanen.org" property="og:site_name">
+	<meta content="768" property="og:image:width">
+	<meta content="435" property="og:image:height">
+	<meta content="website" property="og:type">
+    <meta content="#0087ca" name="theme-color">
+    <link href="img/icons-512.png" rel="apple-touch-icon">
+    <link href="img/icons-152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="img/icons-180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="img/icons-167.png" rel="apple-touch-icon" sizes="167x167">
+    <link href="img/icons-256.png" rel="apple-touch-startup-image">
+
+	<title>arttu.pennanen.org projects</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main>
+			<div class="projectsheader">
+				<h1>Projects</h1>
+			</div>
+			<div id="projects">
+				<div class="project" id="spotify-favorites">
+					<a class="project-link" href="https://github.com/Pennane/spotify-favorites">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Spotify Recent Favorites</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fab fa-node-js"></i>
+
+								</div>
+								<p>Application that displays your most listened tracks and artists on Spotify.</p>
+
+							</div>
+
+							<img alt="waveanimator" data-src="img/spotify-favorites-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+
+					</a>
+				</div>
+				<div class="project" id="laser">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/laser/">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Laser Refraction &amp; Reflection</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fab fa-js"></i>
+
+								</div>
+								<p>Scientific laser refraction 'sandbox' supporting custom values.</p>
+
+							</div>
+
+							<img alt="waveanimator" data-src="img/laser-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+
+					</a>
+				</div>
+				<div class="project" id="waveanim">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/waveanimation/">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Wave Graphic Generator</h3>
+								</div>
+
+								<div class="part-icons">
+									<i class="fab fa-js"></i>
+
+								</div>
+								<div class="part-desc">
+									<p>Experimental canvas animator based on trigonometric functions. Not scientific, but a rather cool experiment.</p>
+								</div>
+
+
+							</div>
+
+							<img alt="waveanimator" data-src="img/waveanim-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="lottosim">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/lottotodennakoisyys/">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Lottery Simulator</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fab fa-js"></i>
+
+								</div>
+								<p>Application for simulating lottery. Probabilities used in the simulator are the same as used in the Finnish Veikkaus' lottery.</p>
+
+							</div>
+
+							<img alt="Lotto simulator" data-src="img/lotto-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="typechase">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/typechase">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Typechase</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fab fa-js"></i>
+								</div>
+								<p>Obvious typeracer copy, so an application for testing and practising typing speed. Does support custom texts, but is also filled with pre-gathered geeky references</p>
+
+							</div>
+							<img alt="typechase" data-src="img/typechase-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="peigombot">
+					<a class="project-link" href="https://github.com/Pennane/peigom-bot/">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Peigom-bot</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fab fa-node-js"></i>
+								</div>
+								<p>Hardwired node.js discord bot for VOIP service Discord. Features many custom commands and some server management tools.</p>
+
+							</div>
+							<img alt="peigom bot" data-src="img/peigom-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="peigombotdocumentation">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/peigom-bot_opas/">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Peigom-bot documentation</h3>
+								</div>
+								<div class="part-icons">
+
+									<i class="fab fa-html5"></i>
+									<i class="fab fa-css3-alt"></i>
+								</div>
+								<p>Documentation for hardwired node.js discord bot. Tutorials included now outdated.</p>
+
+							</div>
+							<img alt="peigom bot documentation" data-src="img/peigombot-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="slotsmachine">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/hedelmapeli/">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Slotmachine</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fab fa-js"></i>
+								</div>
+								<p>Fair odds, nothing like a real casino. Playing this you have a fair chance of hitting the jackpot.</p>
+
+							</div>
+							<img alt="slots machine" data-src="img/hedelmapeli-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="thonketspinner">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/thonketspinner/">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Thonket spinner</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fab fa-js"></i>
+								</div>
+								<p>Fun WebGL motored 3D-model spinner program. A by-product of interest in three.js.</p>
+
+							</div>
+							<img alt="thonket spinner" data-src="img/thonkspinner-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="fishinggame">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/kalastuspeli/">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Fishing game</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fab fa-js"></i>
+								</div>
+								<p>Fishing clicker game with progress saving. A fun experiment in simpler javascript browser games.</p>
+
+							</div>
+							<img alt="fishing game" data-src="img/fiskgame-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="jutingrill">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/jutinrillimakkarapeli">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Juti's Grilling Game</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fab fa-js"></i>
+								</div>
+								<p>Overly minimalistic decision-based grilling game. Give Juti some tasty grill food, or not.</p>
+
+							</div>
+							<img alt="Juti's grilling game" data-src="img/rillimakkara-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="thonkpaint">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/thonkpaint/">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Thonk paint</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fab fa-js"></i>
+								</div>
+								<p>Novelty web paint with the thinking emoji as the brush. Express your thoughts and have a go! I was surprised how interesting 'art' you can actually paint with this.</p>
+
+							</div>
+							<img alt="thonk paint" data-src="img/thonkpaint-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="personalwebpage">
+					<a class="project-link" href="https://arttu.pennanen.org/sub/personalwebpage/">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Personal Webpage 2</h3>
+								</div>
+								<div class="part-icons">
+
+									<i class="fab fa-html5"></i>
+									<i class="fab fa-css3-alt"></i>
+									<i class="fab fa-js"></i>
+								</div>
+								<p>School project. Opted for a simplistic personal webpage, this is what came out. (Try inserting Konami code)</p>
+
+							</div>
+							<img alt="Personal webpage" data-src="img/per1-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="adventuresofn">
+					<a class="project-link" href="https://safeos.net/arttu/AdventureOfNoggerborn/" ref="noreferrer">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Adventures of Noggorbern</h3>
+								</div>
+								<div class="part-icons">
+									<i class="customicon construct2"></i>
+								</div>
+								<p>2D Platformer game created with Construct 2. Everything handmade with the game developing software.</p>
+
+							</div>
+							<img alt="Adventures of Noggorbern" data-src="img/nogg-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+				<div class="project" id="pocketbook">
+					<a class="project-link" href="https://soundcloud.com/arttu-pennanen" ref="noreferrer">
+						<div class="part-wrapper">
+							<div class="part-content">
+								<div class="part-header">
+									<h3>Susse's Pocketbook</h3>
+								</div>
+								<div class="part-icons">
+									<i class="fas fa-music"></i>
+									<i class="fab fa-soundcloud"></i>
+								</div>
+								<p>A bunch of futile music snippets. A by-product of expression.</p>
+
+							</div>
+							<img alt="Adventures of Noggorbern" data-src="img/pocketbook-min.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+						</div>
+					</a>
+				</div>
+			</div>
+		</main>
+		<nav>
+			<a class="home" href="/"><i class="fas fa-home"></i>
+				<div class="tooltip">Home</div>
+			</a>
+			<a class="github" href="https://github.com/Pennane"><i class="fab fa-github"></i>
+				<div class="tooltip">Github</div>
+			</a>
+			<a class="twitter" href="https://twitter.com/arttupennane"><i class="fab fa-twitter"></i>
+				<div class="tooltip">Twitter</div>
+			</a>
+			<a class="youtube" href="https://www.youtube.com/channel/UCsTa47k_riPUR9WCK9aUWww"><i class="fab fa-youtube"></i>
+				<div class="tooltip">Youtube</div>
+			</a>
+		</nav>
+	</div>
+
+
+	<script src="script/main.js"></script>
+</body>
+
+</html>
