@@ -628,5 +628,10 @@ All bg animatin stuff
     .bubble {
       animation: none;
       -webkit-animation: none;
+      display: none;
+    }
+    .project-div:hover .project {
+        transform: inherit;
+        box-shadow: inherit
     }
   }
