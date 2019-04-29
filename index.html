@@ -1,52 +1,21 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 
 <head>
-
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta charset="utf-8">
-	<!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
-	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-	<link rel="preload" href="https://fonts.googleapis.com/css?family=Lato|Roboto:900" as="fetch" crossorigin="anonymous">
-	<script type="text/javascript">
-		! function(e, n, t) {
-			"use strict";
-			var o = "https://fonts.googleapis.com/css?family=Lato|Roboto:700",
-				r = "__3perf_googleFontsStylesheet";
 
-			function c(e) {
-				(n.head || n.body).appendChild(e)
-			}
+	<!-- Prefetch-->
+	<link href="https://use.fontawesome.com" rel="preconnect">
+	<link href="https://rsms.me" rel="preconnect">
+	<link href="https://www.google-analytics.com" rel="preconnect">
 
-			function a() {
-				var e = n.createElement("link");
-				e.href = o, e.rel = "stylesheet", c(e)
-			}
-
-			function f(e) {
-				if (!n.getElementById(r)) {
-					var t = n.createElement("style");
-					t.id = r, c(t)
-				}
-				n.getElementById(r).innerHTML = e
-			}
-			e.FontFace && e.FontFace.prototype.hasOwnProperty("display") ? (t[r] && f(t[r]), fetch(o).then(function(e) {
-				return e.text()
-			}).then(function(e) {
-				return e.replace(/@font-face {/g, "@font-face{font-display:swap;")
-			}).then(function(e) {
-				return t[r] = e
-			}).then(f).catch(a)) : a()
-		}(window, document, localStorage);
-	</script>
-	<!-- End of code snippet for Google Fonts -->
-
-	<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" rel="stylesheet">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
-
+	<!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126133790-1"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-126133790-1');
+    </script> 
+	
+	<!-- Metadata -->
 	<meta content="Arttu Pennanen's project library filled with mysterious shenanigans. You are more than welcomed to venture through the site." name="description">
 	<meta content="Arttupennanen,Arttu,Pennanen" name="keywords">
 	<meta content="Arttu Pennanen" name="author">
@@ -64,42 +33,136 @@
 	<meta content="768" property="og:image:width">
 	<meta content="435" property="og:image:height">
 	<meta content="website" property="og:type">
-	<link href="manifest.json" rel="manifest">
-	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <meta content="#0087ca" name="theme-color">
-    <link href="img/icons-512.png" rel="apple-touch-icon">
-    <link href="img/icons-152.png" rel="apple-touch-icon" sizes="152x152">
-    <link href="img/icons-180.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="img/icons-167.png" rel="apple-touch-icon" sizes="167x167">
-    <link href="img/icons-256.png" rel="apple-touch-startup-image">
 
+	<!-- Icons -->
+	<link href="assets/icons/icons-512.png" rel="apple-touch-icon">
+	<link href="assets/icons/icons-152.png" rel="apple-touch-icon" sizes="152x152">
+	<link href="assets/icons/icons-180.png" rel="apple-touch-icon" sizes="180x180">
+	<link href="assets/icons/icons-167.png" rel="apple-touch-icon" sizes="167x167">
+	<link href="assets/icons/icons-256.png" rel="apple-touch-startup-image">
+	
+	<link href="css/default.css" rel="stylesheet">
 	<title>arttu.pennanen.org</title>
 </head>
-<div class="wrapper">
-	<header>
-		<h1>Arttu Pennanen</h1>
-		<p>a bloke from Finland.</p>
-		<p>I fancy web and what's behind.</p>
-		<a href="#">arttu<i class="fas fa-at"></i>pennanen.org</a>
-	</header>
-	<nav>
-		<a name="projects" class="projects" href="./projects"><i class="fas fa-project-diagram"></i>
-			<div class="tooltip">Projects</div>
-		</a>
-		<a name="github" class="github" href="https://github.com/Pennane"><i class="fab fa-github"></i>
-			<div class="tooltip">Github</div>
-		</a>
-		<a name="twitter" class="twitter" href="https://twitter.com/arttupennane"><i class="fab fa-twitter"></i>
-			<div class="tooltip">Twitter</div>
-		</a>
-		<a name="youtube" class="youtube" href="https://www.youtube.com/channel/UCsTa47k_riPUR9WCK9aUWww"><i class="fab fa-youtube"></i>
-			<div class="tooltip">Youtube</div>
-		</a>
-	</nav>
-</div>
 
 <body>
-	<script src="script/main.js"></script>
+	<div class="content animationparent ">
+		<div class="bg-art">
+			<div class="bg-item"></div>
+			<div class="bg-item"></div>
+			<div class="bg-item"></div>
+			<div class="bg-item"></div>
+			<div class="bg-item"></div>
+		</div>
+		<nav>
+			<div class="navwrapper">
+					<a href="/" class="navlink brand">
+						<img class="brand" src="assets/icons/icons-152.png" alt="">
+						<span class="brand">pennane.</span>
+					</a>
+					<div class="navlinks">
+						<a title="Github @Pennane" href="https://github.com/Pennane" class="navlink">
+							Github
+						</a>
+						<a title="Twitter @arttupennane" href="https://twitter.com/arttupennane" class="navlink">
+							Twitter
+						</a>
+						<a href="/game" class="navlink">
+							Game
+						</a>
+					</div>
+			</div>
+			
+			
+		</nav>
+		<header class="card bg3 hero">
+			<div class="flex v-mid h-mid card-inner">
+				<h1 class="h1">pennane.</h1>
+			</div>
+		</header>
+		<div class="card bg2">
+			<div class="flex h-mid card-inner">
+				<div class="flex divide text-div-images">
+					<div class="flex h-mid v-mid"><img alt="" class="divide-img"
+							src="assets/undraw/undraw_all_the_data_h4ki.svg"></div>
+					<div class="flex text-left">
+						<h2 class="h3">
+							Who am I?
+						</h2>
+						<p class="img-divide-text">
+							Arttu Pennanen; a Highschool student from Finland
+							interested in web security, -design and -development.
+						</p>
+					</div>
+				</div>
+				<div class="flex divide text-div-images reverse-wrap">
+					<div class="flex text-left">
+						<h2 class="h3">
+							Why are you here?
+						</h2>
+						<p class="img-divide-text">
+							Wouldn't know. But as you have: this page will later
+							have some fun applications to fiddle around with.
+						</p>
+					</div>
+					<div class="flex h-mid v-mid"><img alt="" class="divide-img"
+							src="assets/undraw/undraw_code_review_l1q9.svg"></div>
+				</div>
+				<div class="flex divide text-div-images">
+					<div class="flex h-mid v-mid"><img alt="" class="divide-img"
+							src="assets/undraw/undraw_connected_world_wuay.svg"></div>
+					<div class="flex text-left">
+						<h2 class="h3">
+							What now?
+						</h2>
+						<p class="img-divide-text">
+							You do what you desire! For one, you can now scroll down and find my
+							prior projects to mess with. They are quite cool even if lacking in the
+							'usefulness' factor.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="divider">
+			<div class="divider-icon">
+				<i class="fas fa-question"></i>
+			</div>
+		</div>
+		<div class="card after-divider">
+			<div class="flex h-mid card-inner">
+				<h2 class="h1 etch c4">
+					prior projects.
+				</h2>
+			</div>
+		</div>
+		<div class="card bg3 before-divider">
+			<div class="flex h-mid projects">
+				<!-- Dynamic Content-->
+				<noscript> Sorry! These projects can only be viewed by enabling javascript.</noscript>
+			</div>
+		</div>
+		<footer class="card">
+			<div class="flex h-mid v-mid card-inner">
+				<span class="footerspan">
+					<span class="footericon">
+						<i class="far fa-copyright"></i>
+					</span>
+					<span class="footername">
+						Arttu Pennanen
+					</span>
+					<span class="year">
+						2019
+					</span>
+				</span>
+			</div>
+		</footer>
+	</div>
+	<!-- Script -->
+	<script src="js/main.js" type="text/javascript">
+	</script>
+	<!-- Vendor -->
+	<link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
 </body>
 
 </html>

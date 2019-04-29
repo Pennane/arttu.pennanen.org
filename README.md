@@ -1,2 +1,2 @@
 # arttu.pennanen.org
-Repository for old version of site
+Repository for arttu.pennanen.org

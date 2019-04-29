@@ -1,0 +1,45 @@
+{
+    "projects": [
+        {
+            "href": "https://github.com/Pennane/spotify-favorites",
+            "name": "Spotify Recent Favorites",
+            "imgUrl": "./assets/projectimg/spotify-min.jpg",
+            "description": "An application that displays your most listened tracks and artists on Spotify.",
+            "invert": false,
+            "whiteText": false
+        },
+        {
+            "href": "https://arttu.pennanen.org/sub/laser/",
+            "name": "Laser Refraction & Reflection",
+            "imgUrl": "./assets/projectimg/laser-min.jpg",
+            "description": "Scientific laser refraction 'sandbox' supporting custom values.",
+            "invert": false,
+            "whiteText": false
+        },
+        {
+            "href": "https://arttu.pennanen.org/sub/typechase/",
+            "name": "Typechase",
+            "imgUrl": "./assets/projectimg/typechase-min.jpg",
+            "description": "Obvious typeracer copy, so an application for testing and practising typing speed. Does support custom texts but also has a lot of pre-gathered ones.",
+            "invert": false,
+            "whiteText": false
+        },
+        {
+            "href": "https://github.com/Pennane/peigom-bot/",
+            "name": "Peigom-Bot",
+            "imgUrl": "./assets/projectimg/peigom-min.jpg",
+            "description": "Hardwired node.js discord bot for VOIP service Discord. Features many custom commands and some server management tools.",
+            "invert": true,
+            "whiteText": true
+        },
+        {
+            "href": "https://arttu.pennanen.org/sub/thonkpaint/",
+            "name": "Thonk Paint",
+            "imgUrl": "./assets/projectimg/thonkpaint-min.jpg",
+            "description": "Novelty web paint with the thinking emoji as the brush. Express your thoughts and have a go! I was surprised by how interesting 'art' you can actually paint with this.",
+            "invert": false,
+            "whiteText": false
+        }
+    ]
+        
+}
