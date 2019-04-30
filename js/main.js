@@ -1,4 +1,4 @@
-if ('serviceWorker' in navigator) {
+/*if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
         try {
             navigator.serviceWorker.register('/sw.js')
@@ -7,6 +7,7 @@ if ('serviceWorker' in navigator) {
         }
     });
   }
+  */
 
 
 const path = '/assets/content/content.json'
@@ -118,3 +119,16 @@ window.addEventListener("resize", event => {
 })
 
 initBubbles()
+
+let instance = basicScroll.create({
+        elem: document.querySelector('.content'),
+        from: 'top-top',
+        to: 'bottom-bottom',
+        props: {
+            '--animationparallax': {
+                from: `-${parseInt(Parsedocument.body.scrollHeight / 9)}px`,
+                to: '0px',
+            }
+        }
+    })
+instance.start()

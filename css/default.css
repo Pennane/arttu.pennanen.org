@@ -553,6 +553,7 @@ All bg animatin stuff
     bottom: 0;
     right: 0;
     z-index: -1;
+    transform: translateY(var(--animationparallax));
 }
 /*                      */
 
