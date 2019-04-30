@@ -89,7 +89,8 @@ function createBubbles(amount, target) {
 	for (let i = 0; i < amount; i++) {
         let el = document.createElement('div')
         let rn = Math.random() + 0.1
-        el.style.left = `${rnd(3, 97).toFixed(0)}%`;
+        let nr = rnd(0, 97).toFixed(0)
+        el.style.left = `${nr}%`;
         el.style.transform = `scale(${rn.toFixed(2)})`; 
 		el.className = "bubble";
 		el.style.animationDelay = `${(-(i * duration * (Math.random() * 2))).toFixed(0)}s`;
