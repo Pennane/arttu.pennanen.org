@@ -126,7 +126,7 @@ let instance = basicScroll.create({
         to: 'bottom-bottom',
         props: {
             '--animationparallax': {
-                from: `-${parseInt(Parsedocument.body.scrollHeight / 9)}px`,
+                from: `-${parseInt(document.body.scrollHeight / 10)}px`,
                 to: '0px',
             }
         }
