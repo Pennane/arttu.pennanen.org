@@ -120,7 +120,7 @@ window.addEventListener("resize", event => {
 initBubbles()
 
 let instance = basicScroll.create({
-        elem: document.querySelector('.content'),
+        elem: document.querySelector('body'),
         from: 'top-top',
         to: 'bottom-bottom',
         props: {
