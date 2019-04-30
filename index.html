@@ -41,7 +41,7 @@
 	<link href="assets/icons/icons-167.png" rel="apple-touch-icon" sizes="167x167">
 	<link href="assets/icons/icons-256.png" rel="apple-touch-startup-image">
 	
-	<link href="css/default.css" rel="stylesheet">
+	<link href="css/default.css" rel="stylesheet" id="defaultstylesheet">
 	<title>arttu.pennanen.org</title>
 </head>
 
@@ -84,7 +84,7 @@
 			<div class="flex h-mid card-inner">
 				<div class="flex divide text-div-images">
 					<div class="flex h-mid v-mid"><img alt="" class="divide-img"
-							src="assets/undraw/undraw_all_the_data_h4ki.svg"></div>
+							src="assets/undraw/undraw_all_the_data_h4ki.svg" width="100"></div>
 					<div class="flex text-left">
 						<h2 class="h3">
 							Who am I?
@@ -106,11 +106,11 @@
 						</p>
 					</div>
 					<div class="flex h-mid v-mid"><img alt="" class="divide-img"
-							src="assets/undraw/undraw_code_review_l1q9.svg"></div>
+							src="assets/undraw/undraw_code_review_l1q9.svg" width="100"></div>
 				</div>
 				<div class="flex divide text-div-images">
 					<div class="flex h-mid v-mid"><img alt="" class="divide-img"
-							src="assets/undraw/undraw_connected_world_wuay.svg"></div>
+							src="assets/undraw/undraw_connected_world_wuay.svg" width="100"></div>
 					<div class="flex text-left">
 						<h2 class="h3">
 							What now?
@@ -137,7 +137,7 @@
 			</div>
 		</div>
 		<div class="card bg3 before-divider">
-			<div class="flex h-mid projects">
+			<div class="flex h-mid projects" id="dynamiccontent">
 				<!-- Dynamic Content-->
 				<noscript> Sorry! These projects can only be viewed by enabling javascript.</noscript>
 			</div>
@@ -159,6 +159,12 @@
 		</footer>
 	</div>
 	<!-- Script -->
+	<script>
+		if (navigator.userAgent.indexOf("MSIE ") > -1 || navigator.userAgent.indexOf("Trident/") > -1) {
+		document.getElementById('dynamiccontent').innerHTML = "Sorry! These projects can only be viewed by using a modern browser."
+    	confirm('Sorry. This site does not support IE.')
+	}
+	</script>
 	<script src="js/basicScroll.min.js">
 	</script>
 	<script src="js/main.js">

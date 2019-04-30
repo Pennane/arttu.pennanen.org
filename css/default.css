@@ -42,6 +42,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: var(--bg);
+    color: #0059ff;
     color: var(--text);
 }
 
@@ -70,6 +71,7 @@ noscript {
 
 .bg3 {
     background-color: var(--bg3);
+    color: #0023ff;
     color: var(--text2);
 }
 
@@ -157,6 +159,7 @@ noscript {
 .h3::after {
     content: "";
     height: 2px;
+    background: #0059ff;
     background: var(--text);
     width: 100%;
     position: absolute;
@@ -209,6 +212,7 @@ nav {
 
 .navlink {
     box-sizing: border-box;
+    color: #0059ff;
     color: var(--text);
     height: 33px;
     display: flex;
@@ -226,11 +230,14 @@ a.navlink, span.navlink {
 }
 
 .navlink:hover {
+    color: #0023ff;
     color: var(--text3);
+    border-bottom-color: #0023ff;;
     border-bottom-color: var(--text3);
 }
 
 .navlink.brand:hover {
+    color: #0023ff;
     color: var(--text3);
     border-bottom-color: transparent;
 }
@@ -343,6 +350,7 @@ span.brand {
 
 .project-div {
     text-decoration: none;
+    color: #0023ff;
     color: var(--text3);
     padding: 3em 0;
     flex-direction: row;
@@ -379,6 +387,7 @@ span.brand {
     font-size: 2rem;
     text-align: center;
     font-weight: 800;
+    color:#052fdd;
     color: var(--text4);
     margin: 0.7em;
 }
@@ -423,6 +432,7 @@ footer.card {
     font-weight: 700;
     font-size: 1.1rem;
     text-shadow: 0 2px #e8e8e8;
+    color: #0059ff;
     color: var(--text);
     text-transform: lowercase;
 }

@@ -8,7 +8,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-
 const path = '/assets/content/content.json'
 const projectTarget = document.querySelector('.projects')
 
@@ -56,7 +55,6 @@ const loadJSON = (path, callback) => {
     }
     req.send(null);
 }
-
 
 loadJSON(path, data => {
     let wrapperElement = document.createElement('div')
@@ -122,7 +120,7 @@ window.addEventListener("resize", event => {
     clearTimeout(timeout)
     timeout = setTimeout(() => {
         let changedAmount = getAmount();
-        if (Math.abs(currentAmount - changedAmount) > 20) {
+        if (Math.abs(currentAmount - changedAmount) > 15) {
             initBubbles()
             currentAmount = changedAmount;
         }
@@ -131,5 +129,3 @@ window.addEventListener("resize", event => {
 })
 
 initBubbles()
-
-
