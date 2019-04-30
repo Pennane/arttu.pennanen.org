@@ -1,4 +1,4 @@
-/*if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
         try {
             navigator.serviceWorker.register('/sw.js')
@@ -7,7 +7,6 @@
         }
     });
   }
-  */
 
 
 const path = '/assets/content/content.json'
