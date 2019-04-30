@@ -127,7 +127,7 @@ window.addEventListener("resize", event => {
             currentAmount = changedAmount;
         }
 
-    }, 400)
+    }, 500)
 })
 
 initBubbles()
