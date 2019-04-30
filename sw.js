@@ -1,4 +1,4 @@
-var version = "1.1.2"
+var version = "1.1.3"
 var CACHE_NAME = 'arttu-pennanen-org-cache-v'+version;
 var urlsToCache = [
     '/',

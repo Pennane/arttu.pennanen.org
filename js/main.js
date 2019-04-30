@@ -91,7 +91,7 @@ function createBubbles(amount, target) {
         let rn = Math.random() + 0.1
         let nr = rnd(0, 97).toFixed(0)
         el.style.left = `${nr}%`;
-        el.style.transform = `scale(${rn.toFixed(2)})`; 
+        el.style.transform = `scale(${rn.toFixed(2)}) translateX(-50%)`; 
 		el.className = "bubble";
 		el.style.animationDelay = `${(-(i * duration * (Math.random() * 2))).toFixed(0)}s`;
 		el.style.animationDuration = `${(20 + (duration * (rn))).toFixed(0)}s`
@@ -122,8 +122,8 @@ initBubbles()
 
 let instance = basicScroll.create({
         elem: document.querySelector('body'),
-        from: 'top-top',
-        to: 'bottom-bottom',
+        from: '0px',
+        to: `${document.body.scrollHeight}px`,
         props: {
             '--animationparallax': {
                 from: `-${parseInt(document.body.scrollHeight / 10)}px`,
