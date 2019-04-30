@@ -364,10 +364,8 @@ p.lift {
     position: absolute;
     transform: translateY(-50%);
     color: var(--bg3);
-}
-
-.divider-icon i {
-   font-size: 5em;
+    font-size: 7rem;
+    font-weight: 800;
 }
 
 .before-divider {
@@ -503,9 +501,8 @@ footer.card {
     text-transform: lowercase;
 }
 
-.footericon i {
-    font-size: 1rem;
-
+.year {
+    font-size: 0.9em;
 }
 
 /*
