@@ -58,7 +58,7 @@ a {
 .bubble {
 	position: absolute;
 	animation: bubble;
-	background-color: white;
+	background-color: rgb(0, 0, 0);
 	animation-iteration-count: infinite;
 	animation-fill-mode: both;
 	height: 1rem;
@@ -112,8 +112,6 @@ a {
 			<p class="link">move back to <a href="/" title="home">home</a>.</p>
 		</main>
 	</div>
-	<script>
-	   let targetEl=document.querySelector(".hero");const rnd=(e,t)=>Math.floor(Math.random()*(t-e))+e,getAmount=e=>Math.floor(e/100*5);let timeout,currentAmount=getAmount(window.innerWidth);function createBubbles(e){e=e>100?100:e;let t,n=document.querySelector(".heroanimator");n?(n.innerHTML="",t=n):(t=document.createElement("div")).className="heroanimator";for(let n=0;n<e;n++){let e=document.createElement("div");e.style.top=`${rnd(5,95)}%`,e.style.left=`${rnd(5,95)}%`,e.className="bubble",e.style.animationDelay=`${-30*n*(2*Math.random())}s`,e.style.animationDuration="30s",t.appendChild(e)}return t}function initBubbles(){let e=getAmount(window.innerWidth);targetEl.appendChild(createBubbles(e))}window.addEventListener("resize",e=>{clearTimeout(timeout),timeout=setTimeout(()=>{let e=getAmount(window.innerWidth);Math.abs(currentAmount-e)>5&&(initBubbles(),currentAmount=e)},400)}),initBubbles();const setTrueVh = () => document.documentElement.style.setProperty("--vh", `${.01*window.innerHeight}px`);setTrueVh(), window.addEventListener("resize", setTrueVh)
-	</script>
+	<script>let targetEl=document.querySelector(".hero");const rnd=(e,t)=>Math.floor(Math.random()*(t-e))+e,getAmount=e=>Math.floor(e/100*5);let timeout,currentAmount=getAmount(window.innerWidth);function createBubbles(e){e=e>100?100:e;let t,n=document.querySelector(".heroanimator");n?(n.innerHTML="",t=n):(t=document.createElement("div")).className="heroanimator";for(let n=0;n<e;n++){let e=document.createElement("div");e.style.top=`${rnd(5,95)}%`,e.style.left=`${rnd(5,95)}%`,e.className="bubble",e.style.animationDelay=`${-30*n*(2*Math.random())}s`,e.style.animationDuration="30s",t.appendChild(e)}return t}function initBubbles(){let e=getAmount(window.innerWidth);targetEl.appendChild(createBubbles(e))}window.addEventListener("resize",e=>{clearTimeout(timeout),timeout=setTimeout(()=>{let e=getAmount(window.innerWidth);Math.abs(currentAmount-e)>5&&(initBubbles(),currentAmount=e)},400)}),initBubbles();const setTrueVh = () => document.documentElement.style.setProperty("--vh", `${.01*window.innerHeight}px`);setTrueVh(), window.addEventListener("resize", setTrueVh)</script>
 </body>
 </html>
