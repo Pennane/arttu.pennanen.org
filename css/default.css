@@ -371,7 +371,6 @@ span.brand {
     transform: skewX(5deg) skewY(10deg);
     height: 250px;
     width: 240px;
-    flex-basis: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
