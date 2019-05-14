@@ -20,7 +20,7 @@
             "href": "https://arttu.pennanen.org/sub/typechase/",
             "name": "Typechase",
             "imgUrl": "./assets/projectimg/typechase.jpg",
-            "description": "Obvious typeracer copy, so an application for testing and practising typing speed. Does support custom texts but also has a lot of pre-gathered ones.",
+            "description": "Obvious typeracer copy, so an application for testing and practising typing speed. Supports custom texts but also has a lot of pre-defined ones.",
             "invert": false,
             "whiteText": false
         },
@@ -28,7 +28,7 @@
             "href": "https://github.com/Pennane/peigom-bot/",
             "name": "Peigom-Bot",
             "imgUrl": "./assets/projectimg/peigom.jpg",
-            "description": "Hardwired node.js discord bot for VOIP service Discord. Features many custom commands and some server management tools.",
+            "description": "Hardwired node.js discord bot for VOIP service Discord. Features custom commands and server management tools.",
             "invert": true,
             "whiteText": true
         },
@@ -36,7 +36,7 @@
             "href": "https://arttu.pennanen.org/sub/thonkpaint/",
             "name": "Thonk Paint",
             "imgUrl": "./assets/projectimg/thonkpaint.jpg",
-            "description": "Novelty web paint with the thinking emoji as the brush. Express your thoughts and have a go! I was surprised by how interesting 'art' you can actually paint with this.",
+            "description": "Novelty web paint with the thinking emoji as the brush. Express your thoughts!",
             "invert": false,
             "whiteText": false
         }
