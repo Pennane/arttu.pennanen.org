@@ -1,5 +1,5 @@
-var version = "1.3"
-var CACHE_NAME = 'arttu-pennanen-org-cache-v'+version;
+var version = "1.3.01"
+var CACHE_NAME = 'arttu-pennanen-org-cache-v' + version;
 var urlsToCache = [
     '/',
     './css/default.css',
@@ -11,47 +11,47 @@ var urlsToCache = [
     './assets/font/inter/Inter-ExtraBold.woff2'
 ];
 
-var path = '/assets/content/content.json'
+var contentPath = '/assets/content/content.json'
 
-function loadJSON (path, callback) {
+function loadJSON(path, callback) {
     fetch(path)
-        .then(response => {
+        .then((response) => {
             return response.json()
         })
-        .then(data => callback(data))
-        .catch(() => null)
+        .then((data) => { callback(data) })
+        .catch(() => { null })
 }
 
 
-loadJSON(path, data => {
+loadJSON(contentPath, data => {
     data.projects.forEach(project => {
         urlsToCache.push(project.imgUrl)
     });
 })
 
-self.addEventListener('install', function (event) {
+self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
-            .then(function (cache) {
+            .then((cache) => {
                 return cache.addAll(urlsToCache);
             })
     );
 });
 
-self.addEventListener('fetch', function (event) {
-    if (event.request.url.match( '\/sub\/?$') ) {
+self.addEventListener('fetch', (event) => {
+    if (event.request.url.match('\/sub\/?$')) {
         return false;
     }
 
     event.respondWith(
         caches.match(event.request)
-            .then(function (response) {
+            .then((response) => {
                 if (response) {
                     return response;
                 }
 
                 return fetch(event.request).then(
-                    function (response) {
+                    (response) => {
                         if (!response || response.status !== 200 || response.type !== 'basic') {
                             return response;
                         }
@@ -59,7 +59,7 @@ self.addEventListener('fetch', function (event) {
                         var responseToCache = response.clone();
 
                         caches.open(CACHE_NAME)
-                            .then(function (cache) {
+                            .then((cache) => {
                                 cache.put(event.request, responseToCache);
                             });
 
@@ -70,17 +70,17 @@ self.addEventListener('fetch', function (event) {
     );
 });
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', (event) => {
     var cacheWhitelist = [`arttu-pennanen-org-cache-v${version}`];
     event.waitUntil(
-      caches.keys().then(function(cacheNames) {
-        return Promise.all(
-          cacheNames.map(function(cacheName) {
-            if (cacheWhitelist.indexOf(cacheName) === -1) {
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      })
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cacheName) => {
+                    if (cacheWhitelist.indexOf(cacheName) === -1) {
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
     );
-  });
+});
