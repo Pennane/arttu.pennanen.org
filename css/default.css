@@ -215,8 +215,6 @@ nav {
     height: 33px;
     display: flex;
     align-items: center;
-    transition: all 0.2s cubic-bezier(.68,1.01,.89,1);
-    
 }
 
 a.navlink, span.navlink {
