@@ -1,4 +1,4 @@
-var version = "1.2.21"
+var version = "1.3"
 var CACHE_NAME = 'arttu-pennanen-org-cache-v'+version;
 var urlsToCache = [
     '/',
@@ -39,6 +39,10 @@ self.addEventListener('install', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
+    if (event.request.url.match( '\/sub\/?$') ) {
+        return false;
+    }
+
     event.respondWith(
         caches.match(event.request)
             .then(function (response) {
