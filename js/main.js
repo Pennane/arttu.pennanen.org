@@ -1,7 +1,8 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
         try {
-            navigator.serviceWorker.register('/sw.js')
+            let registration = await navigator.serviceWorker.register('/sw.js')
+            registration.update()
         } catch (err) {
             console.log('ServiceWorker registration failed: ', err);
         }
