@@ -1,4 +1,4 @@
-var version = "1.3.02"
+var version = "1.3.1"
 var CACHE_NAME = 'arttu-pennanen-org-cache-v' + version;
 var urlsToCache = [
     '/',
@@ -71,12 +71,11 @@ self.addEventListener('fetch', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-    var cacheWhitelist = [`arttu-pennanen-org-cache-v${version}`];
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
                 cacheNames.map((cacheName) => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
+                    if (cacheWhitelist.indexOf(CACHE_NAME) === -1) {
                         return caches.delete(cacheName);
                     }
                 })
