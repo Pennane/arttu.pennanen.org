@@ -1,4 +1,4 @@
-var version = "1.3.3"
+var version = "1.3.4"
 var CACHE_NAME = `arttu-pennanen-org-cache-v${version}`;
 var urlsToCache = ['/', './css/default.css', './js/main.js', './js/basicScroll.min.js', './assets/font/inter/Inter-Regular.woff2', './assets/font/inter/Inter-Medium.woff2', './assets/font/inter/Inter-Bold.woff2', './assets/font/inter/Inter-ExtraBold.woff2'];
 var contentPath = '/assets/content/content.json'
