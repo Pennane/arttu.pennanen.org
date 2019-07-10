@@ -488,6 +488,32 @@ footer.card {
     transition: filter 0.3s
 }
 
+#sub-list {
+    padding-top: 6em;
+    width: 80vw;
+}
+
+li.page {
+    transition: all 0.1s;
+}
+
+li.page:hover {
+    background-color: rgba(63, 81, 181, 0.05);
+}
+li.page:hover > a.page {
+    color:#365284
+}
+
+a.page:link, a.page:visited {
+    color: #003ba9;
+    text-decoration: none;
+}
+
+#sub-main {
+    display: flex;
+    justify-content: center;
+}
+
 /* Queries */
 @media only screen and (max-width: 940px) {
     .bg-item:first-child{
