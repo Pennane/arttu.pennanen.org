@@ -1,0 +1,238 @@
+@import url('/assets/font/inter/inter.css');
+
+
+html {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #3f454c;
+}
+
+.box-shadow {
+    box-shadow: 0 2px 3px 0 rgba(52, 56, 85, .25);
+}
+
+.page-divider {
+    display: flex;
+    flex: 1 1 auto;
+    position: relative;
+    width: 100%;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(46, 132, 224);
+    background: linear-gradient(to right, rgb(52, 76, 229), rgb(46, 132, 224));
+}
+
+.navlink {
+    color: rgba(255, 255, 255, 0.95);
+    ;
+    text-decoration: none;
+}
+
+h1 {
+    color: #2e2f2f;
+    font-size: calc(1.3em + 0.5vw);
+    font-weight: 700;
+    padding: 0;
+    border-radius: .375rem;
+    padding: 0.3em;
+}
+
+.tryhere {
+    all: unset;
+    padding: 0.8em 1.5em;
+    background: linear-gradient(to right, #8975da, #e02d67);
+    border-radius: 1.3em;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.3);
+    margin: 0.2em 0.5em;
+    width: 75px;
+    text-align: center;
+    display: block;
+    margin-left: 1em;
+}
+
+.tryhere:active {
+    transform: translateY(2px);
+    filter: saturate(110%) brightness(0.8);
+}
+
+
+main>div {
+    box-shadow: 0 2px 3px 0 rgba(52, 56, 85, .25);
+    border-radius: .375rem;
+    background-color: white;
+    padding: 0.75em;
+    margin: .75rem;
+    max-width: 500px;
+    width: 90%;
+}
+
+div.navitem {
+    /* transition: all .1s cubic-bezier(0.46, 0.21, 0.55, 0.82); */
+    height: 2em;
+    padding: 0.1em;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    border-left: .25rem solid transparent;
+    padding-left: 0.8em;
+    padding-right: 0;
+}
+
+.projectimg {
+
+}
+
+.projectimg > img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;    
+}
+
+div.head {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.navitem:hover {
+    background-color: #335ee4;
+}
+
+.navitem.head:hover {
+    background-color: inherit;
+}
+
+.navitem.head {
+    cursor: initial;
+    margin-top: 2em;
+    padding-left: 1em;
+}
+
+.navitem {
+    font-size: 0.98em;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 350
+}
+
+.navitem.no-icon {
+    padding-left: 1.3em;
+}
+
+.navitem.head {
+    font-weight: 450;
+    font-size: 1.02em;
+}
+
+.navdivide {
+    height: 1px;
+    background-color: rgb(0, 60, 25);
+    /* background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1), rgba(0,0,0,0)); */
+    box-sizing: border-box;
+    margin: 0.3em 0;
+}
+
+.navlink>span {
+    font-size: 1.03em;
+}
+
+.navlink>i {
+    width: 1.5rem;
+    /* min-width: 1.5rem; */
+    text-align: center;
+    font-size: 1.3em;
+    margin-right: .5rem;
+    color: #2f84e0;
+}
+
+.topbrandimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.7em;
+    height: 4.7em;
+}
+
+.sidebar {
+    background-color: #2845ca;
+    width: 16em;
+    transition: all .1s ease;
+    min-width: 215px;
+}
+
+.content {
+    background-color: #eee;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+
+
+img.brand {
+    width: 1.6em;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    filter: saturate(0) contrast(1) brightness(3.5);
+}
+
+span.brand {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: .1em;
+}
+
+.page-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav.navbar {
+    line-height: 1.6;
+    padding-top: 2em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(3, 3, 3);
+    padding: .5em 0;
+    letter-spacing: .01em;
+    padding: 1.5em 0;
+    font-size: .96em;
+    bottom: 0;
+    margin-top: auto;
+}
+
+main {
+    padding: 1em;
+    color: #395dcc
+}
+
+@media screen and (max-width: 500px) {
+    .sidebar {
+        max-width: 155px;
+        font-size: 0.95em;
+    }
+}

@@ -1,4 +1,4 @@
-
+/* This service worker provides no purpose whatsoever other than to delete old caches created by previous service worker iterations.*/
 self.addEventListener('install', (event) => {
     event.waitUntil(caches.keys()
         .then(keys => Promise.all(keys.map(key => {

@@ -1,6 +1,6 @@
 /* default.css @ https://arttu.pennanen.org */
 
-@import url("../assets/font/inter/inter.css");
+@import url("/assets/fonts/inter/inter.css");
 html {
   font-family: "Inter", sans-serif;
 }

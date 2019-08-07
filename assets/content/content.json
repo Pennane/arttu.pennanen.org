@@ -3,42 +3,34 @@
         {
             "href": "https://github.com/Pennane/spotify-favorites",
             "name": "Spotify Recent Favorites",
-            "imgUrl": "./assets/projectimg/spotify.jpg",
-            "description": "An application that displays your most listened tracks and artists on Spotify.",
+            "imgUrl": "./assets/images/projectimg/spotify.jpg",
+            "description": "Application that displays your most listened tracks and artists on Spotify.",
             "invert": false,
             "whiteText": false
         },
         {
             "href": "https://arttu.pennanen.org/sub/laser/",
             "name": "Laser Refraction & Reflection",
-            "imgUrl": "./assets/projectimg/laser.jpg",
-            "description": "Scientific laser refraction 'sandbox' supporting custom values.",
+            "imgUrl": "./assets/images/projectimg/laser.jpg",
+            "description": "Scientific laser refraction and reflection 'sandbox'.",
             "invert": false,
             "whiteText": false
         },
         {
             "href": "https://arttu.pennanen.org/sub/typechase/",
             "name": "Typechase",
-            "imgUrl": "./assets/projectimg/typechase.jpg",
-            "description": "Obvious typeracer copy, so an application for testing and practising typing speed. Supports custom texts but also has a lot of pre-defined ones.",
+            "imgUrl": "./assets/images/projectimg/typechase.jpg",
+            "description": "Application for testing and practising keyboard typing speed.",
             "invert": false,
             "whiteText": false
         },
         {
             "href": "https://github.com/Pennane/peigom-bot/",
             "name": "Peigom-Bot",
-            "imgUrl": "./assets/projectimg/peigom.jpg",
-            "description": "Hardwired node.js discord bot for VOIP service Discord. Features custom commands and server management tools.",
+            "imgUrl": "./assets/images/projectimg/peigom.jpg",
+            "description": "Hardwired node.js discord bot for VOIP service Discord.",
             "invert": true,
             "whiteText": true
-        },
-        {
-            "href": "https://arttu.pennanen.org/sub/thonkpaint/",
-            "name": "Thonk Paint",
-            "imgUrl": "./assets/projectimg/thonkpaint.jpg",
-            "description": "Novelty web paint with the thinking emoji as the brush. Express your thoughts!",
-            "invert": false,
-            "whiteText": false
         }
     ]
         
