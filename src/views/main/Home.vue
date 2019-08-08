@@ -53,5 +53,6 @@ export default {
   font-size: 4em;
   text-shadow: 0px 2px #6f747d;
   color: #484848;
+  line-height: 0.8;
 }
 </style>

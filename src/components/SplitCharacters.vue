@@ -33,6 +33,8 @@ export default {
   color: #334ce5;
   animation: bgc ease 12s infinite;
 }
+
+
 .inlineletter {
   display: inline;
 }
@@ -41,5 +43,17 @@ export default {
   50% {
     color: #2f84e0;
   }
+}
+
+@media screen and (max-width: 900px) { 
+  .char5 {
+  display:block
+}
+
+.char {
+      font-size: calc(0.45em + 4.2vw);
+}
+
+
 }
 </style>

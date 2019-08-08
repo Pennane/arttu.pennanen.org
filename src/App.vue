@@ -188,7 +188,7 @@ h1 {
 }
 
 .projectimg {
-  width: 450px;
+  max-width: 90%;
 }
 
 .projectimg > img {

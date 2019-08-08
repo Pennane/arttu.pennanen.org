@@ -27,12 +27,20 @@ export default {
         sidebar.classList.toggle('closed', state)
       }
     },
+    
     onResize(event) {
       if (event.target.innerWidth <= 700) {
         this.toggleSidebar(true)
       } else {
         this.toggleSidebar(false)
       }
+    }
+  },
+  watch:{
+    $route (to, from){
+        if (window.innerWidth <= 700) {
+          this.toggleSidebar(true)
+        }
     }
   },
   mounted() {
@@ -43,6 +51,7 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize)
-  }
+  },
+  
 }
 </script>
