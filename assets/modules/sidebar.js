@@ -33,9 +33,18 @@ if (window.innerWidth <= 700) {
 
 [...document.querySelectorAll('.local.navlink')].forEach(link => {
     let href = link.dataset.href
+    let obj = document.createElement("object")
+    obj.type = "text/html"
+    obj.data = "views/" + href
+
     link.addEventListener('click', e => {
-        console.log('<object type="text/html" data="views/' + href + ' ></object>')
-        document.getElementById("content").innerHTML = '<object type="text/html" data="views/' + href + '" ></object>'
+        while (document.getElementById("content").firstChild) {
+            document.getElementById("content").removeChild(document.getElementById("content").firstChild)
+        }
+        document.getElementById("content").appendChild(obj)
+        if (window.innerWidth <= 700) {
+            sidebar.classList.toggle("closed", true);
+        }
     })
 })
 

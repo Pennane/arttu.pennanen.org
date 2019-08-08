@@ -35,10 +35,10 @@
 	<meta content="website" property="og:type">
 	<meta name="theme-color" content="#0023ff">
 
-	<link rel="manifest" href="manifest.json" />
+	<link rel="manifest" href="./manifest.json" />
 
 	<!-- Icons -->
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="shortcut icon" href="./favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
 	<link rel="icon" type="image/png" sizes="196x196" href="/assets/icons/favicon-192.png">
 	<link rel="icon" type="image/png" sizes="160x160" href="/assets/icons/favicon-160.png">
@@ -56,8 +56,8 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/favicon-152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favicon-180.png">
 
-	<script src="vendor/fontawesome/js/all.min.js"></script>
-	<link href="assets/css/default.css" rel="stylesheet">
+	<script src="./vendor/fontawesome/js/all.min.js"></script>
+	<link href="./assets/css/default.css" rel="stylesheet">
 	<title>arttu.pennanen.org</title>
 </head>
 
@@ -65,7 +65,7 @@
 	<div class="page-wrapper">
 		<div class="topbar">
 			<div class="topbrandimg">
-				<img class="brand" src="assets/icons/icon_white.svg" alt="">
+				<img class="brand" src="./assets/icons/icon_white.svg" alt="">
 			</div>
 
 
@@ -137,9 +137,7 @@
 			</div>
 			<div class="content">
 				<main id="content">
-					<!--<header>
-						<h1>Arttu Pennanen</h1>
-				</header>-->
+					<span>Hey, you are waiting for dynamic content</span>
 				</main>
 				<footer>
 					foototerr
@@ -148,15 +146,12 @@
 		</div>
 	</div>
 	</div>
-	<!-- Script -->
 	<script>
 		if (navigator.userAgent.indexOf("MSIE ") > -1 || navigator.userAgent.indexOf("Trident/") > -1) {
 			document.getElementById('dynamiccontent').innerHTML = "Sorry! These projects can only be viewed by using a modern browser."
 		}
 	</script>
-	<script src="assets/modules/sidebar.js" type="module"></script>
-	<!--<script src="assets/modules/content.js" type="module"></script>
-	<script src="assets/modules/navbar.js" type="module"></script>-->
+	<script src="./assets/modules/sidebar.js" type="module"></script>
 </body>
 
 </html>
