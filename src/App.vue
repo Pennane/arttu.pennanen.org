@@ -227,7 +227,7 @@ div.head {
   font-weight: 450;
 }
 
-.router-link-active.navitem {
+.router-link-exact-active.navitem {
   background-color: #335ee4;
   border-left-color: #e6e6e6;
 }
