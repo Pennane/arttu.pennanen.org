@@ -1,6 +1,6 @@
 <template>
   <footer id="footer">
-    <span>Vissii joku footer</span>
+    <span>© 2019 etc.</span>
   </footer>
 </template>
 

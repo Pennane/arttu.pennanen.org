@@ -15,7 +15,6 @@
               <router-view></router-view>
             </transition>
           </main>
-          <pageFooter />
         </content>
       </div>
     </div>
@@ -24,13 +23,11 @@
 
 <script>
 import Sidebar from '@/components/Sidebar'
-import Footer from '@/components/Footer'
 import Backgroundlines from '@/components/BackgroundLines'
 export default {
   name: 'App',
   components: {
     sidebar: Sidebar,
-    pageFooter: Footer,
     backgroundlines: Backgroundlines
   }
 }
@@ -106,6 +103,10 @@ h1 {
 .sidebar.closed {
   width: 33px;
   min-width: unset;
+}
+
+.sidebar.closed footer {
+  opacity: 0;
 }
 
 .sidebar.closed > .sidebar-toggle {
@@ -267,6 +268,9 @@ div.head {
   width: 16em;
   transition: all 0.25s ease;
   z-index: 3;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
@@ -304,16 +308,19 @@ nav.navbar {
 }
 
 footer {
+  transition: all 0.25s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(3, 3, 3);
+  color: hsl(229, 100%, 87%);
+  font-weight: 350;
   padding: 0.5em 0;
   letter-spacing: 0.01em;
   padding: 1.5em 0;
-  font-size: 0.96em;
+  font-size: 0.95em;
   margin-top: auto;
   width: 100%;
+  white-space: nowrap;
 }
 
 main {
@@ -335,18 +342,22 @@ main {
   opacity: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    width: 14em;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .sidebar {
     position: absolute;
     min-width: unset;
     font-size: 0.95em;
     height: 100%;
-    width: 14em;
   }
 
   .content {
     margin-left: 33px;
   }
 }
-
 </style>

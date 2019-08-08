@@ -7,16 +7,19 @@
       </button>
     </div>
     <navbar />
+    <pageFooter />
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export default {
   name: 'Sidebar',
   components: {
-    navbar: Navbar
+    navbar: Navbar,
+    pageFooter: Footer,
   },
   methods: {
     toggleSidebar(state) {
