@@ -29,6 +29,7 @@ body.view {
 }
 
 .topbar {
+  z-index: 2;
   display: flex;
   align-items: center;
   background-color: rgb(46, 132, 224);
@@ -111,7 +112,7 @@ h1 {
   filter: saturate(110%) brightness(0.7);
 }
 
-main > div {
+.contentbox {
   box-shadow: 0 2px 3px 0 rgba(52, 56, 85, 0.25);
   border-radius: 0.375rem;
   background-color: white;
@@ -213,7 +214,7 @@ div.head {
   background-color: #2845ca;
   width: 16em;
   transition: all 0.25s ease;
-  z-index: 2;
+  z-index: 3;
 }
 
 .content {
@@ -267,6 +268,10 @@ main {
   height: 100%;
   width: 100%;
   display: flex;
+  z-index: 2;
+  padding: 1em;
+  box-sizing: border-box;
+  max-width: 1200px;
 }
 
 .fade-enter-active,
@@ -276,10 +281,6 @@ main {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
-}
-
-main > object {
-  flex: 1 1 auto;
 }
 
 @media screen and (max-width: 700px) {

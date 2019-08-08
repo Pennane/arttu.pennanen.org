@@ -9,6 +9,7 @@
       <div class="page-divider">
         <sidebar />
         <content class="content">
+          <backgroundlines />
           <main id="content">
             <transition name="fade" mode="out-in">
               <router-view></router-view>
@@ -24,11 +25,13 @@
 <script>
 import Sidebar from '@/components/Sidebar'
 import Footer from '@/components/Footer'
+import Backgroundlines from '@/components/BackgroundLines'
 export default {
   name: 'App',
   components: {
     sidebar: Sidebar,
-    pageFooter: Footer
+    pageFooter: Footer,
+    backgroundlines: Backgroundlines
   }
 }
 </script>
