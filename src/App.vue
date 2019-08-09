@@ -48,13 +48,19 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
   background-color: #eeeeee;
+  position: fixed;
+  overflow: hidden;
 }
 
 body.view {
@@ -302,7 +308,8 @@ div.head {
   flex-direction: column;
   align-items: baseline;
   height: 100%;
-  overflow: auto;
+  overflow: auto; 
+  -webkit-overflow-scrolling: touch
 }
 
 img.brand {
@@ -348,13 +355,12 @@ footer {
 }
 
 main {
-  height: 100%;
-  width: 100%;
   display: flex;
   z-index: 2;
   padding: 1em;
   box-sizing: border-box;
   max-width: 1200px;
+  width: 100%;
 }
 
 .fade-enter-active,
