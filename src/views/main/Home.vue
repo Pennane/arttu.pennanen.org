@@ -106,7 +106,7 @@ export default {
 
 @media screen and (max-width: 900px) {
   .char {
-    font-size: calc(0.3em + 5vw);
+    font-size: calc(.25em + 5.4vw);
   }
 
   .header > .h1 {

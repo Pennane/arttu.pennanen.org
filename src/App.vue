@@ -40,6 +40,7 @@ export default {
   font-family: 'Inter', sans-serif;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 html {
@@ -194,7 +195,7 @@ h1 {
   cursor: pointer;
   display: flex;
   border-left: 0.27rem solid transparent;
-  padding-left: 0.8em;
+  padding-left: 1.3em;
   padding-right: 1em;
   white-space: nowrap;
 }
@@ -255,7 +256,7 @@ div.head {
 
 .navdivide {
   height: 1px;
-  background-color: rgb(0, 60, 25);
+  background-color: #60656f;
   /* background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1), rgba(0,0,0,0)); */
   box-sizing: border-box;
   margin: 0.3em 0;
@@ -285,7 +286,7 @@ div.head {
 }
 
 .sidebar {
-  background-color: #e0e0e0;
+  background-color: #dedede;
   width: 16em;
   transition: all 0.25s ease;
   z-index: 3;
@@ -398,6 +399,26 @@ a.contentlink:hover {
 
   .content {
     margin-left: 33px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .navitem {
+    font-size: 0.9em;
+    padding: 1px;
+    padding-left: 1.3em;
+  }
+
+  .navitem-no-icon {
+    padding-left: 1em;
+  }
+
+  .navitem.head {
+    margin-top: 1.3em;
+  }
+
+  footer {
+        padding: 1.1em 0;
   }
 }
 </style>
