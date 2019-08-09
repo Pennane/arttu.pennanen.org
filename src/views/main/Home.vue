@@ -124,10 +124,16 @@ export default {
 
   .headerwrap > .h1 {
     line-height: calc(0.3em + 3.7vw);
+    padding-top: 0;
   }
 
   .headerwrap > .h2 {
     font-size: calc(0.8em + 1.3vw);
+  }
+
+  .home > .header  {
+        margin: 1em 2vw;
+        margin-top: 0;
   }
 }
 </style>
