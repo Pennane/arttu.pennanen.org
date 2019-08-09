@@ -111,6 +111,11 @@ h1 {
 .sidebar.closed {
   width: 33px;
   min-width: unset;
+  pointer-events: none;
+}
+
+.sidebar.closed .sidebar-toggle {
+  pointer-events: all;
 }
 
 .sidebar.closed footer {
