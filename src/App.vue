@@ -70,6 +70,7 @@ body.view {
   flex: 1 1 auto;
   position: relative;
   width: 100%;
+  height: 100%;
 }
 
 .topbar {
@@ -299,6 +300,8 @@ div.head {
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  height: 100%;
+  overflow: auto;
 }
 
 img.brand {

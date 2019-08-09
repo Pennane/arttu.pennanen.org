@@ -12,6 +12,9 @@
         The site has just been ported to
         <a class="contentlink" href="https://vuejs.org/" title="vuejs.org">vue.js</a>, and I am currently in the process of redesigning everything.
       </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed error excepturi vero, vel vitae sint accusantium et consequatur optio eveniet praesentium est nam quisquam tempora ea. Nesciunt repellendus culpa expedita.
+      </p>
     </div>
   </div>
 </template>
