@@ -37,6 +37,7 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .home .header {
@@ -61,7 +62,7 @@ export default {
 .body p {
   max-width: 550px;
   margin: 0;
-  padding: 1em calc(1em + 4vw);
+  padding: 1em calc(5vw - 1em);
   background: white;
   line-height: 1.6;
 }
