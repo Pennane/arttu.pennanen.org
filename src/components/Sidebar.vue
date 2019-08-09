@@ -1,6 +1,6 @@
 
  <template>
-  <div class="sidebar">
+  <div :class="{'sidebar':true, 'closed':(this.startClosed === true)}">
     <div class="sidebar-toggle">
       <button id="sidebar-toggler" v-on:click="toggleSidebar()">
         <font-awesome-icon icon="chevron-left" />
@@ -20,6 +20,12 @@ export default {
   components: {
     navbar: Navbar,
     pageFooter: Footer,
+  },
+    computed: {
+    startClosed: (e) => {
+      if (window.innerWidth >= 700) return false;
+      return true;
+    }
   },
   methods: {
     toggleSidebar(state) {
@@ -46,11 +52,8 @@ export default {
         }
     }
   },
-  mounted() {
+  created() {
     window.addEventListener('resize', this.onResize)
-    if (window.innerWidth <= 700) {
-      this.toggleSidebar(true)
-    }
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize)

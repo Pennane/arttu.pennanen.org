@@ -122,11 +122,11 @@ export default {
     font-size: calc(0.25em + 5.4vw);
   }
 
-  .header > .h1 {
+  .headerwrap > .h1 {
     line-height: calc(0.3em + 3.7vw);
   }
 
-  .header > .h2 {
+  .headerwrap > .h2 {
     font-size: calc(0.8em + 1.3vw);
   }
 }
