@@ -33,7 +33,7 @@ export default {
 .bg-item {
     height: 100%;
     width: 20%;
-    border-left: 1px solid rgba(128, 129, 139, 0.3);
+   border-left: 1px solid rgba(162, 162, 162, 0.3);
 }
 
 .bg-item:first-child{

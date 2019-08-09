@@ -53,7 +53,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #3f454c;
+  background-color: #eeeeee;
 }
 
 body.view {
@@ -76,8 +76,8 @@ body.view {
   z-index: 2;
   display: flex;
   align-items: center;
-  background-color: rgb(46, 132, 224);
   background: linear-gradient(to right, rgb(52, 76, 229), rgb(46, 132, 224));
+  background: #f4f4f4;
 }
 
 .navlink {
@@ -119,6 +119,9 @@ h1 {
 
 #sidebar-toggler {
   transition: transform 0.1s ease;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .sidebar.closed > .navbar {
@@ -128,7 +131,7 @@ h1 {
 .sidebar-toggle > button {
   all: unset;
   display: block;
-  color: white;
+  color: black;
   padding: 0.5em;
   padding-right: 0.8em;
   cursor: pointer;
@@ -136,10 +139,17 @@ h1 {
 
 .tryhere {
   all: unset;
+  -webkit-appearance: none;
+  text-decoration: none;
   padding: 0.8em 1.5em;
-  background: linear-gradient(to right, #8975da, #e02d67);
+  background: linear-gradient(
+    to right,
+    hsla(226, 45%, 54%, 1),
+    hsla(226, 79%, 64%, 1)
+  );
   border-radius: 1.3em;
   color: white;
+
   font-weight: 700;
   cursor: pointer;
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.3);
@@ -182,7 +192,7 @@ h1 {
   align-items: center;
   cursor: pointer;
   display: flex;
-  border-left: 0.25rem solid transparent;
+  border-left: 0.27rem solid transparent;
   padding-left: 0.8em;
   padding-right: 1em;
   white-space: nowrap;
@@ -206,12 +216,17 @@ div.head {
   align-items: baseline;
 }
 
-.navitem:hover {
-  background-color: #335ee4;
+.navitem:not(.head):hover {
+  background-color: #3f61d0;
 }
 
-.navitem.head:hover {
-  background-color: inherit;
+.navitem:not(.head):hover > span {
+  color: #f7f7f7;
+}
+
+.navitem:not(.head):hover > i,
+.navitem:not(.head):hover > svg {
+  color: #e4e4e4;
 }
 
 .navitem.head {
@@ -229,8 +244,12 @@ div.head {
 }
 
 .router-link-exact-active.navitem {
-  background-color: #335ee4;
-  border-left-color: #e6e6e6;
+  background-color: #3f61d0;
+  border-left-color: #a359ce;
+}
+
+.router-link-exact-active.navitem > span {
+  color: #f7f7f7;
 }
 
 .navdivide {
@@ -243,6 +262,7 @@ div.head {
 
 .navitem > span {
   font-size: 1.03em;
+  color: black;
 }
 
 .navitem > i,
@@ -252,7 +272,7 @@ div.head {
   text-align: center;
   font-size: 1.3em;
   margin-right: 0.75rem;
-  color: #2f84e0;
+  color: #475994;
 }
 
 .topbrandimg {
@@ -264,7 +284,7 @@ div.head {
 }
 
 .sidebar {
-  background-color: #2845ca;
+  background-color: #d6d6d6;
   width: 16em;
   transition: all 0.25s ease;
   z-index: 3;
@@ -274,7 +294,7 @@ div.head {
 }
 
 .content {
-  background-color: #eee;
+  background-color: #fff;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -285,7 +305,7 @@ img.brand {
   width: 1.6em;
   opacity: 0.8;
   transition: opacity 0.2s;
-  filter: saturate(0) contrast(1) brightness(3.5);
+  filter: saturate(0) contrast(1) brightness(0.2);
 }
 
 span.brand {
@@ -340,6 +360,23 @@ main {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+a.contentlink {
+  color: #4361c5;
+  font-weight: 550;
+  text-decoration: none;
+  position: relative;
+  text-shadow: 1px 1px #ffffff, -1px 1px #ffffff, -1px -1px #ffffff,
+    1px -1px #ffffff;
+  background-image: linear-gradient(90deg, currentColor 100%, transparent 100%);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+
+a.contentlink:hover {
+  color: #607fe6;
 }
 
 @media screen and (max-width: 1000px) {

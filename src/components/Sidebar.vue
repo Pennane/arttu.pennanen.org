@@ -32,7 +32,7 @@ export default {
     },
     
     onResize(event) {
-      if (event.target.innerWidth <= 700) {
+      if (window.innerWidth <= 700) {
         this.toggleSidebar(true)
       } else {
         this.toggleSidebar(false)
