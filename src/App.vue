@@ -285,7 +285,7 @@ div.head {
 }
 
 .sidebar {
-  background-color: #d6d6d6;
+  background-color: #e0e0e0;
   width: 16em;
   transition: all 0.25s ease;
   z-index: 3;
@@ -335,7 +335,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: hsl(229, 100%, 87%);
+  color: black;
   font-weight: 350;
   padding: 0.5em 0;
   letter-spacing: 0.01em;
