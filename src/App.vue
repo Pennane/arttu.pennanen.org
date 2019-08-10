@@ -341,6 +341,7 @@ span.brand {
 nav.navbar {
   line-height: 1.6;
   transition: opacity 0.3s;
+      overscroll-behavior: contain;
 }
 
 footer {
@@ -414,6 +415,10 @@ a.contentlink:hover {
 }
 
 @media screen and (max-height: 600px) {
+  .navbar {
+    overflow: auto;
+  }
+
   .navitem {
     font-size: 0.9em;
     padding: 1px;
