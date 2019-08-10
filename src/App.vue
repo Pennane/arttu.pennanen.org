@@ -36,11 +36,32 @@ export default {
 <style lang="css">
 @import './assets/fonts/inter/inter.css';
 
+/* colors START */
+:root {
+  --bg-1: #ffffff;
+  --bg-2: #f4f4f4;
+  --bg-3: #dedede;
+  --font-1:#000000;
+  --font-2: #2e2f2f;
+  --font-3: #475994;
+  --accent-1: #3f61d0;
+  --accent-2: #a359ce;
+  --selection-bg: #1351c4a6;
+  --selection-color: #ffffff;
+  --link-color: #475994;
+  --link-hover: #607fe6
+}
+/* colors END*/
+
+/* general START */
+
 #app {
   font-family: 'Inter', sans-serif;
   height: inherit;
   width: inherit;
   overflow: hidden;
+  color: var(--font-1);
+  background-color: var(--bg-1)
 }
 
 html {
@@ -70,6 +91,8 @@ body {
   color: white;
   
 }
+
+/* general END */
 
 /*common element styling START*/
 h1 {
