@@ -82,8 +82,8 @@ export default {
   background-color: rgb(0, 0, 0);
   animation-iteration-count: infinite;
   animation-fill-mode: both;
-  height: 1rem;
-  width: 1rem;
+  height: 15rem;
+  width: 15rem;
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
@@ -97,11 +97,11 @@ export default {
 
   50% {
     opacity: 0;
-    transform: scale(15);
+    transform: scale(1);
   }
   100% {
     opacity: 0;
-    transform: scale(15);
+    transform: scale(1);
   }
 }
 </style>
