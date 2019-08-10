@@ -43,7 +43,6 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 2.5em;
   flex: 0 1 auto;
   justify-content: center;
 }
@@ -53,6 +52,10 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding: 1.3em;
+  margin: 1.2em;
+  padding-top: 0.5em;
+  background-color: white;
 }
 
 .home .body {
@@ -123,17 +126,22 @@ export default {
   }
 
   .headerwrap > .h1 {
-    line-height: calc(0.3em + 3.7vw);
-    padding-top: 0;
+    line-height: 6vw;
+    padding-top: 2vw;
   }
 
   .headerwrap > .h2 {
     font-size: calc(0.8em + 1.3vw);
   }
 
-  .home > .header  {
-        margin: 1em 2vw;
-        margin-top: 0;
+  .home .headerwrap {
+    margin: 0 2vw;
+    padding-bottom: 0.8em;
+    padding-top: 0;
+  }
+
+  .body > p {
+    text-align: justify;
   }
 }
 </style>
