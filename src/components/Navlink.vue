@@ -21,7 +21,6 @@ export default {
     local: Boolean,
     main: Boolean
   },
-  props: ['to', 'title', 'icon', 'local', 'main'],
   computed: {
     noicon: function() {
       if (this.icon) return 'has-icon'

@@ -19,12 +19,12 @@ export default {
   name: 'Sidebar',
   components: {
     navbar: Navbar,
-    pageFooter: Footer,
+    pageFooter: Footer
   },
-    computed: {
-    startClosed: (e) => {
-      if (window.innerWidth >= 700) return false;
-      return true;
+  computed: {
+    startClosed: e => {
+      if (window.innerWidth >= 700) return false
+      return true
     }
   },
   methods: {
@@ -39,7 +39,7 @@ export default {
         sidebar.blur()
       }
     },
-    
+
     onResize(event) {
       if (window.innerWidth <= 700) {
         this.toggleSidebar(true)
@@ -48,11 +48,11 @@ export default {
       }
     }
   },
-  watch:{
-    $route (to, from){
-        if (window.innerWidth <= 700) {
-          this.toggleSidebar(true)
-        }
+  watch: {
+    $route(to, from) {
+      if (window.innerWidth <= 700) {
+        this.toggleSidebar(true)
+      }
     }
   },
   created() {
@@ -60,7 +60,6 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onResize)
-  },
-  
+  }
 }
 </script>

@@ -1,7 +1,7 @@
 
  <template>
   <span>
-    <span v-for="(char, index) of text" v-bind:key="text[char]">
+    <span v-for="(char, index) of text">
       <span
         v-if="char === ' '"
         :class="['char', 'char'+index, 'inlineletter']"
@@ -27,5 +27,20 @@ export default {
 </script>
 
 <style>
+  .char {
+  display: inline-block;
+  transition: transform 0.5s ease-in;
+  color: #3f61d0;
+  animation: bgc ease 12s infinite;
+}
 
+.inlineletter {
+  display: inline;
+}
+
+@keyframes bgc {
+  50% {
+    color: #4c62a9;
+  }
+}
 </style>

@@ -33,12 +33,13 @@ export default {
 }
 </script>
 
+
 <style>
 .home {
   box-sizing: border-box;
 }
 
-.home > .header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +48,7 @@ export default {
   justify-content: center;
 }
 
-.header > .headerwrap {
+ .headerwrap {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -98,50 +99,36 @@ export default {
   margin: 0 0.15em;
   padding: 0;
 }
+</style>
 
-.char {
-  display: inline-block;
-  transition: transform 0.5s ease-in;
-  color: #3f61d0;
-  animation: bgc ease 12s infinite;
-}
 
-.inlineletter {
-  display: inline;
-}
-
-@keyframes bgc {
-  50% {
-    color: #4c62a9;
-  }
-}
-
-.char5 {
-  display: block;
+<style>
+.home .char5 {
+  display: block !important;
 }
 
 @media screen and (max-width: 900px) {
-  .char {
-    font-size: calc(0.25em + 5.4vw);
+  .home .char {
+    font-size: calc(0.25em + 5.4vw) !important;
   }
 
-  .headerwrap > .h1 {
-    line-height: 6vw;
-    padding-top: 2vw;
+  .home .h1 {
+    line-height: 6vw !important;
+    padding-top: 2vw !important;
   }
 
-  .headerwrap > .h2 {
-    font-size: calc(0.8em + 1.3vw);
+  .home .h2 {
+    font-size: calc(0.8em + 1.3vw) !important;
   }
 
-  .home .headerwrap {
-    margin: 0 2vw;
-    padding-bottom: 0.8em;
-    padding-top: 0;
+  .headerwrap {
+    margin: 0 2vw !important;
+    padding-bottom: 0.8em !important;
+    padding-top: 0 !important;
   }
 
-  .body > p {
-    text-align: justify;
+  .home .body > p {
+    text-align: justify !important;
   }
 }
 </style>

@@ -65,6 +65,12 @@ body {
   -ms-text-size-adjust: 100%;
 }
 
+#app ::selection {
+  background-color: rgba(19, 81, 196, 0.65);
+  color: white;
+  
+}
+
 /*common element styling START*/
 h1 {
   color: #2e2f2f;
@@ -96,15 +102,15 @@ main {
   z-index: 2;
   padding: 1em;
   box-sizing: border-box;
-  max-width: 1200px;
   width: 100%;
+  height: 100%;
 }
 
 /*common element styling END*/
 
 /*multiple time use classes START*/
 
-a.contentlink {
+.contentlink {
   color: #4361c5;
   font-weight: 550;
   text-decoration: none;
@@ -117,8 +123,15 @@ a.contentlink {
   background-size: 100% 1px;
 }
 
-a.contentlink:hover {
+.contentlink:hover {
   color: #607fe6;
+}
+
+.contentlink::selection {
+  text-shadow: none;
+  background-color: rgba(19, 81, 196, 0.65);
+  color: white;
+  text-shadow: none;
 }
 
 .page-wrapper {
