@@ -2,27 +2,20 @@
 
         
 <template>
-  <div class="backgroundbubbles" :key="componentKey" >
+  <div class="backgroundbubbles" :key="componentKey">
     <div
-      v-for="index in this.realAmount"
+      v-for="index in this.realAmount()"
       :key="index"
       class="bubble"
       :style="{ 
-          top: rnd(5,95) + '%',
-          left: rnd(5,95) + '%',
+          top: rnd(0,95) + '%',
+          left: rnd(0,90) + '%',
           animationDelay: delay(index),
           animationDuration: duration(index)
           }"
     ></div>
   </div>
 </template>
-                    e.style.top = `${rnd(5, 95)}%`,
-                    e.style.left = `${rnd(5, 95)}%`,
-                    e.className = "bubble",
-                    e.style.animationDelay = `${-30 * n * (2 * Math.random())}s`,
-                    e.style.animationDuration = "30s",
-                    t.appendChild(e)
-
 
 <script>
 import Navbar from '@/components/Navbar'
@@ -32,18 +25,11 @@ export default {
   props: ['amount'],
   data() {
     return {
-      componentKey: 0
+      componentKey: 0,
+      timeout: null,
+      currentAmount: 0
     }
   },
-  computed: {
-    realAmount: function() {
-      if (this.amount !== 'auto') return this.amount
-      let amount = this.getAmount(window.innerWidth)
-      amount = amount > 100 ? 100 : amount
-      return amount
-    }
-  },
-
   methods: {
     getAmount(width) {
       return Math.floor((width / 100) * 3)
@@ -56,10 +42,33 @@ export default {
     },
     duration(i) {
       return 35 + 's'
-    },  
+    },
     forceRerender() {
       this.componentKey += 1
+    },
+    realAmount() {
+      if (this.amount !== 'auto') return this.amount
+      let amount = this.getAmount(window.innerWidth)
+      amount = amount > 100 ? 100 : amount
+      this.currentAmount = amount
+      return amount
+    },
+    onResize(e) {
+      clearTimeout(this.timeout)
+      this.timeout = setTimeout(() => {
+        console.log(this.currentAmount)
+          let amount = this.getAmount(window.innerWidth)
+          if (Math.abs(this.currentAmount - amount) > 10) {
+            this.forceRerender()
+          }
+        }, 400)
     }
+  },
+  created() {
+    window.addEventListener('resize', this.onResize)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
   }
 }
 </script>
