@@ -54,7 +54,7 @@ export default {
   align-items: flex-start;
   justify-content: center;
   padding: 1.3em;
-  margin: 1.2em;
+  margin: 1.3em;
   padding-top: 0.5em;
   background-color: white;
 }
@@ -123,7 +123,7 @@ export default {
 
   .headerwrap {
     margin: 0 2vw !important;
-    padding-bottom: 0.8em !important;
+    padding-bottom: 1.5em !important;
     padding-top: 0 !important;
   }
 
