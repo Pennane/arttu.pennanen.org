@@ -56,12 +56,11 @@ export default {
     onResize(e) {
       clearTimeout(this.timeout)
       this.timeout = setTimeout(() => {
-        console.log(this.currentAmount)
-          let amount = this.getAmount(window.innerWidth)
-          if (Math.abs(this.currentAmount - amount) > 10) {
-            this.forceRerender()
-          }
-        }, 400)
+        let amount = this.getAmount(window.innerWidth)
+        if (Math.abs(this.currentAmount - amount) > 10) {
+          this.forceRerender()
+        }
+      }, 400)
     }
   },
   created() {

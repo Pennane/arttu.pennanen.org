@@ -53,7 +53,8 @@ export default {
 }
 
 h2.h1, p.h2 {
-      text-shadow: 0px 0px 20px white !important
+      text-shadow: 0px 0px 20px white !important;
+      text-shadow: 0px 0px 20px var(--bg-1) !important;
 }
 
 h2.h1 {

@@ -57,6 +57,7 @@ export default {
   margin: 1.3em;
   padding-top: 0.5em;
   background-color: white;
+  background-color: var(--bg-1)
 }
 
 .home .body {
@@ -74,7 +75,8 @@ export default {
   max-width: 550px;
   margin: 0;
   padding: 1em calc(5vw - 1em);
-  background: white;
+  background-color: white;
+  background-color: var(--bg-1);
   line-height: 1.6;
 }
 
@@ -86,6 +88,7 @@ export default {
   font-size: 4.4em;
   text-shadow: 0px 2px #6f747d;
   color: #484848;
+  color: var(--font-2);
   line-height: 0.8;
   margin: 0;
   padding: 1.2rem 0;
@@ -95,6 +98,7 @@ export default {
 .headerwrap > .h2 {
   font-size: 1.55em;
   color: #404350;
+  color: var(--font-2);
   font-weight: 450;
   margin: 0 0.15em;
   padding: 0;

@@ -27,11 +27,13 @@ export default {
 </script>
 
 <style>
+
   .char {
   display: inline-block;
   transition: transform 0.5s ease-in;
   color: #3f61d0;
-  animation: bgc ease 12s infinite;
+  color: var(--split-color1);
+  animation: bgc linear 12s infinite;
 }
 
 .inlineletter {
@@ -41,6 +43,7 @@ export default {
 @keyframes bgc {
   50% {
     color: #4c62a9;
+    color: var(--split-color2)
   }
 }
 </style>

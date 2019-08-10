@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style>
+
     .bg-art {
     display: flex;
     height: 100%;
@@ -34,6 +35,7 @@ export default {
     height: 100%;
     width: 20%;
    border-left: 1px solid rgba(162, 162, 162, 0.3);
+   border-color: var(--bg-line-color);
 }
 
 .bg-item:first-child{
