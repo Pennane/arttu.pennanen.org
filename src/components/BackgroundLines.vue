@@ -66,5 +66,30 @@ export default {
 
 }   
 
+/* Super experimental animation for the lines
+
+.bg-art {
+    animation: spin 20s linear infinite;
+    height: 200vw;
+    width: 200vw;
+    border-color: white;
+    transform: scale(200%);
+        transform-origin: center;
+}
+
+.bg-item {
+    height: 1000%;
+    transform: translateY(-50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg)
+    }
+    100% {
+        transform: rotateZ(360deg) skew(1080deg) rotateX(360deg)
+    }
+}
+*/
 
 </style>

@@ -43,25 +43,25 @@ export default {
 
 /* colors START */
 :root {
-  --bg-1: #ffffff;
-  --bg-2: #f4f4f4;
-  --bg-3: #dedede;
-  --font-1: #000000;
-  --font-2: #404350;
-  --font-3: #475994;
-  --contrast-font1: #f7f7f7;
-  --contrast-font2: #e4e4e4;
-  --accent-1: #3f61d0;
-  --accent-2: #a359ce;
-  --selection-bg: #1351c4a6;
-  --selection-color: #ffffff;
-  --link-color: #4361c5;
-  --link-hover: #607fe6;
-  --brand-filter: saturate(0) contrast(1) brightness(0.2);
-  --nav-divide: #60656f;
-  --split-color1: #3f61d0;
-  --split-color2: #4c62a9;
-  --bg-line-color: rgba(162, 162, 162, 0.3);
+    --bg-1: #fff;
+    --bg-2: #f4f4f4;
+    --bg-3: #dedede;
+    --font-1: #000;
+    --font-2: #ff4d4d;
+    --font-3: #bd2f43;
+    --contrast-font1: #f7f7f7;
+    --contrast-font2: #e4e4e4;
+    --accent-1: #ef4950;
+    --accent-2: #d00000;
+    --selection-bg: rgb(255, 0, 0);
+    --selection-color: #fff;
+    --link-color: #ec4866;
+    --link-hover: #ffd9e0;
+    --brand-filter: saturate(0) contrast(1) brightness(0.2);
+    --nav-divide: #60656f;
+    --split-color1: #000000;
+    --split-color2: #3a3a3a;
+    --bg-line-color: hsla(0,0%,63.5%,0.3);
 }
 
 /* colors END*/
@@ -99,25 +99,25 @@ body {
 }
 
 #app.dark {
-  --bg-1: #232834;
-  --bg-2: #212631;
-  --bg-3: #1f2430;
-  --font-1: #dadde0;
-  --font-2: #a2a2a2;
-  --font-3: #475994;
-  --contrast-font1: #f7f7f7;
-  --contrast-font2: #e4e4e4;
-  --accent-1: #2e4592;
-  --accent-2: #a0a0a0;
-  --selection-bg: #1351c4a6;
-  --selection-color: #ffffff;
-  --link-color: #607ee2;
-  --link-hover: #899ee2;
-  --brand-filter: saturate(0) contrast(1) brightness(0.9);
-  --nav-divide: #60656f;
-  --split-color1: #3f61d0;
-  --split-color2: #4862bf;
-  --bg-line-color: rgb(56, 56, 56);
+    --bg-1: #232834;
+    --bg-2: #212631;
+    --bg-3: #1f2430;
+    --font-1: #dadde0;
+    --font-2: #ff4d4d;
+    --font-3: #bd2f43;
+    --contrast-font1: #f7f7f7;
+    --contrast-font2: #e4e4e4;
+    --accent-1: #8e2d31;
+    --accent-2: #ea1313;
+    --selection-bg: rgb(255, 7, 17);
+    --selection-color: #fff;
+    --link-color: #ff5454;
+    --link-hover: #f97f81;
+    --brand-filter: saturate(0) contrast(1) brightness(0.9);
+    --nav-divide: #60656f;
+    --split-color1: #ffffff;
+    --split-color2: #cccccc;
+    --bg-line-color: #383838;
 }
 
 #app ::selection {
