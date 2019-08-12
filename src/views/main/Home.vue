@@ -3,7 +3,8 @@
     <div class="header">
       <div class="headerwrap">
         <h1 class="h1">
-          <splitchars v-bind:text="'Arttu Pennanen'" />
+          <span class="char">Arttu</span>
+          <span class="char">Pennanen</span>
         </h1>
         <h2 class="h2">Web developing and else.</h2>
       </div>
@@ -89,11 +90,13 @@ export default {
   font-size: 4.4em;
   text-shadow: 0px 2px #6f747d;
   color: #484848;
-  color: var(--font-2);
+  color: var(--split-color1);
   line-height: 0.8;
   margin: 0;
   padding: 1.2rem 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -0.01em;
 }
 
 .headerwrap > .h2 {
@@ -118,7 +121,6 @@ export default {
   }
 
   .home .h1 {
-    line-height: 6vw !important;
     padding-top: 2vw !important;
   }
 

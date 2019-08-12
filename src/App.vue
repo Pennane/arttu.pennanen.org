@@ -238,7 +238,6 @@ p {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.3);
-  margin: 0.2em 0.5em;
   width: 75px;
   text-align: center;
   display: block;
@@ -304,7 +303,7 @@ span.brand {
 
 /*sidebar START*/
 .sidebar {
-  background-color: rgb(222, 222, 222)´;
+  background-color: rgb(222, 222, 222) ´;
   background-color: var(--bg-3);
   width: 16em;
   transition: width 0.25s ease;
@@ -457,6 +456,80 @@ nav.navbar {
 
 /*navbar END*/
 
+/* project START */
+.project {
+  max-width: 700px;
+}
+
+.project > div {
+  padding: 0.5em;
+}
+
+.projectheader {
+  margin: 0.5em 0;
+  margin-bottom: 1.3em;
+  max-width: 630px;
+  clear: both;
+}
+
+.projectheader .upper h2 {
+  margin: 0;
+}
+
+.projectheader .upper {
+  display: flex;
+  align-items: center;
+  align-self: baseline;
+  margin-bottom: 0.8em;
+}
+
+.projectheader .lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectbody p {
+  line-height: 2;
+}
+
+.projectbody {
+  background-color: var(--bg-1);
+}
+
+.projectimage {
+  width: 100%;
+  object-fit: contain;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding:1em 0;
+}
+
+.projectimage > img {
+  max-width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 3px 0 rgba(52, 56, 85, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.projectfooter {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 1em 0;
+  font-style: italic;
+  display: flex;
+  border-radius: 3em;
+  flex: 1 1 auto;
+  justify-content: center;
+  padding: 0.6em 0em !important;
+  align-items: center;
+      margin-bottom: 5em;
+}
+
+/* project END */
+
 /* footer START */
 footer {
   transition: opacity 0.25s ease;
@@ -515,7 +588,7 @@ footer div.wrapper {
 }
 
 main > div {
-  padding: 0 calc(1rem + 5vw);
+  padding: 0 calc(0.1rem + 5.7vw);
 }
 
 /*misc END*/
@@ -542,6 +615,16 @@ main > div {
 
   .content {
     margin-left: 33px;
+  }
+
+  .projectheader .upper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tryhere {
+    margin: 0;
+    margin-top: 0.9em;
+    font-size: 0.9em;
   }
 }
 

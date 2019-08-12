@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import SplitCharacters from '@/components/SplitCharacters.vue'
 
 export default {
   name: 'home',
