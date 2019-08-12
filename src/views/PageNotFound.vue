@@ -50,6 +50,8 @@ export default {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 h2.h1, p.h2 {

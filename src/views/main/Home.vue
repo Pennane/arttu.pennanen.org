@@ -37,6 +37,7 @@ export default {
 <style>
 .home {
   box-sizing: border-box;
+  padding: 0;
 }
 
 .header {

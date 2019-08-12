@@ -34,6 +34,22 @@ export default {
     darkmode() {
       return this.$store.state.darkmode
     }
+  },
+  methods: {
+    loadJSON: function(path) {
+      let req = new XMLHttpRequest()
+      return new Promise((resolve, reject) => {
+        req.overrideMimeType('application/json')
+        req.open('GET', path, true)
+        req.onreadystatechange = () => {
+          if (req.readyState == 4 && req.status == '200') {
+            let response = JSON.parse(req.responseText)
+            return resolve(response)
+          }
+        }
+        req.send(null)
+      })
+    }
   }
 }
 </script>
@@ -43,25 +59,25 @@ export default {
 
 /* colors START */
 :root {
-    --bg-1: #fff;
-    --bg-2: #f4f4f4;
-    --bg-3: #dedede;
-    --font-1: #000;
-    --font-2: #ff4d4d;
-    --font-3: #bd2f43;
-    --contrast-font1: #f7f7f7;
-    --contrast-font2: #e4e4e4;
-    --accent-1: #ef4950;
-    --accent-2: #d00000;
-    --selection-bg: rgb(255, 0, 0);
-    --selection-color: #fff;
-    --link-color: #ec4866;
-    --link-hover: #ffd9e0;
-    --brand-filter: saturate(0) contrast(1) brightness(0.2);
-    --nav-divide: #60656f;
-    --split-color1: #000000;
-    --split-color2: #3a3a3a;
-    --bg-line-color: hsla(0,0%,63.5%,0.3);
+  --bg-1: #fff;
+  --bg-2: #f4f4f4;
+  --bg-3: #dedede;
+  --font-1: #000;
+  --font-2: #ff4d4d;
+  --font-3: #bd2f43;
+  --contrast-font1: #f7f7f7;
+  --contrast-font2: #e4e4e4;
+  --accent-1: #ef4950;
+  --accent-2: #d00000;
+  --selection-bg: rgb(255, 0, 0);
+  --selection-color: #fff;
+  --link-color: #ec4866;
+  --link-hover: #ffd9e0;
+  --brand-filter: brightness(0.2);
+  --nav-divide: #60656f;
+  --split-color1: #2a2a2a;
+  --split-color2: #3a3a3a;
+  --bg-line-color: hsla(0, 0%, 63.5%, 0.3);
 }
 
 /* colors END*/
@@ -99,25 +115,25 @@ body {
 }
 
 #app.dark {
-    --bg-1: #232834;
-    --bg-2: #212631;
-    --bg-3: #1f2430;
-    --font-1: #dadde0;
-    --font-2: #ff4d4d;
-    --font-3: #bd2f43;
-    --contrast-font1: #f7f7f7;
-    --contrast-font2: #e4e4e4;
-    --accent-1: #8e2d31;
-    --accent-2: #ea1313;
-    --selection-bg: rgb(255, 7, 17);
-    --selection-color: #fff;
-    --link-color: #ff5454;
-    --link-hover: #f97f81;
-    --brand-filter: saturate(0) contrast(1) brightness(0.9);
-    --nav-divide: #60656f;
-    --split-color1: #ffffff;
-    --split-color2: #cccccc;
-    --bg-line-color: #383838;
+  --bg-1: #232834;
+  --bg-2: #212631;
+  --bg-3: #1f2430;
+  --font-1: #dadde0;
+  --font-2: #ff4d4d;
+  --font-3: #bd2f43;
+  --contrast-font1: #f7f7f7;
+  --contrast-font2: #e4e4e4;
+  --accent-1: #8e2d31;
+  --accent-2: #ea1313;
+  --selection-bg: rgb(255, 7, 17);
+  --selection-color: #fff;
+  --link-color: #ff5454;
+  --link-hover: #f97f81;
+  --brand-filter: brightness(1);
+  --nav-divide: #60656f;
+  --split-color1: #ffffff;
+  --split-color2: #cccccc;
+  --bg-line-color: #383838;
 }
 
 #app ::selection {
@@ -133,11 +149,15 @@ body {
 h1 {
   color: #2e2f2f;
   color: var(--font-2);
-  font-size: calc(1.3em + 0.5vw);
+  font-size: 2.9em;
   font-weight: 700;
   padding: 0;
   border-radius: 0.375rem;
-  padding: 0.3em;
+  margin: 0.97em 0;
+}
+
+h2 {
+  font-size: 2em;
 }
 
 main {
@@ -211,7 +231,7 @@ p {
   background: linear-gradient(
     to right,
     hsla(226, 45%, 54%, 1),
-    hsla(226, 79%, 64%, 1)
+    hsl(357, 84%, 61%)
   );
   border-radius: 1.3em;
   color: white;
@@ -284,6 +304,7 @@ span.brand {
 
 /*sidebar START*/
 .sidebar {
+  background-color: rgb(222, 222, 222)´;
   background-color: var(--bg-3);
   width: 16em;
   transition: width 0.25s ease;
@@ -310,6 +331,7 @@ span.brand {
   all: unset;
   display: block;
   color: black;
+  color: var(--font1);
   padding: 0.5em;
   padding-right: 0.8em;
   cursor: pointer;
@@ -492,6 +514,10 @@ footer div.wrapper {
   opacity: 0;
 }
 
+main > div {
+  padding: 0 calc(1rem + 5vw);
+}
+
 /*misc END*/
 
 /*media queries START*/
@@ -499,6 +525,10 @@ footer div.wrapper {
 @media screen and (max-width: 1000px) {
   .sidebar {
     width: 14em;
+  }
+
+  h1 {
+    font-size: calc(1.8em + 1.2vw);
   }
 }
 

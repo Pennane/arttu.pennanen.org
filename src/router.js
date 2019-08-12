@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import PageNotFound from './views/PageNotFound.vue'
 import Home from './views/main/Home.vue'
 import Contact from './views/main/Contact.vue'
+import Test from './views/Test.vue'
 
 let router = new Router({
   mode: 'history',
@@ -21,6 +22,16 @@ let router = new Router({
       path: '/contact',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      component: Test
+    },
+    {
+      path: '/sub',
+      name: 'Sub',
+      component: () => import('./views/main/Sub.vue')
     },
     {
       path: '/spotifyfavorites',

@@ -1,16 +1,28 @@
 
  <template>
-  <span>
-    <span v-for="(char, index) of text">
+  <span v-if="animate">
+    <span v-for="(char, index) of text" :key="index">
       <span
         v-if="char === ' '"
-        :class="['char', 'char'+index, 'inlineletter']"
+        :class="['char', 'char'+index, 'inlineletter' , 'animated']"
         v-bind:style="{ animationDelay: (0.15 * (index + 1) + 's')}"
       >{{ char }}</span>
       <span
         v-else
-        :class="['char', 'char'+index]"
+        :class="['char', 'char'+index, 'animated']"
         v-bind:style="{ animationDelay: (0.15 * (index + 1) + 's')}"
+      >{{ char }}</span>
+    </span>
+  </span>
+  <span v-else>
+    <span v-for="(char, index) of text" :key="index">
+      <span
+        v-if="char === ' '"
+        :class="['char', 'char'+index, 'inlineletter']"
+      >{{ char }}</span>
+      <span
+        v-else
+        :class="['char', 'char'+index]"
       >{{ char }}</span>
     </span>
   </span>
@@ -21,7 +33,8 @@ export default {
   name: 'Navlink',
   components: {},
   props: {
-    text: String
+    text: String,
+    animate: Boolean
   }
 }
 </script>
@@ -33,6 +46,9 @@ export default {
   transition: transform 0.5s ease-in;
   color: #3f61d0;
   color: var(--split-color1);
+}
+
+.char.animated {
   animation: bgc linear 12s infinite;
 }
 
