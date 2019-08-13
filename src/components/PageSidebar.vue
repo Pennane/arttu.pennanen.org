@@ -30,7 +30,6 @@ export default {
   methods: {
     toggleSidebar(state) {
       let sidebar = document.querySelector('.sidebar')
-      console.log(sidebar)
       if (typeof state !== 'undefined') {
         sidebar.classList.toggle('closed', state)
       } else {
