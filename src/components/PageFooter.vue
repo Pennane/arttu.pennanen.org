@@ -2,7 +2,7 @@
   <footer id="footer">
     <div class="wrapper">
       <span>© 2019 etc.</span>
-      <button @:click="toggleDarkMode()" :class="{dark:darkmode}">
+      <button @click="toggleDarkMode()" :class="{dark:darkmode}">
         <font-awesome-icon :icon="[darkmode ?'fas':'far','lightbulb']" />
       </button>
     </div>

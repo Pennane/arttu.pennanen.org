@@ -2,7 +2,7 @@
  <template>
   <div :class="{'sidebar':true, 'closed':(this.startClosed === true)}">
     <div class="sidebar-toggle">
-      <button id="sidebar-toggler" @:click="toggleSidebar()">
+      <button id="sidebar-toggler" @click="toggleSidebar()">
         <font-awesome-icon icon="chevron-left" />
       </button>
     </div>
@@ -30,6 +30,7 @@ export default {
   methods: {
     toggleSidebar(state) {
       let sidebar = document.querySelector('.sidebar')
+      console.log(sidebar)
       if (typeof state !== 'undefined') {
         sidebar.classList.toggle('closed', state)
       } else {
