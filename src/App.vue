@@ -49,8 +49,20 @@ export default {
         }
         req.send(null)
       })
+    },
+    onTouchmove(e) {
+      document.body.scrollTop = 0
     }
-  }
+  },
+  mounted() {
+  // Register an event listener when the Vue component is ready
+ document.addEventListener('touchmove', this.onTouchmove)
+},
+
+beforeDestroy() {
+  // Unregister the event listener before destroying this Vue instance
+  document.removeEventListener('touchmove', this.onTouchmove)
+}
 }
 </script>
 
