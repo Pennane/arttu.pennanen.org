@@ -1,17 +1,17 @@
 <template>
   <div class="project">
-    <projectheader
+    <ProjectHeader
       name="Peigom"
       date="12.8.2019"
       type="Discord bot"
       link="https://github.com/Pennane/spotify-favorites"
       buttontext="Find here!"
-    ></projectheader>
+    ></ProjectHeader>
     <div class="projectbody">
       <p>Das auto lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, dolor mollitia voluptate dolorem voluptatem omnis impedit laudantium aperiam beatae aliquid at nemo laborum culpa eius eum minus dicta ducimus!</p>
-      <projectImage alt="" :src="require('@/assets/images/peigom/peigom1.png')"></projectImage>
+      <ProjectImage alt :src="require('@/assets/images/peigom/peigom1.png')"></ProjectImage>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?</p>
-      <projectImage alt="" :src="require('@/assets/images/peigom/peigom2.png')"></projectImage>
+      <ProjectImage alt :src="require('@/assets/images/peigom/peigom2.png')"></ProjectImage>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora eaque nemo animi, dolor accusantium similique facere voluptatem error ullam porro voluptate necessitatibus nostrum quis voluptates doloribus quod adipisci. Aliquid, illum!</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda culpa, animi voluptatibus in distinctio cumque voluptatum nostrum, delectus consequuntur laboriosam recusandae labore repellat at non harum minima repudiandae, enim sunt.</p>
     </div>
@@ -30,8 +30,8 @@ import ProjectImage from '@/components/ProjectImage.vue'
 export default {
   name: 'peigombot',
   components: {
-    projectheader: ProjectHeader,
-    projectImage: ProjectImage
+    ProjectHeader,
+    ProjectImage
   }
 }
 </script>

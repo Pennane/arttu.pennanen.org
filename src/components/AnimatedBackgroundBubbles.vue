@@ -13,16 +13,13 @@
           animationDelay: delay(index),
           animationDuration: duration(index)
           }"
-    ></div>
+    />
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
-
 export default {
-  name: 'Backgroundlines',
-  props: ['amount'],
+  name: 'AnimatedBackgroundBubbles',
   data() {
     return {
       componentKey: 0,
@@ -47,7 +44,6 @@ export default {
       this.componentKey += 1
     },
     realAmount() {
-      if (this.amount !== 'auto') return this.amount
       let amount = this.getAmount(window.innerWidth)
       amount = amount > 100 ? 100 : amount
       this.currentAmount = amount

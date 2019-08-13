@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import PageNotFound from './views/PageNotFound.vue'
+import PageNotFound from './views/main/PageNotFound.vue'
 import Home from './views/main/Home.vue'
 import Contact from './views/main/Contact.vue'
 import Test from './views/Test.vue'

@@ -1,13 +1,13 @@
 <template>
   <div class="page404">
-    <backgroundBubbles amount="auto" />
+    <AnimatedBackgroundBubbles/>
     <div class="header">
       <div class="headerwrap">
         <h1 class="h1">
-          <splitchars v-bind:text="'404 not found'" />
+          <splitchars :text="'404 not found'" />
         </h1>
         <h2 class="h1">
-          <splitchars v-bind:text="'\¯\\\_\(\ツ\)\_\/\¯'" />
+          <splitchars :text="'\¯\\\_\(\ツ\)\_\/\¯'" />
         </h2>
 
         <p class="h2">
@@ -20,13 +20,13 @@
 </template>
 <script>
 import SplitCharacters from '@/components/SplitCharacters.vue'
-import BackgroundBubbles from '@/components/BackgroundBubbles.vue'
+import AnimatedBackgroundBubbles from '@/components/AnimatedBackgroundBubbles.vue'
 
 export default {
   name: 'PageNotFound',
   components: {
     splitchars: SplitCharacters,
-    backgroundBubbles: BackgroundBubbles
+    AnimatedBackgroundBubbles: AnimatedBackgroundBubbles
   }
 }
 </script>

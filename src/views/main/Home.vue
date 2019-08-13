@@ -24,13 +24,8 @@
 </template>
 
 <script>
-import SplitCharacters from '@/components/SplitCharacters.vue'
-
 export default {
-  name: 'home',
-  components: {
-    splitchars: SplitCharacters
-  }
+  name: 'home'
 }
 </script>
 
@@ -50,7 +45,7 @@ export default {
   justify-content: center;
 }
 
- .headerwrap {
+.headerwrap {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -59,7 +54,7 @@ export default {
   margin: 1.3em;
   padding-top: 0.5em;
   background-color: white;
-  background-color: var(--bg-1)
+  background-color: var(--bg-1);
 }
 
 .home .body {

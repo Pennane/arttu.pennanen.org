@@ -1,6 +1,6 @@
 <template>
   <div class="sub">
-    <h1>Contents of /sub </h1>
+    <h1>Contents of /sub</h1>
     <ul v-if="links" class="linkcontainer">
       <li v-for="link in links" :key="'link-'+link">
         <a :href="'/sub/'+link">
@@ -13,9 +13,8 @@
 </template>
 
 <script>
-
 export default {
-  name: 'home',
+  name: 'Sub-page',
   data() {
     return {
       links: false
@@ -49,8 +48,6 @@ export default {
   flex-direction: column;
   line-height: 1.6;
 }
-
-
 
 a {
   text-decoration: none;
