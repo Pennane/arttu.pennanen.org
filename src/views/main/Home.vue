@@ -37,7 +37,7 @@ let posts = {}
 postsData.forEach((post, i) => {
   posts['post' + i] = () => import('@/views/' + post)
 })
-console.log(posts)
+
 export default {
   name: 'home',
   components: posts,

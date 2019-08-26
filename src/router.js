@@ -7,9 +7,19 @@ import Contact from './views/main/Contact.vue'
 import Test from './views/Test.vue'
 
 let router = new Router({
-  mode: 'history',
-  scrollBehavior() {
-    return { x: 0, y: 0 };
+  mode: "history",
+  base: process.env.BASE_URL,
+  scrollBehavior: (to, from, savedPosition) => {
+    if (savedPosition) {
+      return savedPosition;
+    } else if (to.hash) {
+      return {
+        selector: to.hash
+      };
+    } else {
+      document.getElementById("scrollbase").scrollTop = 0
+      return { x: 0, y: 0, selector: "#scrollbase" };
+    }
   },
   routes: [
     {

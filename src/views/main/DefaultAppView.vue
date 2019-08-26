@@ -8,7 +8,7 @@
       </div>
       <div class="page-divider">
         <PageSidebar />
-        <content class="content">
+        <content class="content" id="scrollbase">
           <BackgroundLines />
           <main id="content">
             <transition name="fade" mode="out-in">
