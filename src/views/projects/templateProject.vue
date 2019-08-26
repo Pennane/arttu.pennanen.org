@@ -1,10 +1,10 @@
 <template>
   <Project
     :preview="preview"
-    name="Peigom"
+    name="Project Name"
     date="12.8.2019"
-    type="Discord bot"
-    link="https://github.com/Pennane/spotify-favorites"
+    type="Type of the project"
+    link="https://www.example..com/link/of/the/project"
     buttontext="Find here!"
   >
     <p>Das auto lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, dolor mollitia voluptate dolorem voluptatem omnis impedit laudantium aperiam beatae aliquid at nemo laborum culpa eius eum minus dicta ducimus!</p>
@@ -21,7 +21,7 @@ import Project from '@/views/main/Project.vue'
 import ProjectImage from '@/components/ProjectImage.vue'
 
 export default {
-  name: 'peigombot',
+  name: 'exampleproject',
   components: {
     Project,
     ProjectImage

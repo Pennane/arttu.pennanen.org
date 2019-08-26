@@ -19,13 +19,33 @@
           title="vuejs.org"
         >vue.js</a>, and I am currently in the process of redesigning everything.
       </p>
+      <div class="recent-posts">
+        <component
+          v-for="postkey in Object.keys(posts)"
+          :is="postkey"
+          :key="postkey"
+          :preview="true"
+        ></component>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import postsData from '@/assets/data/posts.json'
+let posts = {}
+postsData.forEach((post, i) => {
+  posts['post' + i] = () => import('@/views/' + post)
+})
+console.log(posts)
 export default {
-  name: 'home'
+  name: 'home',
+  components: posts,
+  data() {
+    return {
+      posts: posts
+    }
+  }
 }
 </script>
 
@@ -101,6 +121,20 @@ export default {
   font-weight: 450;
   margin: 0 0.15em;
   padding: 0;
+}
+
+.recent-posts {
+  max-width: 550px;
+  margin-top: 3em;
+  padding: 1em calc(5vw - 1em);
+  padding-bottom: 8em;
+}
+
+.recent-posts > div {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #8f8f8f;
+  margin-top: 3.6em;
+  padding-bottom: 1.6em;
 }
 </style>
 
