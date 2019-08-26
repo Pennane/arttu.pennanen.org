@@ -125,15 +125,16 @@ export default {
 
 .recent-posts {
   max-width: 550px;
-  margin-top: 3em;
   padding: 1em calc(5vw - 1em);
   padding-bottom: 8em;
+  margin-top: 2vw;
+  padding-top: 1vw;
 }
 
 .recent-posts > div {
   margin-bottom: 2em;
   border-bottom: 1px solid #8f8f8f;
-  margin-top: 3.6em;
+  margin-top: calc(0.5em + 1.1vw);
   padding-bottom: 1.6em;
 }
 </style>
