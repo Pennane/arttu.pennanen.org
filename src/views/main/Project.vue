@@ -9,8 +9,9 @@
         :buttontext="buttontext"
       />
       <div class="projectbody">
-        <slot></slot>
-      </div>
+        <ProjectImage alt :src="previewImage"></ProjectImage>
+        <p class="project-preview-desc">{{previewDescription}}</p>
+      </div>read more
     </div>
     <div class="project" v-else>
       <ProjectHeader :name="name" :date="date" :type="type" :link="link" :buttontext="buttontext"></ProjectHeader>
@@ -58,7 +59,11 @@ export default {
     preview: {
       type: Boolean,
       default: false
-    }
+    },
+    previewDescription: {
+      type: String
+    },
+    previewImage: {}
   },
   computed: {
     time() {

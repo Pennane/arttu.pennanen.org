@@ -6,6 +6,8 @@
     type="Type of the project"
     link="https://www.example..com/link/of/the/project"
     buttontext="Find here!"
+    :previewImage="require('@/assets/images/peigom/peigom1.png')"
+    previewDescription="previewDescription"
   >
     <p>Das auto lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, dolor mollitia voluptate dolorem voluptatem omnis impedit laudantium aperiam beatae aliquid at nemo laborum culpa eius eum minus dicta ducimus!</p>
     <ProjectImage alt :src="require('@/assets/images/peigom/peigom1.png')"></ProjectImage>

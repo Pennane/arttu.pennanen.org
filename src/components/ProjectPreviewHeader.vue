@@ -2,8 +2,6 @@
   <div class="projectheader preview">
     <div class="upper">
       <h2>{{name}}</h2>
-
-      <FindHereButton :link="link" :text="buttontext" />
     </div>
     <div v-if="true" class="lower">
       <span class="type">{{type}}</span>

@@ -6,6 +6,8 @@
     type="Listening Analytics"
     link="https://github.com/Pennane/spotify-favorites"
     buttontext="Find here!"
+    :previewImage="require('@/assets/images/spotifyfavorites/spotifyfavorites1.png')"
+    previewDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?"
   >
     <p>Das auto lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, dolor mollitia voluptate dolorem voluptatem omnis impedit laudantium aperiam beatae aliquid at nemo laborum culpa eius eum minus dicta ducimus!</p>
     <ProjectImage alt :src="require('@/assets/images/spotifyfavorites/spotifyfavorites1.png')"></ProjectImage>

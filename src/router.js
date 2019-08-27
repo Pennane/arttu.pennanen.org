@@ -4,7 +4,6 @@ import Router from 'vue-router'
 import PageNotFound from './views/main/PageNotFound.vue'
 import Home from './views/main/Home.vue'
 import Contact from './views/main/Contact.vue'
-import Test from './views/Test.vue'
 
 let router = new Router({
   mode: "history",
@@ -16,10 +15,10 @@ let router = new Router({
       return {
         selector: to.hash
       };
-    } else {
-      document.getElementById("scrollbase").scrollTop = 0
-      return { x: 0, y: 0, selector: "#scrollbase" };
     }
+    document.getElementById("scrollbase").scrollTop = 0
+    return { x: 0, y: 0, selector: "#scrollbase" };
+
   },
   routes: [
     {
@@ -35,11 +34,6 @@ let router = new Router({
       path: '/contact',
       name: 'Contact',
       component: Contact
-    },
-    {
-      path: '/test',
-      name: 'Test',
-      component: Test
     },
     {
       path: '/sub',
@@ -60,6 +54,11 @@ let router = new Router({
       path: '/peigombot',
       name: 'Peigom bot',
       component: () => import('./views/projects/peigombot.vue')
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      component: () => import('./views/projects/templateProject.vue')
     },
     {
       path: '*',
