@@ -5,13 +5,14 @@ import PageNotFound from './views/main/PageNotFound.vue'
 import Home from './views/main/Home.vue'
 import Contact from './views/main/Contact.vue'
 
-let router = new Router({
+const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   scrollBehavior: (to, from, savedPosition) => {
     if (savedPosition) {
       return savedPosition;
-    } else if (to.hash) {
+    }
+    if (to.hash) {
       return {
         selector: to.hash
       };
