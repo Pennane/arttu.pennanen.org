@@ -10,7 +10,10 @@ import router from './router'
 import App from './App.vue'
 
 Vue.use(VueAnalytics, {
-  id: 'UA-126133790-1'
+  id: 'UA-126133790-1',
+  debug: {
+    sendHitTask: process.env.NODE_ENV === 'production'
+  }
 })
 
 library.add(
@@ -30,4 +33,3 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
-

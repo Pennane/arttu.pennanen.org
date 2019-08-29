@@ -74,9 +74,6 @@ export default {
     time() {
       return this.$root.$children[0].$options.methods.parseDate(this.date)
     }
-  },
-  mounted() {
-    console.log(this)
   }
 }
 </script>
