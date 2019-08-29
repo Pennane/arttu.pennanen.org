@@ -6,6 +6,7 @@
     type="Listening Analytics"
     link="https://github.com/Pennane/spotify-favorites"
     buttontext="Find here!"
+    readlink="spotifyfavorites"
     :previewImage="require('@/assets/images/spotifyfavorites/spotifyfavorites1.png')"
     previewDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?"
   >
@@ -22,7 +23,7 @@
 </template>
 
 <script>
-import Project from '@/views/main/Project.vue'
+import Project from '@/components/Project.vue'
 import ProjectImage from '@/components/ProjectImage.vue'
 
 export default {

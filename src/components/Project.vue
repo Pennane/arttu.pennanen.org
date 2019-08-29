@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="project" v-if="preview">
+    <div class="project preview" v-if="preview">
       <ProjectPreviewHeader
         :name="name"
         :date="date"
@@ -9,9 +9,10 @@
         :buttontext="buttontext"
       />
       <div class="projectbody">
-        <ProjectImage alt :src="previewImage"></ProjectImage>
+        <ProjectImage alt :src="previewImage" preview></ProjectImage>
         <p class="project-preview-desc">{{previewDescription}}</p>
-      </div>read more
+      </div>
+      <router-link class="contentlink projectpreviewlink" :to="readlink">read more</router-link>
     </div>
     <div class="project" v-else>
       <ProjectHeader :name="name" :date="date" :type="type" :link="link" :buttontext="buttontext"></ProjectHeader>
@@ -63,12 +64,40 @@ export default {
     previewDescription: {
       type: String
     },
-    previewImage: {}
+    previewImage: {},
+    readlink: {
+      type: String,
+      default: "test"
+    }
   },
   computed: {
     time() {
       return this.$root.$children[0].$options.methods.parseDate(this.date)
     }
+  },
+  mounted() {
+    console.log(this)
   }
 }
 </script>
+
+<style scoped>
+.upper {
+  color: var(--font-4);
+}
+.lower {
+  color: var(--font-5);
+}
+
+.projectpreviewlink {
+  background: none;
+  text-shadow: none;
+  color: var(--link-color-2);
+  font-weight: 400
+}
+
+.projectpreviewlink:hover {
+  color: var(--link-hover-2)
+}
+
+</style>

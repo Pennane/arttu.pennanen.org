@@ -43,7 +43,7 @@ export default {
 <style scoped>
 .projectheader {
   margin: 0.5em 0;
-  margin-bottom: 1.3em;
+  margin-bottom: 0.5em;
   max-width: 630px;
   clear: both;
 }
@@ -57,12 +57,14 @@ export default {
   align-items: center;
   align-self: baseline;
   margin-bottom: 0.8em;
+  color: var(--font-4)
 }
 
 .projectheader .lower {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--font-5)
 }
 
 @media screen and (max-width: 700px) {

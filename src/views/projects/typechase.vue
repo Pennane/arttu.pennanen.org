@@ -6,6 +6,7 @@
     type="Typing Application"
     link="https://arttu.pennanen.org/sub/typechase/"
     buttontext="Try here!"
+    readlink="typechase"
     :previewImage="require('@/assets/images/typechase/typechase1.png')"
     previewDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illo voluptatibus officiis esse saepe libero impedit cum excepturi minus eos exercitationem, atque molestias quam earum quisquam repellat tenetur, hic a?"
   >
@@ -20,7 +21,7 @@
 </template>
 
 <script>
-import Project from '@/views/main/Project.vue'
+import Project from '@/components/Project.vue'
 import ProjectImage from '@/components/ProjectImage.vue'
 
 export default {

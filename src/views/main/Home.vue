@@ -79,22 +79,21 @@ export default {
 
 .home .body {
   display: flex;
-  padding: 0 calc(1em + 2vw);
   box-sizing: border-box;
-  max-width: none;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
   flex: 0 1 auto;
+  max-width: 570px;
+  align-items: flex-start;
+  margin: 0 calc(6vw - 0.5em);
 }
 
 .body > p {
-  max-width: 550px;
   margin: 0;
-  padding: 1em calc(5vw - 1em);
   background-color: white;
   background-color: var(--bg-1);
   line-height: 1.6;
+  margin: 0.8em 0;
 }
 
 .body p:last-child {
@@ -124,18 +123,14 @@ export default {
 }
 
 .recent-posts {
-  max-width: 550px;
-  padding: 1em calc(5vw - 1em);
   padding-bottom: 8em;
-  margin-top: 2vw;
-  padding-top: 1vw;
 }
 
 .recent-posts > div {
-  margin-bottom: 2em;
-  border-bottom: 1px solid #8f8f8f;
-  margin-top: calc(0.5em + 1.1vw);
-  padding-bottom: 1.6em;
+    margin-bottom: 3em;
+    margin-top: calc(0.5em + 1.1vw);
+    padding-bottom: .6em;
+    background-color: var(--bg-1);
 }
 </style>
 

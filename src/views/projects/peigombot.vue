@@ -1,11 +1,12 @@
 <template>
   <Project
     :preview="preview"
-    name="Peigom"
+    name="Peigom bot"
     date="12.8.2019"
     type="Discord bot"
     link="https://github.com/Pennane/spotify-favorites"
     buttontext="Find here!"
+    readlink="peigombot"
     :previewImage="require('@/assets/images/peigom/peigom1.png')"
     previewDescription="Das auto lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, dolor mollitia voluptate dolorem voluptatem omnis impedit laudantium aperiam beatae aliquid at nemo laborum culpa eius eum minus dicta ducimus!"
   >
@@ -19,7 +20,7 @@
 </template>
 
 <script>
-import Project from '@/views/main/Project.vue'
+import Project from '@/components/Project.vue'
 import ProjectImage from '@/components/ProjectImage.vue'
 
 export default {

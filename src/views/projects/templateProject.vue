@@ -5,6 +5,7 @@
     date="12.8.2019"
     type="Type of the project"
     link="https://www.example..com/link/of/the/project"
+    readlink="test"
     buttontext="Find here!"
     :previewImage="require('@/assets/images/peigom/peigom1.png')"
     previewDescription="previewDescription"
@@ -19,7 +20,7 @@
 </template>
 
 <script>
-import Project from '@/views/main/Project.vue'
+import Project from '@/components/Project.vue'
 import ProjectImage from '@/components/ProjectImage.vue'
 
 export default {
