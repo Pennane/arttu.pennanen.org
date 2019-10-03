@@ -79,10 +79,10 @@ footer div.wrapper {
   justify-content: center;
   align-items: center;
 }
-
+/*
 @media screen and (max-height: 600px) {
   footer {
     padding: 1.1em 0;
   }
-}
+}*/
 </style>
