@@ -19,6 +19,7 @@
           </main>
         </content>
       </div>
+      <PageFooter/>
     </div>
   </div>
 </template>
@@ -26,12 +27,14 @@
 <script>
 import PageSidebar from '@/components/PageSidebar'
 import BackgroundLines from '@/components/BackgroundLines'
+import PageFooter from '@/components/PageFooter'
 
 export default {
   name: 'DefaultAppView',
   components: {
     PageSidebar,
-    BackgroundLines
+    BackgroundLines,
+    PageFooter
   },
   methods: {
     onTouchmove(e) {

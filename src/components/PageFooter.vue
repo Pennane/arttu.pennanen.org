@@ -43,6 +43,14 @@ footer {
   margin-top: auto;
   width: 100%;
   white-space: nowrap;
+
+  all: unset;
+  position: absolute;
+  bottom: 0;
+  padding: 0.7em 1em;
+  z-index: 2;
+  opacity: 0.6;
+  font-size: 0.8em;
 }
 
 footer button {
@@ -77,5 +85,4 @@ footer div.wrapper {
     padding: 1.1em 0;
   }
 }
-
 </style>
