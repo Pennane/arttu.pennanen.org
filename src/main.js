@@ -4,9 +4,18 @@ import { faChevronLeft, faLightbulb as fasLightBulb } from '@fortawesome/free-so
 import { faLightbulb as farLightBulb } from '@fortawesome/free-regular-svg-icons'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueAnalytics from 'vue-analytics'
 import store from './store'
 import router from './router'
 import App from './App.vue'
+
+Vue.use(VueAnalytics, {
+  id: 'UA-126133790-1',
+  debug: {
+    sendHitTask: process.env.NODE_ENV === 'production'
+  },
+  router
+})
 
 library.add(
   faChevronLeft,
@@ -25,4 +34,3 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
-
