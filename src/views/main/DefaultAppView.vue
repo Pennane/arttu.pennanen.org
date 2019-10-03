@@ -3,7 +3,9 @@
     <div class="page-wrapper">
       <div class="topbar">
         <div class="topbrandimg">
+          <router-link to="/">
           <img class="brand" :src="require('@/assets/icons/icon_white.svg')" alt />
+          </router-link>
         </div>
       </div>
       <div class="page-divider">
