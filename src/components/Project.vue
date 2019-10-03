@@ -20,9 +20,7 @@
         <slot></slot>
       </div>
       <div class="projectfooter">
-        <span>teknologiat käytetty jne</span>
-        <span>vanilla js</span>
-        <span>hatunnostot</span>
+        <span>pennanen was here</span>
       </div>
     </div>
   </div>

@@ -187,6 +187,10 @@ img.brand {
   filter: var(--brand-filter);
 }
 
+img.brand:hover {
+  filter: brightness(0);
+}
+
 span.brand {
   font-weight: 700;
   letter-spacing: 0.01em;
