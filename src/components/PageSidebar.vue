@@ -1,8 +1,8 @@
 
  <template>
   <div :class="{'sidebar':true, 'closed':(this.startClosed === true)}">
-    <div class="sidebar-toggle">
-      <button id="sidebar-toggler" @click="toggleSidebar()">
+    <div class="sidebar-toggle" @click="toggleSidebar()">
+      <button id="sidebar-toggler" >
         <font-awesome-icon icon="chevron-left" />
       </button>
     </div>
@@ -87,6 +87,7 @@ export default {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  cursor: pointer;
 }
 
 .sidebar-toggle >>> button {

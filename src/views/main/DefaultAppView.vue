@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="page-divider">
-        <PageSidebar />
+        <!--<PageSidebar /> -->
         <content class="content" id="scrollbase">
           <BackgroundLines />
           <main id="content">
@@ -55,8 +55,6 @@ export default {
 
 
 <style lang="css">
-
-
 /* general START */
 
 #app {
@@ -89,8 +87,6 @@ body {
   -ms-text-size-adjust: 100%;
 }
 
-
-
 #app ::selection {
   background-color: rgba(19, 81, 196, 0.65);
   background-color: var(--selection-bg);
@@ -117,6 +113,7 @@ h2 {
 
 main {
   display: flex;
+  justify-content: center;
   z-index: 2;
   padding: 1em;
   box-sizing: border-box;
@@ -125,8 +122,10 @@ main {
 }
 
 p {
-  color: black;
+  font-weight: 300;
+  color: #000;
   color: var(--font-1);
+  font-size: 16px;
 }
 
 /*common element styling END*/
@@ -236,7 +235,7 @@ span.brand {
 }
 
 .projectbody p {
-  line-height: 2;
+  line-height: 1.6;
 }
 
 .projectbody {

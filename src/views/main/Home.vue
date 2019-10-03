@@ -117,9 +117,10 @@ export default {
   font-size: 1.55em;
   color: #404350;
   color: var(--font-2);
-  font-weight: 450;
+  font-weight: 300;
   margin: 0 0.15em;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 .recent-posts {
@@ -127,10 +128,10 @@ export default {
 }
 
 .recent-posts > div {
-    margin-bottom: 3em;
-    margin-top: calc(0.5em + 1.1vw);
-    padding-bottom: .6em;
-    background-color: var(--bg-1);
+  margin-bottom: 3em;
+  margin-top: calc(0.5em + 1.1vw);
+  padding-bottom: 0.6em;
+  background-color: var(--bg-1);
 }
 </style>
 

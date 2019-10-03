@@ -40,15 +40,15 @@ export default {
   --bg-2: #f4f4f4;
   --bg-3: #dedede;
   --font-1: #000;
-  --font-2: #ff4d4d;
-  --font-3: #bd2f43;
+  --font-2: #2a2a2a;
+  --font-3: #545454;
   --font-4: #2a2a2a;
   --font-5: #595959;
-  --contrast-font1: #f7f7f7;
-  --contrast-font2: #e4e4e4;
-  --accent-1: #ef4950;
-  --accent-2: #d00000;
-  --selection-bg: rgb(255, 0, 0);
+  --contrast-font1: #000000;
+  --contrast-font2: #363636;
+  --accent-1: #c4c4c4;
+  --accent-2: #a0a0a0;
+  --selection-bg: rgb(40, 97, 202);
   --selection-color: #fff;
   --link-color: #5378f0;
   --link-hover: #87a1f6;
@@ -65,16 +65,16 @@ export default {
   --bg-1: #232834;
   --bg-2: #212631;
   --bg-3: #1f2430;
-  --font-1: #dadde0;
-  --font-2: #ff4d4d;
-  --font-3: #bd2f43;
-  --font-4: #c8c9cb;
+  --font-1: #ffffff;
+  --font-2: #f7f7f7;
+  --font-3: #a5a5a5;
+  --font-4: #f8f8f8;
   --font-5: #c8c9cb;
   --contrast-font1: #f7f7f7;
   --contrast-font2: #e4e4e4;
-  --accent-1: #8e2d31;
-  --accent-2: #ea1313;
-  --selection-bg: rgb(255, 7, 17);
+  --accent-1: #1b1f28;
+  --accent-2: #090e18;
+  --selection-bg: rgb(134, 170, 255);
   --selection-color: #fff;
   --link-color: #4878ec;
   --link-hover: #90affb;
@@ -86,5 +86,4 @@ export default {
   --split-color2: #cccccc;
   --bg-line-color: #383838;
 }
-
 </style>
