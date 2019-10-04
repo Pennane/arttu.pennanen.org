@@ -1,7 +1,7 @@
 <template>
     <div class="topbar">
         <div class="topbrandimg">
-          <router-link to="/" @click.native="scrollUp">
+          <router-link to="/" >
           <img class="brand" :src="require('@/assets/icons/icon_white.svg')" alt />
           </router-link>
         </div>
@@ -50,6 +50,10 @@ export default {
   align-items: center;
   width: 4.7em;
   height: 4.7em;
+}
+
+.topbrandimg .router-link-exact-active {
+  cursor: default
 }
 
 img.brand {
