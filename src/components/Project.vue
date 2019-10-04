@@ -12,7 +12,7 @@
         <ProjectImage alt :src="previewImage" preview></ProjectImage>
         <p class="project-preview-desc">{{previewDescription}}</p>
       </div>
-      <router-link class="contentlink projectpreviewlink" :to="readlink">read more</router-link>
+      <router-link class="contentlink projectpreviewlink" :to="filelocation">{{$t("read_more")}}</router-link>
     </div>
     <div class="project" v-else>
       <ProjectHeader :name="name" :date="date" :type="type" :link="link" :buttontext="buttontext"></ProjectHeader>
@@ -63,9 +63,9 @@ export default {
       type: String
     },
     previewImage: {},
-    readlink: {
+    filelocation: {
       type: String,
-      default: "test"
+      default: 'test'
     }
   },
   computed: {
@@ -88,11 +88,10 @@ export default {
   background: none;
   text-shadow: none;
   color: var(--link-color-2);
-  font-weight: 400
+  font-weight: 400;
 }
 
 .projectpreviewlink:hover {
-  color: var(--link-hover-2)
+  color: var(--link-hover-2);
 }
-
 </style>

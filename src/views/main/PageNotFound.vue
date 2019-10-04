@@ -1,6 +1,6 @@
 <template>
   <div class="page404">
-    <AnimatedBackgroundBubbles/>
+    <AnimatedBackgroundBubbles />
     <div class="header">
       <div class="headerwrap">
         <h1 class="h1">
@@ -32,7 +32,6 @@ export default {
 </script>
 
 <style scoped>
-
 .header {
   width: 853px;
   max-width: 100%;
@@ -48,15 +47,16 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   box-sizing: border-box;
   padding: 0;
 }
 
-h2.h1, p.h2 {
-      text-shadow: 0px 0px 20px white !important;
-      text-shadow: 0px 0px 20px var(--bg-1) !important;
+h2.h1,
+p.h2 {
+  text-shadow: 0px 0px 20px white !important;
+  text-shadow: 0px 0px 20px var(--bg-1) !important;
 }
 
 h2.h1 {
@@ -84,7 +84,6 @@ p.h2 {
   .page404 p {
     font-size: 1rem;
   }
-  
 }
 
 .home .char5 {

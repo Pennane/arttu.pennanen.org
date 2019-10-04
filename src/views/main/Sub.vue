@@ -1,6 +1,16 @@
+<i18n>
+{
+  "en": {
+    "sub_header": "Content of /sub"
+  },
+  "fi": {
+    "sub_header": "Sivun /sub sisältö"
+  }
+}
+</i18n>
 <template>
   <div class="sub">
-    <h1>Contents of /sub</h1>
+    <h1>{{$t("sub_header")}}</h1>
     <ul v-if="links" class="linkcontainer">
       <li v-for="link in links" :key="'link-'+link">
         <a :href="'/sub/'+link">

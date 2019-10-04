@@ -1,24 +1,57 @@
+<i18n>
+{
+  "en": {
+    "data": {
+      "name": "Spotify Favorites",
+      "description": "Listening analytics",
+      "buttonText": "Find here!"
+    },
+    "content": {
+      "p_1": "Das auto lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, dolor mollitia voluptate dolorem voluptatem omnis impedit laudantium aperiam beatae aliquid at nemo laborum culpa eius eum minus dicta ducimus!",
+      "p_2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?",
+      "p_3": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora eaque nemo animi, dolor accusantium similique facere voluptatem error ullam porro voluptate necessitatibus nostrum quis voluptates doloribus quod adipisci. Aliquid, illum!",
+      "p_4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda culpa, animi voluptatibus in distinctio cumque voluptatum nostrum, delectus consequuntur laboriosam recusandae labore repellat at non harum minima repudiandae, enim sunt.",
+      "p_5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?"
+    }
+  },
+  "fi": {
+    "data": {
+      "name": "Spotify Favorites",
+      "description": "Musiikin kuuntelu analytiikkaa",
+      "buttonText": "Löydä täältä!"
+    },
+    "content": {
+      "p_1": "Das auto lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, dolor mollitia voluptate dolorem voluptatem omnis impedit laudantium aperiam beatae aliquid at nemo laborum culpa eius eum minus dicta ducimus!",
+      "p_2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?",
+      "p_3": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora eaque nemo animi, dolor accusantium similique facere voluptatem error ullam porro voluptate necessitatibus nostrum quis voluptates doloribus quod adipisci. Aliquid, illum!",
+      "p_4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda culpa, animi voluptatibus in distinctio cumque voluptatum nostrum, delectus consequuntur laboriosam recusandae labore repellat at non harum minima repudiandae, enim sunt.",
+      "p_5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?"
+    }
+  }
+}
+</i18n>
+
 <template>
   <Project
-    :preview="preview"
-    name="Spotify Favorites"
+    :name="$t('data.name')"
+    :type="$t('data.description')"
+    :previewDescription="$t('content.p_1')"
+    :buttontext="$t('data.buttonText')"
     date="12.8.2019"
-    type="Listening Analytics"
     link="https://github.com/Pennane/spotify-favorites"
-    buttontext="Find here!"
-    readlink="spotifyfavorites"
+    filelocation="peigombot"
     :previewImage="require('@/assets/images/spotifyfavorites/spotifyfavorites1.png')"
-    previewDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?"
+    :preview="preview"
   >
-    <p>Das auto lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, dolor mollitia voluptate dolorem voluptatem omnis impedit laudantium aperiam beatae aliquid at nemo laborum culpa eius eum minus dicta ducimus!</p>
+    <p>{{$t("content.p_1")}}</p>
     <ProjectImage alt :src="require('@/assets/images/spotifyfavorites/spotifyfavorites1.png')"></ProjectImage>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?</p>
+    <p>{{$t("content.p_2")}}</p>
     <ProjectImage alt :src="require('@/assets/images/spotifyfavorites/spotifyfavorites2.png')"></ProjectImage>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque labore facere dolorum nisi porro cum eveniet odit perferendis sapiente provident? Iure sit distinctio fuga quam beatae eligendi quaerat natus ad.</p>
+    <p>{{$t("content.p_3")}}</p>
     <ProjectImage alt :src="require('@/assets/images/spotifyfavorites/spotifyfavorites3.png')"></ProjectImage>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea praesentium dolores, cum sed magnam veritatis mollitia voluptas impedit sit nemo dolore sequi totam ducimus earum laborum quae incidunt pariatur. Eius.</p>
+    <p>{{$t("content.p_4")}}</p>
     <ProjectImage alt :src="require('@/assets/images/spotifyfavorites/spotifyfavorites4.png')"></ProjectImage>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aperiam accusamus dolorem quos ducimus porro repellendus voluptatum facere, numquam ex, repudiandae iusto illo, voluptas omnis ut. Deleniti a vero earum.</p>
+    <p>{{$t("content.p_5")}}</p>
   </Project>
 </template>
 

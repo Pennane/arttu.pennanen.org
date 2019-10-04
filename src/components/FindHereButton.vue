@@ -34,7 +34,7 @@ export default {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.3);
-  width: 75px;
+  min-width: 75px;
   text-align: center;
   display: block;
   margin-left: 1em;

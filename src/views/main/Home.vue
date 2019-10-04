@@ -1,3 +1,21 @@
+<i18n>
+{
+  "en": {
+    "lower_header": "Web developing and else.",
+    "intro_1": "Hello. Here are some of the things I've made past my time around the web.",
+    "intro_2_1": "The site has just been ported to",
+    "intro_2_2": ", and I am currently in the process of redesigning everything."
+  },
+  "fi": {
+    "lower_header": "Web-kehitystä sun muuta.",
+    "intro_1": "Täältä löytyy muutamia projekteja, joita olen raapustanut nettisurffailun ohessa.",
+    "intro_2_1": "Sivusto on juuri sovitettu käyttämään",
+    "intro_2_2": "sovelluskehystä (framework), ja mahdolliset muutokset ovat vääjäämättömiä."
+  }
+}
+</i18n>
+
+
 <template>
   <div class="home">
     <div class="header">
@@ -6,18 +24,15 @@
           <span class="char">Arttu</span>
           <span class="char">Pennanen</span>
         </h1>
-        <h2 class="h2">Web developing and else.</h2>
+        <h2 class="h2">{{ $t("lower_header") }}</h2>
       </div>
     </div>
     <div class="body">
-      <p>Hello. Here are some of the things I've made past my time around the web.</p>
+      <p>{{$t("intro_1")}}</p>
       <p>
-        The site has just been ported to
-        <a
-          class="contentlink"
-          href="https://vuejs.org/"
-          title="vuejs.org"
-        >vue.js</a>, and I am currently in the process of redesigning everything.
+        {{$t("intro_2_1")}}
+        <a class="contentlink" href="https://vuejs.org/" title="vuejs.org">vue.js</a>
+        {{$t("intro_2_2")}}
       </p>
       <div class="recent-posts">
         <component
@@ -44,6 +59,12 @@ export default {
   data() {
     return {
       posts: posts
+    }
+  },
+  methods: {
+    changelocale() {
+      console.log(this.$root.$i18n.locale)
+      this.$root.$i18n.locale = 'en'
     }
   }
 }
@@ -158,10 +179,6 @@ export default {
     margin: 0 2vw !important;
     padding-bottom: 1.5em !important;
     padding-top: 0 !important;
-  }
-
-  .home .body > p {
-    text-align: justify !important;
   }
 }
 </style>

@@ -68,9 +68,6 @@ export default {
 }
 
 @media screen and (max-width: 700px) {
-  .content {
-    margin-left: 33px;
-  }
 
   .projectheader .upper {
     flex-direction: column;
