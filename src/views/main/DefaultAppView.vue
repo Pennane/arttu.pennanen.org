@@ -79,6 +79,7 @@ body {
   width: inherit; 
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  background-color: var(--bg-1)
 }
 
 #app ::selection {
