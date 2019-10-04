@@ -39,7 +39,7 @@
     :buttontext="$t('data.buttonText')"
     date="12.8.2019"
     link="https://github.com/Pennane/spotify-favorites"
-    filelocation="peigombot"
+    filelocation="spotifyfavorites"
     :previewImage="require('@/assets/images/spotifyfavorites/spotifyfavorites1.png')"
     :preview="preview"
   >
