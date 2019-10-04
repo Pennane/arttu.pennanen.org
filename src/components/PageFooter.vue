@@ -51,6 +51,8 @@ footer {
   z-index: 2;
   opacity: 0.6;
   font-size: 0.8em;
+  font-weight: 300;
+  font-family: arial;
 }
 
 footer button {

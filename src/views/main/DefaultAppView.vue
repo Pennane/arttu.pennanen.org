@@ -1,13 +1,7 @@
 <template>
   <div :class="{dark:darkmode}">
     <div class="page-wrapper">
-      <div class="topbar">
-        <div class="topbrandimg">
-          <router-link to="/">
-          <img class="brand" :src="require('@/assets/icons/icon_white.svg')" alt />
-          </router-link>
-        </div>
-      </div>
+      <PageTopbar />
       <div class="page-divider">
         <!--<PageSidebar /> -->
         <content class="content" id="scrollbase">
@@ -19,22 +13,24 @@
           </main>
         </content>
       </div>
-      <PageFooter/>
+      <PageFooter />
     </div>
   </div>
 </template>
 
 <script>
-import PageSidebar from '@/components/PageSidebar'
+//import PageSidebar from '@/components/PageSidebar'
 import BackgroundLines from '@/components/BackgroundLines'
 import PageFooter from '@/components/PageFooter'
+import PageTopbar from '@/components/PageTopbar'
 
 export default {
   name: 'DefaultAppView',
   components: {
-    PageSidebar,
+    //  PageSidebar,
     BackgroundLines,
-    PageFooter
+    PageFooter,
+    PageTopbar
   },
   methods: {
     onTouchmove(e) {
@@ -182,43 +178,11 @@ p {
   height: 100%;
 }
 
-img.brand {
-  width: 1.6em;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-  filter: saturate(0) contrast(1) brightness(0.2);
-  filter: var(--brand-filter);
-}
-
-img.brand:hover {
-  filter: brightness(0);
-}
-
-span.brand {
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  -webkit-font-smoothing: antialiased;
-  margin-bottom: 0.1em;
-}
 
 /*multiple time use classes END*/
 
 /*unique "identifier" classes START*/
-.topbar {
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  background-color: #f4f4f4;
-  background-color: var(--bg-2);
-}
 
-.topbrandimg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4.7em;
-  height: 4.7em;
-}
 
 .content {
   background-color: var(--bg-1);

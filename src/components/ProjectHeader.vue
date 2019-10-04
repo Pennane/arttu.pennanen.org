@@ -64,7 +64,11 @@ export default {
 .projectheader .lower {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.date {
+  margin-top: 0.1em;
 }
 
 @media screen and (max-width: 700px) {
