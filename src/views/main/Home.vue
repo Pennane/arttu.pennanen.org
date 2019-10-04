@@ -63,7 +63,6 @@ export default {
   },
   methods: {
     changelocale() {
-      console.log(this.$root.$i18n.locale)
       this.$root.$i18n.locale = 'en'
     }
   }

@@ -1,7 +1,7 @@
 <template>
     <div class="topbar">
         <div class="topbrandimg">
-          <router-link to="/">
+          <router-link to="/" @click.native="scrollUp">
           <img class="brand" :src="require('@/assets/icons/icon_white.svg')" alt />
           </router-link>
         </div>
@@ -18,6 +18,14 @@ export default {
   name: 'PageTopbar',
   components: {
       LocaleChanger
+  },
+  methods: {
+    scrollUp() {
+      if (this.$route.path === "/") {
+        window.scrollTo(0,0)
+      }
+      
+    }
   }
 }
 </script>
@@ -30,6 +38,10 @@ export default {
   background-color: #f4f4f4;
   background-color: var(--bg-2);
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .topbrandimg {

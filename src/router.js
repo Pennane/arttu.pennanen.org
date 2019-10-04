@@ -8,19 +8,22 @@ import Contact from './views/main/Contact.vue'
 const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
-  scrollBehavior: (to, from, savedPosition) => {
-    if (savedPosition) {
-      return savedPosition;
+  scrollBehavior: (to, from, savedPosition) => new Promise((resolve) => {
+    const position = savedPosition || {};
+    console.log(savedPosition)
+    if (!savedPosition) {
+      if (to.hash) {
+        position.selector = to.hash;
+      } else {
+        position.x = 0;
+        position.y = 0;
+      }
+      
     }
-    if (to.hash) {
-      return {
-        selector: to.hash
-      };
-    }
-    document.getElementById("scrollbase").scrollTop = 0
-    return { x: 0, y: 0, selector: "#scrollbase" };
-
-  },
+    router.app.$root.$once('triggerScroll', () => {
+      router.app.$nextTick(() => resolve(position));
+    });
+  }),
   routes: [
     {
       path: '/',

@@ -29,23 +29,9 @@ export default {
 
 <style scoped>
 footer {
-  transition: opacity 0.25s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  color: var(--font-1);
-  font-weight: 350;
-  padding: 0.5em 0;
-  letter-spacing: 0.01em;
-  padding: 1.5em 0;
-  font-size: 0.95em;
-  margin-top: auto;
-  width: 100%;
-  white-space: nowrap;
-
   all: unset;
-  position: absolute;
+  position: fixed;
+  left: 0;
   bottom: 0;
   padding: 0.7em 1em;
   z-index: 2;

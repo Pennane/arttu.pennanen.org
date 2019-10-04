@@ -7,7 +7,7 @@
         <content class="content" id="scrollbase">
           <BackgroundLines />
           <main id="content">
-            <transition name="fade" mode="out-in">
+            <transition name="fade" mode="out-in" @after-leave="$root.$emit('triggerScroll')" >
               <router-view></router-view>
             </transition>
           </main>
@@ -60,9 +60,6 @@ export default {
 
 #app {
   font-family: 'Inter', sans-serif;
-  height: inherit;
-  width: inherit;
-  overflow: hidden;
   color: var(--font-1);
   background-color: var(--bg-1);
 }
@@ -72,8 +69,6 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  position: fixed;
-  overflow: hidden;
   width: 100%;
 }
 
@@ -81,9 +76,7 @@ body {
   margin: 0;
   padding: 0;
   height: inherit;
-  width: inherit;
-  position: fixed;
-  overflow: hidden;
+  width: inherit; 
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -191,8 +184,6 @@ p {
   flex-direction: column;
   align-items: baseline;
   height: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 /*unique "identifier" classes END*/
