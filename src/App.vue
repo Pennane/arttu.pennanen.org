@@ -61,7 +61,7 @@ export default {
   --bg-line-color: hsla(0, 0%, 63.5%, 0.3);
 }
 
-#app.dark {
+.dark {
   --bg-1: #232834;
   --bg-2: #212631;
   --bg-3: #1f2430;

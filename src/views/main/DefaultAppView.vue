@@ -39,17 +39,11 @@ export default {
   },
   computed: {
     darkmode() {
-      return this.$store.state.darkmode
+      let darkmode =  this.$store.state.darkmode;
+      document.body.classList.toggle('dark', darkmode)
+      console.log(1)
+      return darkmode
     }
-  },
-  mounted() {
-    // Register an event listener when the Vue component is ready
-    document.addEventListener('touchmove', this.onTouchmove)
-  },
-
-  beforeDestroy() {
-    // Unregister the event listener before destroying this Vue instance
-    document.removeEventListener('touchmove', this.onTouchmove)
   }
 }
 </script>
