@@ -7,7 +7,7 @@
         <content class="content" id="scrollbase">
           <BackgroundLines />
           <main id="content">
-            <transition name="fade" mode="out-in" @after-leave="$root.$emit('triggerScroll')" >
+            <transition name="fade" mode="out-in" @after-leave="$root.$emit('triggerScroll')">
               <router-view></router-view>
             </transition>
           </main>
@@ -39,7 +39,7 @@ export default {
   },
   computed: {
     darkmode() {
-      let darkmode =  this.$store.state.darkmode;
+      let darkmode = this.$store.state.darkmode
       document.body.classList.toggle('dark', darkmode)
       return darkmode
     }
@@ -69,10 +69,10 @@ body {
   margin: 0;
   padding: 0;
   height: inherit;
-  width: inherit; 
+  width: inherit;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  background-color: var(--bg-1)
+  background-color: var(--bg-1);
 }
 
 #app ::selection {
@@ -165,11 +165,9 @@ p {
   height: 100%;
 }
 
-
 /*multiple time use classes END*/
 
 /*unique "identifier" classes START*/
-
 
 .content {
   background-color: var(--bg-1);
@@ -245,7 +243,8 @@ main > div {
 
 @media screen and (max-width: 700px) {
   .content {
-    margin-left: 33px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 

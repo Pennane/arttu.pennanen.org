@@ -57,19 +57,20 @@ export default {
   align-items: center;
   align-self: baseline;
   margin-bottom: 0.8em;
-  color: var(--font-4)
+  color: var(--font-4);
 }
 
 .projectheader .lower {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--font-5)
+  color: var(--font-5);
 }
 
 @media screen and (max-width: 700px) {
   .content {
-    margin-left: 33px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .projectheader .upper {
