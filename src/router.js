@@ -10,7 +10,7 @@ const router = new Router({
   base: process.env.BASE_URL,
   scrollBehavior: (to, from, savedPosition) => new Promise((resolve) => {
     const position = savedPosition || {};
-    console.log(savedPosition)
+
     if (!savedPosition) {
       if (to.hash) {
         position.selector = to.hash;

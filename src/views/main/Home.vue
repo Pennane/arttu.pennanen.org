@@ -91,7 +91,8 @@ export default {
   align-items: flex-start;
   justify-content: center;
   padding: 1.3em;
-  margin: 1.3em;
+  margin: 1.4em;
+  margin-top: 1.6em;
   padding-top: 0.5em;
   background-color: white;
   background-color: var(--bg-1);

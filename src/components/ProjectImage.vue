@@ -1,7 +1,7 @@
 <template>
   <div>
   <div if="preview" :class="{projectimage: true, preview: preview }">
-    <img :alt="alt" :src="src" />
+    <img :alt="alt" v-lazy="src" />
   </div>
   </div>
 </template>
@@ -46,6 +46,11 @@ export default {
   box-shadow: 0 2px 3px 0 rgba(52, 56, 85, 0.12);
   box-sizing: border-box;
   width: 100%;
+  transition: opacity 0.3s;
+}
+
+.projectimage > img[lazy=loading] {
+ opacity: 0;
 }
 
 
