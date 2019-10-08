@@ -33,7 +33,6 @@ export default {
 
 <style scoped>
 .header {
-  width: 853px;
   max-width: 100%;
   box-sizing: border-box;
 }
