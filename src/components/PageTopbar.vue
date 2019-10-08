@@ -24,7 +24,6 @@ export default {
       if (this.$route.path === "/") {
         window.scrollTo(0,0)
       }
-      
     }
   }
 }

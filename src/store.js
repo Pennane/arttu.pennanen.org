@@ -18,7 +18,7 @@ export default new Vuex.Store({
         state.darkmode = bool
       }
     },
-    setLocale(locale) {
+    setLocale(state, locale) {
       state.locale = locale
     }
   }
