@@ -69,7 +69,7 @@ export default {
   );
   background: var(--topbar-gradient);
   height: 6px;
-  position: fixed;
+  /*position: fixed; */
   width: 100%;
   top: 0;
   left: 0;
@@ -79,7 +79,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 4px;
+  margin-top: -2px;
+  /*margin-top: 4px;*/
 }
 
 .topbrandimg {
