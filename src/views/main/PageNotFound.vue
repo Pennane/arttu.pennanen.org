@@ -37,6 +37,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: initial;
+  text-align: center;
 }
 
 .page404 {

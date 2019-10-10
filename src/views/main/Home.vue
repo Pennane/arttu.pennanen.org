@@ -112,7 +112,6 @@ export default {
   flex: 0 1 auto;
   max-width: 570px;
   align-items: flex-start;
-  margin: 0 calc(6vw - 0.5em);
 }
 
 .introductory > p {
@@ -165,23 +164,23 @@ export default {
   display: block !important;
 }
 
-@media screen and (max-width: 900px) {
-  .home .char {
-    font-size: calc(0.25em + 5.4vw) !important;
+@media screen and (max-width: 500px) {
+  .home .headerwrap > .h1  {
+    font-size: 3em;
   }
 
   .home .h1 {
     padding-top: 2vw !important;
   }
 
-  .home .h2 {
-    font-size: calc(0.8em + 1.3vw) !important;
+  .home .headerwrap > .h2 {
+    font-size: 1.2em
   }
 
   .headerwrap {
-    margin: 0 2vw !important;
-    padding-bottom: 1.5em !important;
-    padding-top: 0 !important;
+    padding: 1em !important;
+    margin: 1em !important;
+    padding-top: 0.5em !important;
   }
 }
 </style>

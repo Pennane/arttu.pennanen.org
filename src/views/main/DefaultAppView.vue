@@ -103,7 +103,7 @@ main {
   display: flex;
   justify-content: center;
   z-index: 2;
-  padding: 1em;
+  padding: 1em calc(6vw + 0.5em);
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -181,7 +181,6 @@ p {
 
 /*unique "identifier" classes END*/
 
-
 /*misc START*/
 
 .fade-enter-active,
@@ -202,7 +201,7 @@ p {
     width: 14em;
   }
 
-  h1 {
+  h1:not([class]) {
     font-size: calc(1.8em + 1.2vw);
   }
 }
