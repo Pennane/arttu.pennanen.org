@@ -77,11 +77,34 @@ export default {
 </script>
 
 <style scoped>
-.upper {
-  color: var(--font-4);
+.project {
+  max-width: 700px;
 }
-.lower {
-  color: var(--font-5);
+
+.projectbody p {
+  line-height: 1.6;
+}
+
+.projectbody > * {
+  margin: 1.3em 0;
+  padding: 0 !important;
+}
+
+.projectbody {
+  background-color: var(--bg-1);
+}
+
+.projectfooter {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 2.2em 0;
+  font-style: italic;
+  display: flex;
+  border-radius: 3em;
+  flex: 1 1 auto;
+  justify-content: center;
+  padding: 0.6em 0em !important;
+  align-items: center;
+  margin-bottom: 5em;
 }
 
 .projectpreviewlink {

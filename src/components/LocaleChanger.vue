@@ -1,13 +1,13 @@
 <template>
   <div class="locale-changer">
-      <input
-        v-for="(lang, i) in langs"
-        :key="`Lang${i}`"
-        type="button"
-        :value="lang"
-        @click="setLocale(lang)"
-        :class="{active: lang === currentLocale}"
-      />
+    <input
+      v-for="(lang, i) in langs"
+      :key="`Lang${i}`"
+      type="button"
+      :value="lang"
+      @click="setLocale(lang)"
+      :class="{active: lang === currentLocale}"
+    />
   </div>
 </template>
 
@@ -16,8 +16,7 @@ export default {
   name: 'LocaleChanger',
   data() {
     return {
-      langs: ['fi', 'en'],
-      
+      langs: ['fi', 'en']
     }
   },
   methods: {
@@ -28,9 +27,9 @@ export default {
     }
   },
   computed: {
-    currentLocale: function () {
+    currentLocale: function() {
       return this.$root.$i18n.locale
-    } 
+    }
   }
 }
 </script>
@@ -48,9 +47,11 @@ export default {
 }
 
 input {
-  all: unset;
+  border: none;
+  background-color: transparent;
   font-family: 'Inter', sans-serif;
   font-weight: 200;
+  font-size: 1rem;
   cursor: pointer;
   padding: 0.2em;
   margin: 0.15em;

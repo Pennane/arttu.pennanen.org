@@ -3,7 +3,7 @@
     <div :class="{'changepage-animation': animated, 'topbarline': true}" />
     <div class="topbarcontent">
       <div class="topbrandimg">
-        <router-link to="/">
+        <router-link to="/" class="homelink" title="home">
           <img class="brand" :src="require('@/assets/icons/icon_white.svg')" alt />
         </router-link>
       </div>
@@ -56,6 +56,8 @@ export default {
   top: 0;
   width: 100%;
   z-index: 10;
+  border-bottom: 1px solid rgba(162, 162, 162, 0.3);
+  border-color: var(--bg-line-color);
 }
 
 .topbarline {
@@ -87,8 +89,9 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4.7em;
-  height: 4.7em;
+  width: 4.5em;
+  height: 4.5em;
+  padding: 0 .2em;
 }
 
 .topbrandimg .router-link-exact-active {
@@ -103,7 +106,7 @@ img.brand {
   filter: var(--brand-filter);
 }
 
-img.brand:hover {
+.homelink:hover img.brand {
   filter: brightness(0);
 }
 
@@ -112,6 +115,14 @@ span.brand {
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   margin-bottom: 0.1em;
+}
+
+.homelink {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .changepage-animation {

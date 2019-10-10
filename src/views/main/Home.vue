@@ -2,9 +2,9 @@
 {
   "en": {
     "lower_header": "Web developing and else.",
-    "intro_1": "Hello. Here are some of the things I've made past my time around the web.",
-    "intro_2_1": "The site has just been ported to",
-    "intro_2_2": ", and I am currently in the process of redesigning everything."
+    "intro_1": "Hello. Here are some projects I've built during my time throughout the web.",
+    "intro_2_1": "The site has just received a port to",
+    "intro_2_2": "and is currently under the process of comprehensive redesign."
   },
   "fi": {
     "lower_header": "Web-kehitystä sun muuta.",
@@ -28,12 +28,19 @@
       </div>
     </div>
     <div class="body">
-      <p>{{$t("intro_1")}}</p>
-      <p>
-        {{$t("intro_2_1")}}
-        <a class="contentlink" href="https://vuejs.org/" title="vuejs.org">vue.js</a>
-        {{$t("intro_2_2")}}
-      </p>
+      <div class="introductory">
+        <p>{{$t("intro_1")}}</p>
+        <p>
+          {{$t("intro_2_1")}}
+          <a
+            class="contentlink"
+            href="https://vuejs.org/"
+            title="vuejs.org"
+          >vue.js</a>
+          {{$t("intro_2_2")}}
+        </p>
+      </div>
+
       <div class="recent-posts">
         <component
           v-for="postkey in Object.keys(posts)"
@@ -109,16 +116,12 @@ export default {
   margin: 0 calc(6vw - 0.5em);
 }
 
-.body > p {
+.introductory > p {
   margin: 0;
   background-color: white;
   background-color: var(--bg-1);
   line-height: 1.6;
   margin: 0.8em 0;
-}
-
-.body p:last-child {
-  margin-bottom: 2em;
 }
 
 .headerwrap > .h1 {
@@ -150,8 +153,9 @@ export default {
 
 .recent-posts > div {
   margin-bottom: 3em;
-  margin-top: calc(0.5em + 1.1vw);
+  margin-top: 2em;
   padding-bottom: 0.6em;
+  padding-top: 0.5em;
   background-color: var(--bg-1);
 }
 </style>

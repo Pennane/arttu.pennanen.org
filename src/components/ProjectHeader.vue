@@ -7,6 +7,7 @@
     </div>
     <div v-if="true" class="lower">
       <span class="type">{{type}}</span>
+      <span class="divider-bullet">•</span>
       <span class="date">{{date}}</span>
     </div>
   </div>
@@ -44,27 +45,32 @@ export default {
 
 <style scoped>
 .projectheader {
-  margin: 0.5em 0;
-  margin-bottom: 1.3em;
+  margin: 3em 0;
   max-width: 630px;
   clear: both;
 }
 
-.projectheader .upper h2 {
+.upper h2 {
   margin: 0;
 }
 
-.projectheader .upper {
+.upper {
   display: flex;
   align-items: center;
   align-self: baseline;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.5em;
+  color: var(--font-4);
 }
 
-.projectheader .lower {
+.lower {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  color: var(--font-5);
+}
+
+.divider-bullet {
+  margin: 0 0.25em 0 0.35em;
+  font-weight: 100;
 }
 
 .date {
@@ -72,7 +78,6 @@ export default {
 }
 
 @media screen and (max-width: 700px) {
-
   .projectheader .upper {
     flex-direction: column;
     align-items: flex-start;

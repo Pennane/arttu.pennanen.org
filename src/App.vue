@@ -66,7 +66,7 @@ export default {
   --bg-1: #232834;
   --bg-2: #212631;
   --bg-3: #1f2430;
-  --font-1: #ffffff;
+  --font-1: #e0e1e3;
   --font-2: #f7f7f7;
   --font-3: #a5a5a5;
   --font-4: #f8f8f8;
@@ -85,7 +85,11 @@ export default {
   --nav-divide: #60656f;
   --split-color1: #ffffff;
   --split-color2: #cccccc;
-  --bg-line-color: #383838;
-  --topbar-gradient: linear-gradient(90deg,hsl(224, 20%, 13%) 0%,hsl(0, 0%, 9%) 100%);
+  --bg-line-color: rgba(28, 32, 42, 0.6);
+  --topbar-gradient: linear-gradient(
+    90deg,
+    hsl(224, 20%, 13%) 0%,
+    hsl(0, 0%, 9%) 100%
+  );
 }
 </style>

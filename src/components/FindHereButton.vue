@@ -20,7 +20,6 @@ export default {
 
 <style scoped>
 .tryhere {
-  all: unset;
   -webkit-appearance: none;
   text-decoration: none;
   padding: 0.8em 1.5em;
@@ -37,7 +36,7 @@ export default {
   min-width: 75px;
   text-align: center;
   display: block;
-  margin-left: 1em;
+  margin-left: 2em;
   white-space: nowrap;
 }
 
@@ -52,8 +51,7 @@ export default {
 
 @media screen and (max-width: 700px) {
   .tryhere {
-    margin: 0;
-    margin-top: 0.9em;
+    margin: 0.6em 0 0.2em 0;
     font-size: 0.9em;
   }
 }

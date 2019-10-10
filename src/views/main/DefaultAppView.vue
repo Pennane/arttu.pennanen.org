@@ -107,6 +107,7 @@ main {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  padding-bottom: 7em;
 }
 
 p {
@@ -180,40 +181,9 @@ p {
 
 /*unique "identifier" classes END*/
 
-/* project START */
-
-.project {
-  max-width: 700px;
-}
-
-.project > div {
-  padding: 0.5em 0;
-}
-
-.projectbody p {
-  line-height: 1.6;
-}
-
-.projectbody {
-  background-color: var(--bg-1);
-}
-
-.projectfooter {
-  background-color: rgba(0, 0, 0, 0.1);
-  margin: 1em 0;
-  font-style: italic;
-  display: flex;
-  border-radius: 3em;
-  flex: 1 1 auto;
-  justify-content: center;
-  padding: 0.6em 0em !important;
-  align-items: center;
-  margin-bottom: 5em;
-}
-
-/* project END */
 
 /*misc START*/
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.21s;

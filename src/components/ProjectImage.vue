@@ -1,8 +1,8 @@
 <template>
   <div>
-  <div if="preview" :class="{projectimage: true, preview: preview }">
-    <img :alt="alt" v-lazy="src" />
-  </div>
+    <div if="preview" :class="{projectimage: true, preview: preview }">
+      <img :alt="alt" v-lazy="src" />
+    </div>
   </div>
 </template>
 
@@ -33,7 +33,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 1em 0;
+  padding: 0;
 }
 
 .projectimage.preview {
@@ -49,10 +49,9 @@ export default {
   transition: opacity 0.3s;
 }
 
-.projectimage > img[lazy=loading] {
- opacity: 0;
+.projectimage > img[lazy='loading'] {
+  opacity: 0;
 }
-
 
 .projectimage.preview > img {
   border: 1px solid rgba(0, 0, 0, 0.1);

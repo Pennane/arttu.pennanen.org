@@ -42,9 +42,9 @@ footer {
 }
 
 footer button {
-  all: unset;
+  background-color: transparent;
   padding: 0.3em;
-  border: 1px solid rgb(0, 0, 0, 0.6);
+  border: 1px solid rgb(0, 0, 0, 0.4);
   border-radius: 0.3em;
   font-size: 0.9em;
   margin: 0.3em;
@@ -53,6 +53,8 @@ footer button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  width: 1.6em;
 }
 footer button {
   color: #717171;
