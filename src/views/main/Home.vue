@@ -2,15 +2,15 @@
 {
   "en": {
     "lower_header": "Web developing and else.",
-    "intro_1": "Hello. Here are some projects I've built during my time throughout the web.",
+    "intro_1": "Here are some projects I've built arbitrarily during my time around the web. These projects were mainly created to act as a learning method when taking a glance at new technologies.",
     "intro_2_1": "The site has just received a port to",
     "intro_2_2": "and is currently under the process of comprehensive redesign."
   },
   "fi": {
-    "lower_header": "Web-kehitystä sun muuta.",
-    "intro_1": "Täältä löytyy muutamia projekteja, joita olen raapustanut nettisurffailun ohessa.",
-    "intro_2_1": "Sivusto on juuri sovitettu käyttämään",
-    "intro_2_2": "sovelluskehystä (framework), ja mahdolliset muutokset ovat vääjäämättömiä."
+    "lower_header": "Web-kehitystä sekä muuta.",
+    "intro_1": "Tässä mielivaltaisesti valittuja projekteja, joiden tarkoituksena on ollut korjata mieltä ärsyttäneitä ongelmia, tai toimia teknologioiden oppimismenetelminä.",
+    "intro_2_1": "Sivusto on vastikään sovitettu käyttämään",
+    "intro_2_2": "sovelluskehystä (framework), ja mikään ei varmuudella ole lopullisessa muodossaan."
   }
 }
 </i18n>
@@ -97,9 +97,8 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 1.3em;
-  margin: 1.4em;
-  margin-top: 1.6em;
+  padding: 1em;
+  margin: 2em;
   padding-top: 0.5em;
   background-color: white;
   background-color: var(--bg-1);
@@ -148,7 +147,7 @@ export default {
 }
 
 .recent-posts {
-  padding-bottom: 8em;
+  padding-bottom: 2em;
 }
 
 .recent-posts > div {

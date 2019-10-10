@@ -55,6 +55,7 @@ input {
   cursor: pointer;
   padding: 0.2em;
   margin: 0.15em;
+  color: var(--font-2)
 }
 
 input.active {
