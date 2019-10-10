@@ -13,9 +13,13 @@
     <h1>{{$t("sub_header")}}</h1>
     <ul v-if="links" class="linkcontainer">
       <li v-for="link in links" :key="'link-'+link">
-        <a :href="'/sub/'+link">
+        <a class="sublink" :href="'/sub/'+link">
           <span class="name">{{ link }}</span>
-          <span class="destination">{{' – ' + windowOrigin + '/sub/' +link+'/' }}</span>
+          <span class="destination">
+            <span class="line">{{' – '}}</span>
+            <span class="origin">{{windowOrigin}}</span>
+            <span class="destinationlink">{{'/sub/' +link+'/'}}</span>
+          </span>
         </a>
       </li>
     </ul>
@@ -61,6 +65,13 @@ export default {
 
 a {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.line {
+  margin: 0 0.3em;
 }
 
 .name {
@@ -71,5 +82,18 @@ a {
   color: var(--font-1);
   opacity: 0.8;
   font-size: 0.77em;
+  display: inline-block;
+}
+
+@media screen and (max-width: 700px) {
+  .origin {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .linkcontainer {
+    padding-left: 20px;
+  }
 }
 </style>
