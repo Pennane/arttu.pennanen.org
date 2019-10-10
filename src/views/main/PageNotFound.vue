@@ -3,29 +3,23 @@
     <AnimatedBackgroundBubbles />
     <div class="header">
       <div class="headerwrap">
-        <h1 class="h1">
-          <splitchars :text="'404 not found'" />
-        </h1>
-        <h2 class="h1">
-          <splitchars :text="'\¯\\\_\(\ツ\)\_\/\¯'" />
-        </h2>
+        <h1>404 not found</h1>
+        <span class="shrug">¯\_(ツ)_/¯</span>
 
-        <p class="h2">
+        <p>
           Back to
-          <router-link class="contentlink" to="/">home</router-link>.
+          <router-link class="homelink" to="/">home</router-link>.
         </p>
       </div>
     </div>
   </div>
 </template>
 <script>
-import SplitCharacters from '@/components/SplitCharacters.vue'
 import AnimatedBackgroundBubbles from '@/components/AnimatedBackgroundBubbles.vue'
 
 export default {
   name: 'PageNotFound',
   components: {
-    splitchars: SplitCharacters,
     AnimatedBackgroundBubbles: AnimatedBackgroundBubbles
   }
 }
@@ -34,10 +28,13 @@ export default {
 <style scoped>
 .header {
   max-width: 100%;
-  box-sizing: border-box;
+  padding: 2em;
 }
 
 .headerwrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: initial;
 }
@@ -48,31 +45,40 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  box-sizing: border-box;
   padding: 0;
 }
 
-h2.h1,
-p.h2 {
-  text-shadow: 0px 0px 20px white !important;
-  text-shadow: 0px 0px 20px var(--bg-1) !important;
-}
-
-h2.h1 {
-  font-size: 3.5em;
+h1 {
+  font-size: 4em;
+  padding: 0;
   margin: 0;
-  padding: 0;
+}
+
+.shrug {
+  font-size: 3em;
   font-weight: 500;
   letter-spacing: -0.01em;
+  padding: 0;
+  margin: 0;
 }
 
-p.h2 {
-  margin: 1.5rem;
-  font-size: 1.4em;
+p {
+  font-size: 20px;
+  padding: 0;
+  margin: .5rem 0;
 }
 
-.contentlink {
+.homelink {
   text-decoration: none;
+  color: #4361c5;
+  color: var(--link-color);
+  font-weight: 550;
+  text-decoration: none;
+  position: relative;
+}
+
+.homelink:hover {
+  color: var(--link-hover)
 }
 
 @media screen and (max-width: 900px) {

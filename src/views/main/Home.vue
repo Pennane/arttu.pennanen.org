@@ -77,7 +77,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .home {
   box-sizing: border-box;
   padding: 0;
