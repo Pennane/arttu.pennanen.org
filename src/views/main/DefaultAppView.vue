@@ -193,10 +193,6 @@ p {
   opacity: 0;
 }
 
-main > div {
-  padding: 0 calc(0.1rem + 5.7vw);
-}
-
 /*misc END*/
 
 /*media queries START*/
