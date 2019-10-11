@@ -49,8 +49,6 @@ export default {
 <style scoped>
 .topbar {
   display: flex;
-  background-color: #f4f4f4;
-  background-color: var(--bg-2);
   flex-direction: column;
   position: sticky;
   top: 0;
@@ -71,7 +69,6 @@ export default {
   );
   background: var(--topbar-gradient);
   height: 6px;
-  /*position: fixed; */
   width: 100%;
   top: 0;
   left: 0;
@@ -82,7 +79,9 @@ export default {
   align-items: center;
   justify-content: space-between;
   margin-top: -2px;
-  /*margin-top: 4px;*/
+  background-color: #f4f4f4;
+  background-color: var(--bg-2);
+  opacity: 0.99;
 }
 
 .topbrandimg {

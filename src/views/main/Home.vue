@@ -164,8 +164,14 @@ export default {
   display: block !important;
 }
 
+@media screen and (max-width: 740px) {
+  .home .headerwrap > .h1 {
+    font-size: 3.8em;
+  }
+}
+
 @media screen and (max-width: 500px) {
-  .home .headerwrap > .h1  {
+  .home .headerwrap > .h1 {
     font-size: 3em;
   }
 
@@ -174,7 +180,7 @@ export default {
   }
 
   .home .headerwrap > .h2 {
-    font-size: 1.2em
+    font-size: 1.2em;
   }
 
   .headerwrap {

@@ -34,19 +34,32 @@ export default {
   justify-content: flex-start;
   align-items: center;
   padding: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 3px 0 rgba(52, 56, 85, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-2);
 }
 
 .projectimage.preview {
   padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid rgba(170, 170, 170, 0.1);
 }
 
 .projectimage > img {
   max-width: 500px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 3px 0 rgba(52, 56, 85, 0.12);
   box-sizing: border-box;
   width: 100%;
   transition: opacity 0.3s;
+  object-fit: contain;
+  object-position: center;
+  max-height: 400px;
 }
 
 .projectimage > img[lazy='loading'] {
@@ -54,12 +67,12 @@ export default {
 }
 
 .projectimage.preview > img {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  max-width: initial;
   width: 100%;
   height: 300px;
-  object-fit: cover;
-  object-position: top;
   max-height: 30vh;
+  transform: scale(1.03);
+  object-position: top;
+  object-fit: cover;
 }
 </style>

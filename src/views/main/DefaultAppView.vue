@@ -110,11 +110,16 @@ main {
   padding-bottom: 7em;
 }
 
+main > div {
+  max-width: 760px;
+}
+
 p {
   font-weight: 300;
   color: #000;
   color: var(--font-1);
   font-size: 16px;
+  max-width: 700px
 }
 
 /*common element styling END*/
@@ -203,13 +208,6 @@ p {
 
   h1:not([class]) {
     font-size: calc(1.8em + 1.2vw);
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .content {
-    margin-left: 15px;
-    margin-right: 15px;
   }
 }
 

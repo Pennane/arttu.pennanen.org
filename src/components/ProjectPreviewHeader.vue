@@ -43,7 +43,6 @@ export default {
 
 <style scoped>
 .projectheader {
-  max-width: 630px;
   clear: both;
 }
 
@@ -63,7 +62,7 @@ export default {
   display: flex;
   align-items: center;
   color: var(--font-5);
-  margin-bottom: 1em;
+      margin-bottom: 0.9em;
 }
 
 .divider-bullet {

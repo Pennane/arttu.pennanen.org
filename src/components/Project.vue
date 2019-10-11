@@ -77,17 +77,13 @@ export default {
 </script>
 
 <style scoped>
-.project {
-  max-width: 700px;
-}
 
 .projectbody p {
   line-height: 1.6;
 }
 
 .projectbody > * {
-  margin: 1.3em 0;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .projectbody {

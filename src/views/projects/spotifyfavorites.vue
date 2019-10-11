@@ -40,7 +40,7 @@
     date="12.8.2019"
     link="https://github.com/Pennane/spotify-favorites"
     filelocation="spotifyfavorites"
-    :previewImage="require('@/assets/images/spotifyfavorites/spotifyfavorites1.png')"
+    :previewImage="require('@/assets/images/spotifyfavorites/spotifyfavorites3.png')"
     :preview="preview"
   >
     <p>{{$t("content.p_1")}}</p>
