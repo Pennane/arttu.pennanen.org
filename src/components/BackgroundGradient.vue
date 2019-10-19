@@ -23,9 +23,9 @@ export default {
     new simpleParallax(image, {
       transition: 'cubic-bezier(0, 0, 0, 1)',
       delay: 0,
-      scale: 2,
+      scale: 1.5,
       overflow: true,
-      orientation: 'down',
+      orientation: 'up',
       breakpoint: 0
     })
   }
@@ -53,8 +53,8 @@ export default {
 
 .light .background-gradient {
   transform: flip(1);
-  filter: sepia(1) saturate(2) invert(1) brightness(1.4) saturate(1) blur(20px)
-    contrast(0.8) brightness(1.2) blur(20px);
+  filter: sepia(1) saturate(10) invert(1) brightness(0.8) saturate(1.1)
+    contrast(1.8) brightness(1) blur(20px);
 }
 
 .background-gradient-img[lazy='loading'] {

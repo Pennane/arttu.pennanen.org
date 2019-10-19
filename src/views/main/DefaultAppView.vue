@@ -1,5 +1,5 @@
 <template>
-  <div :class="{dark:darkmode, light:!darkmode}">
+  <div :class="{dark:true}">
     <div class="page-wrapper">
       <PageTopbar />
       <div class="page-divider">
@@ -14,7 +14,7 @@
           </main>
         </content>
       </div>
-      <PageFooter />
+      <!--<PageFooter /> -->
     </div>
   </div>
 </template>
