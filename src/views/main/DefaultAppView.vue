@@ -41,7 +41,6 @@ export default {
   computed: {
     darkmode() {
       let darkmode = this.$store.state.darkmode && true
-      console.log(darkmode)
       document.body.classList.toggle('dark', darkmode)
       document.body.classList.toggle('light', !darkmode)
       return darkmode
