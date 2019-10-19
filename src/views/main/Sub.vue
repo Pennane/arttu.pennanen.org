@@ -10,6 +10,7 @@
 </i18n>
 <template>
   <div class="sub">
+    <BackgroundGradient />
     <h1>{{$t("sub_header")}}</h1>
     <ul v-if="links" class="linkcontainer">
       <li v-for="link in links" :key="'link-'+link">
@@ -27,8 +28,13 @@
 </template>
 
 <script>
+import BackgroundGradient from '@/components/BackgroundGradient.vue'
+
 export default {
   name: 'Sub-page',
+  components: {
+    BackgroundGradient
+  },
   data() {
     return {
       links: false
@@ -53,7 +59,7 @@ export default {
     }
   },
   metaInfo: {
-    title: "Projects"
+    title: 'Projects'
   }
 }
 </script>

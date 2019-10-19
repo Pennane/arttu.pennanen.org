@@ -32,17 +32,6 @@ export default {
       }
     }
   }
-  /*,
-  watch: {
-    $route(to, from) {
-      let vuethis = this
-      console.log('animated', this.animated)
-      vuethis.animated = true
-      setTimeout(function() {
-        vuethis.animated = false
-      }, 1600)
-    }
-  }*/
 }
 </script>
 
@@ -56,10 +45,6 @@ export default {
   z-index: 10;
 }
 
-.light .topbar {
-  border-bottom: 1px solid rgba(162, 162, 162, 0.3);
-  border-color: var(--bg-line-color);
-}
 
 .topbarline {
   background-color: #2196f3;
@@ -71,6 +56,7 @@ export default {
     to(#1f79cd)
   );
   background: var(--topbar-gradient);
+  background: transparent;
   height: 6px;
   width: 100%;
   top: 0;
@@ -85,10 +71,6 @@ export default {
   opacity: 0.99;
 }
 
-.light .topbarcontent {
-  background-color: #f4f4f4;
-  background-color: var(--bg-2);
-}
 
 .topbrandimg {
   display: flex;

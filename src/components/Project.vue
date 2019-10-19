@@ -86,9 +86,6 @@ export default {
   padding: 0;
 }
 
-.light .projectbody {
-  background-color: var(--bg-1);
-}
 .projectfooter {
   background-color: rgba(0, 0, 0, 0.1);
   margin: 2.2em 0;
