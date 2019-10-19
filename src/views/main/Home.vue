@@ -19,6 +19,9 @@
 <template>
   <div class="home">
     <div class="header">
+      <div class="background-gradient">
+        <img class="background-gradient-img" v-lazy="backgroundImageSrc" />
+      </div>
       <div class="headerwrap">
         <h1 class="h1">
           <span class="char">Arttu</span>
@@ -55,6 +58,8 @@
 
 <script>
 import postsData from '@/assets/data/posts.json'
+import simpleParallax from 'simple-parallax-js'
+
 let posts = {}
 postsData.forEach((post, i) => {
   posts['post' + i] = () => import('@/views/' + post)
@@ -62,22 +67,69 @@ postsData.forEach((post, i) => {
 
 export default {
   name: 'home',
-  components: posts,
+  components: {
+    ...posts
+  },
   data() {
     return {
-      posts: posts
+      posts: posts,
+      backgroundImageSrc: require('@/assets/images/epic-gradient-low.png')
     }
   },
   methods: {
     changelocale() {
       this.$root.$i18n.locale = 'en'
     }
+  },
+  mounted: () => {
+    let image = document.querySelector('.background-gradient-img')
+    if (!image) return
+    new simpleParallax(image, {
+      transition: 'cubic-bezier(0, 0, 0, 1)',
+      delay: 0,
+      scale: 2,
+      overflow: true,
+      orientation: 'down',
+      breakpoint: 0
+    })
   }
 }
 </script>
 
 
 <style scoped>
+.background-gradient {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.background-gradient-img {
+  width: 100%;
+  object-position: bottom;
+  filter: blur(20px);
+  object-fit: cover;
+  
+}
+
+.light .background-gradient {
+  filter: contrast(1) brightness(2) saturate(0.6);
+}
+
+.dark .background-gradient {
+  transition: opacity 3.2s ease;
+  opacity: 1;
+  filter: blur(20px);
+}
+
+.background-gradient-img[lazy='loading'] {
+  opacity: 0;
+}
+
 .home {
   box-sizing: border-box;
   padding: 0;
@@ -90,6 +142,14 @@ export default {
   flex-direction: column;
   flex: 0 1 auto;
   justify-content: center;
+  will-change: margin;
+ transition: all .6s cubic-bezier(0, 0, 0.2, 1)
+
+}
+
+.dark .header {
+  border: 1px solid white;
+   margin-bottom: 32px;
 }
 
 .headerwrap {
@@ -100,6 +160,9 @@ export default {
   padding: 1em;
   margin: 2em;
   padding-top: 0.5em;
+}
+
+.light .headerwrap {
   background-color: white;
   background-color: var(--bg-1);
 }
@@ -116,15 +179,18 @@ export default {
 
 .introductory > p {
   margin: 0;
-  background-color: white;
-  background-color: var(--bg-1);
+
   line-height: 1.6;
   margin: 0.8em 0;
 }
 
+.light .introductory > p {
+  background-color: white;
+  background-color: var(--bg-1);
+}
+
 .headerwrap > .h1 {
   font-size: 4.4em;
-  text-shadow: 0px 2px #6f747d;
   color: #484848;
   color: var(--split-color1);
   line-height: 0.8;
@@ -154,6 +220,9 @@ export default {
   margin-top: 2em;
   padding-bottom: 0.6em;
   padding-top: 0.5em;
+}
+
+.light .recent-posts > div {
   background-color: var(--bg-1);
 }
 </style>

@@ -35,11 +35,26 @@ export default {
     },
     date: {
       type: String
+    },
+    description: {
+      type: String,
+      required: true
     }
   },
   components: {
     FindHereButton
-  }
+  },
+  metaInfo() {
+    return {
+      meta:[
+        { title: this.name },
+        { vmid: 'description', name: 'description', content: this.description},
+        { vmid: 'og:description', property: "og:description", content: this.description},
+        { vmid: 'twitter:description', name: "twitter:description", content: this.description}
+      ]
+    }
+      
+  },
 }
 </script>
 

@@ -1,11 +1,12 @@
 <template>
-  <div :class="{dark:darkmode}">
+  <div :class="{dark:darkmode, light:!darkmode}">
     <div class="page-wrapper">
       <PageTopbar />
       <div class="page-divider">
         <!--<PageSidebar /> -->
         <content class="content" id="scrollbase">
-          <BackgroundLines />
+          <BackgroundLines v-if="!darkmode" />
+
           <main id="content">
             <transition name="fade" mode="out-in" @after-leave="$root.$emit('triggerScroll')">
               <router-view></router-view>
@@ -39,8 +40,10 @@ export default {
   },
   computed: {
     darkmode() {
-      let darkmode = this.$store.state.darkmode
+      let darkmode = this.$store.state.darkmode && true
+      console.log(darkmode)
       document.body.classList.toggle('dark', darkmode)
+      document.body.classList.toggle('light', !darkmode)
       return darkmode
     }
   }
@@ -119,7 +122,7 @@ p {
   color: #000;
   color: var(--font-1);
   font-size: 16px;
-  max-width: 700px
+  max-width: 700px;
 }
 
 /*common element styling END*/
@@ -130,16 +133,6 @@ p {
   color: #4361c5;
   color: var(--link-color);
   font-weight: 550;
-  text-decoration: none;
-  position: relative;
-  text-shadow: 1px 1px #ffffff, -1px 1px #ffffff, -1px -1px #ffffff,
-    1px -1px #ffffff;
-  text-shadow: 1px 1px var(--bg-1), -1px 1px var(--bg-1), -1px -1px var(--bg-1),
-    1px -1px var(--bg-1);
-  background-image: linear-gradient(90deg, currentColor 100%, transparent 100%);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 100% 1px;
 }
 
 .contentlink:hover {
@@ -166,7 +159,6 @@ p {
 .page-divider {
   display: flex;
   flex: 1 1 auto;
-  position: relative;
   width: 100%;
   height: 100%;
 }

@@ -54,6 +54,9 @@ export default {
   top: 0;
   width: 100%;
   z-index: 10;
+}
+
+.light .topbar {
   border-bottom: 1px solid rgba(162, 162, 162, 0.3);
   border-color: var(--bg-line-color);
 }
@@ -79,9 +82,12 @@ export default {
   align-items: center;
   justify-content: space-between;
   margin-top: -2px;
+  opacity: 0.99;
+}
+
+.light .topbarcontent {
   background-color: #f4f4f4;
   background-color: var(--bg-2);
-  opacity: 0.99;
 }
 
 .topbrandimg {
@@ -90,7 +96,7 @@ export default {
   align-items: center;
   width: 4.5em;
   height: 4.5em;
-  padding: 0 .2em;
+  padding: 0 0.2em;
 }
 
 .topbrandimg .router-link-exact-active {

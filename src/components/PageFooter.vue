@@ -33,11 +33,11 @@ footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  padding: 0.7em 1em;
+  margin: 0.8em 1.5em;
   z-index: 2;
   opacity: 0.6;
   font-size: 0.8em;
-  font-weight: 300;
+  font-weight: 600;
   font-family: arial;
 }
 

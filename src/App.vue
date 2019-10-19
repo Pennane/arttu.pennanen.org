@@ -28,9 +28,32 @@ export default {
       let parts = str.split('.')
       return new Date(parts[2], parts[1] - 1, parts[0])
     }
+  },
+  metaInfo: {
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width,initial-scale=1.0' },
+      { vmid: 'description', name: 'description', content: "Arttu Pennanen's project library functioning as a personal repository."},
+      { name: 'keywords', content: "Arttupennanen,Arttu,Pennanen"},
+      { name: 'author', content: 'Arttu Pennanen'},
+      { name: 'twitter:card', content: 'summary'},
+      { name: 'twitter:creator', content: '@arttupennane'},
+      { name: "twitter:title", content: 'Arttu Pennanen Web'},
+      { vmid: 'twitter:description', name: "twitter:description", content: "Arttu Pennanen's project library meant as a personal repository."},
+      { name: "twitter:site", content:"https://arttu.pennanen.org"  },
+      { property: "og:title", content: "Arttu Pennanen Web"},
+      { vmid: 'og:description', property: "og:description", content: "Arttu Pennanen's project library meant as a personal repository."},
+      { property: "og:site_name", content: "arttu.pennanen.org"},
+      { property: "og:type", content: "website"},
+      { name: "theme-color", content:"#000000"},
+    ],
+    title: 'Arttu Pennanen'
   }
 }
 </script>
+
+
+    
 
 <style>
 @import './assets/fonts/inter/inter.css';
@@ -59,11 +82,11 @@ export default {
   --split-color1: #2a2a2a;
   --split-color2: #3a3a3a;
   --bg-line-color: hsla(0, 0%, 63.5%, 0.3);
-  --topbar-gradient: linear-gradient(90deg, #2196f3 0%, #1f79cd 100%);
+  --topbar-gradient: linear-gradient(90deg, #2164f3 0%, #1f66cd 100%);
 }
 
 .dark {
-  --bg-1: #232834;
+  --bg-1: #1c1d25;
   --bg-2: #212631;
   --bg-3: #1f2430;
   --font-1: #e0e1e3;
@@ -86,10 +109,6 @@ export default {
   --split-color1: #ffffff;
   --split-color2: #cccccc;
   --bg-line-color: rgba(28, 32, 42, 0.6);
-  --topbar-gradient: linear-gradient(
-    90deg,
-    hsl(224, 20%, 13%) 0%,
-    hsl(0, 0%, 9%) 100%
-  );
+  --topbar-gradient: transparent;
 }
 </style>

@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueAnalytics from 'vue-analytics'
 import i18n from './i18n'
 import VueLazyload from 'vue-lazyload'
+import VueMeta from 'vue-meta'
 
 Vue.use(VueAnalytics, {
   id: 'UA-126133790-1',
@@ -20,6 +21,8 @@ Vue.use(VueAnalytics, {
 })
 
 Vue.use(VueLazyload)
+
+Vue.use(VueMeta)
 
 library.add(
   faChevronLeft,

@@ -15,7 +15,7 @@
       <router-link class="contentlink projectpreviewlink" :to="filelocation">{{$t("read_more")}}</router-link>
     </div>
     <div class="project" v-else>
-      <ProjectHeader :name="name" :date="date" :type="type" :link="link" :buttontext="buttontext"></ProjectHeader>
+      <ProjectHeader :description="previewDescription" :name="name" :date="date" :type="type" :link="link" :buttontext="buttontext"></ProjectHeader>
       <div class="projectbody">
         <slot></slot>
       </div>
@@ -86,10 +86,9 @@ export default {
   padding: 0;
 }
 
-.projectbody {
+.light .projectbody {
   background-color: var(--bg-1);
 }
-
 .projectfooter {
   background-color: rgba(0, 0, 0, 0.1);
   margin: 2.2em 0;

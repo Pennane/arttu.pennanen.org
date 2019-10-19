@@ -51,6 +51,9 @@ export default {
           _compthis.links = l
         })
     }
+  },
+  metaInfo: {
+    title: "Projects"
   }
 }
 </script>

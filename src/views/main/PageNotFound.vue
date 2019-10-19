@@ -21,6 +21,9 @@ export default {
   name: 'PageNotFound',
   components: {
     AnimatedBackgroundBubbles: AnimatedBackgroundBubbles
+  },
+  metaInfo: {
+    title: "404 Not Found"
   }
 }
 </script>
