@@ -73,7 +73,7 @@ export default {
   data() {
     return {
       posts: posts,
-      backgroundImageSrc: require('@/assets/images/epic-gradient-low.png')
+      backgroundImageSrc: require('@/assets/images/epic-gradient-lowest.png')
     }
   },
   methods: {
