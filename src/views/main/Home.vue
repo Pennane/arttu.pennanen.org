@@ -18,7 +18,7 @@
 
 <template>
   <div class="home">
-    <div class="header">
+    <header class="header">
       <BackgroundGradient />
       <div class="headerwrap">
         <h1 class="h1">
@@ -27,7 +27,7 @@
         </h1>
         <h2 class="h2">{{ $t("lower_header") }}</h2>
       </div>
-    </div>
+    </header>
     <div class="body">
       <div class="introductory">
         <p>{{$t("intro_1")}}</p>
