@@ -36,6 +36,7 @@ export default {
   top: 0;
   width: 100%;
   z-index: 10;
+  pointer-events: none;
 }
 
 .topbarline {
@@ -70,6 +71,7 @@ export default {
   width: 4.5em;
   height: 4.5em;
   padding: 0 0.2em;
+  pointer-events: auto;
 }
 
 .topbrandimg .router-link-exact-active {
@@ -101,6 +103,10 @@ span.brand {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.localization-bar {
+  pointer-events: auto;
 }
 
 .changepage-animation {
