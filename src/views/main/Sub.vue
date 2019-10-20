@@ -10,8 +10,11 @@
 </i18n>
 <template>
   <div class="sub">
-    <BackgroundGradient />
-    <h1>{{$t("sub_header")}}</h1>
+    <div class="subHeader">
+      <h1>{{$t("sub_header")}}</h1>
+      <BackgroundGradient />
+    </div>
+
     <ul v-if="links" class="linkcontainer">
       <li v-for="link in links" :key="'link-'+link">
         <a class="sublink" :href="'/sub/'+link">
@@ -70,6 +73,15 @@ export default {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
+}
+
+.subHeader {
+  display: flex;
+  align-items: center;
+}
+
+.subHeader >>> .background-gradient-img {
+  margin-bottom: 3em;
 }
 
 a {

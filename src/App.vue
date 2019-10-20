@@ -100,10 +100,10 @@ export default {
   --accent-2: #090e18;
   --selection-bg: rgb(134, 170, 255);
   --selection-color: #fff;
-  --link-color: #4878ec;
-  --link-hover: #90affb;
-  --link-color-2: #2556cc;
-  --link-hover-2: #163682;
+  --link-color: #90affb;
+  --link-hover: #d2dcff;
+  --link-color-2: #4e82ff;
+  --link-hover-2: #96b0eb;
   --brand-filter: brightness(1);
   --nav-divide: #60656f;
   --split-color1: #ffffff;

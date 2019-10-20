@@ -25,7 +25,7 @@ export default {
     new simpleParallax(image, {
       transition: 'cubic-bezier(0, 0, 0, 1)',
       delay: 0,
-      scale: 1.5,
+      scale: 1.7,
       overflow: true,
       orientation: 'up',
       breakpoint: 0
@@ -48,6 +48,7 @@ export default {
 }
 
 .background-gradient-img {
+  margin-top: calc(5em + 3vw);
   width: 100%;
   object-position: bottom;
   object-fit: cover;

@@ -156,10 +156,6 @@ p {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-1);
-  background-image: linear-gradient(
-    hsla(207, 7%, 25%, 0) 0%,
-    rgb(25, 31, 36) 100%
-  );
 }
 
 .page-divider {
