@@ -5,25 +5,29 @@ import PageNotFound from './views/main/PageNotFound.vue'
 import Home from './views/main/Home.vue'
 import Contact from './views/main/Contact.vue'
 
+import spotifyfavorites from './views/projects/spotifyfavorites.vue'
+
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
-  scrollBehavior: (to, from, savedPosition) => new Promise((resolve) => {
-    const position = savedPosition || {};
+  scrollBehavior(to, from, savedPosition) {
+    return new Promise(resolve => {
+      const position = { x: 0, y: 0 };
 
-    if (!savedPosition) {
-      if (to.hash) {
-        position.selector = to.hash;
-      } else {
-        position.x = 0;
-        position.y = 0;
+      if (savedPosition) {
+        position.x = savedPosition.x;
+        position.y = savedPosition.y;
       }
-      
-    }
-    router.app.$root.$once('triggerScroll', () => {
-      router.app.$nextTick(() => resolve(position));
-    });
-  }),
+
+      router.app.$root.$once('scrollBeforeEnter', () => {
+        resolve(position);
+      });
+    })
+  },
   routes: [
     {
       path: '/',
@@ -47,7 +51,7 @@ const router = new Router({
     {
       path: '/spotifyfavorites',
       name: 'Spotify favorites',
-      component: () => import('./views/projects/spotifyfavorites.vue')
+      component: spotifyfavorites
     },
     {
       path: '/typechase',
