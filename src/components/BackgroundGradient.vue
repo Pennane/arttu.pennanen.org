@@ -2,9 +2,11 @@
 
         
  <template>
-  <div class="background-gradient">
-    <img class="background-gradient-img" v-lazy="backgroundImageSrc" />
-  </div>
+  <transition appear appear-active-class="fade-enter-active">
+    <div class="background-gradient">
+      <img class="background-gradient-img" v-lazy="backgroundImageSrc" />
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -49,6 +51,8 @@ export default {
   width: 100%;
   object-position: bottom;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 3.2s ease;
 }
 
 .light .background-gradient {
@@ -57,16 +61,21 @@ export default {
     contrast(1.8) brightness(1) blur(20px);
 }
 
-.background-gradient-img[lazy='loading'] {
-  opacity: 0;
+.background-gradient-img[lazy='loaded'] {
+  opacity: 1;
 }
 
-.light .background-gradient-img {
-  animation: backgroundImageFadeLight 3s;
+.fade-enter-active {
+  animation: enter 3.2s ease;
 }
 
-.dark .background-gradient-img {
-  animation: backgroundImageFadeDark 3s;
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes backgroundImageFade {

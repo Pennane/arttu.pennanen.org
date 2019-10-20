@@ -24,13 +24,6 @@ export default {
   },
   data: function() {
     return { animated: false }
-  },
-  methods: {
-    scrollUp() {
-      if (this.$route.path === '/') {
-        window.scrollTo(0, 0)
-      }
-    }
   }
 }
 </script>
@@ -44,7 +37,6 @@ export default {
   width: 100%;
   z-index: 10;
 }
-
 
 .topbarline {
   background-color: #2196f3;
@@ -70,7 +62,6 @@ export default {
   margin-top: -2px;
   opacity: 0.99;
 }
-
 
 .topbrandimg {
   display: flex;

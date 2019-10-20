@@ -3,18 +3,17 @@
     <div class="page-wrapper">
       <PageTopbar />
       <div class="page-divider">
-        <!--<PageSidebar /> -->
-        <content class="content" id="scrollbase">
-          <BackgroundLines v-if="!darkmode" />
-
+        <content class="content">
+          <BackgroundLines />
           <main id="content">
-            <transition name="fade" mode="out-in" @after-leave="$root.$emit('triggerScroll')">
-              <router-view></router-view>
+            <transition name="fade" mode="out-in" @after-leave="beforeEnter">
+              <keep-alive>
+                <router-view />
+              </keep-alive>
             </transition>
           </main>
         </content>
       </div>
-      <!--<PageFooter /> -->
     </div>
   </div>
 </template>
@@ -34,17 +33,21 @@ export default {
     PageTopbar
   },
   methods: {
-    onTouchmove(e) {
-      document.body.scrollTop = 0
+    beforeEnter() {
+      this.$root.$emit('scrollBeforeEnter')
     }
   },
   computed: {
     darkmode() {
       let darkmode = this.$store.state.darkmode && true
-      document.body.classList.toggle('dark', darkmode)
-      document.body.classList.toggle('light', !darkmode)
+      //document.body.classList.toggle('dark', darkmode)
+      //document.body.classList.toggle('light', !darkmode)
       return darkmode
     }
+  },
+  mounted: function() {
+    let darkmode = true
+    document.body.classList.toggle('dark', darkmode)
   }
 }
 </script>
@@ -56,7 +59,6 @@ export default {
 #app {
   font-family: 'Inter', sans-serif;
   color: var(--font-1);
-  background-color: var(--bg-1);
 }
 
 html {
@@ -153,6 +155,11 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--bg-1);
+  background-image: linear-gradient(
+    hsla(207, 7%, 25%, 0) 0%,
+    rgb(25, 31, 36) 100%
+  );
 }
 
 .page-divider {
@@ -167,7 +174,6 @@ p {
 /*unique "identifier" classes START*/
 
 .content {
-  background-color: var(--bg-1);
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -181,7 +187,7 @@ p {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.21s;
+  transition: opacity 0.21s ease;
 }
 .fade-enter,
 .fade-leave-to {
