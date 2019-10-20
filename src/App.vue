@@ -56,7 +56,7 @@ export default {
     
 
 <style>
-@import './public/fonts/inter/inter.css';
+@import '<%= BASE_URL %>/fonts/inter/inter.css';
 
 :root {
   --bg-1: #fff;
