@@ -78,6 +78,10 @@ export default {
 
 <style scoped>
 
+.projectbody {
+  background-color: var(--bg-1)
+}
+
 .projectbody p {
   line-height: 1.6;
 }

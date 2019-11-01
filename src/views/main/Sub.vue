@@ -12,7 +12,6 @@
   <div class="sub">
     <div class="subHeader">
       <h1>{{$t("sub_header")}}</h1>
-      <BackgroundGradient />
     </div>
 
     <ul v-if="links" class="linkcontainer">
@@ -31,13 +30,9 @@
 </template>
 
 <script>
-import BackgroundGradient from '@/components/BackgroundGradient.vue'
-
 export default {
   name: 'Sub-page',
-  components: {
-    BackgroundGradient
-  },
+  components: {},
   data() {
     return {
       links: false
@@ -73,11 +68,13 @@ export default {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
+    background-color: var(--bg-1)
 }
 
 .subHeader {
   display: flex;
   align-items: center;
+  background-color: var(--bg-1)
 }
 
 .subHeader >>> .background-gradient-img {

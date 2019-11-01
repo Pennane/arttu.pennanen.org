@@ -19,13 +19,14 @@
 <template>
   <div class="home">
     <header class="header">
-      <BackgroundGradient />
       <div class="headerwrap">
         <h1 class="h1">
           <span class="char">Arttu</span>
           <span class="char">Pennanen</span>
+          <span class="char">Web</span>
+          <span class="char">developing</span>
+          <span class="char">and else.</span>
         </h1>
-        <h2 class="h2">{{ $t("lower_header") }}</h2>
       </div>
     </header>
     <div class="body">
@@ -56,7 +57,6 @@
 
 <script>
 import postsData from '@/assets/data/posts.json'
-import BackgroundGradient from '@/components/BackgroundGradient.vue'
 
 let posts = {}
 postsData.forEach((post, i) => {
@@ -66,8 +66,7 @@ postsData.forEach((post, i) => {
 export default {
   name: 'home',
   components: {
-    ...posts,
-    BackgroundGradient
+    ...posts
   },
   data() {
     return {
@@ -97,7 +96,6 @@ export default {
   flex: 0 1 auto;
   justify-content: center;
   will-change: margin;
-  border: 1px solid black;
   margin-bottom: 32px;
 }
 
@@ -127,31 +125,35 @@ export default {
 
 .introductory > p {
   margin: 0;
-
   line-height: 1.6;
   margin: 0.8em 0;
+  background-color: white;
+  background-color: var(--bg-1);
 }
 
 .headerwrap > .h1 {
   font-size: 4.4em;
   color: #484848;
   color: var(--split-color1);
-  line-height: 0.8;
+  line-height: 0.448;
   margin: 0;
   padding: 1.2rem 0;
   display: flex;
   flex-direction: column;
-  letter-spacing: -0.01em;
+  letter-spacing: -4px;
+  font-size: 9em;
+  mix-blend-mode: darken;
 }
 
-.headerwrap > .h2 {
-  font-size: 1.55em;
-  color: #404350;
-  color: var(--font-2);
-  font-weight: 300;
-  margin: 0 0.15em;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
+.h1 span:nth-child(odd) {
+  color: hsla(225, 35%, 41%, 1);
+  opacity: 0.9;
+}
+
+.h1 span:nth-child(even) {
+      color: hsla(0, 59%, 45%, 1);
+  mix-blend-mode: multiply;
+  opacity: 0.9;
 }
 
 .recent-posts {
@@ -163,6 +165,8 @@ export default {
   margin-top: 2em;
   padding-bottom: 0.6em;
   padding-top: 0.5em;
+  background-color: white;
+  background-color: var(--bg-1);
 }
 </style>
 

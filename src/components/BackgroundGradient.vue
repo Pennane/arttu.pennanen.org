@@ -20,6 +20,7 @@ export default {
     }
   },
   mounted: () => {
+    return;
     let image = document.querySelector('.background-gradient-img')
     if (!image) return
     new simpleParallax(image, {
@@ -55,12 +56,7 @@ export default {
   opacity: 0;
   transition: opacity 3.2s ease;
 }
-
-.light .background-gradient {
-  transform: flip(1);
-  filter: sepia(1) saturate(10) invert(1) brightness(0.8) saturate(1.1)
-    contrast(1.8) brightness(1) blur(20px);
-}
+ 
 
 .background-gradient-img[lazy='loaded'] {
   opacity: 1;

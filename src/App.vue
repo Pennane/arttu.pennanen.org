@@ -85,7 +85,7 @@ export default {
 }
 
 .dark {
-  --bg-1: #1c1d25;
+  --bg-1: #292c42;
   --bg-2: #212631;
   --bg-3: #1f2430;
   --font-1: #e0e1e3;
@@ -105,7 +105,7 @@ export default {
   --link-hover-2: #96b0eb;
   --brand-filter: brightness(1);
   --nav-divide: #60656f;
-  --split-color1: #ffffff;
+  --split-color1: #ee4b4b;
   --split-color2: #cccccc;
   --bg-line-color: rgba(28, 32, 42, 0.6);
   --topbar-gradient: transparent;

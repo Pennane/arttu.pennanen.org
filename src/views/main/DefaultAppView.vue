@@ -1,5 +1,5 @@
 <template>
-  <div :class="{dark:true}">
+  <div :class="{dark:false}">
     <div class="page-wrapper">
       <PageTopbar />
       <div class="page-divider">
@@ -19,7 +19,6 @@
 </template>
 
 <script>
-//import PageSidebar from '@/components/PageSidebar'
 import BackgroundLines from '@/components/BackgroundLines'
 import PageFooter from '@/components/PageFooter'
 import PageTopbar from '@/components/PageTopbar'
@@ -27,7 +26,6 @@ import PageTopbar from '@/components/PageTopbar'
 export default {
   name: 'DefaultAppView',
   components: {
-    //  PageSidebar,
     BackgroundLines,
     PageFooter,
     PageTopbar
@@ -37,16 +35,18 @@ export default {
       this.$root.$emit('scrollBeforeEnter')
     }
   },
+  /*
+  This is for forcing darkmode
   computed: {
     darkmode() {
       let darkmode = this.$store.state.darkmode && true
-      //document.body.classList.toggle('dark', darkmode)
-      //document.body.classList.toggle('light', !darkmode)
+      document.body.classList.toggle('dark', darkmode)
+      document.body.classList.toggle('light', !darkmode)
       return darkmode
     }
-  },
+  },*/
   mounted: function() {
-    let darkmode = true
+    let darkmode = false
     document.body.classList.toggle('dark', darkmode)
   }
 }
