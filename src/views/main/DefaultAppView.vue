@@ -185,11 +185,11 @@ p {
 }
 
 .retro > span:nth-child(odd) {
-  color: hsla(225, 31%, 52%, 1);
+     color: #4068e6
 }
 
 .retro > span:nth-child(even) {
-  color: hsl(30, 22%, 46%);
+      color: #f23b3d
 }
 
 .retro.wider {

@@ -61,7 +61,7 @@ export default {
   --bg-1: hsla(49, 7%, 98%, 1);
   --bg-2: #fff;
   --bg-3: #dedede;
-  --font-1: hsla(0, 0%, 40%, 1);
+  --font-1: #3a3a3a;
   --font-2: #2a2a2a;
   --font-3: #545454;
   --font-4: #2a2a2a;
