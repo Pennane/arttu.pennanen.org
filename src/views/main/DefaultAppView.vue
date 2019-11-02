@@ -14,7 +14,42 @@
           </main>
         </content>
       </div>
+      <PageFooter />
     </div>
+    <svg class="defs-only">
+      <filter
+        id="brown-tint"
+        color-interpolation-filters="sRGB"
+        x="0"
+        y="0"
+        height="100%"
+        width="100%"
+      >
+        <feColorMatrix
+          type="matrix"
+          values="0.58     0     0     0     0
+              0     0.49     0     0     0
+              0     0     0.39     0     0
+              0     0     0     1     0 "
+        />
+      </filter>
+      <filter
+        id="blue-tint"
+        color-interpolation-filters="sRGB"
+        x="0"
+        y="0"
+        height="100%"
+        width="100%"
+      >
+        <feColorMatrix
+          type="matrix"
+          values="0.4     0     0     0     0
+              0     0.47     0     0     0
+              0     0     0.69     0     0
+              0     0     0     1     0 "
+        />
+      </filter>
+    </svg>
   </div>
 </template>
 
@@ -59,6 +94,10 @@ export default {
 #app {
   font-family: 'Inter', sans-serif;
   color: var(--font-1);
+}
+
+svg.defs-only {
+  display: none;
 }
 
 html {
@@ -107,28 +146,55 @@ main {
   display: flex;
   justify-content: center;
   z-index: 2;
-  padding: 1em calc(6vw + 0.5em);
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   padding-bottom: 7em;
 }
 
-main > div {
-  max-width: 760px;
-}
-
 p {
-  font-weight: 300;
+  font-weight: 3;
   color: #000;
   color: var(--font-1);
-  font-size: 16px;
-  max-width: 700px;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.3;
 }
 
 /*common element styling END*/
 
 /*multiple time use classes START*/
+
+.retro {
+  color: #484848;
+  color: var(--split-color1);
+  line-height: 0.455;
+  margin: 0;
+  padding: 1.2rem 0;
+  letter-spacing: -4px;
+  display: flex;
+  flex-direction: column;
+  font-size: 9em;
+  text-align: left;
+}
+
+.retro > span {
+  white-space: nowrap;
+  mix-blend-mode: darken;
+  opacity: 0.95;
+}
+
+.retro > span:nth-child(odd) {
+  color: hsla(225, 31%, 52%, 1);
+}
+
+.retro > span:nth-child(even) {
+  color: hsl(30, 22%, 46%);
+}
+
+.retro.wider {
+  line-height: 0.48;
+}
 
 .contentlink {
   color: #4361c5;
@@ -195,8 +261,8 @@ p {
 /*media queries START*/
 
 @media screen and (max-width: 1000px) {
-  .sidebar {
-    width: 14em;
+  .retro {
+    font-size: 12vw;
   }
 
   h1:not([class]) {

@@ -1,14 +1,28 @@
+<i18n>
+{
+  "en": {
+    "not_found_text": "404\nnot\nfound.\n¯\\_(ツ)_/¯",
+    "return_home": ["Back to","home"]
+
+  },
+  "fi": {
+   "not_found_text": "404\nei löydy.\n¯\\_(ツ)_/¯",
+    "return_home": ["Takaisin","alkuun"]
+    }
+}
+</i18n>
+
 <template>
   <div class="page404">
     <AnimatedBackgroundBubbles />
     <div class="header">
       <div class="headerwrap">
-        <h1>404 not found</h1>
-        <span class="shrug">¯\_(ツ)_/¯</span>
-
+        <h1 class="h1 retro wider">
+          <span v-for="line in getHeader" :key="line">{{line}}</span>
+        </h1>
         <p>
-          Back to
-          <router-link class="homelink" to="/">home</router-link>.
+          {{$t("return_home")[0]}}
+          <router-link class="homelink" to="/">{{$t("return_home")[1]}}</router-link>.
         </p>
       </div>
     </div>
@@ -24,6 +38,11 @@ export default {
   },
   metaInfo: {
     title: "404 Not Found"
+  },
+  computed: {
+    getHeader() {
+      return this.$t('not_found_text').split('\n')
+    }
   }
 }
 </script>
@@ -52,24 +71,17 @@ export default {
   padding: 0;
 }
 
-h1 {
-  font-size: 4em;
-  padding: 0;
-  margin: 0;
-}
-
-.shrug {
-  font-size: 3em;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  padding: 0;
-  margin: 0;
+.retro > span:last-child {
+  font-size: 0.7em;
+  line-height: 1.05;
+  margin-left: -.1em;
 }
 
 p {
-  font-size: 20px;
+  font-size: 1.5em;
   padding: 0;
-  margin: .5rem 0;
+  margin: 1rem 0;
+  width: 100%
 }
 
 .homelink {
@@ -90,9 +102,6 @@ p {
     font-size: calc(0.1em + 1.5vw);
   }
 
-  .page404 p {
-    font-size: 1rem;
-  }
 }
 
 .home .char5 {

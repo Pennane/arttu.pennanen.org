@@ -2,66 +2,54 @@
   <footer id="footer">
     <div class="wrapper">
       <span>© 2019 etc.</span>
-      <button @click="toggleDarkMode()" :class="{dark:darkmode}">
-        <font-awesome-icon :icon="[darkmode ?'fas':'far','lightbulb']" />
-      </button>
+      <!--<DarkmodeChanger />-->
     </div>
   </footer>
 </template>
 
 <script>
+//import DarkmodeChanger from '@/components/DarkmodeChanger.vue'
+
 export default {
   name: 'PageFooter',
-  computed: {
-    darkmode() {
-      return this.$store.state.darkmode
-    }
-  },
-  methods: {
-    toggleDarkMode() {
-      let bool = localStorage.darkmode === 'true' ? false : true
-      localStorage.darkmode = bool
-      this.$store.commit('toggleDarkmode')
-    }
+  components: {
+  //  DarkmodeChanger
   }
 }
 </script>
 
 <style scoped>
 footer {
-  all: unset;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  margin: 0.8em 1.5em;
+  position: relative;
   z-index: 2;
-  opacity: 0.6;
-  font-size: 0.8em;
-  font-weight: 600;
-  font-family: arial;
+  padding: 4em;
 }
 
-footer button {
-  background-color: transparent;
-  padding: 0.3em;
-  border: 1px solid rgb(0, 0, 0, 0.4);
-  border-radius: 0.3em;
-  font-size: 0.9em;
-  margin: 0.3em;
-  margin-left: 0.8em;
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  width: 1.6em;
-}
-footer button {
-  color: #717171;
+footer::before {
+   background-color: var(--bg-2);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  transform: skewY(-3deg) scale(1);
 }
 
-footer button.dark {
-  color: rgba(255, 255, 86, 0.9);
+footer::after {
+  background-color: var(--bg-2);
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: -25%;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  content: '';
+  overflow: hidden;
 }
 
 footer div.wrapper {
@@ -69,10 +57,4 @@ footer div.wrapper {
   justify-content: center;
   align-items: center;
 }
-/*
-@media screen and (max-height: 600px) {
-  footer {
-    padding: 1.1em 0;
-  }
-}*/
 </style>

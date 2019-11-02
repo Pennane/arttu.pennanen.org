@@ -1,13 +1,13 @@
 <i18n>
 {
   "en": {
-    "lower_header": "Web developing and else.",
+    "main_header": "Arttu\nPennanen\nWeb\ndeveloping\nand else.",
     "intro_1": "Here are some projects I've built arbitrarily during my time around the web. These projects were mainly created to act as a learning method when taking a glance at new technologies.",
     "intro_2_1": "The site has just received a port to",
     "intro_2_2": "and is currently under the process of comprehensive redesign."
   },
   "fi": {
-    "lower_header": "Web-kehitystä sekä muuta.",
+    "main_header": "Arttu\nPennanen\nWeb\nkehitystä\nsekä muuta.",
     "intro_1": "Tässä mielivaltaisesti valittuja projekteja, joiden tarkoituksena on ollut korjata mieltä ärsyttäneitä ongelmia, tai toimia teknologioiden oppimismenetelminä.",
     "intro_2_1": "Sivusto on vastikään sovitettu käyttämään",
     "intro_2_2": "sovelluskehystä (framework), ja mikään ei varmuudella ole lopullisessa muodossaan."
@@ -20,12 +20,8 @@
   <div class="home">
     <header class="header">
       <div class="headerwrap">
-        <h1 class="h1">
-          <span class="char">Arttu</span>
-          <span class="char">Pennanen</span>
-          <span class="char">Web</span>
-          <span class="char">developing</span>
-          <span class="char">and else.</span>
+        <h1 class="h1 retro">
+          <span v-for="line in getHeader" :key="line">{{line}}</span>
         </h1>
       </div>
     </header>
@@ -77,6 +73,11 @@ export default {
     changelocale() {
       this.$root.$i18n.locale = 'en'
     }
+  },
+  computed: {
+    getHeader() {
+      return this.$t('main_header').split('\n')
+    }
   }
 }
 </script>
@@ -86,6 +87,7 @@ export default {
 .home {
   box-sizing: border-box;
   padding: 0;
+  width: 100%;
 }
 
 .header {
@@ -115,49 +117,42 @@ export default {
 
 .home .body {
   display: flex;
-  box-sizing: border-box;
-  justify-content: center;
   flex-direction: column;
-  flex: 0 1 auto;
-  max-width: 570px;
-  align-items: flex-start;
+}
+
+.introductory {
+  padding: 7em 20%;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 2em;
+  z-index: 2;
+}
+
+.introductory::after {
+  background-color: var(--bg-2);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  transform: skewY(3deg);
 }
 
 .introductory > p {
   margin: 0;
   line-height: 1.6;
   margin: 0.8em 0;
-  background-color: white;
-  background-color: var(--bg-1);
+  max-width: 600px;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.3;
 }
 
-.headerwrap > .h1 {
-  font-size: 4.4em;
-  color: #484848;
-  color: var(--split-color1);
-  line-height: 0.448;
-  margin: 0;
-  padding: 1.2rem 0;
-  display: flex;
-  flex-direction: column;
-  letter-spacing: -4px;
-  font-size: 9em;
-  mix-blend-mode: darken;
-}
-
-.h1 span:nth-child(odd) {
-  color: hsla(225, 35%, 41%, 1);
-  opacity: 0.9;
-}
-
-.h1 span:nth-child(even) {
-      color: hsla(0, 59%, 45%, 1);
-  mix-blend-mode: multiply;
-  opacity: 0.9;
-}
-
-.recent-posts {
-  padding-bottom: 2em;
+.introductory > p:first-child {
+  margin-top: 0;
 }
 
 .recent-posts > div {
@@ -165,23 +160,41 @@ export default {
   margin-top: 2em;
   padding-bottom: 0.6em;
   padding-top: 0.5em;
-  background-color: white;
+  position: relative;
+  max-width: 600px;
   background-color: var(--bg-1);
 }
-</style>
 
-
-<style>
-.home .char5 {
-  display: block !important;
+.recent-posts > div:nth-child(even) {
+  padding: 2.5em calc(6vw + 0.5em);
+  margin: 2em 0 2em 10%;
+  max-width: 600px;
 }
 
-@media screen and (max-width: 740px) {
-  .home .headerwrap > .h1 {
-    font-size: 3.8em;
+.recent-posts > div:nth-child(odd) {
+  padding: 2.5em calc(6vw + 0.5em);
+  margin: 2em 0 2em 30%;
+  max-width: 600px;
+}
+
+@media screen and (max-width: 1000px) {
+  .recent-posts > div {
+    margin: 0 !important;
+  }
+
+  .recent-posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
+@media screen and (max-width: 850px) {
+  .home .body {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 500px) {
   .home .headerwrap > .h1 {
     font-size: 3em;

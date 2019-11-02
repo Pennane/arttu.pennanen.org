@@ -58,10 +58,10 @@ export default {
 <style>
 
 :root {
-  --bg-1: #fff;
-  --bg-2: #f4f4f4;
+  --bg-1: hsla(49, 7%, 98%, 1);
+  --bg-2: #fff;
   --bg-3: #dedede;
-  --font-1: #0e1a24;
+  --font-1: hsla(0, 0%, 40%, 1);
   --font-2: #2a2a2a;
   --font-3: #545454;
   --font-4: #2a2a2a;

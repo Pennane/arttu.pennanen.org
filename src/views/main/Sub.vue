@@ -1,17 +1,22 @@
 <i18n>
 {
-  "en": {
-    "sub_header": "Content of /sub"
+    "en": {
+    "sub_header": 
+      "And here\nyou can find\nitems for\n/sub."
   },
   "fi": {
-    "sub_header": "Sivun /sub sisältö"
+    "sub_header": "Ja täältä\nlöydät sijainnin\n/sub\nsisällön."
   }
 }
 </i18n>
 <template>
   <div class="sub">
     <div class="subHeader">
-      <h1>{{$t("sub_header")}}</h1>
+      <h1 class="retro wider">
+         <span v-for="line in getHeader" :key='line'>
+          {{line}}
+        </span>
+      </h1>
     </div>
 
     <ul v-if="links" class="linkcontainer">
@@ -44,6 +49,9 @@ export default {
   computed: {
     windowOrigin() {
       return window.location.origin
+    },
+    getHeader() {
+      return this.$t('sub_header').split('\n')
     }
   },
   methods: {
@@ -58,6 +66,10 @@ export default {
   },
   metaInfo: {
     title: 'Projects'
+  },
+  mounted() {
+    console.log(this.$t('sub_header'))
+    console.log('excuse me')
   }
 }
 </script>
@@ -68,13 +80,13 @@ export default {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
-    background-color: var(--bg-1)
+  background-color: var(--bg-1);
 }
 
 .subHeader {
   display: flex;
   align-items: center;
-  background-color: var(--bg-1)
+  background-color: var(--bg-1);
 }
 
 .subHeader >>> .background-gradient-img {
