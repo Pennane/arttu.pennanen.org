@@ -2,8 +2,8 @@
 {
   "en": {
     "main_header": "Web\ndeveloping\nand else.",
-    "intro_1": "For why this has been brought up to daylight has no concrete answer but to make myself feel settlement. The internet is particularly dear to me. All the life that lies beneath the web is formed from technologies and mind's creative expression that shows a new wave of art that has never been seen before.",
-    "intro_2_1": "Just an instant in time, but what will sprout from it, is what makes it important. Whatever exists soon might have no resemblance to what is now. And something that can now be seen here today, might never be seen here again. For there lies the magic; no matter how intricate you try to be, the thing that finally lights up the spark might be something completely unforeseen."
+    "intro_1": "For why this has been brought up to daylight has no concrete answer but to make myself feel settlement. The universe is particularly dear to me. All the life that lies beneath the surface is formed from technologies and mind's creative expression that shows a new wave of art that has never been seen before.",
+    "intro_2_1": "Just an instant in time, but what will sprout from it, is what makes it important. Whatever exists soon might have no resemblance to what is now. And something that can now be seen here today, might never be seen here again. The mind forgets and sparks from  coincidental moments. Intricacy does not ease the mind. The thing that finally lights up the spark might be something completely unforeseen."
   },
   "fi": {
     "main_header": "Web\nkehitystä\nsekä muuta.",
@@ -27,8 +27,9 @@
       <div class="introductory">
         <p>{{$t("intro_1")}}</p>
         <p>{{$t("intro_2_1")}}</p>
+        <p class="quote">- joemama 1942</p>
       </div>
-      
+
       <div class="recent-posts">
         <component
           v-for="postkey in Object.keys(posts)"
@@ -114,7 +115,7 @@ export default {
   padding: 7em 20%;
   box-sizing: border-box;
   position: relative;
-  margin-top: 2em;
+     margin-top: 2.2em;
   z-index: 2;
 }
 
@@ -139,6 +140,10 @@ export default {
   font-weight: 400;
   font-size: 1.2em;
   line-height: 1.3;
+}
+
+.quote {
+  color: var(--font-3);
 }
 
 .introductory > p:first-child {

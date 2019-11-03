@@ -13,7 +13,7 @@
 export default {
   name: 'PageFooter',
   components: {
-  //  DarkmodeChanger
+    //  DarkmodeChanger
   }
 }
 </script>
@@ -22,11 +22,11 @@ export default {
 footer {
   position: relative;
   z-index: 2;
-  padding: 4em;
+  padding: 7em 20%;
 }
 
 footer::before {
-   background-color: var(--bg-2);
+  background-color: var(--bg-2);
   position: absolute;
   z-index: -1;
   top: 0;
