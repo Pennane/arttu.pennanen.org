@@ -185,11 +185,11 @@ p {
 }
 
 .retro > span:nth-child(odd) {
-     color: #4068e6
+  color: #2f437e;
 }
 
 .retro > span:nth-child(even) {
-      color: #f23b3d
+  color: #685338;
 }
 
 .retro.wider {

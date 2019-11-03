@@ -13,9 +13,7 @@
   <div class="sub">
     <div class="subHeader">
       <h1 class="retro wider">
-         <span v-for="line in getHeader" :key='line'>
-          {{line}}
-        </span>
+        <span v-for="line in getHeader" :key="line">{{line}}</span>
       </h1>
     </div>
 
@@ -87,6 +85,8 @@ export default {
   display: flex;
   align-items: center;
   background-color: var(--bg-1);
+  padding: 2em;
+  padding-top: 1em;
 }
 
 .subHeader >>> .background-gradient-img {

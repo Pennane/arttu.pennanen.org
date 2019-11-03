@@ -144,7 +144,7 @@ export default {
 .introductory > p {
   margin: 0;
   line-height: 1.6;
-  margin: 0.8em 0;
+  margin: 0.8em auto;
   max-width: 600px;
   font-weight: 400;
   font-size: 1.5em;
@@ -163,7 +163,17 @@ export default {
   position: relative;
   max-width: 600px;
   background-color: var(--bg-1);
+  padding: 2.5em calc(6vw + 0.5em);
 }
+
+.recent-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
 
 .recent-posts > div:nth-child(even) {
   padding: 2.5em calc(6vw + 0.5em);
@@ -176,6 +186,7 @@ export default {
   margin: 2em 0 2em 30%;
   max-width: 600px;
 }
+*/
 
 @media screen and (max-width: 1000px) {
   .recent-posts > div {
