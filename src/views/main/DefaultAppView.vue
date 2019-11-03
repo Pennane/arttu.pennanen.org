@@ -174,9 +174,13 @@ p {
   letter-spacing: -4px;
   display: flex;
   flex-direction: column;
-  font-size: 9em;
   text-align: left;
 }
+
+.retro {
+  font-size: 9em;
+}
+
 
 .retro > span {
   white-space: nowrap;

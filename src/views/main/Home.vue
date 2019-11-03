@@ -1,16 +1,14 @@
 <i18n>
 {
   "en": {
-    "main_header": "Arttu\nPennanen\nWeb\ndeveloping\nand else.",
-    "intro_1": "Here are some projects I've built arbitrarily during my time around the web. These projects were mainly created to act as a learning method when taking a glance at new technologies.",
-    "intro_2_1": "The site has just received a port to",
-    "intro_2_2": "and is currently under the process of comprehensive redesign."
+    "main_header": "Web\ndeveloping\nand else.",
+    "intro_1": "For why this has been brought up to daylight has no concrete answer but to make myself feel settlement. The internet is particularly dear to me. All the life that lies beneath the web is formed from technologies and mind's creative expression that shows a new wave of art that has never been seen before.",
+    "intro_2_1": "Just an instant in time, but what will sprout from it, is what makes it important. Whatever exists soon might have no resemblance to what is now. And something that can now be seen here today, might never be seen here again. For there lies the magic; no matter how intricate you try to be, the thing that finally lights up the spark might be something completely unforeseen."
   },
   "fi": {
-    "main_header": "Arttu\nPennanen\nWeb\nkehitystä\nsekä muuta.",
-    "intro_1": "Tässä mielivaltaisesti valittuja projekteja, joiden tarkoituksena on ollut korjata mieltä ärsyttäneitä ongelmia, tai toimia teknologioiden oppimismenetelminä.",
-    "intro_2_1": "Sivusto on vastikään sovitettu käyttämään",
-    "intro_2_2": "sovelluskehystä (framework), ja mikään ei varmuudella ole lopullisessa muodossaan."
+    "main_header": "Web\nkehitystä\nsekä muuta.",
+    "intro_1": "Tässä joitain projekteja, joiden tarkoituksena on ollut korjata mieltä ärsyttäneitä ongelmia.",
+    "intro_2_1": "Mikään ei pysy kauaa samanlaisena - pahimmillaan ei edes saman oloisena - ja näin asioiden kuuluu olla. Sisäistä sivu englanniksi. Se on niin ehkä vähän mielekkäämpää."
   }
 }
 </i18n>
@@ -28,17 +26,9 @@
     <div class="body">
       <div class="introductory">
         <p>{{$t("intro_1")}}</p>
-        <p>
-          {{$t("intro_2_1")}}
-          <a
-            class="contentlink"
-            href="https://vuejs.org/"
-            title="vuejs.org"
-          >vue.js</a>
-          {{$t("intro_2_2")}}
-        </p>
+        <p>{{$t("intro_2_1")}}</p>
       </div>
-
+      
       <div class="recent-posts">
         <component
           v-for="postkey in Object.keys(posts)"
@@ -147,7 +137,7 @@ export default {
   margin: 0.8em auto;
   max-width: 600px;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 1.3;
 }
 

@@ -19,12 +19,12 @@
 
     <ul v-if="links" class="linkcontainer">
       <li v-for="link in links" :key="'link-'+link">
-        <a class="sublink" :href="'/sub/'+link">
+        <a class="sublink" :href="'https://arttu.pennanen.org/sub/'+link">
           <span class="name">{{ link }}</span>
           <span class="destination">
             <span class="line">{{' – '}}</span>
-            <span class="origin">{{windowOrigin}}</span>
-            <span class="destinationlink">{{'/sub/' +link+'/'}}</span>
+            <span class="origin">https://arttu.pennanen.org/</span>
+            <span class="destinationlink">{{'sub/'+link+'/'}}</span>
           </span>
         </a>
       </li>
