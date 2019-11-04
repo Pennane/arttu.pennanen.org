@@ -158,7 +158,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 3em 0 4em 0;
-      margin-top: -1px;
+  margin-top: -2px;
 }
 
 .recent-posts >>> .project {

@@ -117,6 +117,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   background-color: var(--bg-1);
+  height: 100%
 }
 
 #app ::selection {
