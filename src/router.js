@@ -3,7 +3,6 @@ import Router from 'vue-router'
 
 import PageNotFound from './views/main/PageNotFound.vue'
 import Home from './views/main/Home.vue'
-import Contact from './views/main/Contact.vue'
 
 import spotifyfavorites from './views/projects/spotifyfavorites.vue'
 
@@ -37,11 +36,6 @@ const router = new Router({
     {
       path: '/home',
       redirect: '/'
-    },
-    {
-      path: '/contact',
-      name: 'Contact',
-      component: Contact
     },
     {
       path: '/sub',

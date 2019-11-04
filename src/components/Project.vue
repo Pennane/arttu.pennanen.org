@@ -15,7 +15,14 @@
       <router-link class="contentlink projectpreviewlink" :to="filelocation">{{$t("read_more")}}</router-link>
     </div>
     <div class="project" v-else>
-      <ProjectHeader :description="previewDescription" :name="name" :date="date" :type="type" :link="link" :buttontext="buttontext"></ProjectHeader>
+      <ProjectHeader
+        :description="previewDescription"
+        :name="name"
+        :date="date"
+        :type="type"
+        :link="link"
+        :buttontext="buttontext"
+      ></ProjectHeader>
       <div class="projectbody">
         <slot></slot>
       </div>
@@ -77,18 +84,19 @@ export default {
 </script>
 
 <style scoped>
-
 .project:not(.preview) {
-  padding: 1em calc(6vw + 0.5em); 
-      max-width: 800px;
+  padding: 1em calc(6vw + 0.5em);
+  max-width: 800px;
+  padding-bottom: 7em;
 }
 
-.projectbody {
-  background-color: var(--bg-1)
+.project:not(.preview) > .projectbody {
+      background-color: var(--bg-1);
 }
 
 .projectbody p {
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size: 1.1em;
 }
 
 .projectbody > * {

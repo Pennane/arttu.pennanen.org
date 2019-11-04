@@ -33,19 +33,34 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width,initial-scale=1.0' },
-      { vmid: 'description', name: 'description', content: "Arttu Pennanen's project library functioning as a personal repository."},
-      { name: 'keywords', content: "Arttupennanen,Arttu,Pennanen"},
-      { name: 'author', content: 'Arttu Pennanen'},
-      { name: 'twitter:card', content: 'summary'},
-      { name: 'twitter:creator', content: '@arttupennane'},
-      { name: "twitter:title", content: 'Arttu Pennanen Web'},
-      { vmid: 'twitter:description', name: "twitter:description", content: "Arttu Pennanen's project library meant as a personal repository."},
-      { name: "twitter:site", content:"https://arttu.pennanen.org"  },
-      { property: "og:title", content: "Arttu Pennanen Web"},
-      { vmid: 'og:description', property: "og:description", content: "Arttu Pennanen's project library meant as a personal repository."},
-      { property: "og:site_name", content: "arttu.pennanen.org"},
-      { property: "og:type", content: "website"},
-      { name: "theme-color", content:"#000000"},
+      {
+        vmid: 'description',
+        name: 'description',
+        content:
+          "Arttu Pennanen's project library functioning as a personal repository."
+      },
+      { name: 'keywords', content: 'Arttupennanen,Arttu,Pennanen' },
+      { name: 'author', content: 'Arttu Pennanen' },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:creator', content: '@arttupennane' },
+      { name: 'twitter:title', content: 'Arttu Pennanen Web' },
+      {
+        vmid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          "Arttu Pennanen's project library meant as a personal repository."
+      },
+      { name: 'twitter:site', content: 'https://arttu.pennanen.org' },
+      { property: 'og:title', content: 'Arttu Pennanen Web' },
+      {
+        vmid: 'og:description',
+        property: 'og:description',
+        content:
+          "Arttu Pennanen's project library meant as a personal repository."
+      },
+      { property: 'og:site_name', content: 'arttu.pennanen.org' },
+      { property: 'og:type', content: 'website' },
+      { name: 'theme-color', content: '#000000' }
     ],
     title: 'Arttu Pennanen'
   }
@@ -56,11 +71,12 @@ export default {
     
 
 <style>
-
 :root {
   --bg-1: hsla(49, 7%, 98%, 1);
   --bg-2: #fff;
-  --bg-3: #dedede;
+  --bg-3: #394d85;
+  --bg-4: #405796;
+  --bg-5: #4f546a;
   --font-1: #3a3a3a;
   --font-2: #2a2a2a;
   --font-3: #545454;

@@ -64,16 +64,16 @@ export default {
   },
   metaInfo: {
     title: 'Projects'
-  },
-  mounted() {
-    console.log(this.$t('sub_header'))
-    console.log('excuse me')
   }
 }
 </script>
 
 
 <style scoped>
+  .sub {
+    padding-bottom: 7em;
+  }
+
 .linkcontainer {
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@ export default {
   display: flex;
   align-items: center;
   background-color: var(--bg-1);
-  padding: 2em;
+padding-bottom: 2em;
   padding-top: 1em;
 }
 

@@ -24,11 +24,11 @@
       </div>
     </header>
     <div class="body">
-      <div class="introductory">
+      <!--<div class="introductory">
         <p>{{$t("intro_1")}}</p>
         <p>{{$t("intro_2_1")}}</p>
         <p class="quote">- joemama 1942</p>
-      </div>
+      </div>-->
 
       <div class="recent-posts">
         <component
@@ -101,7 +101,7 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 1em;
+  padding: 1em 0;
   margin: 2em;
   padding-top: 0.5em;
 }
@@ -115,7 +115,7 @@ export default {
   padding: 7em 20%;
   box-sizing: border-box;
   position: relative;
-     margin-top: 2.2em;
+  margin-top: 2.2em;
   z-index: 2;
 }
 
@@ -151,14 +151,64 @@ export default {
 }
 
 .recent-posts > div {
-  margin-bottom: 3em;
-  margin-top: 2em;
-  padding-bottom: 0.6em;
-  padding-top: 0.5em;
   position: relative;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 0 4em 0;
+      margin-top: -1px;
+}
+
+.recent-posts >>> .project {
   max-width: 600px;
-  background-color: var(--bg-1);
   padding: 2.5em calc(6vw + 0.5em);
+  --font-1: #ffffff;
+  --font-4: #ffffff;
+  --font-5: #ffffff;
+  --link-color-2: #e2e8ff;
+}
+
+.recent-posts > div::after {
+  background-color: var(--bg-2);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  content: '';
+  transform: skewY(3deg);
+}
+
+.recent-posts > div::before {
+  background-color: var(--bg-2);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  content: '';
+  transform: skewY(-3deg);
+}
+
+.recent-posts > div:nth-child(3n + 1)::after,
+.recent-posts > div:nth-child(3n + 1)::before {
+  background-color: var(--bg-3);
+}
+
+.recent-posts > div:nth-child(3n + 2)::after,
+.recent-posts > div:nth-child(3n + 2)::before {
+  background-color: var(--bg-4);
+}
+
+.recent-posts > div:nth-child(3n + 3)::after,
+.recent-posts > div:nth-child(3n + 3)::before {
+  background-color: var(--bg-5);
 }
 
 .recent-posts {
@@ -166,27 +216,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 4.2em;
 }
-
-/*
-
-.recent-posts > div:nth-child(even) {
-  padding: 2.5em calc(6vw + 0.5em);
-  margin: 2em 0 2em 10%;
-  max-width: 600px;
-}
-
-.recent-posts > div:nth-child(odd) {
-  padding: 2.5em calc(6vw + 0.5em);
-  margin: 2em 0 2em 30%;
-  max-width: 600px;
-}
-*/
 
 @media screen and (max-width: 1000px) {
-  .recent-posts > div {
-    margin: 0 !important;
-  }
 
   .recent-posts {
     display: flex;
@@ -202,22 +235,17 @@ export default {
   }
 }
 @media screen and (max-width: 500px) {
-  .home .headerwrap > .h1 {
-    font-size: 3em;
-  }
-
   .home .h1 {
     padding-top: 2vw !important;
   }
 
-  .home .headerwrap > .h2 {
-    font-size: 1.2em;
+  .headerwrap {
+    margin: 1em !important;
+    margin-bottom: 0
   }
 
-  .headerwrap {
-    padding: 1em !important;
-    margin: 1em !important;
-    padding-top: 0.5em !important;
+  .header {
+    margin-bottom: 0;
   }
 }
 </style>

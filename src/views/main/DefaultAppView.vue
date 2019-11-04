@@ -94,6 +94,7 @@ export default {
 #app {
   font-family: 'Inter', sans-serif;
   color: var(--font-1);
+  height: 100%;
 }
 
 svg.defs-only {
@@ -149,7 +150,6 @@ main {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding-bottom: 7em;
 }
 
 p {
@@ -232,7 +232,6 @@ p {
   display: flex;
   flex: 1 1 auto;
   width: 100%;
-  height: 100%;
 }
 
 /*multiple time use classes END*/
@@ -264,9 +263,9 @@ p {
 
 /*media queries START*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
   .retro {
-    font-size: 12vw;
+     font-size: 16vw;
   }
 
   h1:not([class]) {
