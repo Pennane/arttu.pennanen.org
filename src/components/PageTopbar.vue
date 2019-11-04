@@ -39,23 +39,6 @@ export default {
   pointer-events: none;
 }
 
-.topbarline {
-  background-color: #2196f3;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#2196f3),
-    to(#1f79cd)
-  );
-  background: var(--topbar-gradient);
-  background: transparent;
-  height: 6px;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
 .topbarcontent {
   display: flex;
   align-items: center;

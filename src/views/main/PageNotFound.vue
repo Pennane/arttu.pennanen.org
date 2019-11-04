@@ -69,6 +69,7 @@ export default {
   align-items: center;
   flex-direction: column;
   padding: 0;
+  padding-bottom: 8em
 }
 
 .retro > span:last-child {

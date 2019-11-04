@@ -43,14 +43,14 @@ footer {
   z-index: 2;
   padding: 6em 20%;
   padding-bottom: 7.1em;
-  background-color: #334473;
   color: white;
+  margin-top: auto !important;
 }
 
 
 footer::before,
 footer::after {
-  background-color: inherit;
+  background-color: #334473;
   position: absolute;
   z-index: -1;
   display: block;
@@ -91,5 +91,12 @@ footer div.wrapper {
 .footerBg-5::before,
 .footerBg-5::after {
   background-color: var(--bg-5);
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    padding: 3em 20%;
+    padding-bottom: 6em;
+  }
 }
 </style>

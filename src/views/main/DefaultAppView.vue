@@ -3,7 +3,7 @@
     <div class="page-wrapper">
       <PageTopbar />
       <div class="page-divider">
-        <content class="content">
+        <div class="content">
           <BackgroundLines />
           <main id="content">
             <transition name="fade" mode="out-in" @after-leave="beforeEnter">
@@ -12,7 +12,7 @@
               </keep-alive>
             </transition>
           </main>
-        </content>
+        </div>
       </div>
       <PageFooter />
     </div>
@@ -94,7 +94,6 @@ export default {
 #app {
   font-family: 'Inter', sans-serif;
   color: var(--font-1);
-  height: 100%;
 }
 
 svg.defs-only {
@@ -103,21 +102,17 @@ svg.defs-only {
 
 html {
   font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
   height: 100%;
   width: 100%;
+  margin: 0;
 }
 
 body {
   margin: 0;
-  padding: 0;
-  height: inherit;
-  width: inherit;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   background-color: var(--bg-1);
-  height: 100%
+  height: 100%;
 }
 
 #app ::selection {
@@ -182,7 +177,6 @@ p {
   font-size: 9em;
 }
 
-
 .retro > span {
   white-space: nowrap;
   mix-blend-mode: darken;
@@ -228,11 +222,11 @@ p {
   flex-direction: column;
   background-color: var(--bg-1);
 }
-
 .page-divider {
   display: flex;
   flex: 1 1 auto;
   width: 100%;
+  height: 100%;
 }
 
 /*multiple time use classes END*/
@@ -240,11 +234,11 @@ p {
 /*unique "identifier" classes START*/
 
 .content {
-  flex: 1 1 auto;
   display: flex;
-  flex-direction: column;
-  align-items: baseline;
+  flex: 1 1 auto;
   height: 100%;
+  align-items: baseline;
+  flex-direction: column;
 }
 
 /*unique "identifier" classes END*/
@@ -266,7 +260,7 @@ p {
 
 @media screen and (max-width: 850px) {
   .retro {
-     font-size: 16vw;
+    font-size: 16vw;
   }
 
   h1:not([class]) {
