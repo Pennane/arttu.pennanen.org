@@ -45,12 +45,13 @@ footer {
   padding-bottom: 7.1em;
   color: white;
   margin-top: auto !important;
+  background-color: #334473;
 }
 
 
 footer::before,
 footer::after {
-  background-color: #334473;
+  background-color: inherit;
   position: absolute;
   z-index: -1;
   display: block;
