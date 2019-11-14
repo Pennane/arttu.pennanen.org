@@ -164,10 +164,6 @@ export default {
 .recent-posts >>> .project {
   max-width: 600px;
   padding: 2.5em calc(6vw + 0.5em);
-  --font-1: #ffffff;
-  --font-4: #ffffff;
-  --font-5: #ffffff;
-  --link-color-2: #e2e8ff;
 }
 
 .recent-posts > div::after {

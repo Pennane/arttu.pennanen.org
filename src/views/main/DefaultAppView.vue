@@ -162,9 +162,9 @@ p {
 /*multiple time use classes START*/
 
 .retro {
-  color: #484848;
+  color: #2a2a2a;
   color: var(--split-color1);
-  line-height: 0.455;
+  line-height: 0.475;
   margin: 0;
   padding: 1.2rem 0;
   letter-spacing: -4px;
@@ -179,16 +179,16 @@ p {
 
 .retro > span {
   white-space: nowrap;
-  mix-blend-mode: darken;
+  /*  mix-blend-mode: color-dodge; */
   opacity: 0.95;
 }
 
 .retro > span:nth-child(odd) {
-  color: #2f437e;
+      color: hsla(225, 14%, 26%, 1)
 }
 
 .retro > span:nth-child(even) {
-  color: #685338;
+  color: hsl(34, 24%, 34%);
 }
 
 .retro.wider {
@@ -258,9 +258,9 @@ p {
 
 /*media queries START*/
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .retro {
-    font-size: 16vw;
+    font-size: 15.5vw;
   }
 
   h1:not([class]) {

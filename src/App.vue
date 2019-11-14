@@ -72,32 +72,30 @@ export default {
 
 <style>
 :root {
-  --bg-1: hsla(49, 7%, 98%, 1);
+  --bg-1: #fafafa;
   --bg-2: #fff;
-  --bg-3: #394d85;
-  --bg-4: #405796;
-  --bg-5: #4f546a;
+  --bg-3: #ffffff;
+  --bg-4: hsla(0, 0%, 98%, 1);
+  --bg-5: hsla(0, 0%, 96%, 1);
   --font-1: #3a3a3a;
   --font-2: #2a2a2a;
   --font-3: #545454;
   --font-4: #2a2a2a;
   --font-5: #595959;
-  --contrast-font1: #000000;
+  --contrast-font1: #000;
   --contrast-font2: #363636;
   --accent-1: #c4c4c4;
   --accent-2: #a0a0a0;
-  --selection-bg: rgb(40, 97, 202);
-  --selection-color: #fff;
+  --selection-bg: #2861ca;
   --link-color: #5378f0;
   --link-hover: #87a1f6;
   --link-color-2: #2042b4;
   --link-hover-2: #071545;
   --brand-filter: brightness(0.2);
-  --nav-divide: #60656f;
   --split-color1: #2a2a2a;
   --split-color2: #3a3a3a;
   --bg-line-color: hsla(0, 0%, 63.5%, 0.3);
-  --topbar-gradient: linear-gradient(90deg, #2164f3 0%, #1f66cd 100%);
+  --topbar-gradient: linear-gradient(90deg, #2164f3, #1f66cd);
 }
 
 .dark {

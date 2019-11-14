@@ -43,9 +43,9 @@ footer {
   z-index: 2;
   padding: 6em 20%;
   padding-bottom: 7.1em;
-  color: white;
+  color: black;
   margin-top: auto !important;
-  background-color: #334473;
+  background-color: #e5e5e5;
 }
 
 

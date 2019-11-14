@@ -5,7 +5,7 @@
       "And here\nyou can find\nitems for\n/sub."
   },
   "fi": {
-    "sub_header": "Ja täältä\nlöydät\n/sub\nsisällön."
+    "sub_header": "Ja täältä\n/sub\nsisältö."
   }
 }
 </i18n>
