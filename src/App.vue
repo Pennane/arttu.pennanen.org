@@ -87,6 +87,7 @@ export default {
   --accent-1: #c4c4c4;
   --accent-2: #a0a0a0;
   --selection-bg: #2861ca;
+  --selection-color: #fff;
   --link-color: #5378f0;
   --link-hover: #87a1f6;
   --link-color-2: #2042b4;

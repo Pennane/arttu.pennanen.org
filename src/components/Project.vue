@@ -95,7 +95,7 @@ export default {
 }
 
 .projectbody p {
-  line-height: 1.5;
+  line-height: 1.7;
   font-size: 1.1em;
 }
 

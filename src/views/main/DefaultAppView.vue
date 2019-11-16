@@ -198,7 +198,7 @@ p {
 .contentlink {
   color: #4361c5;
   color: var(--link-color);
-  font-weight: 550;
+  font-weight: 4000;
 }
 
 .contentlink:hover {
