@@ -4,7 +4,7 @@
     "data": {
       "name": "Spotify Favorites",
       "description": "Listening analytics",
-      "buttonText": "Find here!"
+      "buttonText": "Try here!"
     },
     "content": {
       "p_1": "Spotify Favorites is an application that shows most Spotify account's most listened tracks and artists from three different time frames. Most listened from the last month, last half a year and last few years.",
@@ -19,7 +19,7 @@
     "data": {
       "name": "Spotify Favorites",
       "description": "Musiikin kuuntelu analytiikkaa",
-      "buttonText": "Löydä täältä!"
+      "buttonText": "Kokeile täällä!"
     },
     "content": {
       "p_1": "Spotify Favorites on sovellus, jonka avulla voi tarkastella oman käyttäjän eniten kuunneltuja kappaleita ja artisteja. Tietoja voi tarkastella kolmesta eri aikahaarukasta, eli kuunnelluimpia viimeisen kuukauden, puolen vuoden tai vuosien ajalta.",
@@ -40,7 +40,7 @@
     :previewDescription="$t('content.p_1')"
     :buttontext="$t('data.buttonText')"
     date="12.8.2019"
-    link="https://github.com/Pennane/vue-spotify-favorites"
+    link="https://spotifyfavorites.pennanen.dev/"
     filelocation="spotifyfavorites"
     :previewImage="require('@/assets/images/spotifyfavorites/spotifyfavorites3.png')"
     :preview="preview"
