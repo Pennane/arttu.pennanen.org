@@ -1,55 +1,13 @@
 <template>
   <div :class="{dark:false}">
-    <div class="page-wrapper">
+    <div :class="['page-wrapper',modernBackground ? 'modernBackground' : null]">
       <PageTopbar />
-      <div class="page-divider">
-        <div class="content">
-          <BackgroundLines />
-          <main id="content">
-            <transition name="fade" mode="out-in" @after-leave="beforeEnter">
-              <keep-alive>
-                <router-view />
-              </keep-alive>
-            </transition>
-          </main>
-        </div>
-      </div>
+      <main id="content">
+        <router-view class="content-wrapper"/>
+      </main>
       <PageFooter />
+      <BackgroundLines />
     </div>
-    <svg class="defs-only">
-      <filter
-        id="brown-tint"
-        color-interpolation-filters="sRGB"
-        x="0"
-        y="0"
-        height="100%"
-        width="100%"
-      >
-        <feColorMatrix
-          type="matrix"
-          values="0.58     0     0     0     0
-              0     0.49     0     0     0
-              0     0     0.39     0     0
-              0     0     0     1     0 "
-        />
-      </filter>
-      <filter
-        id="blue-tint"
-        color-interpolation-filters="sRGB"
-        x="0"
-        y="0"
-        height="100%"
-        width="100%"
-      >
-        <feColorMatrix
-          type="matrix"
-          values="0.4     0     0     0     0
-              0     0.47     0     0     0
-              0     0     0.69     0     0
-              0     0     0     1     0 "
-        />
-      </filter>
-    </svg>
   </div>
 </template>
 
@@ -60,6 +18,11 @@ import PageTopbar from '@/components/PageTopbar'
 
 export default {
   name: 'DefaultAppView',
+  data: () => {
+    return {
+      modernBackground: false
+    }
+  },
   components: {
     BackgroundLines,
     PageFooter,
@@ -68,21 +31,22 @@ export default {
   methods: {
     beforeEnter() {
       this.$root.$emit('scrollBeforeEnter')
+    },
+    checkModernBackround() {
+      return this.$router.currentRoute.name === 'Home'
     }
   },
-  /*
-  This is for forcing darkmode
-  computed: {
-    darkmode() {
-      let darkmode = this.$store.state.darkmode && true
-      document.body.classList.toggle('dark', darkmode)
-      document.body.classList.toggle('light', !darkmode)
-      return darkmode
-    }
-  },*/
   mounted: function() {
     let darkmode = false
     document.body.classList.toggle('dark', darkmode)
+  },
+  created() {
+    this.modernBackground = this.checkModernBackround()
+  },
+  watch: {
+    $route(to, from) {
+      this.modernBackground = this.checkModernBackround()
+    }
   }
 }
 </script>
@@ -94,6 +58,7 @@ export default {
 #app {
   font-family: 'Inter', sans-serif;
   color: var(--font-1);
+  height: 100%;
 }
 
 svg.defs-only {
@@ -145,7 +110,11 @@ main {
   z-index: 2;
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  flex: 0 0 auto;
+}
+
+.content-wrapper > * {
+ flex: 0 0 auto;
 }
 
 p {
@@ -160,6 +129,23 @@ p {
 /*common element styling END*/
 
 /*multiple time use classes START*/
+
+.modern {
+  white-space: nowrap;
+  line-height: 0.475;
+  margin: 0;
+  letter-spacing: -4px;
+  box-shadow: 0px 5px 0 0 white;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 0;
+  opacity: 0.95;
+  color: white;
+  line-height: 0.9;
+  font-size: 7rem;
+  padding: 2rem 4rem;
+}
 
 .retro {
   color: #2a2a2a;
@@ -184,7 +170,7 @@ p {
 }
 
 .retro > span:nth-child(odd) {
-      color: hsla(225, 14%, 26%, 1)
+  color: hsla(225, 14%, 26%, 1);
 }
 
 .retro > span:nth-child(even) {
@@ -222,6 +208,18 @@ p {
   flex-direction: column;
   background-color: var(--bg-1);
 }
+
+.page-wrapper > * {
+  flex: 0 0 auto;
+}
+
+.modernBackground {
+  background: #667db6;
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+  background-position: center;
+  background-size: 115%;
+}
+
 .page-divider {
   display: flex;
   flex: 1 1 auto;
@@ -231,36 +229,22 @@ p {
 
 /*multiple time use classes END*/
 
-/*unique "identifier" classes START*/
-
-.content {
-  display: flex;
-  flex: 1 1 auto;
-  height: 100%;
-  align-items: baseline;
-  flex-direction: column;
-}
-
-/*unique "identifier" classes END*/
-
-/*misc START*/
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.21s ease;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-/*misc END*/
-
 /*media queries START*/
 
 @media screen and (max-width: 900px) {
   .retro {
     font-size: 15.5vw;
+  }
+
+  .modern {
+    font-size: 10vw;
+    padding: 1.5rem 2.7rem;
+    box-shadow: 0px 3px 0 0 white;
+    letter-spacing: -2px;
+  }
+
+  .modernBackground {
+    background-size: 150%;
   }
 
   h1:not([class]) {

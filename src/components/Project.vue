@@ -9,7 +9,9 @@
         :buttontext="buttontext"
       />
       <div class="projectbody">
-        <ProjectImage alt :src="previewImage" preview></ProjectImage>
+        <router-link :to="filelocation">
+          <ProjectImage alt :src="previewImage" preview></ProjectImage>
+        </router-link>
         <p class="project-preview-desc">{{previewDescription}}</p>
       </div>
       <router-link class="contentlink projectpreviewlink" :to="filelocation">{{$t("read_more")}}</router-link>
@@ -91,7 +93,7 @@ export default {
 }
 
 .project:not(.preview) > .projectbody {
-      background-color: var(--bg-1);
+  background-color: var(--bg-1);
 }
 
 .projectbody p {

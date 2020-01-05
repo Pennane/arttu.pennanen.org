@@ -1,31 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 import PageNotFound from './views/main/PageNotFound.vue'
 import Home from './views/main/Home.vue'
 
-import spotifyfavorites from './views/projects/spotifyfavorites.vue'
-
+/*
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
-}
+}*/
 
 const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   scrollBehavior(to, from, savedPosition) {
-    return new Promise(resolve => {
-      const position = { x: 0, y: 0 };
-
-      if (savedPosition) {
-        position.x = savedPosition.x;
-        position.y = savedPosition.y;
-      }
-
-      router.app.$root.$once('scrollBeforeEnter', () => {
-        resolve(position);
-      });
-    })
+    let position = { x: 0, y: 0 }
+    if (savedPosition) {
+      position = savedPosition
+    }
+    return position
   },
   routes: [
     {
@@ -43,9 +34,14 @@ const router = new Router({
       component: () => import('./views/main/Sub.vue')
     },
     {
+      path: '/yatzy',
+      name: 'Yatzy',
+      component: () => import('./views/projects/yatzy.vue')
+    },
+    {
       path: '/spotifyfavorites',
       name: 'Spotify favorites',
-      component: spotifyfavorites
+      component: () => import('./views/projects/spotifyfavorites.vue')
     },
     {
       path: '/typechase',

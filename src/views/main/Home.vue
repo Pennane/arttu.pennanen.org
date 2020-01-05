@@ -6,7 +6,7 @@
     "intro_2_1": "Just an instant in time, but what will sprout from it, is what makes it important. Whatever exists soon might have no resemblance to what is now. And something that can now be seen here today, might never be seen here again. The mind forgets and sparks from  coincidental moments. Intricacy does not ease the mind. The thing that finally lights up the spark might be something completely unforeseen."
   },
   "fi": {
-    "main_header": "Web\nkehitystä\nsekä muuta.",
+    "main_header": "Web\nkehitystä\nsun muuta.",
     "intro_1": "Tässä joitain projekteja, joiden tarkoituksena on ollut korjata mieltä ärsyttäneitä ongelmia.",
     "intro_2_1": "Mikään ei pysy kauaa samanlaisena - pahimmillaan ei edes saman oloisena - ja näin asioiden kuuluu olla. Sisäistä sivu englanniksi. Se on niin ehkä vähän mielekkäämpää."
   }
@@ -18,7 +18,7 @@
   <div class="home">
     <header class="header">
       <div class="headerwrap">
-        <h1 class="h1 retro">
+        <h1 class="h1 modern">
           <span v-for="line in getHeader" :key="line">{{line}}</span>
         </h1>
       </div>

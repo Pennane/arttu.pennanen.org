@@ -75,8 +75,8 @@ export default {
   --bg-1: #fafafa;
   --bg-2: #fff;
   --bg-3: #ffffff;
-  --bg-4: hsla(0, 0%, 98%, 1);
-  --bg-5: hsla(0, 0%, 96%, 1);
+  --bg-4: hsla(0, 0%, 97%, 1);
+  --bg-5: hsla(0, 0%, 95%, 1);
   --font-1: #3a3a3a;
   --font-2: #2a2a2a;
   --font-3: #545454;
@@ -95,7 +95,7 @@ export default {
   --brand-filter: brightness(0.2);
   --split-color1: #2a2a2a;
   --split-color2: #3a3a3a;
-  --bg-line-color: hsla(0, 0%, 63.5%, 0.3);
+  --bg-line-color: hsla(0, 0%, 61%, 0.3);
   --topbar-gradient: linear-gradient(90deg, #2164f3, #1f66cd);
 }
 

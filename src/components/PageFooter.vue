@@ -1,26 +1,19 @@
 <template>
   <footer id="footer" :class="inheritedBackgroundColor">
     <div class="wrapper">
-      <span>© 2019 etc.</span>
-      <!--<DarkmodeChanger />-->
+      <span>© Arttu Pennanen {{currentYear}}</span>
+      <span><a href="https://github.com/Pennane">Github</a></span>
     </div>
   </footer>
 </template>
 
 <script>
-//import DarkmodeChanger from '@/components/DarkmodeChanger.vue'
 
 export default {
   name: 'PageFooter',
-  components: {
-    //  DarkmodeChanger
-  },
   computed: {
-    inheritedBackgroundColor: function() {
-      if (
-        !document.querySelector('.home') ||
-        !document.querySelectorAll('.project.preview')
-      ) {
+    inheritedBackgroundColor() {
+      if (!document.querySelector('.home') || !document.querySelectorAll('.project.preview')) {
         return null
       }
 
@@ -32,6 +25,9 @@ export default {
         'footerBg-5': bgNumber == 0,
         yeet: true
       }
+    },
+    currentYear() {
+      return new Date().getFullYear()
     }
   }
 }
@@ -45,7 +41,8 @@ footer {
   padding-bottom: 7.1em;
   color: black;
   margin-top: auto !important;
-  background-color: #e5e5e5;
+  background-color: #fafafa;
+  font-size: 0.9em;
 }
 
 
@@ -76,6 +73,12 @@ footer div.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer span {
+      text-decoration: none;
+      margin: 0.5em;
+          color: #555;
 }
 
 
