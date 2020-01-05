@@ -39,30 +39,38 @@
     :type="$t('data.description')"
     :previewDescription="$t('content.p_1')"
     :buttontext="$t('data.buttonText')"
-    date="12.8.2019"
+    date="16.10.2019"
     link="https://spotifyfavorites.pennanen.dev/"
     filelocation="spotifyfavorites"
-    :previewImage="require('@/assets/images/spotifyfavorites/spotifyfavorites3.png')"
+    :previewImage="
+      require('@/assets/images/spotifyfavorites/spotifyfavorites3.png')
+    "
     :preview="preview"
   >
-    <p>{{$t("content.p_1")}}</p>
-    <p>{{$t("content.p_2")}}</p>
-    <p>{{$t("content.p_3")}}</p>
-    <ProjectImage alt :src="require('@/assets/images/spotifyfavorites/spotifyfavorites1.png')"></ProjectImage>
-    <p>{{$t("content.p_4")}}</p>
+    <p>{{ $t('content.p_1') }}</p>
+    <p>{{ $t('content.p_2') }}</p>
+    <p>{{ $t('content.p_3') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/spotifyfavorites/spotifyfavorites1.png')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_4') }}</p>
     <p>
-      {{$t("content.p_5")}}
-      <a class="contentlink"
-        href="https://github.com/Pennane/spotify-favorites"
-      >github.com/Pennane/spotify-favorites </a>({{$t("word.old")}})
-      {{$t("word.and")}}
-      <a class="contentlink"
-        href="https://github.com/Pennane/spotify-favorites"
-      >github.com/Pennane/vue-spotify-favorites </a>({{$t("word.new")}}).
+      {{ $t('content.p_5') }}
+      <a class="contentlink" href="https://github.com/Pennane/spotify-favorites"
+        >github.com/Pennane/spotify-favorites </a
+      >({{ $t('word.old') }})
+      {{ $t('word.and') }}
+      <a class="contentlink" href="https://github.com/Pennane/spotify-favorites"
+        >github.com/Pennane/vue-spotify-favorites </a
+      >({{ $t('word.new') }}).
     </p>
     <p>
-      {{$t("content.p_6")}}
-      <a  class="contentlink" href="https://spotifyfavorites.pennanen.dev/">{{$t("word.here")}}</a>.
+      {{ $t('content.p_6') }}
+      <a class="contentlink" href="https://spotifyfavorites.pennanen.dev/">{{
+        $t('word.here')
+      }}</a
+      >.
     </p>
   </Project>
 </template>

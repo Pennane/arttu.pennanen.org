@@ -49,21 +49,37 @@
     :type="$t('data.description')"
     :previewDescription="$t('content.p_1')"
     :buttontext="$t('data.buttonText')"
-    date="12.8.2019"
+    date="1.12.2020"
     link="https://yatzy.pennanen.dev/"
     filelocation="yatzy"
     :previewImage="require('@/assets/images/yatzy/1.png')"
     :preview="preview"
   >
-    <p>{{$t("content.p_1")}}</p>
-    <p>{{$t("content.p_2")}}</p>
-    <ProjectImage alt :src="require('@/assets/images/yatzy/1.png')" :caption="$t('caption.i_1')"></ProjectImage>
-    <p>{{$t("content.p_3")}}</p>
-    <ProjectImage alt :src="require('@/assets/images/yatzy/2.png')" :caption="$t('caption.i_2')"></ProjectImage>
-    <p>{{$t("content.p_4")}}</p>
-    <ProjectImage alt :src="require('@/assets/images/yatzy/3.mp4')" :caption="$t('caption.i_3')"></ProjectImage>
-    <ProjectImage alt :src="require('@/assets/images/yatzy/4.mp4')" :caption="$t('caption.i_4')"></ProjectImage>
-    <p>{{$t("content.p_5")}}</p>
+    <p>{{ $t('content.p_1') }}</p>
+    <p>{{ $t('content.p_2') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/yatzy/1.png')"
+      :caption="$t('caption.i_1')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_3') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/yatzy/2.png')"
+      :caption="$t('caption.i_2')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_4') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/yatzy/3.mp4')"
+      :caption="$t('caption.i_3')"
+    ></ProjectImage>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/yatzy/4.mp4')"
+      :caption="$t('caption.i_4')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_5') }}</p>
   </Project>
 </template>
 

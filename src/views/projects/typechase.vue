@@ -35,19 +35,28 @@
     :type="$t('data.description')"
     :previewDescription="$t('content.p_1')"
     :buttontext="$t('data.buttonText')"
-    date="12.8.2019"
+    date="12.7.2019"
     link="https://arttu.pennanen.org/sub/typechase/"
     filelocation="typechase"
     :previewImage="require('@/assets/images/typechase/typechase1.png')"
     :preview="preview"
   >
-    <p>{{$t("content.p_1")}}</p>
-    <ProjectImage alt :src="require('@/assets/images/typechase/typechase1.png')"></ProjectImage>
-    <p>{{$t("content.p_2")}}</p>
-    <ProjectImage alt :src="require('@/assets/images/typechase/typechase2.png')"></ProjectImage>
-    <p>{{$t("content.p_3")}}</p>
-    <ProjectImage alt :src="require('@/assets/images/typechase/typechase3.png')"></ProjectImage>
-    <p>{{$t("content.p_4")}}</p>
+    <p>{{ $t('content.p_1') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/typechase/typechase1.png')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_2') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/typechase/typechase2.png')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_3') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/typechase/typechase3.png')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_4') }}</p>
   </Project>
 </template>
 
