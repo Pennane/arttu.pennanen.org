@@ -53,39 +53,44 @@
     :type="$t('data.description')"
     :previewDescription="$t('content.p_1')"
     :buttontext="$t('data.buttonText')"
-    date="12.8.2019"
+    date="8.2018-"
     link="https://github.com/Pennane/peigom-bot"
     filelocation="peigombot"
     :previewImage="require('@/assets/images/peigom/peigom1.png')"
     :preview="preview"
   >
-    <p>{{$t("content.p_1")}}</p>
-    <p>{{$t("content.p_2")}}</p>
+    <p>{{ $t('content.p_1') }}</p>
+    <p>{{ $t('content.p_2') }}</p>
     <ProjectImage
       alt
       :src="require('@/assets/images/peigom/peigom1.png')"
       :caption="$t('caption.i_1')"
     ></ProjectImage>
-    <p>{{$t("content.p_3")}}<a href="https://github.com/Pennane/peigom-bot">https://github.com/Pennane/peigom-bot</a></p>
+    <p>
+      {{ $t('content.p_3')
+      }}<a href="https://github.com/Pennane/peigom-bot"
+        >https://github.com/Pennane/peigom-bot</a
+      >
+    </p>
     <ProjectImage
       alt
       :src="require('@/assets/images/peigom/peigom2.png')"
       :caption="$t('caption.i_2')"
     ></ProjectImage>
-    <p>{{$t("content.p_4")}}</p>
-    <p>{{$t("content.p_5")}}</p>
+    <p>{{ $t('content.p_4') }}</p>
+    <p>{{ $t('content.p_5') }}</p>
     <ProjectImage
       alt
       :src="require('@/assets/images/peigom/peigom3.png')"
       :caption="$t('caption.i_3')"
     ></ProjectImage>
-    <p>{{$t("content.p_6")}}</p>
+    <p>{{ $t('content.p_6') }}</p>
     <ProjectImage
       alt
       :src="require('@/assets/images/peigom/peigom4.png')"
       :caption="$t('caption.i_4')"
     ></ProjectImage>
-    <p>{{$t("content.p_7")}}</p>
+    <p>{{ $t('content.p_7') }}</p>
   </Project>
 </template>
 

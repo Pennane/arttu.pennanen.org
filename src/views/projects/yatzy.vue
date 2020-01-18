@@ -55,15 +55,31 @@
     :previewImage="require('@/assets/images/yatzy/1.png')"
     :preview="preview"
   >
-    <p>{{$t("content.p_1")}}</p>
-    <p>{{$t("content.p_2")}}</p>
-    <ProjectImage alt :src="require('@/assets/images/yatzy/1.png')" :caption="$t('caption.i_1')"></ProjectImage>
-    <p>{{$t("content.p_3")}}</p>
-    <ProjectImage alt :src="require('@/assets/images/yatzy/2.png')" :caption="$t('caption.i_2')"></ProjectImage>
-    <p>{{$t("content.p_4")}}</p>
-    <ProjectImage alt :src="require('@/assets/images/yatzy/3.mp4')" :caption="$t('caption.i_3')"></ProjectImage>
-    <ProjectImage alt :src="require('@/assets/images/yatzy/4.mp4')" :caption="$t('caption.i_4')"></ProjectImage>
-    <p>{{$t("content.p_5")}}</p>
+    <p>{{ $t('content.p_1') }}</p>
+    <p>{{ $t('content.p_2') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/yatzy/1.png')"
+      :caption="$t('caption.i_1')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_3') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/yatzy/2.png')"
+      :caption="$t('caption.i_2')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_4') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/yatzy/3.mp4')"
+      :caption="$t('caption.i_3')"
+    ></ProjectImage>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/yatzy/4.mp4')"
+      :caption="$t('caption.i_4')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_5') }}</p>
   </Project>
 </template>
 

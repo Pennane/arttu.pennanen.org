@@ -9,12 +9,17 @@
         :buttontext="buttontext"
       />
       <div class="projectbody">
-        <router-link :to="filelocation">
+        <router-link :to="filelocation" :name="name">
           <ProjectImage alt :src="previewImage" preview></ProjectImage>
         </router-link>
-        <p class="project-preview-desc">{{previewDescription}}</p>
+        <p class="project-preview-desc">{{ previewDescription }}</p>
       </div>
-      <router-link class="contentlink projectpreviewlink" :to="filelocation">{{$t("read_more")}}</router-link>
+      <router-link
+        class="contentlink projectpreviewlink"
+        :to="filelocation"
+        :name="name"
+        >{{ $t('read_more') }}</router-link
+      >
     </div>
     <div class="project" v-else>
       <ProjectHeader
