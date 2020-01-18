@@ -49,7 +49,7 @@
     :type="$t('data.description')"
     :previewDescription="$t('content.p_1')"
     :buttontext="$t('data.buttonText')"
-    date="12.8.2019"
+    date="1.12.2020"
     link="https://yatzy.pennanen.dev/"
     filelocation="yatzy"
     :previewImage="require('@/assets/images/yatzy/1.png')"

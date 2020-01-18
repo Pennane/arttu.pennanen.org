@@ -1,6 +1,6 @@
 <template>
   <div :class="{dark:false}">
-    <div :class="['page-wrapper',modernBackground ? 'modernBackground' : null]">
+    <div class="page-wrapper">
       <PageTopbar />
       <main id="content">
         <router-view class="content-wrapper"/>
@@ -31,22 +31,11 @@ export default {
   methods: {
     beforeEnter() {
       this.$root.$emit('scrollBeforeEnter')
-    },
-    checkModernBackround() {
-      return this.$router.currentRoute.name === 'Home'
     }
   },
   mounted: function() {
     let darkmode = false
     document.body.classList.toggle('dark', darkmode)
-  },
-  created() {
-    this.modernBackground = this.checkModernBackround()
-  },
-  watch: {
-    $route(to, from) {
-      this.modernBackground = this.checkModernBackround()
-    }
   }
 }
 </script>
@@ -111,6 +100,7 @@ main {
   box-sizing: border-box;
   width: 100%;
   flex: 0 0 auto;
+  margin-top: 70px;
 }
 
 .content-wrapper > * {
@@ -174,7 +164,7 @@ p {
 }
 
 .retro > span:nth-child(even) {
-  color: hsl(34, 24%, 34%);
+  color: hsl(224, 24%, 34%)
 }
 
 .retro.wider {

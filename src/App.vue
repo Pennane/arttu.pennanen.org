@@ -74,9 +74,9 @@ export default {
 :root {
   --bg-1: #fafafa;
   --bg-2: #fff;
-  --bg-3: #ffffff;
-  --bg-4: hsla(0, 0%, 97%, 1);
-  --bg-5: hsla(0, 0%, 95%, 1);
+  --bg-3: hsla(224, 21%, 96%, 1);
+  --bg-4: hsla(225, 19%, 92%, 1);
+  --bg-5: hsla(231, 20%, 94%, 1);
   --font-1: #3a3a3a;
   --font-2: #2a2a2a;
   --font-3: #545454;

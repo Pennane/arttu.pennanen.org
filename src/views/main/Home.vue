@@ -1,14 +1,10 @@
 <i18n>
 {
   "en": {
-    "main_header": "Web\ndeveloping\nand else.",
-    "intro_1": "For why this has been brought up to daylight has no concrete answer but to make myself feel settlement. The universe is particularly dear to me. All the life that lies beneath the surface is formed from technologies and mind's creative expression that shows a new wave of art that has never been seen before.",
-    "intro_2_1": "Just an instant in time, but what will sprout from it, is what makes it important. Whatever exists soon might have no resemblance to what is now. And something that can now be seen here today, might never be seen here again. The mind forgets and sparks from  coincidental moments. Intricacy does not ease the mind. The thing that finally lights up the spark might be something completely unforeseen."
+    "main_header": "Web\ndeveloping\nand else."
   },
   "fi": {
-    "main_header": "Web\nkehitystä\nsun muuta.",
-    "intro_1": "Tässä joitain projekteja, joiden tarkoituksena on ollut korjata mieltä ärsyttäneitä ongelmia.",
-    "intro_2_1": "Mikään ei pysy kauaa samanlaisena - pahimmillaan ei edes saman oloisena - ja näin asioiden kuuluu olla. Sisäistä sivu englanniksi. Se on niin ehkä vähän mielekkäämpää."
+    "main_header": "Web\nkehitystä\nsun muuta."
   }
 }
 </i18n>
@@ -18,18 +14,12 @@
   <div class="home">
     <header class="header">
       <div class="headerwrap">
-        <h1 class="h1 modern">
+        <h1 class="h1 retro">
           <span v-for="line in getHeader" :key="line">{{line}}</span>
         </h1>
       </div>
     </header>
     <div class="body">
-      <!--<div class="introductory">
-        <p>{{$t("intro_1")}}</p>
-        <p>{{$t("intro_2_1")}}</p>
-        <p class="quote">- joemama 1942</p>
-      </div>-->
-
       <div class="recent-posts">
         <component
           v-for="postkey in Object.keys(posts)"
@@ -216,7 +206,6 @@ export default {
 }
 
 @media screen and (max-width: 1000px) {
-
   .recent-posts {
     display: flex;
     flex-direction: column;
@@ -237,7 +226,7 @@ export default {
 
   .headerwrap {
     margin: 1em !important;
-    margin-bottom: 0
+    margin-bottom: 0;
   }
 
   .header {

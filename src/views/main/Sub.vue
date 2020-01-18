@@ -16,7 +16,9 @@
         <span v-for="line in getHeader" :key="line">{{line}}</span>
       </h1>
     </div>
-
+    <div v-if="!links" class="loader-wrapper">
+      <Loader />
+    </div>
     <ul v-if="links" class="linkcontainer">
       <li v-for="link in links" :key="'link-'+link">
         <a class="sublink" :href="'https://arttu.pennanen.org/sub/'+link">
@@ -33,9 +35,14 @@
 </template>
 
 <script>
+
+import Loader from '@/components/Loader.vue';
+
 export default {
   name: 'Sub-page',
-  components: {},
+  components: {
+    Loader
+  },
   data() {
     return {
       links: false
@@ -70,6 +77,10 @@ export default {
 
 
 <style scoped>
+  .loader-wrapper {
+    margin: 5em 0;
+  }
+
   .sub {
     padding-bottom: 7em;
   }

@@ -2,18 +2,22 @@
   <footer id="footer" :class="inheritedBackgroundColor">
     <div class="wrapper">
       <span>© Arttu Pennanen {{currentYear}}</span>
-      <span><a href="https://github.com/Pennane">Github</a></span>
+      <span>
+        <a href="https://github.com/Pennane">Github</a>
+      </span>
     </div>
   </footer>
 </template>
 
 <script>
-
 export default {
   name: 'PageFooter',
   computed: {
     inheritedBackgroundColor() {
-      if (!document.querySelector('.home') || !document.querySelectorAll('.project.preview')) {
+      if (
+        !document.querySelector('.home') ||
+        !document.querySelectorAll('.project.preview')
+      ) {
         return null
       }
 
@@ -41,10 +45,9 @@ footer {
   padding-bottom: 7.1em;
   color: black;
   margin-top: auto !important;
-  background-color: #fafafa;
+  background-color: hsla(225, 20%, 98%, 1);
   font-size: 0.9em;
 }
-
 
 footer::before,
 footer::after {
@@ -76,11 +79,10 @@ footer div.wrapper {
 }
 
 footer span {
-      text-decoration: none;
-      margin: 0.5em;
-          color: #555;
+  text-decoration: none;
+  margin: 0.5em;
+  color: #555;
 }
-
 
 .footerBg-3::before,
 .footerBg-3::after {
