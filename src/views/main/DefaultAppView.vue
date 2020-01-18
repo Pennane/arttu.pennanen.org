@@ -130,7 +130,6 @@ p {
   flex-direction: column;
   text-align: left;
   border-radius: 0;
-  opacity: 0.95;
   color: white;
   line-height: 0.9;
   font-size: 7rem;
@@ -146,17 +145,12 @@ p {
   letter-spacing: -4px;
   display: flex;
   flex-direction: column;
+      font-size: 6em;
   text-align: left;
-}
-
-.retro {
-  font-size: 9em;
 }
 
 .retro > span {
   white-space: nowrap;
-  /*  mix-blend-mode: color-dodge; */
-  opacity: 0.95;
 }
 
 .retro > span:nth-child(odd) {
@@ -223,7 +217,7 @@ p {
 
 @media screen and (max-width: 900px) {
   .retro {
-    font-size: 15.5vw;
+    font-size: calc(1em + 10vw);
   }
 
   .modern {

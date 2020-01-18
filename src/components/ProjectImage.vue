@@ -69,6 +69,7 @@ export default {
 
 .projectimage.preview {
   padding: 0;
+  opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center;

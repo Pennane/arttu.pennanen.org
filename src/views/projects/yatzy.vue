@@ -7,7 +7,7 @@
       "buttonText": "Try here!"
     },
     "content": {
-      "p_1": "This Yatzy functions as a port from traditional dice game to an internet environment, where nothing unnecessary has been brought in. ",
+      "p_1": "Port of a traditional dice game where nothing unnecessary has been brought in. ",
       "p_2": "Reason for this Yatzy version was a longing for a game found in the now terminated Playforia online game community, that had.",
       "p_3": "The visual side for this Yatzy game replicates the Playforia's old Yatzy where the design has been created using the skeuomorphic design style where objects mimic their real-life counterparts.",
       "p_4" : "Creating the game usability and ease of use were on high priority. This can be seen as smooth animations and lack of unnecessary features.",
@@ -27,7 +27,7 @@
       "buttonText": "Kokeile täällä!"
     },
     "content": {
-      "p_1": "Tämä Yatzy peli toimii perinteisen noppapelin tuontina verkkoympäristöön ilman omituisia ominaisuuksia tai visioita. ",
+      "p_1": "Perinteisen noppapelin tuonti verkkoympäristöön ilman omituisia ominaisuuksia. ",
       "p_2": "Tämä tunnetun noppapelin versio syntyi kaipuusta lopettaneen Aapeli-pelisivuston Yatzy peliä kohtaan, jota nuorempana pelattiin useaan otteeseen useassa yhteydessä.",
       "p_3": "Yatzyn visuaalinen puoli on luotu vahvasti kunnioittaen vanhaa Aapelissa toiminutta yatzy peliä ajatellen, jossa pääideana on, että käyttöliittymä on toteutettu skeuoformismin (eli reaalimaailmaa jäljittelevään design-tyylin) tyylillä.",
       "p_4" : "Peliä luodessa pyrkimyksenä oli pitää käytettävyys mahdollisimman luontevana ja sulavana. Tuntuisi, että soljuvat kappaleiden animoinnit tekevät tämän Yatzy kopion pelaamisesta erittän miellyttävää, mikä ei todellakaan ole itsestäänselvyys virtuaaliselle noppapelille.",

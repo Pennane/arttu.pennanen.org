@@ -7,7 +7,7 @@
       "buttonText": "Find here!"
     },
     "content": {
-      "p_1": "Peigom bot is a bot for Discord that contains a few dozen commands and actions, such as music playback, image processing and server moderation. Peigom has been under construction for a while now and has smoothed to something rather nicely polished compared to what it was in the beginning.",
+      "p_1": "Peigom bot is a Discord bot that contains a few dozen commands and actions, such as music playback, image processing and server moderation. Peigom has been under construction for a while now and has smoothed over time to something rather nicely polished.",
       "p_2": "Peigom has been right from the start a passion project that has turned into a project that has no end in sight.",
       "p_3": "On a Discord server the bot can be woken up by using the command \",auta\". As of now the bot can not be invited to new servers, but if necessary the source code can be found from Github ",
       "p_4": "Currently, the bot has 52 different commands all of which can be triggered using various words. The bot functions completely in Finnish, so that can be a bit of a letdown for some. The bot a very rudimentary permission hierarchy that divides commands for normal users and administrators.",
