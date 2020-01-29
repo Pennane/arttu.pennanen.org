@@ -1,42 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
         <loc>https://pennanen.dev/</loc>
     </url>
-	<url>
-		<loc>https://pennanen.dev/spotifyfavorites</loc>
-	</url>
-	<url>
-		<loc>https://pennanen.dev/peigombot</loc>
-	</url>
-	<url>
-		<loc>https://pennanen.dev/typechase</loc>
-	</url>
+    <url>
+        <loc>https://pennanen.dev/yatzy</loc>
+    </url>
+    <url>
+        <loc>https://pennanen.dev/spotifyfavorites</loc>
+    </url>
+    <url>
+        <loc>https://pennanen.dev/peigombot</loc>
+    </url>
+    <url>
+        <loc>https://pennanen.dev/typechase</loc>
+    </url>
+    <url>
+        <loc>https://pennanen.dev/spotifyfavorites</loc>
+    </url>
+    <url>
+        <loc>https://yatzy.pennanen.dev</loc>
+    </url>
+    <url>
+        <loc>https://spotifyfavorites.pennanen.dev</loc>
+    </url>
     <url>
         <loc>https://pennanen.dev/sub</loc>
     </url>
     <url>
-        <loc>https://pennanen.dev/sub/laser/</loc>
-    </url>
-    <url>
         <loc>https://pennanen.dev/sub/jutinrillimakkarapeli/</loc>
-    </url>
-    <url>
-        <loc>https://pennanen.dev/sub/kalastuspeli/</loc>
-    </url>
-    <url>
-        <loc>https://pennanen.dev/sub/hedelmapeli/</loc>
-    </url>
-    <url>
-        <loc>https://pennanen.dev/sub/lottotodennakoisyys/</loc>
-    </url>
-    <url>
-        <loc>https://pennanen.dev/sub/thonkpaint/</loc>
-    </url>
-    <url>
-        <loc>https://pennanen.dev/sub/typechase/</loc>
     </url>
     <url>
         <loc>https://pennanen.dev/sub/peigom-bot_opas/</loc>
@@ -44,5 +39,4 @@
     <url>
         <loc>https://pennanen.dev/sub/thinkingscreensaver/</loc>
     </url>
-   
 </urlset>
