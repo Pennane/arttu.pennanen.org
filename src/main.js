@@ -13,7 +13,7 @@ import store from './store'
 import App from './App.vue'
 
 Vue.use(VueAnalytics, {
-  id: 'UA-126133790-1',
+  id: 'UA-126133790-2',
   debug: {
     sendHitTask: process.env.NODE_ENV === 'production'
   },
