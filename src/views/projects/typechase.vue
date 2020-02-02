@@ -7,10 +7,17 @@
       "buttonText": "Try here!"
     },
     "content": {
-      "p_1": "Das auto lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, dolor mollitia voluptate dolorem voluptatem omnis impedit laudantium aperiam beatae aliquid at nemo laborum culpa eius eum minus dicta ducimus!",
-      "p_2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?",
-      "p_3": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora eaque nemo animi, dolor accusantium similique facere voluptatem error ullam porro voluptate necessitatibus nostrum quis voluptates doloribus quod adipisci. Aliquid, illum!",
-      "p_4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda culpa, animi voluptatibus in distinctio cumque voluptatum nostrum, delectus consequuntur laboriosam recusandae labore repellat at non harum minima repudiandae, enim sunt."
+      "p_1": "Typechase is a typing application meant for type practising. It has various pre-saved texts that can be typed in to learn about typing speed.",
+      "p_2": "User can use own preferred texts and redo the current text currently in typing.",
+      "p_3": "Interacting with the app is relatively simple as the only thing to keep in mind is to type the words showcased right in front of the user.",
+      "p_4": "The progress is shown using different colours with green for successfully typed character, red for unsuccessfully typed characters and yellow for characters that have been typed incorrectly but fixed afterwards.",
+      "p_5": "There is a comprehensive guide about the functionality of the app that shows everything necessary to understand the Typechase application.",
+      "p_6": "Typechase saves completed typing sessions to history which then presents the user the average words-per-minute listing from the previous typed in texts."
+    },
+    "caption": {
+      "i_1": "A view of the Typechase interface",
+      "i_2": "A view of the Typechase guide",
+      "i_3": "A view of the Typechase typing history"
     }
       },
   "fi": {
@@ -20,10 +27,17 @@
       "buttonText": "Kokeile täällä!"
     },
     "content": {
-      "p_1": "Das auto lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum, dolor mollitia voluptate dolorem voluptatem omnis impedit laudantium aperiam beatae aliquid at nemo laborum culpa eius eum minus dicta ducimus!",
-      "p_2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illo aliquid rem quas quia veniam autem! Architecto sit optio provident quod, commodi accusantium animi, sunt, consectetur ratione aperiam itaque quis?",
-      "p_3": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora eaque nemo animi, dolor accusantium similique facere voluptatem error ullam porro voluptate necessitatibus nostrum quis voluptates doloribus quod adipisci. Aliquid, illum!",
-      "p_4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda culpa, animi voluptatibus in distinctio cumque voluptatum nostrum, delectus consequuntur laboriosam recusandae labore repellat at non harum minima repudiandae, enim sunt."
+      "p_1": "Typechase on konekirjoituksen opetteluun, sekä oman taidon tarkastamiseen tarkoitettu sovellus, johon on tallennettu useita englanninkielisiä tekstejä, joita käyttäjä voi kirjoittaa harjoitusmielessä.",
+      "p_2": "Valmiiksi tallennettujen tekstejen sijasta käyttäjä voi myös käyttää omia tekstejä kirjoittamisen opetteluun, sekä aloittaa aina uudelleen käynnissäolevan tekstin.",
+      "p_3": "Typechase on helppokäyttöinen siinä mielessä, ettei käyttäjän periaatteessa tarvitse tehdä muuta, kuin kirjoittaa edesse näkyvä teksti.",
+      "p_4": "Kirjoittamisen edistystä ilmaistaan erivärisin kirjaimin. Vihreä oikein kirjoitetuille merkeille, punainen väärin kirjoitetuille merkeille, ja keltainen väärin kirjoitetuille, mutta jälkeenpäin korjatuille merkeille.",
+      "p_5": "Sovellukseen on sisäänrakennettu opas, josta näkee kaikki tarvittavat tiedot sovelluksen toiminnasta.",
+      "p_6": "Kaikki valmiiksi kirjoitetut tekstit tallennetaan käyttäjän selaimeen, josta sovellus laskee käyttäjälle päivittyvää wpm-tulosta."
+    },
+    "caption": {
+      "i_1": "Näkymä Typechase:n käyttöliittymästä",
+      "i_2": "Näkymä Typechase:n opasosiosta",
+      "i_3": "Näkymä Typechase:n kirjoitushistoriasta"
     }
   }
 }
@@ -42,21 +56,26 @@
     :preview="preview"
   >
     <p>{{ $t('content.p_1') }}</p>
-    <ProjectImage
-      alt
-      :src="require('@/assets/images/typechase/typechase1.png')"
-    ></ProjectImage>
     <p>{{ $t('content.p_2') }}</p>
     <ProjectImage
       alt
-      :src="require('@/assets/images/typechase/typechase2.png')"
+      :src="require('@/assets/images/typechase/typechase1.png')"
+      :caption="$t('caption.i_1')"
     ></ProjectImage>
     <p>{{ $t('content.p_3') }}</p>
+    <p>{{ $t('content.p_4') }}</p>
+    <ProjectImage
+      alt
+      :src="require('@/assets/images/typechase/typechase2.png')"
+      :caption="$t('caption.i_2')"
+    ></ProjectImage>
+    <p>{{ $t('content.p_5') }}</p>
     <ProjectImage
       alt
       :src="require('@/assets/images/typechase/typechase3.png')"
+      :caption="$t('caption.i_3')"
     ></ProjectImage>
-    <p>{{ $t('content.p_4') }}</p>
+    <p>{{ $t('content.p_6') }}</p>
   </Project>
 </template>
 
