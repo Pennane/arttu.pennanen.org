@@ -1,3 +1,4 @@
 https://arttu.pennanen.dev/* https://pennanen.dev/:splat 301!
 https://arttupennanen.netlify.com/* https://pennanen.dev/:splat 301!
+/sub/* https://arttu.pennanen.org/sub/:splat 307!
 /*    /index.html   200
