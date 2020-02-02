@@ -3,11 +3,6 @@ import Router from 'vue-router'
 import PageNotFound from './views/main/PageNotFound.vue'
 import Home from './views/main/Home.vue'
 
-/*
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}*/
-
 const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,

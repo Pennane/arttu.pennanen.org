@@ -9,7 +9,11 @@
         :buttontext="buttontext"
       />
       <div class="projectbody">
-        <router-link :to="filelocation" :name="name">
+        <router-link
+          :to="filelocation"
+          :name="name"
+          :aria-label="$t('read_more')"
+        >
           <ProjectImage alt :src="previewImage" preview></ProjectImage>
         </router-link>
         <p class="project-preview-desc">{{ previewDescription }}</p>
