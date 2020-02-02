@@ -13,20 +13,20 @@
   <div class="sub">
     <div class="subHeader">
       <h1 class="retro wider">
-        <span v-for="line in getHeader" :key="line">{{line}}</span>
+        <span v-for="line in getHeader" :key="line">{{ line }}</span>
       </h1>
     </div>
     <div v-if="!links" class="loader-wrapper">
       <Loader />
     </div>
     <ul v-if="links" class="linkcontainer">
-      <li v-for="link in links" :key="'link-'+link">
-        <a class="sublink" :href="'https://arttu.pennanen.org/sub/'+link">
+      <li v-for="link in links" :key="'link-' + link">
+        <a class="sublink" :href="'/sub/' + link">
           <span class="name">{{ link }}</span>
           <span class="destination">
-            <span class="line">{{' – '}}</span>
-            <span class="origin">https://arttu.pennanen.org/</span>
-            <span class="destinationlink">{{'sub/'+link+'/'}}</span>
+            <span class="line">{{ ' – ' }}</span>
+            <span class="origin">https://pennanen.dev/</span>
+            <span class="destinationlink">{{ 'sub/' + link + '/' }}</span>
           </span>
         </a>
       </li>
@@ -35,8 +35,8 @@
 </template>
 
 <script>
-
-import Loader from '@/components/Loader.vue';
+import Loader from '@/components/Loader.vue'
+import Folders from '@/assets/data/subfolders.json'
 
 export default {
   name: 'Sub-page',
@@ -62,11 +62,8 @@ export default {
   methods: {
     getLinks() {
       let _compthis = this
-      this.$root.$children[0].$options.methods
-        .loadJSON('https://arttu.pennanen.org/directory.php')
-        .then(function(l) {
-          _compthis.links = l
-        })
+      _compthis.links = Folders
+      console.log(Folders)
     }
   },
   metaInfo: {
@@ -75,15 +72,14 @@ export default {
 }
 </script>
 
-
 <style scoped>
-  .loader-wrapper {
-    margin: 5em 0;
-  }
+.loader-wrapper {
+  margin: 5em 0;
+}
 
-  .sub {
-    padding-bottom: 7em;
-  }
+.sub {
+  padding-bottom: 7em;
+}
 
 .linkcontainer {
   display: flex;
@@ -96,7 +92,7 @@ export default {
   display: flex;
   align-items: center;
   background-color: var(--bg-1);
-padding-bottom: 2em;
+  padding-bottom: 2em;
   padding-top: 1em;
 }
 
