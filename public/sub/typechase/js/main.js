@@ -44,8 +44,8 @@
     let textInstance;
     const slicedClassTag = "char";
     const textsPath =
-        window.location.host === "https://arttu.pennanen.org"
-            ? "https://arttu.pennanen.org/sub/typechase/assets/texts.json"
+        window.location.host === "https://pennanen.dev"
+            ? "https://pennanen.dev/sub/typechase/assets/texts.json"
             : "./assets/texts.json";
 
     const destination = document.querySelector("#textbox");

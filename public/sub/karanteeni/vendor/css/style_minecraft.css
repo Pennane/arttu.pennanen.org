@@ -12,7 +12,7 @@ body {
     min-height: 100%;
     position: relative;
     margin: 0;
-    background-image: url(https://arttu.pennanen.org/sub/karanteeni/assets/images/kuvajuttu.png);
+    background-image: url(https://pennanen.dev/sub/karanteeni/assets/images/kuvajuttu.png);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,7 +80,7 @@ footer {
 }
 
 .bg-image {
-    background-image: url(https://arttu.pennanen.org/sub/karanteeni/assets/images/kuvajuttu.png);
+    background-image: url(https://pennanen.dev/sub/karanteeni/assets/images/kuvajuttu.png);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,14 +89,14 @@ footer {
 
 @font-face {
     font-family: Minecraftia;
-    src: url(https://arttu.pennanen.org/sub/karanteeni/assets/fonts/Minecraftia.woff2)
+    src: url(https://pennanen.dev/sub/karanteeni/assets/fonts/Minecraftia.woff2)
 }
 
 .karanav {
     background-color: #20232a;
     font-size: 16px;
     box-shadow: 0 0 20px 3px #000;
-    background-image: url(https://arttu.pennanen.org/sub/karanteeni/assets/images/dirt.png);
+    background-image: url(https://pennanen.dev/sub/karanteeni/assets/images/dirt.png);
     background-size: 25px;
     font-family: Minecraftia !important
 }
@@ -136,7 +136,7 @@ footer {
 }
 
 .dropdown-menu {
-    background: linear-gradient(rgba(23, 23, 23, .8), rgba(23, 23, 23, .8)), url(https://arttu.pennanen.org/sub/karanteeni/assets/images/dirt.png);
+    background: linear-gradient(rgba(23, 23, 23, .8), rgba(23, 23, 23, .8)), url(https://pennanen.dev/sub/karanteeni/assets/images/dirt.png);
     background-size: 25px
 }
 
@@ -211,7 +211,7 @@ footer {
 }
 
 .jumbo-bg {
-    background: url(https://arttu.pennanen.org/sub/karanteeni/assets/images/yeet.png) center;
+    background: url(https://pennanen.dev/sub/karanteeni/assets/images/yeet.png) center;
     background-size: cover
 }
 
@@ -510,7 +510,7 @@ h1, h2, h3, h4, h5, h6 {
 .yp-jutut {
     height: 125px;
     font-size: 1rem !important;
-    background: url(https://arttu.pennanen.org/sub/karanteeni/assets/images/sign.png);
+    background: url(https://pennanen.dev/sub/karanteeni/assets/images/sign.png);
     font-family: Minecraftia;
     color: #000;
     font-weight: 700;

@@ -72,14 +72,14 @@ export default {
           name: 'twitter:description',
           content: this.$t('meta.description')
         },
-        { name: 'twitter:site', content: 'https://arttu.pennanen.org' },
+        { name: 'twitter:site', content: 'https://pennanen.dev' },
         { property: 'og:title', content: this.$t('meta.title') },
         {
           vmid: 'og:description',
           property: 'og:description',
           content: this.$t('meta.description')
         },
-        { property: 'og:site_name', content: 'arttu.pennanen.org' },
+        { property: 'og:site_name', content: 'pennanen.dev' },
         { property: 'og:type', content: 'website' },
         { name: 'theme-color', content: '#424d6c' }
       ],

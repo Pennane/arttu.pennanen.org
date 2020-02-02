@@ -1,7 +1,7 @@
 # typechase
 Typing speed tester / game build on vanilla javascript.
 
-Currently the ~~old~~ present version found [here](https://arttu.pennanen.org/sub/typechase/)
+Currently the ~~old~~ present version found [here](https://pennanen.dev/sub/typechase/)
 
 ## COMPLETED:
 * All old features now exist in this new version

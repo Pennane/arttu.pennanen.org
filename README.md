@@ -1,2 +1,2 @@
-# arttu.pennanen.org
-Repository for arttu.pennanen.org
+# pennanen.dev
+Repository for pennanen.dev

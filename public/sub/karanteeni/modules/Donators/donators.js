@@ -1,4 +1,4 @@
-var requestURL = 'https://arttu.pennanen.org/sub/karanteeni/modules/Donators/donators.json';
+var requestURL = 'https://pennanen.dev/sub/karanteeni/modules/Donators/donators.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
