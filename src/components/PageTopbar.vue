@@ -1,12 +1,20 @@
 <template>
   <div class="topbar">
-    <div :class="{'changepage-animation': animated, 'topbarline': true}" />
+    <div :class="{ 'changepage-animation': animated, topbarline: true }" />
     <div class="topbarcontent">
       <div class="topbrandimg">
         <router-link to="/" class="homelink" title="home">
-          <img class="brand" :src="require('@/assets/icons/icon_white.svg')" alt />
+          <img
+            class="brand"
+            :src="require('@/assets/icons/icon_white.svg')"
+            alt
+          />
+        </router-link>
+        <router-link to="/sub" class="navlink misc" title="projects">
+          {{ $t('word.misc') }}
         </router-link>
       </div>
+
       <div class="localization-bar">
         <LocaleChanger />
       </div>
@@ -51,8 +59,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4.5em;
-  height: 4.5em;
   padding: 0 0.2em;
   pointer-events: auto;
 }
@@ -81,11 +87,28 @@ span.brand {
 }
 
 .homelink {
-  width: 100%;
-  height: 100%;
+  width: 4.5em;
+  height: 4.5em;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navlink {
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.2em;
+  margin: 0.15em;
+  color: var(--font-2);
+  text-decoration: none;
+}
+
+.navlink.misc {
+  color: #525252;
 }
 
 .localization-bar {
