@@ -22,11 +22,15 @@
             margin-bottom: 0.2em;
         }
         input {
-          letter-spacing: .05em;
+          letter-spacing: .2em;
           line-height: 2;
         }
         #found-words {
           max-width: 600px;
+        }
+
+        .wide {
+          letter-spacing: .05em;
         }
     </style>
   </head>
@@ -39,8 +43,8 @@
         </input>
         </div>
         <div>
-          <span>Etsittävä sana (esim a--k-)</span>
-          <input type="text" id="known-characters" value="----">
+          <span>Etsittävä sana (esim <span class="wide">a__k_</span>)</span>
+          <input type="text" id="known-characters" value="____">
           </input>
         </div>
         <div>
