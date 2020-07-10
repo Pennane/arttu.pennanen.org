@@ -19,7 +19,7 @@ function findWordsWithInstructions(wordsArray, instructions) {
         else usableCharactersAmounts.set(character, 1)
     })
 
-    let knownCharacters = instructions.knownCharacters.split('').map(character => (character === '-' ? null : character))
+    let knownCharacters = instructions.knownCharacters.split('').map(character => (character === '-' || character === '_' || character === ' ') ? null : character)
 
     let possibleWords = wordsArray
 
@@ -32,7 +32,7 @@ function findWordsWithInstructions(wordsArray, instructions) {
     possibleWords = possibleWords.filter(word => {
         let characters = word.split('')
 
-        const hasRightCharacters = character => usableCharacters.indexOf(character) >= 0;
+        const hasRightCharacters = (character) => usableCharacters.indexOf(character) >= 0;
 
         return characters.every(hasRightCharacters);
     })
@@ -63,14 +63,15 @@ function findWordsWithInstructions(wordsArray, instructions) {
     return possibleWords
 }
 
-fetchWords('kotus_sanat.txt').then(words => {
+fetchWords('kotus_sanat.txt').then((words) => {
 
     let foundWordsOutput = document.getElementById('found-words')
 
+
     function updateResults() {
         let foundWords = findWordsWithInstructions(words, {
-            usableCharacters,
-            knownCharacters
+            usableCharacters: usableCharacters,
+            knownCharacters: knownCharacters
         })
         foundWordsOutput.textContent = foundWords.join(', ')
     }
@@ -84,22 +85,21 @@ fetchWords('kotus_sanat.txt').then(words => {
     usableCharactersInput.addEventListener("input", () => {
         clearTimeout(timeout_usableCharacters);
         timeout_usableCharacters = setTimeout(() => {
-            usableCharacters = usableCharactersInput.value
+            usableCharacters = usableCharactersInput.value.toLowerCase()
             updateResults()
         }, 600);
     })
     knownCharactersInput.addEventListener("input", () => {
         clearTimeout(timeout_knownCharacters);
         timeout_knownCharacters = setTimeout(() => {
-            knownCharacters = knownCharactersInput.value
+            knownCharacters = knownCharactersInput.value.toLowerCase()
             updateResults()
         }, 600);
     })
 
-    usableCharacters = usableCharactersInput.value
-    knownCharacters = knownCharactersInput.value
+    usableCharacters = usableCharactersInput.value.toLowerCase()
+    knownCharacters = knownCharactersInput.value.toLowerCase()
     updateResults()
 
-})
-    .catch(err => console.log('Failed to parse words', err))
+}).catch(err => console.log('Failed to parse words', err))
 
