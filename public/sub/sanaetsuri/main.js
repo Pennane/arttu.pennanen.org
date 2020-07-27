@@ -19,7 +19,7 @@ function findWordsWithInstructions(wordsArray, instructions) {
         else usableCharactersAmounts.set(character, 1)
     })
 
-    let knownCharacters = instructions.knownCharacters.split('').map(character => (character === '-' || character === '_' || character === ' ') ? null : character)
+    let knownCharacters = instructions.knownCharacters.split('').map(character => ((character === '-' || character === '_' || character === ' ') ? null : character))
 
     let possibleWords = wordsArray
 
@@ -32,7 +32,7 @@ function findWordsWithInstructions(wordsArray, instructions) {
     possibleWords = possibleWords.filter(word => {
         let characters = word.split('')
 
-        const hasRightCharacters = (character) => usableCharacters.indexOf(character) >= 0;
+        const hasRightCharacters = character => usableCharacters.indexOf(character) >= 0;
 
         return characters.every(hasRightCharacters);
     })
@@ -63,16 +63,22 @@ function findWordsWithInstructions(wordsArray, instructions) {
     return possibleWords
 }
 
-fetchWords('kotus_sanat.txt').then((words) => {
+fetchWords('kotus_sanat.txt').then(words => {
 
     let foundWordsOutput = document.getElementById('found-words')
 
-
     function updateResults() {
-        let foundWords = findWordsWithInstructions(words, {
-            usableCharacters: usableCharacters,
-            knownCharacters: knownCharacters
+        let instructions = knownCharacters.split(',').map(word => word.trim());
+        let foundWords = [];
+
+        instructions.forEach(instruction => {
+            let newWords = findWordsWithInstructions(words, {
+                usableCharacters,
+                knownCharacters: instruction
+            })
+            foundWords = foundWords.concat(newWords)
         })
+
         foundWordsOutput.textContent = foundWords.join(', ')
     }
 
@@ -101,5 +107,5 @@ fetchWords('kotus_sanat.txt').then((words) => {
     knownCharacters = knownCharactersInput.value.toLowerCase()
     updateResults()
 
-}).catch(err => console.log('Failed to parse words', err))
+})
 
