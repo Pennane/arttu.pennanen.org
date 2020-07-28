@@ -1,10 +1,11 @@
 let base = document.getElementById('game-of-life')
 
-
 let size = {
     x: 0,
     y: 0
 }
+
+let updateInterval = 200;
 
 function createBlock(x, y) {
     let block = document.createElement('input')
@@ -38,6 +39,7 @@ function scaleGameBoard() {
 
     let gameBoard = document.createElement('div')
     gameBoard.id = "gameboard"
+
     for (let y = 0; y <= size.y; y++) {
         let row = document.createElement('div')
         row.id = "row-" + y
@@ -47,21 +49,13 @@ function scaleGameBoard() {
         }
         gameBoard.appendChild(row)
     }
+
     base.appendChild(gameBoard)
 }
 
 scaleGameBoard()
 
-
-
 let running = false;
-
-
-
-
-
-
-
 
 function checkNeigbhours(x, y) {
     let alive = 0;
@@ -133,7 +127,7 @@ function calculateGameState() {
         }
     }
     if (running) {
-        setTimeout(() => { calculateGameState() }, 150)
+        setTimeout(() => { calculateGameState() }, updateInterval)
     }
 
 }
