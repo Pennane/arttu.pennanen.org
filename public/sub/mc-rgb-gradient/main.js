@@ -22,7 +22,8 @@ function generateGradientName(nickName, colorArray) {
 
 function parsedNicknameElement(nickName) {
     let output = document.createElement('span')
-    let colorChunks = nickName.replace(/&#/gi, ",&#").split(',');
+    let splitKey = "yE9sYcWcZFPo:=kn7,t|k$rP(cDvqR"
+    let colorChunks = nickName.replace(/&#/gi, splitKey+"&#").split(splitKey);
     colorChunks.shift()
     colorChunks.forEach((chunk, i) => {
         let chunkEl = document.createElement('span')
@@ -60,12 +61,16 @@ function update() {
     nicknameOutputElement.textContent = gradientNickname
 }
 
+let timeout;
 document.addEventListener('change', () => {
-    update()
+    clearTimeout(timeout);
+    timeout = setTimeout(() => update(), 500);
+
 })
 
 document.addEventListener('input', () => {
-    update()
+    clearTimeout(timeout);
+    timeout = setTimeout(() => update(), 500);
 })
 
 update()
