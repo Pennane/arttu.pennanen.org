@@ -1,14 +1,17 @@
 <template>
-  <div :class="{projectimagecontainer: true, preview: preview }">
-    <div v-if="video" :class="{video: true, projectimage: true, preview: preview }">
+  <div :class="{ projectimagecontainer: true, preview: preview }">
+    <div
+      v-if="video"
+      :class="{ video: true, projectimage: true, preview: preview }"
+    >
       <video autoplay loop muted playsinline>
         <source :src="src" type="video/mp4" />
       </video>
     </div>
-    <div v-else :class="{projectimage: true, preview: preview }">
+    <div v-else :class="{ projectimage: true, preview: preview }">
       <img :alt="alt" v-lazy="src" />
     </div>
-    <span class="caption" v-if="caption && !preview">{{caption}}</span>
+    <span class="caption" v-if="caption && !preview">{{ caption }}</span>
   </div>
 </template>
 
@@ -43,7 +46,7 @@ export default {
 .projectimagecontainer {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 3px 0 rgba(52, 56, 85, 0.12);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   margin-top: 2.5em;
 }
 
@@ -77,7 +80,8 @@ export default {
   border: 1px solid rgba(170, 170, 170, 0.1);
 }
 
-.projectimage > img, .projectimage > video {
+.projectimage > img,
+.projectimage > video {
   max-width: 500px;
   box-sizing: border-box;
   width: 100%;
@@ -91,7 +95,8 @@ export default {
   opacity: 0;
 }
 
-.projectimage.preview > img, .projectimage.preview > video {
+.projectimage.preview > img,
+.projectimage.preview > video {
   max-width: initial;
   width: 100%;
   height: 300px;

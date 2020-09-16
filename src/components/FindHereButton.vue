@@ -23,11 +23,7 @@ export default {
   -webkit-appearance: none;
   text-decoration: none;
   padding: 0.8em 1.5em;
-  background: linear-gradient(
-    to right,
-    hsla(226, 45%, 54%, 1),
-    hsl(357, 84%, 61%)
-  );
+  background: linear-gradient(to right, #2a4dea, #4864fe);
   border-radius: 1.3em;
   color: white;
   font-weight: 700;
@@ -56,4 +52,3 @@ export default {
   }
 }
 </style>
-

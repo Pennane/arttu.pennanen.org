@@ -1,16 +1,17 @@
 <template>
   <div class="topbar">
-    <div :class="{ 'changepage-animation': animated, topbarline: true }" />
-    <div class="topbarcontent">
-      <div class="topbrandimg">
-        <router-link to="/" class="homelink" title="home">
+    <!--<div :class="{ 'changepage-animation': animated, topbarline: true }" />-->
+    <div class="topbar-content">
+      <div class="topbar-home">
+        <router-link to="/" class="nav-link home-link" title="home">
           <img
             class="brand"
-            :src="require('@/assets/icons/icon_white.svg')"
+            :src="require('@/assets/icons/icon-black.png')"
             alt
           />
+          Arttu Pennanen
         </router-link>
-        <router-link to="/sub" class="navlink misc" title="projects">
+        <router-link to="/sub" class="nav-link" title="projects">
           {{ $t('word.misc') }}
         </router-link>
       </div>
@@ -47,15 +48,23 @@ export default {
   pointer-events: none;
 }
 
-.topbarcontent {
+.topbar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: -2px;
   opacity: 0.99;
+  padding-top: 0.6em;
 }
 
-.topbrandimg {
+.topbarline {
+  position: fixed;
+  background: red;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.topbar-home {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,52 +72,40 @@ export default {
   pointer-events: auto;
 }
 
-.topbrandimg .router-link-exact-active {
+.topbar-home .router-link-exact-active {
   cursor: default;
 }
 
 img.brand {
-  width: 1.6em;
+  width: 1.3rem;
   opacity: 0.8;
   transition: opacity 0.2s;
   filter: saturate(0) contrast(1) brightness(0.2);
   filter: var(--brand-filter);
+  margin: 0 0.6em;
 }
 
-.homelink:hover img.brand {
+.home-link:hover img.brand {
   filter: brightness(0);
 }
 
-span.brand {
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  -webkit-font-smoothing: antialiased;
-  margin-bottom: 0.1em;
-}
-
-.homelink {
-  width: 4.5em;
-  height: 4.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navlink {
+.nav-link {
   font-weight: 400;
   border: none;
-  background-color: transparent;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
-  padding: 0.2em;
-  margin: 0.15em;
-  color: var(--font-2);
+  color: rgb(34, 34, 34);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+  background: none;
 }
 
-.navlink.misc {
-  color: #525252;
+.nav-link.home-link {
+  margin-right: 3.3em;
 }
 
 .localization-bar {
@@ -159,6 +156,12 @@ span.brand {
     bottom: initial;
     top: 0;
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .topbar-content {
+    margin: 0 3vw;
   }
 }
 </style>

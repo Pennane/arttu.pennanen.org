@@ -1,21 +1,20 @@
 <i18n>
 {
   "en": {
-    "main_header": "Web\ndeveloping\nand else."
+    "main_header": "welcome\nwelcome\nwelcome"
   },
   "fi": {
-    "main_header": "Web\nkehitystä\nsun muuta."
+    "main_header": "tervetuloa\ntervetuloa\ntervetuloa"
   }
 }
 </i18n>
-
 
 <template>
   <div class="home">
     <header class="header">
       <div class="headerwrap">
         <h1 class="h1 retro">
-          <span v-for="line in getHeader" :key="line">{{line}}</span>
+          <span v-for="line in getHeader" :key="line">{{ line }}</span>
         </h1>
       </div>
     </header>
@@ -62,7 +61,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped>
 .home {

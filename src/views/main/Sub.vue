@@ -2,10 +2,10 @@
 {
     "en": {
     "sub_header": 
-      "And here\nyou can find\nitems for\n/sub."
+      "And then\nthe other\noccurences."
   },
   "fi": {
-    "sub_header": "Ja täältä\n/sub\nsisältö."
+    "sub_header": "Ja muut\najansaatokset."
   }
 }
 </i18n>

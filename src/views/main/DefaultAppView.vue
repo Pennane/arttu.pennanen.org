@@ -1,9 +1,9 @@
 <template>
-  <div :class="{dark:false}">
+  <div :class="{ dark: false }">
     <div class="page-wrapper">
       <PageTopbar />
       <main id="content">
-        <router-view class="content-wrapper"/>
+        <router-view class="content-wrapper" />
       </main>
       <PageFooter />
       <BackgroundLines />
@@ -39,7 +39,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="css">
 /* general START */
@@ -137,15 +136,14 @@ p {
 }
 
 .retro {
-  color: #2a2a2a;
-  color: var(--split-color1);
+  color: #222222;
   line-height: 0.475;
   margin: 0;
   padding: 1.2rem 0;
   letter-spacing: -4px;
   display: flex;
   flex-direction: column;
-      font-size: 6em;
+  font-size: 6em;
   text-align: left;
 }
 
@@ -154,11 +152,12 @@ p {
 }
 
 .retro > span:nth-child(odd) {
-  color: hsla(225, 14%, 26%, 1);
+  mix-blend-mode: multiply;
+
 }
 
 .retro > span:nth-child(even) {
-  color: hsl(224, 24%, 34%)
+
 }
 
 .retro.wider {
@@ -217,7 +216,7 @@ p {
 
 @media screen and (max-width: 900px) {
   .retro {
-    font-size: calc(1em + 10vw);
+    font-size: calc(0.9em + 10vw);
   }
 
   .modern {
