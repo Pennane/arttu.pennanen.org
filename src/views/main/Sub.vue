@@ -86,6 +86,8 @@ export default {
   flex-direction: column;
   line-height: 1.6;
   background-color: var(--bg-1);
+  margin-left: 0.6em;
+  margin-right: 0.5em;
 }
 
 .subHeader {
