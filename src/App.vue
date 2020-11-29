@@ -32,15 +32,14 @@ export default {
     }
   },
   watch: {
-    // whenever active changes, this function will run
     darkmode: function() {
       document.body.style.backgroundColor = this.darkmode
         ? '#292c42'
-        : '#fafafa;'
+        : '#fafafa'
     }
   },
   mounted: function() {
-    document.body.style.backgroundColor = this.darkmode ? '#292c42' : '#fafafa;'
+    document.body.style.backgroundColor = this.darkmode ? '#292c42' : '#fafafa'
   },
   methods: {
     loadJSON: function(path) {
