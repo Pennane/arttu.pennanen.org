@@ -6,7 +6,7 @@
       type="button"
       :value="lang"
       @click="setLocale(lang)"
-      :class="{active: lang === currentLocale}"
+      :class="{ active: lang === currentLocale }"
     />
   </div>
 </template>
@@ -43,7 +43,6 @@ export default {
 <style scoped>
 .locale-changer {
   display: flex;
-  flex-wrap: wrap;
 }
 
 input {
@@ -63,5 +62,11 @@ input {
 input.active {
   font-weight: 400;
   cursor: default;
+}
+
+@media screen and (max-width: 800px) {
+  .locale-changer {
+    padding-left: 0.1em;
+  }
 }
 </style>

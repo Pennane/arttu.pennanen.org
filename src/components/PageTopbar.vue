@@ -9,7 +9,7 @@
             :src="require('@/assets/icons/icon-black.png')"
             alt
           />
-          Arttu Pennanen
+          <span class="name">Arttu Pennanen</span>
         </router-link>
         <router-link to="/sub" class="nav-link" title="projects">
           {{ $t('word.misc') }}

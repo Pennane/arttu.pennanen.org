@@ -1,5 +1,9 @@
 <template>
-  <button @click="toggleDarkMode()" :class="{ dark: darkmode }">
+  <button
+    class="darkmode-changer"
+    @click="toggleDarkMode()"
+    :class="{ dark: darkmode }"
+  >
     <font-awesome-icon :icon="[darkmode ? 'fas' : 'far', 'lightbulb']" />
   </button>
 </template>
