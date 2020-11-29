@@ -14,7 +14,9 @@
     <header class="header">
       <div class="headerwrap">
         <h1 class="h1 retro">
-          <span v-for="line in getHeader" :key="line">{{ line }}</span>
+          <span v-for="(line, index) in getHeader" :key="line + index">{{
+            line
+          }}</span>
         </h1>
       </div>
     </header>
@@ -78,10 +80,6 @@ export default {
   justify-content: center;
   will-change: margin;
   margin-bottom: 32px;
-}
-
-.dark .header {
-  border: 1px solid white;
 }
 
 .headerwrap {

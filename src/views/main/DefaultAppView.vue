@@ -136,7 +136,7 @@ p {
 }
 
 .retro {
-  color: #222222;
+  color: var(--large-header);
   line-height: 0.475;
   margin: 0;
   padding: 1.2rem 0;
@@ -152,7 +152,7 @@ p {
 }
 
 .retro > span:nth-child(odd) {
-  mix-blend-mode: multiply;
+  mix-blend-mode: var(--large-header-blend-mode);
 
 }
 

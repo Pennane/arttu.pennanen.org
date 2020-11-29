@@ -1,7 +1,7 @@
 <template>
   <footer id="footer" :class="inheritedBackgroundColor">
     <div class="wrapper">
-      <span>© Arttu Pennanen {{currentYear}}</span>
+      <span>© Arttu Pennanen {{ currentYear }}</span>
       <span>
         <a href="https://github.com/Pennane">Github</a>
       </span>
@@ -43,9 +43,9 @@ footer {
   z-index: 2;
   padding: 6em 20%;
   padding-bottom: 7.1em;
-  color: black;
+  color: var(--font-1);
   margin-top: auto !important;
-  background-color: hsla(225, 20%, 98%, 1);
+  background-color: var(--bg-1);
   font-size: 0.9em;
 }
 
@@ -81,7 +81,7 @@ footer div.wrapper {
 footer span {
   text-decoration: none;
   margin: 0.5em;
-  color: #555;
+  color: var(--font-1);
 }
 
 .footerBg-3::before,

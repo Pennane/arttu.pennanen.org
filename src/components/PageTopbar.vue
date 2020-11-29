@@ -17,6 +17,7 @@
       </div>
 
       <div class="localization-bar">
+        <DarkmodeChanger />
         <LocaleChanger />
       </div>
     </div>
@@ -24,12 +25,14 @@
 </template>
 
 <script>
+import DarkmodeChanger from '@/components/DarkmodeChanger.vue'
 import LocaleChanger from '@/components/LocaleChanger'
 
 export default {
   name: 'PageTopbar',
   components: {
-    LocaleChanger
+    LocaleChanger,
+    DarkmodeChanger
   },
   data: function() {
     return { animated: false }
@@ -89,18 +92,21 @@ img.brand {
   filter: brightness(0);
 }
 
+.dark .home-link:hover img.brand {
+  filter: brightness(10);
+}
+
 .nav-link {
   font-weight: 400;
   border: none;
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   cursor: pointer;
-  color: rgb(34, 34, 34);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: rgb(34, 34, 34);
+  color: var(--contrast-font1);
   background: none;
 }
 
@@ -110,6 +116,7 @@ img.brand {
 
 .localization-bar {
   pointer-events: auto;
+  display: flex;
 }
 
 .changepage-animation {

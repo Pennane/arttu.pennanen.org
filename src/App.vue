@@ -16,7 +16,7 @@
 </i18n>
 
 <template>
-  <DefaultAppView id="app" />
+  <DefaultAppView id="app" :class="darkmode ? 'dark' : ''" />
 </template>
 
 <script>
@@ -25,6 +25,22 @@ export default {
   name: 'App',
   components: {
     DefaultAppView
+  },
+  computed: {
+    darkmode: function() {
+      return this.$store.state.darkmode
+    }
+  },
+  watch: {
+    // whenever active changes, this function will run
+    darkmode: function() {
+      document.body.style.backgroundColor = this.darkmode
+        ? '#292c42'
+        : '#fafafa;'
+    }
+  },
+  mounted: function() {
+    document.body.style.backgroundColor = this.darkmode ? '#292c42' : '#fafafa;'
   },
   methods: {
     loadJSON: function(path) {
@@ -96,6 +112,8 @@ export default {
   --bg-3: hsla(224, 21%, 96%, 1);
   --bg-4: hsla(225, 19%, 92%, 1);
   --bg-5: hsla(231, 20%, 94%, 1);
+  --large-header: #222222;
+  --large-header-blend-mode: multiply;
   --font-1: #3a3a3a;
   --font-2: #2a2a2a;
   --font-3: #545454;
@@ -122,12 +140,16 @@ export default {
   --bg-1: #292c42;
   --bg-2: #212631;
   --bg-3: #1f2430;
+  --bg-4: #1a1f28;
+  --bg-5: #181d25;
+  --large-header: #eaeaea;
+  --large-header-blend-mode: screen;
   --font-1: #e0e1e3;
   --font-2: #f7f7f7;
   --font-3: #a5a5a5;
   --font-4: #f8f8f8;
   --font-5: #c8c9cb;
-  --contrast-font1: #f7f7f7;
+  --contrast-font1: #e1e1e2;
   --contrast-font2: #e4e4e4;
   --accent-1: #1b1f28;
   --accent-2: #090e18;
@@ -137,11 +159,11 @@ export default {
   --link-hover: #d2dcff;
   --link-color-2: #4e82ff;
   --link-hover-2: #96b0eb;
-  --brand-filter: brightness(1);
+  --brand-filter: brightness(10);
   --nav-divide: #60656f;
   --split-color1: #ee4b4b;
   --split-color2: #cccccc;
-  --bg-line-color: rgba(28, 32, 42, 0.6);
+  --bg-line-color: rgba(22, 26, 34, 0.6);
   --topbar-gradient: transparent;
 }
 </style>
