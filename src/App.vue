@@ -34,12 +34,12 @@ export default {
   watch: {
     darkmode: function() {
       document.body.style.backgroundColor = this.darkmode
-        ? '#292c42'
+        ? '#1a278e'
         : '#fafafa'
     }
   },
   mounted: function() {
-    document.body.style.backgroundColor = this.darkmode ? '#292c42' : '#fafafa'
+    document.body.style.backgroundColor = this.darkmode ? '#1a278e' : '#fafafa'
   },
   methods: {
     loadJSON: function(path) {
@@ -136,11 +136,11 @@ export default {
 }
 
 .dark {
-  --bg-1: #292c42;
-  --bg-2: #212631;
-  --bg-3: #1f2430;
-  --bg-4: #1a1f28;
-  --bg-5: #181d25;
+  --bg-1: #1a278e;
+  --bg-2: #1a278e;
+  --bg-3: #19268a;
+  --bg-4: #182381;
+  --bg-5: #18227c;
   --large-header: #eaeaea;
   --large-header-blend-mode: screen;
   --font-1: #e0e1e3;

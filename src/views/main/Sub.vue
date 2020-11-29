@@ -93,6 +93,7 @@ export default {
 .subHeader {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: var(--bg-1);
   padding-bottom: 2em;
   padding-top: 1em;
