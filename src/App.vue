@@ -34,12 +34,12 @@ export default {
   watch: {
     darkmode: function() {
       document.body.style.backgroundColor = this.darkmode
-        ? '#1a278e'
+        ? '#0b0d1e'
         : '#fafafa'
     }
   },
   mounted: function() {
-    document.body.style.backgroundColor = this.darkmode ? '#1a278e' : '#fafafa'
+    document.body.style.backgroundColor = this.darkmode ? '#0b0d1e' : '#fafafa'
   },
   methods: {
     loadJSON: function(path) {
@@ -136,11 +136,11 @@ export default {
 }
 
 .dark {
-  --bg-1: #1a278e;
+  --bg-1: hsl(233 49% 8% / 1);
   --bg-2: #1a278e;
-  --bg-3: #19268a;
-  --bg-4: #182381;
-  --bg-5: #18227c;
+  --bg-3: hsl(234 46% 9% / 1);
+  --bg-4: hsl(234 45% 10% / 1);
+  --bg-5: hsl(235 45% 11% / 1);
   --large-header: #eaeaea;
   --large-header-blend-mode: screen;
   --font-1: #e0e1e3;
@@ -152,8 +152,7 @@ export default {
   --contrast-font2: #e4e4e4;
   --accent-1: #1b1f28;
   --accent-2: #090e18;
-  --selection-bg: rgb(134, 170, 255);
-  --selection-color: #fff;
+  --selection-bg: #86aaff;
   --link-color: #90affb;
   --link-hover: #d2dcff;
   --link-color-2: #4e82ff;
@@ -161,7 +160,7 @@ export default {
   --brand-filter: brightness(10);
   --nav-divide: #60656f;
   --split-color1: #ee4b4b;
-  --split-color2: #cccccc;
+  --split-color2: #ccc;
   --bg-line-color: rgba(22, 26, 34, 0.6);
   --topbar-gradient: transparent;
 }

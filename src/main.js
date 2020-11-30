@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronLeft, faLightbulb as fasLightBulb } from '@fortawesome/free-solid-svg-icons'
-import { faLightbulb as farLightBulb } from '@fortawesome/free-regular-svg-icons'
+import { faChevronLeft, faLightbulb as fasLightBulb, faMoon } from '@fortawesome/free-solid-svg-icons'
+import { faLightbulb as farLightBulb, faMoon as farMoon } from '@fortawesome/free-regular-svg-icons'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueAnalytics from 'vue-analytics'
@@ -29,7 +29,9 @@ library.add(
   faGithub,
   faTwitter,
   fasLightBulb,
-  farLightBulb
+  farLightBulb,
+  faMoon,
+  farMoon
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
