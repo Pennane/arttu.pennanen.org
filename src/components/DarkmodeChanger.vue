@@ -66,12 +66,29 @@ button {
   0% {
     opacity: 0;
     transform: rotate(-160deg) scale(0);
+    -webkit-transform: rotate(-160deg) scale(0);
   }
   40% {
     opacity: 1;
   }
   100% {
     transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes icon {
+  0% {
+    opacity: 0;
+    transform: rotate(-160deg) scale(0);
+    -webkit-transform: rotate(-160deg) scale(0);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
   }
 }
 </style>

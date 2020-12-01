@@ -136,11 +136,11 @@ export default {
 }
 
 .dark {
-  --bg-1: hsl(233 49% 8% / 1);
-  --bg-2: #1a278e;
-  --bg-3: hsl(234 46% 9% / 1);
-  --bg-4: hsl(234 45% 10% / 1);
-  --bg-5: hsl(235 45% 11% / 1);
+  --bg-1: #0a0d1e;
+  --bg-2: #0e1020;
+  --bg-3: #0c0f22;
+  --bg-4: #0e1025;
+  --bg-5: #0f1229;
   --large-header: #eaeaea;
   --large-header-blend-mode: screen;
   --font-1: #e0e1e3;
