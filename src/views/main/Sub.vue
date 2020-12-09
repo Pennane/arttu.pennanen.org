@@ -19,18 +19,20 @@
     <div v-if="!links" class="loader-wrapper">
       <Loader />
     </div>
-    <ul v-if="links" class="linkcontainer">
-      <li v-for="link in links" :key="'link-' + link">
-        <a class="sublink" :href="'/sub/' + link">
-          <span class="name">{{ link }}</span>
-          <span class="destination">
-            <span class="line">{{ ' – ' }}</span>
-            <span class="origin">https://pennanen.dev/</span>
-            <span class="destinationlink">{{ 'sub/' + link + '/' }}</span>
-          </span>
-        </a>
-      </li>
-    </ul>
+    <div class="links">
+      <ul v-if="links" class="linkcontainer">
+        <li v-for="link in links" :key="'link-' + link">
+          <a class="sublink" :href="'/sub/' + link">
+            <span class="name">{{ link }}</span>
+            <span class="destination">
+              <span class="line">{{ ' – ' }}</span>
+              <span class="origin">https://pennanen.dev/</span>
+              <span class="destinationlink">{{ 'sub/' + link + '/' }}</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -63,22 +65,36 @@ export default {
     getLinks() {
       let _compthis = this
       _compthis.links = Folders
-      console.log(Folders)
     }
   },
   metaInfo: {
     title: 'Projects'
+  },
+  mounted() {
+    if (!window.experimentaltransition) return
+    this.$store.commit('transitioning', false)
+  },
+  beforeRouteLeave(to, from, next) {
+    if (!window.experimentaltransition) return next()
+    this.$store.commit('transitioning', true)
+    setTimeout(() => {
+      next()
+    }, 300)
   }
 }
 </script>
 
 <style scoped>
+.red {
+  color: red;
+}
+
 .loader-wrapper {
   margin: 5em 0;
 }
 
 .sub {
-  padding-bottom: 7em;
+  width: 100%;
 }
 
 .linkcontainer {
@@ -88,19 +104,54 @@ export default {
   background-color: var(--bg-1);
   margin-left: 0.6em;
   margin-right: 0.5em;
+  padding-top: 0.8em;
+  font-size: 0.9rem;
+}
+
+.links {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5em 0.8em 6em 0.8em;
+  overflow: hidden;
+}
+
+.links::after {
+  background-color: var(--bg-1);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  content: '';
+  transform: skewY(-5deg) scaleY(1.2);
+  transform-origin: top;
+}
+
+.links::before {
+  background-color: var(--bg-1);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  content: '';
+  transform: skewY(-5deg) scaleY(1.2);
+  transform-origin: top;
 }
 
 .subHeader {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg-1);
-  padding-bottom: 2em;
+  padding-bottom: 3rem;
   padding-top: 1em;
-}
-
-.subHeader >>> .background-gradient-img {
-  margin-bottom: 3em;
 }
 
 a {

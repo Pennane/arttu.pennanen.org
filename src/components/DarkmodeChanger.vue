@@ -30,7 +30,6 @@ export default {
   methods: {
     toggleDarkMode() {
       let bool = localStorage.darkmode === 'true' ? false : true
-      console.log(bool)
       localStorage.darkmode = bool
       this.$store.commit('toggleDarkmode')
     },
@@ -52,10 +51,15 @@ button {
   align-items: center;
   box-sizing: border-box;
   width: 3.67em;
+  transform: rotate(0deg) scale(1);
+  will-change: transform opacity;
 }
 
 .animation .icon {
-  animation: icon 0.4s 1;
+  animation-name: icon;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 
 .dark button {

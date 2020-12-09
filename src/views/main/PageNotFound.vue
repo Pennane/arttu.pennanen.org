@@ -18,11 +18,14 @@
     <div class="header">
       <div class="headerwrap">
         <h1 class="h1 retro wider">
-          <span v-for="line in getHeader" :key="line">{{line}}</span>
+          <span v-for="line in getHeader" :key="line">{{ line }}</span>
         </h1>
         <p>
-          {{$t("return_home")[0]}}
-          <router-link class="homelink" to="/">{{$t("return_home")[1]}}</router-link>.
+          {{ $t('return_home')[0] }}
+          <router-link class="homelink" to="/">{{
+            $t('return_home')[1]
+          }}</router-link
+          >.
         </p>
       </div>
     </div>
@@ -37,12 +40,23 @@ export default {
     AnimatedBackgroundBubbles: AnimatedBackgroundBubbles
   },
   metaInfo: {
-    title: "404 Not Found"
+    title: '404 Not Found'
   },
   computed: {
     getHeader() {
       return this.$t('not_found_text').split('\n')
     }
+  },
+  mounted() {
+    if (!window.experimentaltransition) return
+    this.$store.commit('transitioning', false)
+  },
+  beforeRouteLeave(to, from, next) {
+    if (!window.experimentaltransition) return next()
+    this.$store.commit('transitioning', true)
+    setTimeout(() => {
+      next()
+    }, 300)
   }
 }
 </script>
@@ -69,40 +83,41 @@ export default {
   align-items: center;
   flex-direction: column;
   padding: 0;
-  padding-bottom: 8em
+  padding-bottom: 8em;
 }
 
 .retro > span:last-child {
   font-size: 0.7em;
   line-height: 1.05;
-  margin-left: -.1em;
+  margin-left: -0.1em;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.1em;
   padding: 0;
   margin: 1rem 0;
-  width: 100%
+
+  width: 100%;
+  font-weight: 400;
 }
 
 .homelink {
   text-decoration: none;
   color: #4361c5;
   color: var(--link-color);
-  font-weight: 550;
-  text-decoration: none;
+  font-weight: 300;
+  text-decoration: underline;
   position: relative;
 }
 
 .homelink:hover {
-  color: var(--link-hover)
+  color: var(--link-hover);
 }
 
 @media screen and (max-width: 900px) {
   .page404 {
     font-size: calc(0.1em + 1.5vw);
   }
-
 }
 
 .home .char5 {

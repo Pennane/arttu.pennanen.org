@@ -29,7 +29,6 @@
 }
 </i18n>
 
-
 <template>
   <Project
     :name="$t('data.name')"
@@ -42,12 +41,12 @@
     :previewImage="require('@/assets/images/peigom/peigom1.png')"
     :preview="preview"
   >
-    <p>{{$t("content.p_1")}}</p>
+    <p>{{ $t('content.p_1') }}</p>
     <ProjectImage alt :src="require('@/assets/images/peigom/peigom1.png')" />
-    <p>{{$t("content.p_2")}}</p>
+    <p>{{ $t('content.p_2') }}</p>
     <ProjectImage alt :src="require('@/assets/images/peigom/peigom2.png')" />
-    <p>{{$t("content.p_3")}}</p>
-    <p>{{$t("content.p_4")}}</p>
+    <p>{{ $t('content.p_3') }}</p>
+    <p>{{ $t('content.p_4') }}</p>
   </Project>
 </template>
 
@@ -66,6 +65,17 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  mounted() {
+    if (!window.experimentaltransition) return
+    this.$store.commit('transitioning', false)
+  },
+  beforeRouteLeave(to, from, next) {
+    if (!window.experimentaltransition) return next()
+    this.$store.commit('transitioning', true)
+    setTimeout(() => {
+      next()
+    }, 300)
   }
 }
 </script>

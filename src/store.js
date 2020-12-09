@@ -8,7 +8,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     darkmode: localStorage.darkmode !== undefined ? (localStorage.darkmode == "true") : window.matchMedia('(prefers-color-scheme: dark)').matches,
-    locale: localStorage.locale
+    locale: localStorage.locale,
+    transitioning: false
   },
   mutations: {
     toggleDarkmode(state, bool) {
@@ -20,6 +21,9 @@ export default new Vuex.Store({
     },
     setLocale(state, locale) {
       state.locale = locale
+    },
+    transitioning(state, bool) {
+      state.transitioning = bool
     }
   }
 })

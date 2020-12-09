@@ -133,6 +133,7 @@ export default {
   --split-color2: #3a3a3a;
   --bg-line-color: hsla(0, 0%, 61%, 0.3);
   --topbar-gradient: linear-gradient(90deg, #2164f3, #1f66cd);
+  --page-change-gradient: linear-gradient(to top, #2a4dea, #4864fe);
 }
 
 .dark {
@@ -163,5 +164,6 @@ export default {
   --split-color2: #ccc;
   --bg-line-color: rgba(22, 26, 34, 0.6);
   --topbar-gradient: transparent;
+  --page-change-gradient: linear-gradient(to top, #131f53, #182767);
 }
 </style>

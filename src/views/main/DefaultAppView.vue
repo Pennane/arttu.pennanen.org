@@ -2,12 +2,13 @@
   <div :class="{ dark: false }">
     <div class="page-wrapper">
       <PageTopbar />
-      <main id="content">
+      <main id="content" v-scroll-lock="transitioning">
         <router-view class="content-wrapper" />
       </main>
       <PageFooter />
       <BackgroundLines />
     </div>
+    <PageChangeAnimation />
   </div>
 </template>
 
@@ -15,6 +16,7 @@
 import BackgroundLines from '@/components/BackgroundLines'
 import PageFooter from '@/components/PageFooter'
 import PageTopbar from '@/components/PageTopbar'
+import PageChangeAnimation from '@/components/PageChangeAnimation'
 
 export default {
   name: 'DefaultAppView',
@@ -26,11 +28,12 @@ export default {
   components: {
     BackgroundLines,
     PageFooter,
-    PageTopbar
+    PageTopbar,
+    PageChangeAnimation
   },
-  methods: {
-    beforeEnter() {
-      this.$root.$emit('scrollBeforeEnter')
+  computed: {
+    transitioning() {
+      return this.$store.state.transitioning
     }
   },
   mounted: function() {

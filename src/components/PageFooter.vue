@@ -1,5 +1,5 @@
 <template>
-  <footer id="footer" :class="inheritedBackgroundColor">
+  <footer id="footer" :class="classList">
     <div class="wrapper">
       <span>© Arttu Pennanen {{ currentYear }}</span>
       <span>
@@ -13,6 +13,9 @@
 export default {
   name: 'PageFooter',
   computed: {
+    page404() {
+      return document.querySelector('.page404') && true
+    },
     inheritedBackgroundColor() {
       if (
         !document.querySelector('.home') ||
@@ -26,9 +29,12 @@ export default {
       return {
         'footerBg-3': bgNumber == 1,
         'footerBg-4': bgNumber == 2,
-        'footerBg-5': bgNumber == 0,
-        yeet: true
+        'footerBg-5': bgNumber == 0
       }
+    },
+    classList() {
+      let list = { ...this.inheritedBackgroundColor, hidden: this.page404 }
+      return list
     },
     currentYear() {
       return new Date().getFullYear()
@@ -84,19 +90,32 @@ footer span {
   color: var(--font-1);
 }
 
+.footerBg-2::before,
+.footerBg-2::after,
+.footerBg-2 {
+  background-color: var(--bg-2);
+}
+
 .footerBg-3::before,
-.footerBg-3::after {
+.footerBg-3::after,
+.footerBg-3 {
   background-color: var(--bg-3);
 }
 
 .footerBg-4::before,
-.footerBg-4::after {
+.footerBg-4::after,
+.footerBg-4 {
   background-color: var(--bg-4);
 }
 
 .footerBg-5::before,
-.footerBg-5::after {
+.footerBg-5::after,
+.footerBg-5 {
   background-color: var(--bg-5);
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 1000px) {

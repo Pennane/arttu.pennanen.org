@@ -6,6 +6,7 @@ import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueAnalytics from 'vue-analytics'
 import VueLazyload from 'vue-lazyload'
+import VScrollLock from 'v-scroll-lock'
 import VueMeta from 'vue-meta'
 import i18n from './i18n'
 import router from './router'
@@ -23,6 +24,8 @@ Vue.use(VueAnalytics, {
 Vue.use(VueLazyload)
 
 Vue.use(VueMeta)
+
+Vue.use(VScrollLock)
 
 library.add(
   faChevronLeft,

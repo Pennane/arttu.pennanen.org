@@ -98,6 +98,17 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  mounted() {
+    if (!window.experimentaltransition) return
+    this.$store.commit('transitioning', false)
+  },
+  beforeRouteLeave(to, from, next) {
+    if (!window.experimentaltransition) return next()
+    this.$store.commit('transitioning', true)
+    setTimeout(() => {
+      next()
+    }, 300)
   }
 }
 </script>

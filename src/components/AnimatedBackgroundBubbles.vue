@@ -1,18 +1,15 @@
-
-
-        
 <template>
   <div class="backgroundbubbles" :key="componentKey">
     <div
       v-for="index in this.realAmount()"
       :key="index"
       class="bubble"
-      :style="{ 
-          top: rnd(0,95) + '%',
-          left: rnd(0,90) + '%',
-          animationDelay: delay(index),
-          animationDuration: duration(index)
-          }"
+      :style="{
+        top: rnd(0, 95) + '%',
+        left: rnd(0, 90) + '%',
+        animationDelay: delay(index),
+        animationDuration: duration(index)
+      }"
     />
   </div>
 </template>
@@ -91,6 +88,11 @@ export default {
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
+}
+
+.dark .bubble {
+  background-color: hsl(217, 69%, 30%);
+  mix-blend-mode: luminosity;
 }
 
 @keyframes bubble {
