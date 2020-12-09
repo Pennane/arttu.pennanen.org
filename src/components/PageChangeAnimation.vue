@@ -88,8 +88,9 @@ export default {
 }
 
 .animateIn {
-  animation: animateIn 0.3s;
+  animation: animateIn 0.4s;
   animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  animation-fill-mode: both;
 }
 
 .animateOut {

@@ -71,15 +71,15 @@ export default {
     title: 'Projects'
   },
   mounted() {
-    if (!window.experimentaltransition) return
+    if (window.experimentaltransition) return
     this.$store.commit('transitioning', false)
   },
   beforeRouteLeave(to, from, next) {
-    if (!window.experimentaltransition) return next()
+    if (window.experimentaltransition) return next()
     this.$store.commit('transitioning', true)
     setTimeout(() => {
       next()
-    }, 300)
+    }, 400)
   }
 }
 </script>
@@ -115,8 +115,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 2.5em calc(6vw + 0.5em);
-  padding-bottom: 4em;
-  overflow: hidden;
+  padding-bottom: 2em;
 }
 
 .links::after {
@@ -143,7 +142,7 @@ export default {
   width: 50%;
   height: 100%;
   content: '';
-  transform: skewY(-5deg) scaleY(1.2);
+  transform: skewY(5deg) scaleY(1.2);
   transform-origin: top;
 }
 
@@ -151,8 +150,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 3rem;
-  padding-top: 1em;
+  padding-bottom: 7rem;
+  padding-top: 2em;
 }
 
 a {

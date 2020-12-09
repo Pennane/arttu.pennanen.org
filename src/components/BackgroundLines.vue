@@ -1,7 +1,4 @@
-
-
-        
- <template>
+<template>
   <div class="bg-art">
     <div class="bg-item" />
     <div class="bg-item" />

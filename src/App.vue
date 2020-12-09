@@ -162,7 +162,7 @@ export default {
   --nav-divide: #60656f;
   --split-color1: #ee4b4b;
   --split-color2: #ccc;
-  --bg-line-color: rgba(22, 26, 34, 0.6);
+  --bg-line-color: rgba(34, 39, 49, 0.6);
   --topbar-gradient: transparent;
   --page-change-gradient: linear-gradient(to top, #131f53, #182767);
 }

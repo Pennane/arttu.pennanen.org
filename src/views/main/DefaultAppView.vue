@@ -2,7 +2,7 @@
   <div :class="{ dark: false }">
     <div class="page-wrapper">
       <PageTopbar />
-      <main id="content" v-scroll-lock="transitioning">
+      <main id="content">
         <router-view class="content-wrapper" />
       </main>
       <PageFooter />
@@ -30,11 +30,6 @@ export default {
     PageFooter,
     PageTopbar,
     PageChangeAnimation
-  },
-  computed: {
-    transitioning() {
-      return this.$store.state.transitioning
-    }
   },
   mounted: function() {
     let darkmode = false
@@ -193,6 +188,14 @@ p {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-1);
+ background-image: radial-gradient(#6a6d7b 1.2px, #fafafa 1.2px);
+ background-size: 36px 36px
+}
+
+.dark .page-wrapper {
+ background-color: #0a0d1e;
+ background-image: radial-gradient(#272C34 1.2px, #0f1229 1.2px);
+ background-size: 36px 36px
 }
 
 .page-wrapper > * {
