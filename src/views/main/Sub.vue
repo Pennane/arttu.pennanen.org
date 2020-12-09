@@ -114,7 +114,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2.5em 0.8em 6em 0.8em;
+  padding: 2.5em calc(6vw + 0.5em);
+  padding-bottom: 4em;
   overflow: hidden;
 }
 
