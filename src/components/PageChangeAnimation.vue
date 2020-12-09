@@ -40,9 +40,11 @@ export default {
     startAnimationOut() {
       this.animateOut = true
     },
-    stopAnimation() {
-      this.animateIn = false
-      this.animateOut = false
+    stopAnimation(e) {
+      if (e.animationName.startsWith('animateOut')) {
+        this.animateOut = false
+        this.animateIn = false
+      }
     }
   }
 }
@@ -67,7 +69,7 @@ export default {
   top: 100px;
   left: 0;
   display: block;
-  width: 50%;
+  width: 50.1%;
   height: 100%;
   content: '';
   transform: skewY(-32deg) scaleY(2);
@@ -81,14 +83,14 @@ export default {
   top: 100px;
   right: 0;
   display: block;
-  width: 50%;
+  width: 50.1%;
   height: 100%;
   content: '';
   transform: skewY(32deg) scaleY(2);
 }
 
 .animateIn {
-  animation: animateIn 0.4s;
+  animation: animateIn 0.44s;
   animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   animation-fill-mode: both;
 }
@@ -123,7 +125,7 @@ export default {
     height: 100%;
     transform: translate(0);
   }
-  10% {
+  15% {
     height: 100%;
     transform: translate(0);
   }

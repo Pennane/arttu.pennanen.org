@@ -69,8 +69,8 @@ button {
 @keyframes icon {
   0% {
     opacity: 0;
-    transform: rotate(-160deg) scale(0);
-    -webkit-transform: rotate(-160deg) scale(0);
+    transform: rotate(-80deg) scale(0);
+    -webkit-transform: rotate(-80deg) scale(0);
   }
   40% {
     opacity: 1;
