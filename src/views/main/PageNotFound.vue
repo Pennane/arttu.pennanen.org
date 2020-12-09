@@ -78,12 +78,13 @@ export default {
 
 .page404 {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 0;
   padding-bottom: 8em;
+  box-sizing: border-box;
+  height: calc(100vh - 70px);
 }
 
 .retro > span:last-child {

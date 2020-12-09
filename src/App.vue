@@ -139,9 +139,9 @@ export default {
 .dark {
   --bg-1: #0a0d1e;
   --bg-2: #0e1020;
-  --bg-3: #0c0f22;
-  --bg-4: #0e1025;
-  --bg-5: #0f1229;
+  --bg-3: #0f1124;
+  --bg-4: #0d1021;
+  --bg-5: #0c0e1d;
   --large-header: #eaeaea;
   --large-header-blend-mode: screen;
   --font-1: #e0e1e3;
@@ -164,6 +164,10 @@ export default {
   --split-color2: #ccc;
   --bg-line-color: rgba(34, 39, 49, 0.6);
   --topbar-gradient: transparent;
-  --page-change-gradient: linear-gradient(to top, #131f53, #182767);
+  --page-change-gradient: linear-gradient(
+    to top,
+    hsl(232deg 42% 10%),
+    hsl(232deg 43% 11%)
+  );
 }
 </style>

@@ -44,7 +44,6 @@ export default {
 #app {
   font-family: 'Inter', sans-serif;
   color: var(--font-1);
-  height: 100%;
 }
 
 svg.defs-only {
@@ -53,8 +52,6 @@ svg.defs-only {
 
 html {
   font-family: 'Inter', sans-serif;
-  height: 100%;
-  width: 100%;
   margin: 0;
 }
 
@@ -63,7 +60,6 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   background-color: var(--bg-1);
-  height: 100%;
 }
 
 #app ::selection {
@@ -95,9 +91,8 @@ main {
   justify-content: center;
   z-index: 2;
   box-sizing: border-box;
-  width: 100%;
   flex: 0 0 auto;
-  margin-top: 70px;
+  padding-top: 70px;
 }
 
 .content-wrapper > * {
@@ -183,8 +178,6 @@ p {
 }
 
 .page-wrapper {
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-1);
@@ -207,13 +200,6 @@ p {
   background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
   background-position: center;
   background-size: 115%;
-}
-
-.page-divider {
-  display: flex;
-  flex: 1 1 auto;
-  width: 100%;
-  height: 100%;
 }
 
 /*multiple time use classes END*/

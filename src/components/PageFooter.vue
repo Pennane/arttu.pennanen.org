@@ -1,5 +1,5 @@
 <template>
-  <footer id="footer" :class="classList">
+  <footer id="footer" :class="{ hidden: page404 }">
     <div class="wrapper">
       <span>© Arttu Pennanen {{ currentYear }}</span>
       <span>
@@ -14,27 +14,7 @@ export default {
   name: 'PageFooter',
   computed: {
     page404() {
-      return document.querySelector('.page404') && true
-    },
-    inheritedBackgroundColor() {
-      if (
-        !document.querySelector('.home') ||
-        !document.querySelectorAll('.project.preview')
-      ) {
-        return null
-      }
-
-      let bgNumber = document.querySelectorAll('.project.preview').length % 3
-
-      return {
-        'footerBg-3': bgNumber == 1,
-        'footerBg-4': bgNumber == 2,
-        'footerBg-5': bgNumber == 0
-      }
-    },
-    classList() {
-      let list = { ...this.inheritedBackgroundColor, hidden: this.page404 }
-      return list
+      return document.querySelector('.page404')
     },
     currentYear() {
       return new Date().getFullYear()
