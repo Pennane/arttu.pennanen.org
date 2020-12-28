@@ -29,6 +29,15 @@ const router = new Router({
       component: () => import('./views/main/Sub.vue')
     },
     {
+      path: '/minesweeper',
+      name: 'Minesweeper',
+      component: () => import('./views/projects/minesweeper.vue')
+    },
+    {
+      path: '/miinaharava',
+      redirect: '/minesweeper'
+    },
+    {
       path: '/yatzy',
       name: 'Yatzy',
       component: () => import('./views/projects/yatzy.vue')

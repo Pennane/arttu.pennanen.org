@@ -106,6 +106,7 @@ export default {
 .home .body {
   display: flex;
   flex-direction: column;
+  align-self: normal;
 }
 
 .introductory {

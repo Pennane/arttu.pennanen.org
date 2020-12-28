@@ -98,6 +98,7 @@ export default {
 .project:not(.preview) {
   padding: 1em calc(6vw + 0.5em);
   max-width: 800px;
+  width: 100%;
   padding-bottom: 7em;
 }
 
