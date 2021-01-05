@@ -100,6 +100,7 @@ export default {
   max-width: 800px;
   width: 100%;
   padding-bottom: 7em;
+  background-color: var(--bg-1);
 }
 
 .project:not(.preview) > .projectbody {

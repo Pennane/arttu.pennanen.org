@@ -31,7 +31,7 @@ footer {
   padding-bottom: 7.1em;
   color: var(--font-1);
   margin-top: auto !important;
-  background-color: var(--bg-1);
+  background-color: var(--bg-3);
   font-size: 0.9em;
 }
 

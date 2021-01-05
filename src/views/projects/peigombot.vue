@@ -29,13 +29,13 @@
       "buttonText": "Löydä täältä!"
     },
     "content": {
-      "p_1": "Peigom bot on Discord botti, joka sisältää muutaman kymmentä kometoa sekä toimintoa, kuten musiikintoisto-, kuvanmuokkaus-, ja moderointitoimintoja. Peigom on ollu rakenteilla jo muutaman vuoden, ja onkin ajan kanssa hioutunut kamalasta hirvityksestä jopa toimivaksi rakkineeksi.",
+      "p_1": "Peigom bot on Discord botti, joka sisältää muutamankymmentä kometoa sekä toimintoa, kuten musiikintoisto-, kuvanmuokkaus-, ja moderointitoimintoja. Peigom on ollu rakenteilla jo muutaman vuoden, ja onkin ajan kanssa hioutunut kamalasta hirvityksestä jopa toimivaksi rakkineeksi.",
       "p_2": "Peigom bot on alusta lähtien täysin itse värkätty kokonaisuus, josta on tullut itselle tärkeä omanlaisensa ikuisuusprojekti.",
       "p_3": "Discord palvelimella botin voi herättää käyttämällä komentoa \",auta\". Tällä hetkellä bottia ei saa lisättyä uusille palvelimille, mutta botin lähdekoodi löytyy Githubista ",
       "p_4": "Tällä hetkellä botti sisäistää näennäisesti 52 eri komentoa, joista kaikki tukevat useampia \"triggereitä\". Komennot on jaettu oikeusjärjestelmällä kolmeen osaan, missä suurin osa komennoista toimii jokaisella käyttäjällä, muutama valittu komentoa Discord palvelimen ylläpitäjillä, sekä kourallinen pelkästään botin omistajalla.",
       "p_5": "Alla lista kaikista botin komennoista",
       "p_6": "Peigomin ehkä monimutkaisin toiminto on musiikintoisto-ominaisuus, millä botti pystyy toistamaan Youtuben kautta musiikkia suoraan Discordin äänikanaville. Paljon on yritetty, eikä Peigom vielä tältä osalta ole aivan hallitsevien musiikkibottien tasolla, mutta musiikkitoiminnot ovat myönnettävästi jo varsin kiitettävällä tasolla.",
-      "p_7": "Botti pyörii kotikeinoin muutaman kymmenen euron Raspberry Pi tietokoneella, mutta tulevaisuudessa botti mahdollisesti siirtyy jollekin ulkoistetulle palvelimelle."
+      "p_7": "Botti pyörii kotikeinoin muutamankymmenen euron Raspberry Pi tietokoneella. Tulevaisuudessa tarpeen tullessa botti siirretään  ulkoistetulle palvelimelle."
      },
      "caption": {
        "i_1" : "Botin herättävä valikon avaava komento on ,auta",
@@ -54,7 +54,7 @@
     :previewDescription="$t('content.p_1')"
     :buttontext="$t('data.buttonText')"
     date="8.2018-"
-    link="https://github.com/Pennane/peigom-bot"
+    link="https://peigom.pennanen.dev"
     filelocation="peigombot"
     :previewImage="require('@/assets/images/peigom/peigom1.png')"
     :preview="preview"
