@@ -25,7 +25,6 @@ Vue.use(VueLazyload)
 
 Vue.use(VueMeta)
 
-
 VScrollLock.bodyScrollOptions = {
   reserveScrollBarGap: true
 }

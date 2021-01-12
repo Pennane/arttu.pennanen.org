@@ -81,7 +81,7 @@ for (i = 0; i < 4; i++) {
 
 window.addEventListener("load", () => {
 	update();
-	
+
 	s1f1 = randomFrom(fruits);
 	s1f2 = randomFrom(fruits);
 	s1f3 = randomFrom(fruits);
@@ -91,22 +91,22 @@ window.addEventListener("load", () => {
 	s3f1 = randomFrom(fruits);
 	s3f2 = randomFrom(fruits);
 	s3f3 = randomFrom(fruits);
-	
-	document.getElementById("s1f1").classList.toggle(s1f1, !0);
-	document.getElementById("s2f1").classList.toggle(s2f1, !0);
-	document.getElementById("s3f1").classList.toggle(s3f1, !0);
-	document.getElementById("s1f2").classList.toggle(s1f2, !0);
-	document.getElementById("s2f2").classList.toggle(s2f2, !0);
-	document.getElementById("s3f2").classList.toggle(s3f2, !0);
-	document.getElementById("s1f3").classList.toggle(s1f3, !0);
-	document.getElementById("s2f3").classList.toggle(s2f3, !0);
-	document.getElementById("s3f3").classList.toggle(s3f3, !0);
-	
+
+	document.querySelector("#s1f1 .fruit-image").classList.toggle(s1f1, true);
+	document.querySelector("#s2f1 .fruit-image").classList.toggle(s2f1, true);
+	document.querySelector("#s3f1 .fruit-image").classList.toggle(s3f1, true);
+	document.querySelector("#s1f2 .fruit-image").classList.toggle(s1f2, true);
+	document.querySelector("#s2f2 .fruit-image").classList.toggle(s2f2, true);
+	document.querySelector("#s3f2 .fruit-image").classList.toggle(s3f2, true);
+	document.querySelector("#s1f3 .fruit-image").classList.toggle(s1f3, true);
+	document.querySelector("#s2f3 .fruit-image").classList.toggle(s2f3, true);
+	document.querySelector("#s3f3 .fruit-image").classList.toggle(s3f3, true);
+
 	spinbutton.addEventListener("click", () => {
 		spin();
 		update();
 	});
-	
+
 	betdown.addEventListener("click", () => { betchange(0); });
 	betup.addEventListener("click", () => { betchange(1); });
 });
@@ -120,7 +120,7 @@ function betchange(direction) {
 		}
 	} else if (direction === 1) {
 		if (bet < bets.length - 1) {
-			bet++;	
+			bet++;
 		}
 	}
 	update();
@@ -161,36 +161,36 @@ function spin() {
 }
 
 function spins1() {
-	removeClasses(document.getElementById("s1f3"), fruitClasses);
-	document.getElementById("s1f3").classList.toggle(s1f2, true);
-	document.getElementById("s1f2").classList.toggle(s1f2, false);
+	removeClasses(document.querySelector("#s1f3 .fruit-image"), fruitClasses);
+	document.querySelector("#s1f3 .fruit-image").classList.toggle(s1f2, true);
+	document.querySelector("#s1f2 .fruit-image").classList.toggle(s1f2, false);
 	s1f2 = s1f1;
-	document.getElementById("s1f2").classList.toggle(s1f2, true);
-	document.getElementById("s1f1").classList.toggle(s1f1, false);
+	document.querySelector("#s1f2 .fruit-image").classList.toggle(s1f2, true);
+	document.querySelector("#s1f1 .fruit-image").classList.toggle(s1f1, false);
 	s1f1 = fruits[Math.floor(Math.random() * fruits.length)];
-	document.getElementById("s1f1").classList.toggle(s1f1, true);
+	document.querySelector("#s1f1 .fruit-image").classList.toggle(s1f1, true);
 }
 
 function spins2() {
-	removeClasses(document.getElementById("s2f3"), fruitClasses);
-	document.getElementById("s2f3").classList.toggle(s2f2, true);
-	document.getElementById("s2f2").classList.toggle(s2f2, false);
+	removeClasses(document.querySelector("#s2f3 .fruit-image"), fruitClasses);
+	document.querySelector("#s2f3 .fruit-image").classList.toggle(s2f2, true);
+	document.querySelector("#s2f2 .fruit-image").classList.toggle(s2f2, false);
 	s2f2 = s2f1;
-	document.getElementById("s2f2").classList.toggle(s2f2, true);
-	document.getElementById("s2f1").classList.toggle(s2f1, false);
+	document.querySelector("#s2f2 .fruit-image").classList.toggle(s2f2, true);
+	document.querySelector("#s2f1 .fruit-image").classList.toggle(s2f1, false);
 	s2f1 = randomFrom(fruits);
-	document.getElementById("s2f1").classList.toggle(s2f1, true);
+	document.querySelector("#s2f1 .fruit-image").classList.toggle(s2f1, true);
 }
 
 function spins3() {
-	removeClasses(document.getElementById("s3f3"), fruitClasses);
-	document.getElementById("s3f3").classList.toggle(s3f2, true);
-	document.getElementById("s3f2").classList.toggle(s3f2, false);
+	removeClasses(document.querySelector("#s3f3  .fruit-image"), fruitClasses);
+	document.querySelector("#s3f3 .fruit-image").classList.toggle(s3f2, true);
+	document.querySelector("#s3f2 .fruit-image").classList.toggle(s3f2, false);
 	s3f2 = s3f1;
-	document.getElementById("s3f2").classList.toggle(s3f2, true);
-	document.getElementById("s3f1").classList.toggle(s3f1, false);
+	document.querySelector("#s3f2 .fruit-image").classList.toggle(s3f2, true);
+	document.querySelector("#s3f1 .fruit-image").classList.toggle(s3f1, false);
 	s3f1 = randomFrom(fruits);
-	document.getElementById("s3f1").classList.toggle(s3f1, true);
+	document.querySelector("#s3f1 .fruit-image").classList.toggle(s3f1, true);
 }
 
 function checkForWin() {

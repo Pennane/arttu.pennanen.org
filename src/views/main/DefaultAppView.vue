@@ -44,6 +44,7 @@ export default {
 #app {
   font-family: 'Inter', sans-serif;
   color: var(--font-1);
+  height: 100%;
 }
 
 svg.defs-only {
@@ -53,12 +54,14 @@ svg.defs-only {
 html {
   font-family: 'Inter', sans-serif;
   margin: 0;
+  height: 100%;
 }
 
 body {
   margin: 0;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  height: 100%;
   background-color: var(--bg-1);
 }
 
@@ -182,7 +185,8 @@ p {
   flex-direction: column;
   background-color: var(--bg-1);
  background-image: radial-gradient(#6a6d7b 1.2px, #fafafa 1.2px);
- background-size: 36px 36px
+ background-size: 36px 36px;
+ min-height: 100%
 }
 
 .dark .page-wrapper {

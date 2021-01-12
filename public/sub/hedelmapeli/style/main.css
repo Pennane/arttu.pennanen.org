@@ -135,17 +135,24 @@ h1 {
 .spinner {
 	display: flex;
 	flex-direction: column;
-	padding: 0.5vw 1vw;
 	font-size: 2em
 }
 
 .fruit {
-	max-width: 6em;
-	max-height: 6em;
-	min-width: 2em;
-	min-height: 2em;
-	height: 4vw;
-	width: 4vw;
+    padding: .3em .2em;
+}
+
+.fruit-image {
+	height: 64px;
+	width: 64px;
+	margin: 3px;
+}
+
+.middlefruit {
+	border: 1px solid #bbbbbb;
+    border-left: none;
+    border-right: none;
+    padding: 0.1em .2em;
 }
 
 .nowrap {
@@ -154,7 +161,7 @@ h1 {
 }
 
 .outerfruit {
-	filter: brightness(0.6) blur(0.3px);
+	filter: brightness(0.5) blur(1px);
 }
 
 innerfruit {

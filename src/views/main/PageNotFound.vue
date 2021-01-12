@@ -84,7 +84,6 @@ export default {
   padding: 0;
   padding-bottom: 8em;
   box-sizing: border-box;
-  height: calc(100vh - 70px);
 }
 
 .retro > span:last-child {
