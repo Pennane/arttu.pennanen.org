@@ -25,6 +25,7 @@ const handleStart = async () => {
     source.connect(audioCtx.destination);
     source.start();
     loadedTracks.push(source)
+    newRandomAnimation()
 }
 
 class ResponsiveCanvas {
@@ -222,13 +223,19 @@ animate = setInterval(function x() {
 
 let functionTypes = ['sin', 'cos', 'tan']
 
-setInterval(() => {
+const newRandomAnimation = () => {
     xFunction = randomFromArray(functionTypes)
     do {
         yFunction = randomFromArray(functionTypes)
     } while (yFunction === xFunction)
 
     changeIntensity = randomFloatFromRange(0.2, 80)
-    drawSize = randomIntegerFromRange(25, 100)
+    drawSize = randomIntegerFromRange(30, 100)
     pointAmount = randomIntegerFromRange(3, 50)
+}
+
+/*
+setInterval(() => {
+   newRandomAnimation()
 }, 3000)
+*/
