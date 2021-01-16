@@ -25,9 +25,10 @@ const loadTrack = (id) => {
 }
 
 
-const amountOfTracks = 12
+const amountOfTracks = 13
 let trackIds = []
 let tracks = []
+let trackPromises = []
 
 for (let i = 0; i < amountOfTracks; i++) {
     let id;
@@ -37,17 +38,23 @@ for (let i = 0; i < amountOfTracks; i++) {
     trackIds.push(id)
 }
 
+trackIds.forEach(id => {
+    let track = loadTrack(id)
+    .then(async (loaded) => {
+        tracks.push(await loaded)
+    })
+    trackPromises.push(track)
+
+})
+
 const getTracks = () => {
     return new Promise(async (resolve, reject) => {
-        if (tracks.length > 0) {
-            return resolve(Promise.all(tracks))
-        } else {
-            trackIds.forEach(id => {
-                let track = loadTrack(id)
-                tracks.push(track)
+        if (tracks.length === 0) {
+            Promise.any(trackPromises).then(() => {
+                return resolve(tracks)
             })
-
-           return resolve(Promise.all(tracks)) 
+        } else {
+            return resolve(tracks)
         }
     })
 }

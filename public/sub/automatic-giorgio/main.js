@@ -1,23 +1,24 @@
-import {default as musicLoader}  from './musicloader.js'
+import { default as musicLoader } from './musicloader.js'
 
 const randomFromArray = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const randomFloatFromRange = (min, max) => Math.random() * (max - min + 1) + min
 const randomIntegerFromRange = (min, max) => Math.floor(randomFloatFromRange(min, max))
 
 
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new window.AudioContext();
 
 let tracks = [];
 let loadedTracks = []
 
 const handleStart = async () => {
-    if (tracks.length < 1) {
-        tracks = await musicLoader()
-    }
-    var source = audioCtx.createBufferSource();
+
+    tracks = await musicLoader()
+
+    let source = audioCtx.createBufferSource();
     loadedTracks.forEach(source => {
         source.stop()
     })
+
     loadedTracks = [];
     source.buffer = tracks[randomIntegerFromRange(0, tracks.length - 1)];
     source.loop = true;
@@ -95,13 +96,13 @@ let responsivecanvas = new ResponsiveCanvas(target, {
     translateToCenter: true
 })
 
-target.addEventListener('click', () => {handleStart()})
+target.addEventListener('click', () => { handleStart() })
 
 let { canvas, ctx } = responsivecanvas
 
 ctx.lineWidth = 2;
 let pointAmount = 20
-let changeIntensity = .2
+let changeIntensity = 0.2
 let drawSize = 20
 let yFunction = "sin"
 let xFunction = "cos"
@@ -226,8 +227,8 @@ setInterval(() => {
     do {
         yFunction = randomFromArray(functionTypes)
     } while (yFunction === xFunction)
-  
+
     changeIntensity = randomFloatFromRange(0.2, 80)
-    drawSize = randomIntegerFromRange(25,100)
-    pointAmount = randomIntegerFromRange(3,50)
+    drawSize = randomIntegerFromRange(25, 100)
+    pointAmount = randomIntegerFromRange(3, 50)
 }, 3000)
