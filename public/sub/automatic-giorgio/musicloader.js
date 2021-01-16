@@ -39,28 +39,22 @@ for (let i = 0; i < amountOfTracks; i++) {
     trackIds.push(id)
 }
 
-let firstTrack = loadTrack(trackIds[0])
-    .then(loaded => {
-        trackPromises.push(loaded)
-        return loaded
-    })
-    .then(loaded => {
-        tracks.push(loaded)
-        trackIds.forEach(id => {
-            let track = loadTrack(id)
-                .then(async (loaded) => {
-                    tracks.push(await loaded)
-                })
-            trackPromises.push(track)
-        })
-    })
+async function loadToMemory() {
+    for (const trackid of trackIds) {
+        let track = loadTrack(trackid)
+        trackPromises.push(track)
+        let resolvedTrack = await track
+        tracks.push(resolvedTrack)
+      }
+}
 
-
+loadToMemory()
 
 const getTracks = () => {
     return new Promise(async (resolve, reject) => {
         if (tracks.length === 0) {
-            Promise.any(trackPromises).then(()=> {
+            Promise.any(trackPromises)
+            .then(() => {
                 return resolve(tracks)
             }) 
         } else {
