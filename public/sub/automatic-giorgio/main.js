@@ -1,14 +1,29 @@
 import {default as musicLoader}  from './musicloader.js'
 
+const randomFromArray = (arr) => arr[Math.floor(Math.random() * arr.length)];
+const randomFloatFromRange = (min, max) => Math.random() * (max - min + 1) + min
+const randomIntegerFromRange = (min, max) => Math.floor(randomFloatFromRange(min, max))
+
+
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
+let tracks = [];
+let loadedTracks = []
+
 const handleStart = async () => {
-    let tracks = await musicLoader()
+    if (tracks.length < 1) {
+        tracks = await musicLoader()
+    }
     var source = audioCtx.createBufferSource();
-    source.buffer = tracks[0];
+    loadedTracks.forEach(source => {
+        source.stop()
+    })
+    loadedTracks = [];
+    source.buffer = tracks[randomIntegerFromRange(0, tracks.length - 1)];
     source.loop = true;
     source.connect(audioCtx.destination);
     source.start();
+    loadedTracks.push(source)
 }
 
 class ResponsiveCanvas {
@@ -95,9 +110,6 @@ let xMult = 1;
 
 let animate;
 
-const randomFromArray = (arr) => arr[Math.floor(Math.random() * arr.length)];
-const randomFloatFromRange = (min, max) => Math.random() * (max - min + 1) + min
-const randomIntegerFromRange = (min, max) => Math.floor(randomFloatFromRange(min, max))
 
 const generateXposition = (val) => {
 

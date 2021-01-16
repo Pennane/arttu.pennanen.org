@@ -25,7 +25,7 @@ const loadTrack = (id) => {
 }
 
 
-const amountOfTracks = 1
+const amountOfTracks = 12
 let trackIds = []
 let tracks = []
 
