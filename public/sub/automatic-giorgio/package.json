@@ -4,6 +4,7 @@
   "scripts": {
     "build": "webpack"
   },
+  "private": true,
   "browserslist": "> 0.25%, not dead",
   "devDependencies": {
     "@babel/cli": "^7.12.10",
