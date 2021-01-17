@@ -1,3 +1,12 @@
+import { AudioContext } from 'standardized-audio-context'
+
+const testAudio = document.createElement('audio')
+const canPlayOgg =
+  typeof testAudio.canPlayType === 'function' &&
+  testAudio.canPlayType('audio/ogg') !== ''
+
+const fileType = canPlayOgg ? '.ogg' : '.mp3'
+
 const randomFloatFromRange = (min, max) => Math.random() * (max - min + 1) + min
 const randomIntegerFromRange = (min, max) =>
   Math.floor(randomFloatFromRange(min, max))
@@ -10,12 +19,13 @@ const loadAudioBuffer = (url, context) => {
       .then(audioBuffer => {
         return resolve(audioBuffer)
       })
+      .catch(err => reject(err))
   })
 }
 
 const loadTrack = id => {
   return new Promise(async (resolve, reject) => {
-    const url = './assets/music/giorgio/g' + id + '.ogg'
+    const url = './assets/music/giorgio/g' + id + fileType
     const context = new AudioContext()
     let audio = await loadAudioBuffer(url, context)
     return resolve(audio)
@@ -50,9 +60,11 @@ loadToMemory()
 const getTracks = () => {
   return new Promise(async (resolve, reject) => {
     if (tracks.length === 0) {
-      Promise.any(trackPromises).then(() => {
-        return resolve(tracks)
-      })
+      Promise.any(trackPromises)
+        .then(() => {
+          return resolve(tracks)
+        })
+        .catch(err => reject(err))
     } else {
       return resolve(tracks)
     }

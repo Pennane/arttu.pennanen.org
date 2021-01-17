@@ -1,3 +1,5 @@
+import { AudioContext } from 'standardized-audio-context'
+
 import { default as musicLoader } from './musicloader.js'
 
 const randomFromArray = arr => arr[Math.floor(Math.random() * arr.length)]
@@ -5,7 +7,7 @@ const randomFloatFromRange = (min, max) => Math.random() * (max - min + 1) + min
 const randomIntegerFromRange = (min, max) =>
   Math.floor(randomFloatFromRange(min, max))
 
-const audioCtx = new window.AudioContext()
+const audioCtx = new AudioContext()
 
 let tracks = []
 let loadedTracks = []
@@ -13,7 +15,12 @@ let loadedTracks = []
 let tracknumber
 
 const handleClick = async () => {
-  tracks = await musicLoader()
+  try {
+    tracks = await musicLoader()
+  } catch (err) {
+    console.log(err)
+    console.log('FAILED TO LOAD TRACKS BRO')
+  }
 
   let source = audioCtx.createBufferSource()
   let currentTime = audioCtx.currentTime
