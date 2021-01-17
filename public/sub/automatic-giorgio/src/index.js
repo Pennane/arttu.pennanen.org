@@ -1,5 +1,4 @@
 import { AudioContext } from 'standardized-audio-context'
-
 import { default as musicLoader } from './musicloader.js'
 
 const randomFromArray = arr => arr[Math.floor(Math.random() * arr.length)]
@@ -19,7 +18,6 @@ const handleClick = async () => {
     tracks = await musicLoader()
   } catch (err) {
     console.log(err)
-    console.log('FAILED TO LOAD TRACKS BRO')
   }
 
   let source = audioCtx.createBufferSource()
@@ -114,7 +112,7 @@ class ResponsiveCanvas {
   }
 }
 
-let target = document.querySelector('#automatic-giorgio')
+let target = document.getElementById('automatic-giorgio')
 let responsivecanvas = new ResponsiveCanvas(target, {
   fromOffset: true,
   resize: true,
