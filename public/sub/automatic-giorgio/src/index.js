@@ -23,11 +23,11 @@ const handleClick = async () => {
   let source = audioCtx.createBufferSource()
   let currentTime = audioCtx.currentTime
 
-  loadedTracks.slice(2).forEach(source => {
+  loadedTracks.slice(1).forEach(source => {
     source.stop()
   })
 
-  loadedTracks = loadedTracks.slice(0, 2)
+  loadedTracks = loadedTracks.slice(0, 1)
 
   let newTracknumber
   do {
