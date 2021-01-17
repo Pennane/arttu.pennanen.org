@@ -1,13 +1,6 @@
 import { default as musicLoader } from './musicloader.js'
 
 const randomFromArray = arr => arr[Math.floor(Math.random() * arr.length)]
-const randomNewFromArray = (arr, old) => {
-  let item
-  do {
-    item = randomFromArray(arr)
-  } while (item === old && arr.length > 1)
-  return item
-}
 const randomFloatFromRange = (min, max) => Math.random() * (max - min + 1) + min
 const randomIntegerFromRange = (min, max) =>
   Math.floor(randomFloatFromRange(min, max))
@@ -19,29 +12,31 @@ let loadedTracks = []
 
 let tracknumber
 
-const handleStart = async () => {
+const handleClick = async () => {
   tracks = await musicLoader()
 
   let source = audioCtx.createBufferSource()
   let currentTime = audioCtx.currentTime
 
-  loadedTracks.forEach(source => {
+  loadedTracks.slice(2).forEach(source => {
     source.stop()
   })
 
-  loadedTracks = []
+  loadedTracks = loadedTracks.slice(0, 2)
 
   let newTracknumber
   do {
     newTracknumber = randomIntegerFromRange(0, tracks.length - 1)
   } while (newTracknumber === tracknumber && tracks.length > 1)
 
+  loadedTracks[1]
+
   tracknumber = newTracknumber
   source.buffer = tracks[tracknumber]
   source.loop = true
   source.connect(audioCtx.destination)
   source.start(0, currentTime)
-  loadedTracks.push(source)
+  loadedTracks.unshift(source)
   newRandomAnimation()
 }
 
@@ -120,7 +115,7 @@ let responsivecanvas = new ResponsiveCanvas(target, {
 })
 
 target.addEventListener('click', () => {
-  handleStart()
+  handleClick()
 })
 
 let { canvas, ctx } = responsivecanvas
