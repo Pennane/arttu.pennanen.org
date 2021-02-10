@@ -11,7 +11,7 @@ const isNotUnixHiddenPath = function(path) {
 
 const hiddenProjects = [
   '60seconds',
-  'coundown',
+  'countdown',
   'cursors',
   'kalastuspeli',
   'landing-page-demo',
@@ -19,7 +19,10 @@ const hiddenProjects = [
   'rotmg_fame',
   'thonketspinner',
   'truewave',
-  'yla-aste_html'
+  'yla-aste_html',
+  'pokeri_kadet',
+  'rankitdemo',
+  'waveanimation'
 ]
 
 let directories = fs.readdirSync(targetFolder)
