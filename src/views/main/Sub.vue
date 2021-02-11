@@ -16,29 +16,47 @@
         <span v-for="line in getHeader" :key="line">{{ line }}</span>
       </h1>
     </div>
-    <div v-if="!links" class="loader-wrapper">
+    <div v-if="!projects" class="loader-wrapper">
       <Loader />
     </div>
-    <div class="links">
-      <ul v-if="links" class="linkcontainer">
-        <li v-for="link in links" :key="'link-' + link">
-          <a class="sublink" :href="'/sub/' + link">
-            <span class="name">{{ link }}</span>
-            <span class="destination">
-              <span class="line">{{ ' – ' }}</span>
-              <span class="origin">https://pennanen.dev/</span>
-              <span class="destinationlink">{{ 'sub/' + link + '/' }}</span>
-            </span>
+    <div class="projects">
+      <div v-if="projects" class="linkcontainer">
+        <div
+          class="project"
+          v-for="project in projects"
+          :key="'link-' + project.name['en']"
+        >
+          <a
+            class="sublink"
+            :href="project.custom_url ? project.url : project.url"
+          >
+            <div class="project-upper">
+              <img
+                class="projectImage"
+                :src="
+                  project.icon
+                    ? project.icon
+                    : require('@/assets/images/epic-gradient.png')
+                "
+                :alt="project.name[lang]"
+              />
+              <div class="project-main">
+                <span class="name">{{ project.name[lang] }}</span>
+                <span class="description" v-if="project.description">{{
+                  project.description[lang]
+                }}</span>
+              </div>
+            </div>
           </a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Loader from '@/components/Loader.vue'
-import Folders from '@/assets/data/subfolders.json'
+import Projects from '@/assets/data/projects.json'
 
 export default {
   name: 'Sub-page',
@@ -47,7 +65,7 @@ export default {
   },
   data() {
     return {
-      links: false
+      projects: null
     }
   },
   created() {
@@ -59,12 +77,14 @@ export default {
     },
     getHeader() {
       return this.$t('sub_header').split('\n')
+    },
+    lang() {
+      return this.$i18n.locale
     }
   },
   methods: {
     getLinks() {
-      let _compthis = this
-      _compthis.links = Folders
+      this.projects = Projects
     }
   },
   metaInfo: {
@@ -74,6 +94,7 @@ export default {
     if (window.experimentaltransition) return
     this.$store.commit('transitioning', false)
   },
+
   beforeRouteLeave(to, from, next) {
     if (window.experimentaltransition) return next()
     this.$store.commit('transitioning', true)
@@ -85,10 +106,6 @@ export default {
 </script>
 
 <style scoped>
-.red {
-  color: red;
-}
-
 .loader-wrapper {
   margin: 5em 0;
 }
@@ -101,24 +118,24 @@ export default {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
-  background-color: var(--bg-1);
   margin-left: 0.6em;
   margin-right: 0.5em;
   padding-top: 0.8em;
   font-size: 0.9rem;
 }
 
-.links {
+.projects {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2.5em calc(6vw + 0.5em);
-  padding-bottom: 2em;
+  margin-top: 3em;
+  padding: 3.5em calc(6vw + 0.5em);
+  padding-bottom: 8em;
 }
 
-.links::after {
+.projects::after {
   background-color: var(--bg-1);
   position: absolute;
   z-index: -1;
@@ -128,11 +145,11 @@ export default {
   width: 50%;
   height: 100%;
   content: '';
-  transform: skewY(-5deg) scaleY(1.2);
+  transform: skewY(-5deg) scaleY(1);
   transform-origin: top;
 }
 
-.links::before {
+.projects::before {
   background-color: var(--bg-1);
   position: absolute;
   z-index: -1;
@@ -142,7 +159,7 @@ export default {
   width: 50%;
   height: 100%;
   content: '';
-  transform: skewY(5deg) scaleY(1.2);
+  transform: skewY(5deg) scaleY(1);
   transform-origin: top;
 }
 
@@ -150,7 +167,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 7rem;
   padding-top: 2em;
 }
 
@@ -167,6 +183,8 @@ a {
 
 .name {
   color: var(--link-color);
+  font-weight: 500;
+  display: block;
 }
 
 .destination {
@@ -174,6 +192,40 @@ a {
   opacity: 0.8;
   font-size: 0.77em;
   display: inline-block;
+}
+
+.projectImage {
+  height: 50px;
+  width: 50px;
+  border-radius: 4px;
+  border: 1px solid var(--bg-5);
+  margin-right: 0.4em;
+}
+
+.project-upper {
+  display: flex;
+  padding: 0.4em 0.7em;
+}
+
+.project-main {
+  width: 350px;
+  max-width: 100%;
+}
+
+.description {
+  color: var(--font-5);
+}
+
+.sublink {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0.15em;
+  margin-bottom: 0.25em;
+}
+
+.sublink:hover {
+  border-color: var(--bg-5);
+  border-radius: 6px;
 }
 
 @media screen and (max-width: 700px) {

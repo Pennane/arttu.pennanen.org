@@ -1,0 +1,17 @@
+{
+    "url": null,
+    "date": "2.7.2019",
+    "name": {
+        "en": "Typechase",
+        "fi": null
+    },
+    "description": {
+        "en": "Typing speed application",
+        "fi": "Konekirjoitussovellus"
+    },
+    "icon": "icon.png",
+    "technologies": [
+        "Javascript",
+        "Localstorage"
+    ]
+}

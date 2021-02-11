@@ -1,0 +1,13 @@
+{
+    "url": null,
+    "date": "14.10.2018",
+    "name": {
+        "en": "Slots machine",
+        "fi": null
+    },
+    "description": {
+        "en": "School project. Very basic slotmachine.",
+        "fi": "Koulutyö. Todella yksinkertainen hedelmäpeli."
+    },
+    "icon": "icon.png"
+}

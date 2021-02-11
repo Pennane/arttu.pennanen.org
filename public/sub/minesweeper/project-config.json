@@ -1,0 +1,17 @@
+{
+    "url": "https://minesweeper.pennanen.dev",
+    "date": "6.1.2021",
+    "name": {
+        "en": "Minesweeper",
+        "fi": "Miinaharava"
+    },
+    "description": {
+        "en": "Traditional minesweeper built with Vue",
+        "fi": "Tavanomainen miinaharava"
+    },
+    "icon": "icon.png",
+    "technologies": [
+        "Vue",
+        "Vuex"
+    ]
+}

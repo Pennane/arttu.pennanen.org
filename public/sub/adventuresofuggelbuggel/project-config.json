@@ -1,0 +1,13 @@
+{
+    "url": null,
+    "date": "1.12.2017",
+    "name": {
+        "en": "Adventures of Uggel Buggel",
+        "fi": null
+    },
+    "description": {
+        "en": "School project. Javascript game built with construct 2",
+        "fi": "Koulutyö. Javascript peli rakennettu construct 2 ohjelmalla"
+    },
+    "icon": "icon-114.png"
+}

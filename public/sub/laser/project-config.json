@@ -1,0 +1,17 @@
+{
+    "url": null,
+    "date": "7.10.2018",
+    "name": {
+        "en": "Scientific laser refraction & reflection",
+        "fi": "Laserin hajonta & heijastus"
+    },
+    "description": {
+        "en": "School project.",
+        "fi": "Koulutyö"
+    },
+    "icon": "icon.png",
+    "technologies": [
+        "Javascript",
+        "Canvas"
+    ]
+}
