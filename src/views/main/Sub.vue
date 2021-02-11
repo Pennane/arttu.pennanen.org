@@ -36,7 +36,7 @@
                 :src="
                   project.icon
                     ? project.icon
-                    : require('@/assets/images/epic-gradient.png')
+                    : require('@/assets/images/placeholder.png')
                 "
                 :alt="project.name[lang]"
               />
