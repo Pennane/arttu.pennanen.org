@@ -19,37 +19,31 @@
     <div v-if="!projects" class="loader-wrapper">
       <Loader />
     </div>
-    <div class="projects">
-      <div v-if="projects" class="linkcontainer">
-        <div
-          class="project"
-          v-for="project in projects"
-          :key="'link-' + project.name['en']"
-        >
-          <a
-            class="sublink"
-            :href="project.custom_url ? project.url : project.url"
-          >
-            <div class="project-upper">
-              <img
-                class="projectImage"
-                :src="
-                  project.icon
-                    ? project.icon
-                    : require('@/assets/images/placeholder.png')
-                "
-                :alt="project.name[lang]"
-              />
-              <div class="project-main">
-                <span class="name">{{ project.name[lang] }}</span>
-                <span class="description" v-if="project.description">{{
-                  project.description[lang]
-                }}</span>
-              </div>
-            </div>
-          </a>
+    <div v-if="projects" class="projects">
+      <a
+        v-for="project in projects"
+        :key="'link-' + project.name['en']"
+        class="project-link"
+        :href="project.custom_url ? project.url : project.url"
+      >
+        <div class="project">
+          <img
+            class="projectImage"
+            :src="
+              project.icon
+                ? project.icon
+                : require('@/assets/images/placeholder.png')
+            "
+            :alt="project.name[lang]"
+          />
+          <div class="project-main">
+            <span class="name">{{ project.name[lang] }}</span>
+            <span class="description" v-if="project.description">{{
+              project.description[lang]
+            }}</span>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>
@@ -106,6 +100,13 @@ export default {
 </script>
 
 <style scoped>
+.subHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2em;
+}
+
 .loader-wrapper {
   margin: 5em 0;
 }
@@ -114,25 +115,17 @@ export default {
   width: 100%;
 }
 
-.linkcontainer {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.6;
-  margin-left: 0.6em;
-  margin-right: 0.5em;
-  padding-top: 0.8em;
-  font-size: 0.9rem;
-}
-
 .projects {
   position: relative;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 3em;
-  padding: 3.5em calc(6vw + 0.5em);
+  margin-top: 3.9em;
+  padding: 3.9em calc(6vw + 0.5em);
   padding-bottom: 8em;
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
 .projects::after {
@@ -163,22 +156,12 @@ export default {
   transform-origin: top;
 }
 
-.subHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 2em;
-}
-
 a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
-.line {
-  margin: 0 0.3em;
+.project {
+  display: flex;
+  padding: 0.4em 0.7em;
 }
 
 .name {
@@ -200,30 +183,33 @@ a {
   border-radius: 4px;
   border: 1px solid var(--bg-5);
   margin-right: 0.4em;
-}
-
-.project-upper {
-  display: flex;
-  padding: 0.4em 0.7em;
+  flex: 0 0 auto;
 }
 
 .project-main {
-  width: 350px;
-  max-width: 100%;
+  flex: 1 1 auto;
+  padding-right: 1em;
 }
 
 .description {
   color: var(--font-5);
 }
 
-.sublink {
+.project-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 390px;
+  max-width: 95vw;
   border: 1px solid transparent;
   border-radius: 6px;
   padding: 0.15em;
   margin-bottom: 0.25em;
+  display: block;
 }
 
-.sublink:hover {
+.project-link:hover {
   border-color: var(--bg-5);
   border-radius: 6px;
 }

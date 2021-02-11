@@ -6,6 +6,7 @@
       toggleDarkMode()
       animate()
     "
+    name="theme changer"
     :class="{ dark: darkmode, animation: animated }"
   >
     <span class="icon">
