@@ -1,6 +1,4 @@
 [
     "projects/yatzy.vue",
-    "projects/peigombot.vue",
-    "projects/spotifyfavorites.vue",
-    "projects/typechase.vue"
+    "projects/spotifyfavorites.vue"
 ]

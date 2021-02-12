@@ -6,8 +6,8 @@
         "fi": "Sanaetsuri"
     },
     "description": {
-        "en": "Typing speed application",
-        "fi": "Konekirjoitussovellus"
+        "en": "Word finder for the mobile game word snack",
+        "fi": "Sanojen etsijä Sanapala mobiilipeliin"
     },
     "icon": "icon.png"
 }

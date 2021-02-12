@@ -6,11 +6,8 @@
         "fi": "Lottotodennäköisyys simulaattori"
     },
     "description": {
-        "en": null,
-        "fi": null
+        "en": "Site that simulates money gain using Veikkaus lottery service",
+        "fi": "Sivu joka simuloi tuloja peletessa Veikkauksen lottoa"
     },
-    "icon": "icon.png",
-    "technologies": [
-        "Javascript"
-    ]
+    "icon": "icon.png"
 }

@@ -15,7 +15,21 @@ const hiddenProjects = [
   'yla-aste_html',
   'pokeri_kadet',
   'rankitdemo',
-  'waveanimation'
+  'waveanimation',
+  'ivs',
+  'gameoflife',
+  'thonkpaint',
+  'mc-rgb-gradient',
+  'perception',
+  'hedelmapeli',
+  'a-clock',
+  'automatic-giorgio',
+  'jutinrillimakkarapeli',
+  'firework',
+  'laser',
+  'adventuresofuggelbuggel',
+  'raymarching',
+  'thinkingscreensaver'
 ]
 
 const isUnixHiddenPath = function(path) {
@@ -30,19 +44,15 @@ const isNotHiddenProject = function(directory) {
   return hiddenProjects.indexOf(directory) === -1
 }
 
-const filterDirectories = directories => {
-  return directories.filter(
-    d => isNotUnixHiddenPath(d) && isNotHiddenProject(d)
-  )
-}
-
 const defaultObject = directory => {
   return {
+    directory,
     url: `/sub/${directory}`,
     name: {
       en: directory,
       fi: directory
-    }
+    },
+    date: 100
   }
 }
 
@@ -51,7 +61,7 @@ const isObject = o => typeof o === 'object' && o !== null
 const isString = text => typeof text === 'string' || text instanceof String
 
 const parseDate = str => {
-  if (!str || !isString(str)) return null
+  if (!str || !isString(str)) return 1000
   let parts = str.split('.')
   return new Date(parts[2], parts[1] - 1, parts[0]).getTime()
 }
@@ -85,12 +95,13 @@ const parseMultiLanguage = item => {
 
 const parseObject = (directory, config) => {
   let parsed = {
+    directory,
     url: parseString(config.url) || `/sub/${directory}`,
-    custom_url: parseString(config.url) && true,
+    custom_url: (parseString(config.url) && true) || undefined,
     name: parseMultiLanguage(config.name) || directory,
     description: parseMultiLanguage(config.description) || undefined,
     icon: parseIcon(config.icon, config.url, directory) || undefined,
-    date: parseDate(config.date) || 0
+    date: parseDate(config.date)
     // technologies: parseArray(config.technologies) || undefined
   }
   return parsed
@@ -107,15 +118,26 @@ const directoryToObject = directory => {
   }
 }
 
-let directories = filterDirectories(fs.readdirSync(targetFolder))
+let directories = fs
+  .readdirSync(targetFolder)
+  .filter(d => isNotUnixHiddenPath(d))
 
 let projectObjects = directories.map(directoryToObject)
+
+fs.writeFileSync(
+  './src/assets/data/allprojects.json',
+  JSON.stringify(projectObjects)
+)
 
 let chronologicalProjects = projectObjects.sort((a, b) =>
   a.date < b.date ? 1 : -1
 )
 
+let filteredProjects = chronologicalProjects.filter(p =>
+  isNotHiddenProject(p.directory)
+)
+
 fs.writeFileSync(
   './src/assets/data/projects.json',
-  JSON.stringify(chronologicalProjects)
+  JSON.stringify(filteredProjects)
 )

@@ -1,18 +1,17 @@
 <i18n>
 {
-  "en": {
-    "sub_header":"And then\nthe other\noccurences.",
-    "old_content": "Is something missin, that has been here before? It could be "
+    "en": {
+    "all_header": 
+      "Everything.\nGreat and not."
   },
   "fi": {
-    "sub_header": "Ja muita\nsattumia.",
-    "old_content": "Puuttuuko jotain, mikä on ollut täällä aiemmin? Se saattaa löytyä "
+    "all_header": "Kaikki muu.\nHyvä ja huono."
   }
 }
 </i18n>
 <template>
-  <div class="sub">
-    <div class="subHeader">
+  <div class="all">
+    <div class="allHeader">
       <h1 class="retro wider">
         <span v-for="line in getHeader" :key="line">{{ line }}</span>
       </h1>
@@ -45,22 +44,16 @@
           </div>
         </div>
       </a>
-      <p class="oldProjects">
-        {{ $t('old_content') }}
-        <router-link to="/all" title="every project">
-          {{ $t('word.here') }}
-        </router-link>
-      </p>
     </div>
   </div>
 </template>
 
 <script>
 import Loader from '@/components/Loader.vue'
-import Projects from '@/assets/data/projects.json'
+import Projects from '@/assets/data/allprojects.json'
 
 export default {
-  name: 'Sub-page',
+  name: 'All',
   components: {
     Loader
   },
@@ -77,7 +70,7 @@ export default {
       return window.location.origin
     },
     getHeader() {
-      return this.$t('sub_header').split('\n')
+      return this.$t('all_header').split('\n')
     },
     lang() {
       return this.$i18n.locale
@@ -107,7 +100,7 @@ export default {
 </script>
 
 <style scoped>
-.subHeader {
+.allHeader {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,26 +111,20 @@ export default {
   margin: 5em 0;
 }
 
-.sub {
+.all {
   width: 100%;
 }
 
 .projects {
   position: relative;
-  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   margin-top: 3.9em;
   padding: 3.9em calc(6vw + 0.5em);
   padding-bottom: 8em;
   line-height: 1.6;
   font-size: 0.9rem;
-}
-
-.oldProjects {
-  margin-top: 3em;
-  margin-bottom: 2em;
 }
 
 .projects::after {

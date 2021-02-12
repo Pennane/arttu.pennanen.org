@@ -4,7 +4,7 @@ import PageNotFound from './views/main/PageNotFound.vue'
 import Home from './views/main/Home.vue'
 
 const router = new Router({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   scrollBehavior(to, from, savedPosition) {
     let position = { x: 0, y: 0 }
@@ -27,6 +27,11 @@ const router = new Router({
       path: '/sub',
       name: 'Sub',
       component: () => import('./views/main/Sub.vue')
+    },
+    {
+      path: '/all',
+      name: 'All',
+      component: () => import('./views/main/All.vue')
     },
     {
       path: '/minesweeper',

@@ -157,7 +157,7 @@ p {
 }
 
 .retro.wider {
-  line-height: 0.48;
+line-height: 0.51;
 }
 
 .contentlink {
