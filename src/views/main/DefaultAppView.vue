@@ -14,8 +14,8 @@
 
 <script>
 import BackgroundLines from '@/components/BackgroundLines'
-import PageFooter from '@/components/PageFooter'
-import PageTopbar from '@/components/PageTopbar'
+import PageFooter from '@/components/layout/PageFooter'
+import PageTopbar from '@/components/layout/PageTopbar'
 import PageChangeAnimation from '@/components/PageChangeAnimation'
 
 export default {

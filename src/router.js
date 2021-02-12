@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import PageNotFound from './views/main/PageNotFound.vue'
 import Home from './views/main/Home.vue'
+import Contact from './views/main/Contact.vue'
 
 const router = new Router({
   mode: 'history',
@@ -18,6 +19,11 @@ const router = new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact
     },
     {
       path: '/home',
@@ -43,10 +49,6 @@ const router = new Router({
       component: () => import('./views/projects/minesweeper.vue')
     },
     {
-      path: '/miinaharava',
-      redirect: '/minesweeper'
-    },
-    {
       path: '/yatzy',
       name: 'Yatzy',
       component: () => import('./views/projects/yatzy.vue')
@@ -65,11 +67,6 @@ const router = new Router({
       path: '/peigombot',
       name: 'Peigom bot',
       component: () => import('./views/projects/peigombot.vue')
-    },
-    {
-      path: '/test',
-      name: 'Test',
-      component: () => import('./views/projects/templateProject.vue')
     },
     {
       path: '*',

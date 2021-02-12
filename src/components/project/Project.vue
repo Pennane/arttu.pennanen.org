@@ -9,7 +9,11 @@
         :buttontext="buttontext"
       />
       <div class="projectbody">
-        <router-link :to="filelocation" :name="name" :aria-label="$t('read_more')">
+        <router-link
+          :to="filelocation"
+          :name="name"
+          :aria-label="$t('read_more')"
+        >
           <ProjectImage alt :src="previewImage" preview></ProjectImage>
         </router-link>
         <p class="project-preview-desc">{{ previewDescription }}</p>
@@ -18,7 +22,8 @@
         class="contentlink projectpreviewlink"
         :to="filelocation"
         :name="name"
-      >{{ $t('read_more') }}</router-link>
+        >{{ $t('read_more') }}</router-link
+      >
     </div>
     <div class="project" v-else>
       <ProjectHeader
@@ -40,9 +45,9 @@
 </template>
 
 <script>
-import ProjectHeader from '@/components/ProjectHeader.vue'
-import ProjectImage from '@/components/ProjectImage.vue'
-import ProjectPreviewHeader from '@/components/ProjectPreviewHeader.vue'
+import ProjectHeader from '@/components/project/ProjectHeader.vue'
+import ProjectImage from '@/components/project/ProjectImage.vue'
+import ProjectPreviewHeader from '@/components/project/ProjectPreviewHeader.vue'
 
 export default {
   name: 'project',
@@ -93,7 +98,7 @@ export default {
 .project:not(.preview) {
   padding: 1em calc(8vw + 0.8em);
   max-width: 1080px;
-  
+
   padding-bottom: 7em;
   background-color: var(--bg-1);
   box-sizing: border-box;

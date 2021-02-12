@@ -41,7 +41,7 @@ export default {
 }
 
 .tryhere:active {
-  transform: translateY(2px);
+  transform: translateY(1px);
   filter: saturate(110%) brightness(0.7);
 }
 

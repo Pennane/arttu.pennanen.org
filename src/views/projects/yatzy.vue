@@ -84,8 +84,8 @@
 </template>
 
 <script>
-import Project from '@/components/Project.vue'
-import ProjectImage from '@/components/ProjectImage.vue'
+import Project from '@/components/project/Project.vue'
+import ProjectImage from '@/components/project/ProjectImage.vue'
 
 export default {
   name: 'yatzy',
