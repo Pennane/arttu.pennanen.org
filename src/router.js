@@ -24,9 +24,13 @@ const router = new Router({
       redirect: '/'
     },
     {
-      path: '/sub',
-      name: 'Sub',
+      path: '/projects',
+      name: 'Projects',
       component: () => import('./views/main/Sub.vue')
+    },
+    {
+      path: '/sub',
+      redirect: '/projects'
     },
     {
       path: '/all',
