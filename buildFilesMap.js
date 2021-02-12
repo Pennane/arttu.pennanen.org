@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const targetFolder = './public/sub'
+const targetFolder = './public/projects'
 
 const hiddenProjects = [
   '60seconds',
@@ -47,7 +47,7 @@ const isNotHiddenProject = function(directory) {
 const defaultObject = directory => {
   return {
     directory,
-    url: `/sub/${directory}`,
+    url: `/projects/${directory}`,
     name: {
       en: directory,
       fi: directory
@@ -78,7 +78,7 @@ const parseArray = arr => {
 
 const parseIcon = (icon, url, directory) => {
   if (!icon || !isString(icon)) return null
-  return path.join('/sub', directory, icon)
+  return path.join('/projects', directory, icon)
 }
 
 const parseMultiLanguage = item => {
@@ -96,7 +96,7 @@ const parseMultiLanguage = item => {
 const parseObject = (directory, config) => {
   let parsed = {
     directory,
-    url: parseString(config.url) || `/sub/${directory}`,
+    url: parseString(config.url) || `/projects/${directory}`,
     custom_url: (parseString(config.url) && true) || undefined,
     name: parseMultiLanguage(config.name) || directory,
     description: parseMultiLanguage(config.description) || undefined,

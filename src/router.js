@@ -26,7 +26,7 @@ const router = new Router({
     {
       path: '/projects',
       name: 'Projects',
-      component: () => import('./views/main/Sub.vue')
+      component: () => import('./views/main/Projects.vue')
     },
     {
       path: '/sub',

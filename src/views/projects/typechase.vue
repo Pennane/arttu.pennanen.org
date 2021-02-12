@@ -50,7 +50,7 @@
     :previewDescription="$t('content.p_1')"
     :buttontext="$t('data.buttonText')"
     date="12.7.2019"
-    link="https://pennanen.dev/sub/typechase/"
+    link="https://pennanen.dev/projects/typechase/"
     filelocation="typechase"
     :previewImage="require('@/assets/images/typechase/typechase1.png')"
     :preview="preview"

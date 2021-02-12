@@ -11,7 +11,7 @@
           />
           <span class="name">Arttu Pennanen</span>
         </router-link>
-        <router-link to="/sub" class="nav-link" title="projects">
+        <router-link to="/projects" class="nav-link" title="projects">
           {{ $t('word.misc') }}
         </router-link>
       </div>
