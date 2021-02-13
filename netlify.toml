@@ -8,7 +8,7 @@
     status = 301
 
 [[redirects]]
-    from = "https://arttupennanen.netlify.com/*
+    from = "https://arttupennanen.netlify.com/*"
     to = "https://pennanen.dev/:splat"
     status = 301
 
