@@ -1,0 +1,18 @@
+[build]
+  command = "npm run generate"
+  publish = "dist/"
+
+[[redirects]]
+  from = "https://arttu.pennanen.dev/*"
+  to = "https://pennanen.dev/:splat"
+  status = 301!
+
+[[redirects]]
+  from = "https://arttupennanen.netlify.com/*
+  to = " https://pennanen.dev/:splat"
+  status = 301!
+
+  [[redirects]]
+  from = "/sub"
+  to = "/projects"
+  status = 301!
