@@ -5,11 +5,14 @@
     </header>
 
     <section v-if="projects" class="projects">
-      <ProjectLink
-        v-for="project in projects"
-        :key="'link-' + project.name['en']"
-        :project="project"
-      />
+      <SequentialEntrance :storeTarget="animationStoreTarget">
+        <ProjectLink
+          v-for="project in projects"
+          :key="'link-' + project.name['en']"
+          :project="project"
+        />
+      </SequentialEntrance>
+
       <p class="old-projects">
         <nuxt-link to="/all" title="every project">
           Searching for something that has been here before? Try here</nuxt-link
@@ -20,26 +23,16 @@
 </template>
 
 <script lang="ts">
-interface Project {
-  directory: string;
-  url: string;
-  custom_url?: boolean;
-  name: {
-    en: string;
-    fi: string;
-  };
-  description?: {
-    en: string;
-    fi: string;
-  };
-  icon?: string;
-  date: number;
-}
-
+import { Project } from "../types/index";
 import Vue from "vue";
 import data from "~/assets/data/projects.json";
 
 export default Vue.extend({
+  data() {
+    return {
+      animationStoreTarget: "projects"
+    };
+  },
   computed: {
     projects(): Project[] {
       return data;

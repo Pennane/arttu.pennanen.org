@@ -9,7 +9,7 @@
       <h2>About</h2>
       <p>
         I'm a Software Developer who enjoys making both visual and out of view
-        things elegant. Currently my favorite technologies are everything web:
+        things flowing. Currently, my favourite technologies are everything web:
         <em>Typescript</em>, <em>Vue.js</em>, <em>Node.js</em>, and
         <em>SASS</em>.
       </p>

@@ -6,31 +6,19 @@
     </header>
 
     <section v-if="projects" class="projects">
-      <ProjectLink
-        v-for="project in projects"
-        :key="'link-' + project.name['en']"
-        :project="project"
-      />
+      <SequentialEntrance storeTarget="allProjects">
+        <ProjectLink
+          v-for="project in projects"
+          :key="'link-' + project.name['en']"
+          :project="project"
+        />
+      </SequentialEntrance>
     </section>
   </div>
 </template>
 
 <script lang="ts">
-interface Project {
-  directory: string;
-  url: string;
-  custom_url?: boolean;
-  name: {
-    en: string;
-    fi: string;
-  };
-  description?: {
-    en: string;
-    fi: string;
-  };
-  icon?: string;
-  date: number;
-}
+import { Project } from "../types/index";
 
 import Vue from "vue";
 import data from "~/assets/data/allprojects.json";

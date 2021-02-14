@@ -26,4 +26,15 @@ $bg-size: 36px;
     align-items: center;
   }
 }
+
+.sequential {
+  animation: sequential;
+  animation-duration: 0.7s;
+}
+
+@keyframes sequential {
+  100% {
+    opacity: 1;
+  }
+}
 </style>

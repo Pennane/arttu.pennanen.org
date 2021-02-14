@@ -23,12 +23,12 @@ export default Vue.extend({
   name: "BackgroundGradient",
   computed: {
     showImage() {
-      return this.$store.state.animations.indexAnimationDisplayed;
+      return this.$store.state.animations.index;
     }
   },
   methods: {
     ...mapMutations({
-      setAnimationDisplayed: "animations/set"
+      setAnimationDisplayed: "animations/index"
     })
   },
   head() {
