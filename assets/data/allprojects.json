@@ -171,7 +171,7 @@
     },
     {
         "directory": "karanteeni-joulu",
-        "url": "https://github.com/Pennane/korsoraattori-extension/releases",
+        "url": "http://joulu.karanteeni.net/",
         "custom_url": true,
         "name": {
             "en": "Karanteeni Advent Calendar 2019",
@@ -181,7 +181,8 @@
             "en": "Interactive advent calendar for a minecraft community",
             "fi": "Interaktiivinen minecraft yhteisön joulukalenteri"
         },
-        "date": 1574978400000
+        "date": 1574978400000,
+        "icon": "/projects/karanteeni-joulu/icon.png"
     },
     {
         "directory": "korsoraattori",
@@ -195,7 +196,8 @@
             "en": "Korsoraattori wrapped as a Chrome extension",
             "fi": "Korsoraattori kääritty Chrome laajennukseksi"
         },
-        "date": 1612476000000
+        "date": 1612476000000,
+        "icon": "/projects/korsoraattori/icon.png"
     },
     {
         "directory": "landing-page-demo",
@@ -365,7 +367,8 @@
             "en": "Spotify listening history analytics",
             "fi": "Spotify kuuntelu analytiikkaa"
         },
-        "date": 1575928800000
+        "date": 1575928800000,
+        "icon": "/projects/spotify-favorites/icon.png"
     },
     {
         "directory": "thinkingscreensaver",

@@ -8,5 +8,6 @@
     "description": {
         "en": "Interactive advent calendar for a minecraft community",
         "fi": "Interaktiivinen minecraft yhteisön joulukalenteri"
-    }
+    },
+    "icon": "icon.png"
 }
