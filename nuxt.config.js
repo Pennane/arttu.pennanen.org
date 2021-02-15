@@ -1,10 +1,8 @@
 export default {
   publicPath: "/nuxt/",
-  // Target: https://go.nuxtjs.dev/config-target
   target: "static",
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Arttu Pennanen",
+    title: "Arttu Pennanen - Aspiging developer working with the web",
     htmlAttrs: {
       lang: "en"
     },
@@ -12,39 +10,71 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
+        hid: "title",
+        name: "title",
+        content: "Arttu Pennanen - Aspiring developer working with the web"
+      },
+      {
         hid: "description",
         name: "description",
-        content: "Arttu Pennanen's portfolio website"
+        content:
+          "Portfolio website by Arttu Pennanen housing personal web projects consisting of utilities, demos and inner side jokes."
+      },
+      {
+        hid: "og:type",
+        name: "og:type",
+        content: "website"
+      },
+      {
+        hid: "og:title",
+        name: "og:title",
+        content: "Arttu Pennanen - Aspiring developer working with the web"
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content:
+          "Portfolio website by Arttu Pennanen housing personal web projects consisting of utilities, demos and inner side jokes."
+      },
+      {
+        hid: "og:image",
+        name: "og:image",
+        content: "https://pennanen.dev/cover.png"
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image"
+      },
+      {
+        hid: "twitter:type",
+        name: "twitter:type",
+        content: "website"
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "Arttu Pennanen - Aspiring developer working with the web"
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content:
+          "Portfolio website by Arttu Pennanen housing personal web projects consisting of utilities, demos and inner side jokes."
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "https://pennanen.dev/cover.png"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["@/assets/theme.scss", "@/assets/global.scss"],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    "@nuxt/typescript-build"
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    // "@nuxtjs/axios",
-    "@nuxtjs/google-fonts"
-  ],
-
-  // // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  // axios: {},
-
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/google-analytics"],
+  modules: ["@nuxtjs/google-fonts"],
   googleFonts: {
     preload: true,
     display: "swap",
@@ -52,7 +82,8 @@ export default {
       Inter: [400, 450, 500, 600]
     }
   },
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+  googleAnalytics: {
+    id: "UA-126133790-2"
+  },
   build: {}
 };
