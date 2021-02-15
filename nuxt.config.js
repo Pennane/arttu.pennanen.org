@@ -2,7 +2,7 @@ export default {
   publicPath: "/nuxt/",
   target: "static",
   head: {
-    title: "Arttu Pennanen - Aspiging developer working with the web",
+    title: "Arttu Pennanen - Aspiring developer working with the web",
     htmlAttrs: {
       lang: "en"
     },
