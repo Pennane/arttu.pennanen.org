@@ -17,7 +17,7 @@ import Vue from "vue";
 export default Vue.extend({
   methods: {
     toggleDarkMode() {
-      this.$colorMode.value =
+      this.$colorMode.preference =
         this.$colorMode.value === "dark" ? "light" : "dark";
     }
   }
