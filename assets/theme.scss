@@ -1,19 +1,39 @@
 :root {
   --bg-1: #fafafa;
-  --text-color: rgba(75, 85, 99);
+  --text-color: #4b5563;
   --secondary-text-color: #465a6f;
   --title-color: #0a2540;
   --secondary-title-color: #0b2540;
   --contrast-text-color: #fff;
   --contrast-title-color: #fff;
-  --nav-link-color: hsl(210, 70%, 18%);
-  --nav-link-hover-color: hsl(210, 72%, 8%);
-  --selection-bg: #2861ca;
-  --selection-color: #fff;
-  --link-color: rgb(29, 78, 216);
-  --link-hover: rgba(96, 165, 250);
+  --nav-link-color: #0e2e4e;
+  --nav-link-hover-color: #061423;
+  --link-color: #1d4ed8;
+  --link-hover: #60a5fa;
   --brand-filter: brightness(0.2);
-  --bg-line-color: #4247700f;
+  --bg-line-color: rgba(66, 71, 112, 0.05882);
   --light-border-color: rgba(0, 0, 0, 0.02);
   --border-color: rgba(0, 0, 0, 0.08);
+}
+
+.dark-mode {
+  --bg-1: #000000;
+  --text-color: hsl(212deg 9% 87%);
+  --secondary-text-color: hsl(211deg 8% 95%);
+  --title-color: hsl(210deg 7% 88%);
+  --secondary-title-color: hsl(211deg 8% 93%);
+  --contrast-text-color: #000;
+  --contrast-title-color: #fff;
+  --nav-link-color: #ffffff;
+  --nav-link-hover-color: #cdcbcb;
+  --link-color: #1dd88e;
+  --link-hover: #60faa1;
+  --brand-filter: brightness(20);
+  --bg-line-color: hsl(0deg 0% 100% / 4%);
+  --light-border-color: rgba(0, 0, 0, 0.02);
+  --border-color: rgba(0, 0, 0, 0.08);
+}
+
+.theme-transition * {
+  transition: background-color 0.2s;
 }

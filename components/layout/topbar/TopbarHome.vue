@@ -2,6 +2,14 @@
   <div class="topbar--home">
     <NuxtLink class="nav-link" to="/">
       <img
+        v-if="$colorMode.preference === 'dark'"
+        src="~/assets/icons/icon-white-64.png"
+        height="21"
+        width="21"
+        alt="brand icon"
+      />
+      <img
+        v-else
         src="~/assets/icons/icon-black-64.png"
         height="21"
         width="21"
@@ -26,10 +34,9 @@ export default Vue.extend({
   img {
     width: 1.3rem;
     opacity: 0.8;
+    margin: 0;
+    margin-right: 0.6em;
     transition: opacity 0.2s;
-    filter: saturate(0) contrast(1) brightness(0.2);
-    filter: var(--brand-filter);
-    margin: 0 0.6em;
   }
 }
 </style>

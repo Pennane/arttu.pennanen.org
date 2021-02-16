@@ -2,7 +2,7 @@ export default {
   publicPath: "/nuxt/",
   target: "static",
   head: {
-    title: "Arttu Pennanen - Aspiging developer working with the web",
+    title: "Arttu Pennanen - Aspiring developer working with the web",
     htmlAttrs: {
       lang: "en"
     },
@@ -73,7 +73,12 @@ export default {
   css: ["@/assets/theme.scss", "@/assets/global.scss"],
   plugins: [],
   components: true,
-  buildModules: ["@nuxt/typescript-build", "@nuxtjs/google-analytics"],
+  buildModules: [
+    "@nuxt/typescript-build",
+    "@nuxtjs/google-analytics",
+    "@nuxtjs/fontawesome",
+    "@nuxtjs/color-mode"
+  ],
   modules: ["@nuxtjs/google-fonts"],
   googleFonts: {
     preload: true,
@@ -84,6 +89,12 @@ export default {
   },
   googleAnalytics: {
     id: "UA-126133790-2"
+  },
+  fontawesome: {
+    icons: {
+      solid: ["faMoon"],
+      regular: ["faMoon"]
+    }
   },
   build: {}
 };

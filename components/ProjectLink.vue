@@ -88,6 +88,7 @@ export default Vue.extend({
         0 1px 2px 0 rgba(0, 0, 0, 0.04);
       margin-right: 0.7em;
       flex: 0 0 auto;
+      background-color: #ffffff03;
     }
 
     &--main {

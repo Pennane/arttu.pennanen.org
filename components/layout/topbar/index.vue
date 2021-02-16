@@ -3,6 +3,7 @@
     <div class="topbar">
       <TopbarHome />
       <Navigation />
+      <ThemeChanger />
     </div>
   </div>
 </template>
@@ -24,15 +25,21 @@ export default Vue.extend({
   width: 100%;
   z-index: 10;
   pointer-events: none;
-  align-items: flex-end;
+  align-items: center;
+  height: 55px;
 }
 
 .topbar {
   display: flex;
   opacity: 0.99;
-  padding: 0 1em;
+  padding: 0 1.8em;
   max-width: 1400px;
   flex: 1 1 auto;
+  & div {
+    height: 48px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .nav-link {
@@ -40,7 +47,8 @@ export default Vue.extend({
   pointer-events: auto;
   font-weight: 400;
   border: none;
-  padding: 1.5em 0.5em;
+  padding: 0 0.5em;
+  height: 100%;
   font-size: 0.85em;
   cursor: pointer;
   display: inline-flex;
@@ -60,6 +68,12 @@ export default Vue.extend({
 
   &.nuxt-link-exact-active {
     // text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .topbar {
+    padding: 0 1em;
   }
 }
 </style>
