@@ -47,7 +47,6 @@ export default Vue.extend({
         });
       }
     } else {
-      console.log("animating not once");
       animate(children);
     }
 

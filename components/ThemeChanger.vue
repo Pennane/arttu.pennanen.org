@@ -6,7 +6,7 @@
       name="theme changer"
     >
       <font-awesome-icon
-        :icon="[$colorMode.preference === 'dark' ? 'fas' : 'far', 'moon']"
+        :icon="[$colorMode.value === 'dark' ? 'far' : 'far', 'moon']"
       />
     </button>
   </div>
@@ -17,9 +17,8 @@ import Vue from "vue";
 export default Vue.extend({
   methods: {
     toggleDarkMode() {
-      this.$colorMode.$watch;
-      this.$colorMode.preference =
-        this.$colorMode.preference === "dark" ? "light" : "dark";
+      this.$colorMode.value =
+        this.$colorMode.value === "dark" ? "light" : "dark";
     }
   }
 });

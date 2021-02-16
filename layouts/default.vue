@@ -21,12 +21,11 @@ export default Vue.extend({
   },
   computed: {
     colorTheme() {
-      return this.$colorMode.preference;
+      return this.$colorMode.value;
     }
   },
   watch: {
     colorTheme(val, old) {
-      console.log(val, old);
       this.pushTransitionClass();
     }
   },

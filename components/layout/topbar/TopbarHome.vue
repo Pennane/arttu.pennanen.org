@@ -2,7 +2,7 @@
   <div class="topbar--home">
     <NuxtLink class="nav-link" to="/">
       <img
-        v-if="$colorMode.preference === 'dark'"
+        v-if="$colorMode.value === 'dark'"
         src="~/assets/icons/icon-white-64.png"
         height="21"
         width="21"
