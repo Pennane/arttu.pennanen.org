@@ -13,6 +13,6 @@
     status = 301
 
 [[redirects]]
-    from = "/sub"
-    to = "/projects"
+    from = "/sub/*"
+    to = "/projects/:splat"
     status = 301
