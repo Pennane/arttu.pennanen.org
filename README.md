@@ -1,4 +1,4 @@
-# pennanen.dev
+# [pennanen.dev](http://pennanen.dev/)
 
 ## Build Setup
 
