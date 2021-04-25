@@ -5,16 +5,16 @@
       <h1>Welcome</h1>
     </header>
 
-    <section>
-      <h2>About</h2>
+    <section style="margin-top:2.6em">
+      <!-- <h2>About</h2> -->
       <p>
-        I'm a Software Developer who enjoys making both visual and out of view
-        things flowing. Currently, my favourite technologies are everything web:
-        <em>Typescript</em>, <em>Vue.js</em>, <em>Node.js</em>, and
-        <em>SASS</em>.
+        I'm studying and creating web-based things. Currently, my favourite
+        technologies to work with are <em>Typescript</em>, <em>Node</em> and
+        <em>Next.js</em>.
       </p>
       <p>
-        When I am not coding I'm either making or drinking coffee. Tough break.
+        When I am not coding I'm most likely tinkering around with photography,
+        hi-fi or coffee.
       </p>
     </section>
     <section>

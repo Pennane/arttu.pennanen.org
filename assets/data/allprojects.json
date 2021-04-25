@@ -430,6 +430,21 @@
         "date": 1562014800000
     },
     {
+        "directory": "radio",
+        "url": "http://radio.pennanen.dev/",
+        "custom_url": true,
+        "name": {
+            "en": "Vinyl Radio",
+            "fi": "Vinyyli Radio"
+        },
+        "description": {
+            "en": "A display for vinyl records",
+            "fi": "Vinyylikokoelma & levyraatipohja"
+        },
+        "date": 1619358254215,
+        "icon": "/projects/radio/icon.png"
+    },
+    {
         "directory": "waveanimation",
         "url": "/projects/waveanimation",
         "name": {

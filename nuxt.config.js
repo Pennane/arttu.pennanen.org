@@ -2,7 +2,7 @@ export default {
   publicPath: "/nuxt/",
   target: "static",
   head: {
-    title: "Arttu Pennanen - Aspiring developer working with the web",
+    title: "Arttu Pennanen",
     htmlAttrs: {
       lang: "en"
     },
@@ -12,13 +12,13 @@ export default {
       {
         hid: "title",
         name: "title",
-        content: "Arttu Pennanen - Aspiring developer working with the web"
+        content: "Arttu Pennanen"
       },
       {
         hid: "description",
         name: "description",
         content:
-          "Portfolio website by Arttu Pennanen housing personal web projects consisting of utilities, demos and inner side jokes."
+          "Portfolio website for personal projects consisting mostly of demos and inside jokes."
       },
       {
         hid: "og:type",
@@ -28,13 +28,13 @@ export default {
       {
         hid: "og:title",
         name: "og:title",
-        content: "Arttu Pennanen - Aspiring developer working with the web"
+        content: "Arttu Pennanen"
       },
       {
         hid: "og:description",
         name: "og:description",
         content:
-          "Portfolio website by Arttu Pennanen housing personal web projects consisting of utilities, demos and inner side jokes."
+          "Portfolio website for personal projects consisting mostly of demos and inside jokes."
       },
       {
         hid: "og:image",
@@ -54,13 +54,13 @@ export default {
       {
         hid: "twitter:title",
         name: "twitter:title",
-        content: "Arttu Pennanen - Aspiring developer working with the web"
+        content: "Arttu Pennanen"
       },
       {
         hid: "twitter:description",
         name: "twitter:description",
         content:
-          "Portfolio website by Arttu Pennanen housing personal web projects consisting of utilities, demos and inner side jokes."
+          "Portfolio website for personal projects consisting mostly of demos and inside jokes."
       },
       {
         hid: "twitter:image",
