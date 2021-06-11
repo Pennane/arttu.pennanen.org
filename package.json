@@ -25,6 +25,6 @@
     "@nuxtjs/google-fonts": "^1.2.0",
     "fibers": "^5.0.0",
     "sass": "^1.32.7",
-    "sass-loader": "^10.1.1"
+    "sass-loader": "^12.1.0"
   }
 }
